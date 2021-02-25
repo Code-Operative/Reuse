@@ -1,0 +1,425 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+
+/*** SOME GENERIC STYLES ***/
+
+@mixin customer-area-base-box {
+    background: $clr-thirteen;
+    padding: 25px;
+    border: none;
+}
+
+@mixin customer-area-box {
+    @include customer-area-base-box;
+}
+
+.table-labeled {
+    th {
+        vertical-align: middle;
+    }
+    td {
+        vertical-align: middle;
+    }
+    .label {
+        font-weight: 400;
+        border-radius: 3px;
+        font-size: inherit;
+        padding: 4px 6px;
+        margin: 2px;
+        color: white;
+        white-space: nowrap;
+    }
+}
+
+.page-order {
+    .table {
+        margin-bottom: 0;
+    }
+    table {
+        th {
+            padding: 8px;
+        }
+        td {
+            padding: 8px;
+        }
+        thead {
+            th {
+                text-align: center;
+            }
+        }
+    }
+}
+
+#authentication {
+    .tooltip.tooltip-bottom {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+#identity,
+#authentication {
+    .radio-inline {
+        padding: 0;
+        .custom-radio {
+            margin-right: 0;
+        }
+    }
+}
+/*** Most of the customer accpunt pages ***/
+
+.page-customer-account {
+    #content {
+        @include customer-area-box;
+        margin-bottom: 20px;
+        .order-actions {
+            a {
+                padding: 0 2px;
+            }
+        }
+        .forgot-password {
+            text-align: center;
+            font-size: $font-size-sm;
+            margin-top: 16px;
+            padding-bottom: 15px;
+        }
+        .no-account {
+            text-align: center;
+            font-size: $base-font-size;
+        }
+    }
+}
+
+
+/*** Login page ***/
+
+.page-authentication {
+    .page-header{
+        text-align: center;
+    }
+    #content {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}
+
+
+
+/*** Addresses page ***/
+
+.page-addresses {
+    .address {
+        @include customer-area-base-box
+        margin-bottom: 30px;
+        .address-body {
+            padding: 16px;
+            h4 {
+                font-size: $base-font-size;
+                font-weight: 700;
+            }
+        }
+    }
+}
+.js-address-form{
+    .form-control-label{
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
+.address-footer {
+    padding: 8px 0;
+}
+.addresses-footer, .address-footer {
+    a {
+        display: inline-block;
+        background: $brand-second;
+        color: $white;
+        padding: 7px 10px;
+        font-size: 12px;
+        margin-right: 8px;
+        &:hover {
+            background: $brand-primary;
+            color: $white;
+        }
+        &:active{
+            background: darken($brand-primary, 10%);
+            color: $white;
+        }
+        i {
+            font-size: $base-font-size;
+        }
+    }
+}
+/*** Order details page ***/
+
+.page-order-detail {
+    font-size: 14px;
+    color: $gray-dark;
+    .box {
+        @include customer-area-base-box;
+        margin-bottom: 16px;
+    }
+    h3 {
+        font-size: $base-font-size;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $gray-darker;
+        margin-bottom: 16px;
+    }
+    #order-infos {
+        ul {
+            margin: 0;
+        }
+    }
+    #order-history {
+        .history-lines {
+            .history-line {
+                padding: 8px 0;
+                border-bottom: 1px solid $gray-lighter;
+                &:last-child {
+                    border-bottom: 0;
+                }
+                .label {
+                    display: inline-block;
+                    margin: 4px 0;
+                    padding: 4px 6px;
+                    color: white;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+    .addresses {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        h4 {
+            font-size: $base-font-size;
+            font-weight: 700;
+        }
+    }
+    #order-products {
+        &.return {
+            margin-bottom: 16px;
+            th {
+                &.head-checkbox {
+                    width: 30px;
+                }
+            }
+            td {
+                padding: 1.375rem 0.75rem;
+                &.qty {
+                    min-width: 125px;
+                    .current {
+                        width: 30%;
+                        float: left;
+                        text-align: right;
+                        padding-right: 0.5rem;
+                    }
+                    .select {
+                        width: 70%;
+                        float: left;
+                        margin: -0.625rem 0;
+                        padding-left: 0.25rem;
+                        select {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .order-items {
+        padding: 0 !important;
+        .order-item {
+            padding: 16px 16px 0;
+            border-bottom: 1px solid $gray-lighter;
+            .checkbox {
+                width: 30px;
+                float: left;
+                padding: 0 15px;
+            }
+            .content {
+                width: calc(100% - 30px);
+                float: left;
+                padding: 0 15px;
+            }
+            .desc {
+                .name {
+                    font-weight: bold;
+                }
+                margin-bottom: 16px;
+            }
+            .qty {
+                margin-bottom: 16px;
+                .q {
+                    margin-bottom: 4px;
+                }
+                .s {
+                    margin-bottom: 4px;
+                }
+            }
+        }
+    }
+    .messages {
+        .message {
+            margin-top: 8px;
+            border-bottom: 1px solid $gray-lighter;
+            &:last-child {
+                border-bottom: 0;
+            }
+            > div {
+                margin-bottom: 8px;
+            }
+        }
+    }
+    .customization {
+        margin-top: 12px;
+    }
+}
+
+
+/*** Order return page ***/
+
+#order-return-infos {
+    .thead-default th {
+        color: $gray-darker;
+    }
+    .customization {
+        margin-top: 12px;
+    }
+}
+
+
+/*** My account landing page ***/
+
+.page-my-account {
+    #content {
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            min-width: 100%;
+            a {
+                text-align: center;
+                display: inline-block;
+                font-size: $base-font-size;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $clr-eight;
+                padding: 0 15px;
+                margin-bottom: 30px;
+                .link-item {
+                    display: block;
+                    height: 100%;
+                    @include customer-area-base-box;
+                }
+                i {
+                    display: block;
+                    font-size: 2.6rem;
+                    width: 100%;
+                    padding-bottom: 3.4rem;
+                }
+                &:hover {
+                    color: $gray-darker;
+                    i {
+                        color: $brand-primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*** History page ***/
+
+#history {
+    .orders {
+        margin: 0 -16px;
+        .order {
+            a {
+                h3 {
+                    color: $gray-dark;
+                }
+            }
+            padding: 12px 16px;
+            border-bottom: 1px solid $gray-lighter;
+            .label {
+                display: inline-block;
+                margin: 4px 0;
+                padding: 4px 6px;
+                color: white;
+                border-radius: 3px;
+            }
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+//alerts
+#module-ps_emailalerts-account{
+    #content-wrapper{
+        width: 100%;
+    }
+}
+//personal page
+.js-customer-form{
+    .form-control-label{
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
+/*** FOOTER ***/
+
+.page-footer {
+    margin-top: 15px;
+    a {
+        border-radius: 0;
+        border: 1px solid $black;
+        position: relative;
+        display: inline-block;
+        padding: 13px 32px;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.25;
+        background: transparent;
+        color: $clr-eight;
+        cursor: pointer;
+        white-space: normal;
+        text-align: center;
+        text-transform: uppercase;
+        &:hover {
+            background: $black;
+            color: $white;
+        }
+        &:active {
+            background: lighten($black, 7%);
+            color: $white;
+            outline: none!important;
+        }
+    }
+    .account-link {
+        margin-right: 16px;
+        i {
+            font-size: $base-font-size;
+        }
+        span {
+            font-size: $font-size-sm;
+            vertical-align: middle;
+        }
+    }
+}
+
+//max 575
+@include media-breakpoint-down(xs) {
+    .page-footer{
+        a{
+            width: 100%;
+            margin: 0 0 15px;
+        }
+    }
+}

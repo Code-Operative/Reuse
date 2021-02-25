@@ -1,0 +1,21 @@
+.lang-rtl {
+    .block-contact{
+        li{
+            padding-left: 0;
+            padding-right: 25px;
+            &:before{
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+}
+@include media-breakpoint-up(sm) {
+    .lang-rtl {
+        .header__contact__item{
+            i{
+                padding: 0 0 0 5px;
+            }
+        }
+    }
+}

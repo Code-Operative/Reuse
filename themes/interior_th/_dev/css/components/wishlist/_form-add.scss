@@ -1,0 +1,38 @@
+/* form add ****************************************** */
+
+#form_wishlist {
+    fieldset {
+        padding: 20px;
+    }
+    label {
+        display: inline-block;
+        padding: 0 10px 0 0;
+    }
+}
+
+#block-history {
+    margin-top: 30px;
+}
+
+#form_wishlist {
+    .inputTxt {
+        width: 260px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .page-subheading {
+        margin-bottom: 20px;
+    }
+}
+.display_list {
+    li {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+#showBoughtProducts, #showBoughtProductsInfos, #hideBoughtProductsInfos {
+    display: none;
+}
+.unvisible {
+    display: none;
+}

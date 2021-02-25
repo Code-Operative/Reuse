@@ -1,0 +1,40 @@
+/*menu thumbail*/
+.top-menu{
+	&[data-depth="1"]{
+		.menu-thumbnails{
+			display: none;
+		}
+	}
+}
+@include media-breakpoint-up(sm) {
+	.menu-thumbnails{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		.thumbnail{
+			max-width: 50%;
+			padding: 0 15px 15px;
+		}
+	}
+}
+@include media-breakpoint-up(lg) {
+	.menu-thumbnails{
+		width: 40%;
+		margin-left: auto;
+	}
+}
+@include media-breakpoint-down(md) {
+	.menu-thumbnails{
+		margin: 20px -15px 0;
+	}
+}
+@include media-breakpoint-down(xs) {
+	.menu-thumbnails{
+		margin-left: 0;
+		margin-right: 0;
+		.thumbnail{
+			margin-bottom: 20px;
+		}
+	}
+}
+

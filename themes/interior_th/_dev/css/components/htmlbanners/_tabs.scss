@@ -1,0 +1,129 @@
+.home-tabs {
+	margin-top: 50px;
+	.home-tabs-inner {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	.tab-content {
+		line-height: 1.5;
+		border: 0 solid $clr-three;
+		border-left-width: 1px;
+		margin-left: 0;
+		margin-right: 0;
+		overflow: hidden;
+		padding: 30px 15px 30px 30px;
+	}
+	.tab-pane {
+		.htmlcontent__html{
+			color: $clr-five;
+			font-size: 13px;
+		}
+		p{
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
+		h4{
+			color: $clr-four;
+			font-size: 18px;
+			text-transform: uppercase;
+		}
+		ul{
+			display: table-cell;
+			margin-bottom: 10px;
+			vertical-align: top;
+			width: 50%;
+			li{
+				margin-bottom: 7px;
+				position: relative;
+			    padding: 0 0 0 10px;
+				&:before{
+					display: inline-block;
+					color: $brand-primary;
+					content: '\e80d';
+					font-size: 9px;
+					vertical-align: 2px;
+					font-family: $second-icon-font;
+				    position: absolute;
+				    top: 4px;
+				    left: 0;
+				}
+			}
+		}
+	}
+	.banner-link {
+		margin-bottom: 20px;
+	}
+}
+
+.htmlcontent-tabs {
+	margin: 0;
+	li {
+		border-bottom: 1px solid $clr-three;
+		&.tab_1{
+			border-top: 1px solid $clr-three;
+		}
+		a {
+			color: $clr-four;
+			display: flex;
+			align-items: center;
+			font-size: 14px;
+			line-height: 1.2;
+			padding-right: 10px;
+			position: relative;
+			text-transform: uppercase;
+			span {
+				padding: 10px 0;
+				word-break: break-all;
+			}
+			&.active, &:hover{
+				color: $brand-primary;
+			}
+		}
+		&.active{
+			a {
+				color: $brand-primary;
+			}
+		}
+	}
+	.icon-wrap {
+		padding-right: 12px;
+	}
+	.img-icon {
+		max-width: 24px;
+	}
+}
+
+@include media-breakpoint-down(lg) {
+	.htmlcontent-tabs{
+		li{
+			a{
+				&:before{
+					font-size: 21px;
+				}
+				font-size: 12px;
+				padding-right: 5px;
+			}
+		}
+	}
+}
+@include media-breakpoint-down(sm){
+	.home-tabs {
+		.tab-content{
+			font-size: 13px;
+			border: none;
+			padding: 0;
+			margin-top: 20px;
+		}
+	}
+}
+@include media-breakpoint-down(xs){
+	.home-tabs {
+		.tab-pane {
+			ul {
+			    display: block;
+			    width: 100%;
+			}
+		}
+	}
+}

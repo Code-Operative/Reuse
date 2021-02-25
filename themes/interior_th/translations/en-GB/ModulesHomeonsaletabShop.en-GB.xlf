@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="back" source-language="en-GB" target-language="en-GB" datatype="plaintext">
+    <body>
+      <trans-unit id="e5a135b961eaceb101c09889717c36ae">
+        <source>No products with dropped prices</source>
+        <target>No products with dropped prices</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="4fa02c865aedd399135dccfcba2a04e4">
+        <source>All promotions</source>
+        <target>All promotions</target>
+        <note>Line: </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

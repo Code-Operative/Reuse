@@ -1,0 +1,19 @@
+/*
+** Quickview style
+*/
+.quickview {
+	.product-quickview-review {
+		margin-left: auto;
+	}
+}
+.product-quickview-review {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    .comments-nb {
+        font-size: 14px;
+        font-weight: 600;
+        padding-left: 4px;
+        line-height: 1;
+    }
+}

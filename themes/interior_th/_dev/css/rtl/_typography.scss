@@ -1,0 +1,27 @@
+.lang-rtl{
+	.page-heading {
+		> span{
+			&:not(.heading-counter){
+				padding-right: 0;
+				padding-left: 17px;
+			}
+		}
+	}
+	.rte {
+	    ul {
+	        padding-left: 0;
+	        padding-right: 18px;
+	    }
+	}
+}
+@include media-breakpoint-up(sm) {
+	.lang-rtl{
+		.page-heading {
+			.heading-counter{
+				padding-left: 0;
+				padding-right: 17px;
+				float: left;
+			}
+		}
+	}
+}

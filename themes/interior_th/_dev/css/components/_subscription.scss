@@ -1,0 +1,51 @@
+@import '~bootstrap/scss/_mixins.scss';
+@import '../partials/_variables';
+
+.block_newsletter {
+    .input-wrapper {
+        position: relative;
+    }
+
+    .form-control {
+        font-size: 13px;
+
+        padding-right: 52px;
+
+        color: $clr-five;
+        border-width: 1px;
+        border-color: $clr-five;
+        background: none;
+
+        &::placeholder {
+            color: inherit;
+        }
+
+        &:focus {
+            color: $brand-primary;
+            border-color: $brand-primary;
+        }
+    }
+
+    .submit {
+        font-size: 21px;
+        line-height: 38px;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        display: table-cell;
+
+        width: 40px;
+        height: 40px;
+
+        cursor: pointer;
+        text-align: center;
+        vertical-align: top;
+
+        color: $white;
+        border: none;
+        outline: none;
+        background: $brand-primary;
+    }
+}

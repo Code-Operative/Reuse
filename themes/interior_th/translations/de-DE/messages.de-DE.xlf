@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="back" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="0557fa923dcee4d0f86b1409f5c2167f">
+        <source>Back</source>
+        <target>Zurück</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="f2a6c498fb90ee345d997f888fce3b18">
+        <source>Delete</source>
+        <target>Löschen</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="4b7d496eedb665d0b5f589f2f874e7cb">
+        <source>Product detail</source>
+        <target>Artikeldetails</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="fdba7ef79b2aa5e4dd3f29dc83266c86">
+        <source>Caterory</source>
+        <target>Kategorie</target>
+        <note>Line: </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
+

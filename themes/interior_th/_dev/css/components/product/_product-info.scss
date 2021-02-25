@@ -1,0 +1,12 @@
+.product-info{
+	color: $clr-four;
+	font-size: 13px;
+	> div {
+		margin-bottom: 8px;
+	}
+	label{
+		color: inherit;
+		font-size: inherit;
+		font-weight: 700;
+	}
+}

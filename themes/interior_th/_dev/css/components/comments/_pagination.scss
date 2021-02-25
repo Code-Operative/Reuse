@@ -1,0 +1,56 @@
+#product-comments-list-pagination {
+    margin-bottom: 20px;
+    ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin: 0;
+    }
+    li {
+        margin: 0 2px;
+        span {
+            border: 1px solid $clr-three;
+            display: block;
+            font-size: 13px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            width: 28px;
+            border-radius: 3px;
+            transition: .3s border-color, .3s background-color;
+            cursor: pointer;
+        }
+        &:first-child, &:last-child {
+            span {
+                line-height: 26px;
+            }
+        }
+        i {
+            font-size: 18px;
+        }
+        &.disabled span {
+            cursor: not-allowed;
+
+            opacity: .3;
+        }
+
+        &.active {
+            span {
+                border-color: $brand-primary;
+                background-color: $brand-primary;
+                color: $white;
+                cursor: default;
+            }
+        }
+        &:hover {
+            span {
+                &:not(.current) {
+                    border-color: $brand-primary;
+                    background-color: $brand-primary;
+                    color: $white;
+                }
+            }
+        }
+    }
+}

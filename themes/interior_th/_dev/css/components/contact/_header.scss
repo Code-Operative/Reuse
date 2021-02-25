@@ -1,0 +1,33 @@
+@include media-breakpoint-up(lg) {
+	.header__contact {
+		position: relative;
+		&__item{
+			display: inline-block;
+			vertical-align: middle;
+			padding: 0 $header-block-gutter-width/2;
+			border-right: 1px solid rgba(#565656, 0.3);
+			vertical-align: baseline;
+			i {
+				padding-right: 5px;
+			}
+		}
+	}
+	.header__contact__list {
+		visibility: visible;
+		opacity: 1;
+		transform: none;
+	    background: none;
+	    border: none;
+	    color: inherit;
+	    max-width: none;
+	    font-size: inherit;
+	    position: static;
+	    margin: 0;
+	    display: block !important;
+	}
+	#_desktop_contact_link {
+		.header__contact__list {
+			background: none;
+		}
+	}
+}

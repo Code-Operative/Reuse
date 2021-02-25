@@ -1,0 +1,28 @@
+.pull-right {
+    float: right;
+}
+@include media-breakpoint-up(xl) {
+    .container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+@include media-breakpoint-down(md) {
+    .container{
+        width: auto;
+    }
+}
+@include media-breakpoint-down(xs) {
+    .container{
+        padding-left: $grid-gutter-width-base/2;
+        padding-right: $grid-gutter-width-base/2;
+    }
+    .row{
+        margin-left: -$grid-gutter-width-base/2;
+        margin-right: -$grid-gutter-width-base/2;
+    }
+    [class*="col-"]{
+        padding-left: $grid-gutter-width-base/2;
+        padding-right: $grid-gutter-width-base/2;
+    }
+}

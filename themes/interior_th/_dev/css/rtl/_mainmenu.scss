@@ -1,0 +1,18 @@
+//main meny
+@include media-breakpoint-down(md) {
+    .lang-rtl{
+        .top-menu{
+            .dropdown-item{
+                padding-right: 20px;
+            }
+            .navbar-toggler{
+                right: auto;
+                left: 0;
+            }
+            .submenu{
+                padding-left: 0;
+                padding-right: 20px;
+            }
+        }
+    }
+}

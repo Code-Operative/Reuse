@@ -1,0 +1,9 @@
+.lang-rtl {
+	.custom-radio {
+	    input[type="radio"] {
+	    	+ span {
+	    		margin: 0 0 0 5px;
+	    	}
+	    }
+	}
+}

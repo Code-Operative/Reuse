@@ -1,0 +1,20 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+#products {
+    color: $gray-dark;
+    .products-select {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+    .up {
+        margin-bottom: 16px;
+        .btn-secondary {
+            color: $gray;
+            text-transform: inherit;
+            .material-icons {
+                margin-right: 0;
+            }
+        }
+    }
+}

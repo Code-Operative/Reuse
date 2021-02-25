@@ -1,0 +1,39 @@
+.product-add-to-cart{
+    margin-top: 30px;
+    .control-label{
+        color: $clr-four;
+        font-size: 16px;
+        padding-right: 5px;
+        text-transform: uppercase;
+        vertical-align: middle;
+    }
+}
+
+.product-quantity {
+    display: inline-block;
+    vertical-align: middle;
+    .qty{
+        padding-right: 10px;
+    }
+    .qty,.add {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .add {
+        
+    }
+    .input-group-btn-vertical {
+        
+    }
+    .input-group-btn-vertical {
+        .btn {
+        
+            i {
+            
+            }
+        }
+    }
+    .btn-touchspin {
+      
+    }
+}

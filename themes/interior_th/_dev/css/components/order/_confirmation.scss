@@ -1,0 +1,67 @@
+/**** ORDER CONFIRMATION *****/
+.page-order-confirmation{
+    .wrapper-columns{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+#order-details {
+    padding-left: $large-space;
+    > .card-title {
+        margin-bottom: $large-space;
+    }
+    ul {
+        margin-bottom: $medium-space;
+        li {
+            margin-bottom: $small-space;
+        }
+    }
+}
+
+#order-items {
+    border-right: $gray-light 1px solid;
+    table {
+        width: 100%;
+        tr {
+            height: $large-space;
+            td {
+                &:first-child {
+                    text-align: right;
+                    width: 80%;
+                }
+                &:last-child {
+                    text-align: right;
+                }
+            }
+        }
+    }
+    .order-line {
+        background: $clr-thirteen;
+        padding: 5px;
+        margin: 0 0 5px;
+        align-items: center;
+    }
+    .details {
+        font-weight: 600;
+        .customizations {
+            margin-top: 10px;
+        }
+    }
+}
+
+#order-confirmation {
+    #registration-form {
+        margin: 30px 0;
+    }
+}
+.page-order-confirmation{
+    margin: 10px 0;
+}
+//max 575
+@include media-breakpoint-down(xs) {
+    .order-confirmation-table{
+        .qty{
+            margin-top: 15px;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="back" source-language="ca-ES" target-language="ca-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="6b73d58cfd759aa3a623b5344a4da636">
+        <source>No best sellers found</source>
+        <target>No s'han trobat els més venuts</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="eae99cd6a931f3553123420b16383812">
+        <source>All best sellers</source>
+        <target>Tots els més venuts</target>
+        <note>Line: </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

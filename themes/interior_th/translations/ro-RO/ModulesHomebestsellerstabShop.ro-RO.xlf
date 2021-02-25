@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="back" source-language="ro-RO" target-language="ro-RO" datatype="plaintext">
+    <body>
+      <trans-unit id="6b73d58cfd759aa3a623b5344a4da636">
+        <source>No best sellers found</source>
+        <target>Nu s-au găsit cei mai buni vânzători</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="eae99cd6a931f3553123420b16383812">
+        <source>All best sellers</source>
+        <target>Toate produsele din topul vanzarilor</target>
+        <note>Line: </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

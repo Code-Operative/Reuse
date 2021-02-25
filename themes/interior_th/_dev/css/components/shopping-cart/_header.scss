@@ -1,0 +1,78 @@
+.cart-header {
+    cursor: pointer;
+    margin: 0;
+}
+@include media-breakpoint-up(lg) {
+    #_desktop_cart{
+        position: static;
+    }
+    .cart-header {
+        display: block;
+        text-align: right;
+        > .inner-wrapper {
+            line-height: 1;
+            position: relative;
+            i {
+                font-size: 35px;
+                padding-right: 10px;
+                vertical-align: -7px;
+            }
+        }
+        .cart-products-count {
+            font-size: 10px;
+            line-height: 1;
+            line-height: 14px;
+            position: absolute;
+            top: -2px;
+            right: 4px;
+            display: block;
+            min-width: 14px;
+            height: 14px;
+            text-align: center;
+            color: $white;
+            border-radius: 50%;
+            background: $brand-primary;
+        }
+    }
+}
+@include media-breakpoint-down(md) {
+    #_mobile_cart {
+        flex: 1 0 0;
+    }
+    .cart-header {
+        position: relative;
+        padding-right: 10px;
+        > .inner-wrapper {
+            i {
+                font-size: 17px;
+                cursor: pointer;
+                width: 1.8em;
+                height: 1.8em;
+                background-color: $brand-second;
+                color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                transition: background-color .4s, color .4s;
+                &:hover {
+                    background-color: lighten($brand-primary, 5%);
+                }
+            }
+        }
+        .cart-products-count {
+            font-size: 10px;
+            line-height: 16px;
+            position: absolute;
+            top: -5px;
+            left: 21px;
+            display: block;
+            min-width: 16px;
+            height: 16px;
+            text-align: center;
+            color: $white;
+            border-radius: 50%;
+            background: $brand-primary;
+        }
+    }
+}

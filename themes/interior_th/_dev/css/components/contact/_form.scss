@@ -1,0 +1,12 @@
+.contact-form {
+    color: $gray-dark;
+    width: 100%;
+    h3 {
+        text-transform: uppercase;
+        color: $gray-darker;
+    }
+    .form-control-label{
+    	text-transform: uppercase;
+    	font-weight: 600;
+    }
+}

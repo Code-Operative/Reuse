@@ -1,0 +1,76 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+#block-reassurance {
+    margin-top: 30px;
+
+    img {
+        vertical-align: top;
+        max-width: 60px;
+        flex: 0 0 25px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    .block-reassurance-item {
+        padding: 15px;
+        background: #f5f5f5;
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+    }
+    span {
+        font-weight: 400;
+        font-size: 12px;
+        padding-left: 10px;
+        vertical-align: top;
+        line-height: 1.5;
+        margin: 0;
+    }
+}
+//product page
+.page-product{
+    #block-reassurance {
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 0 -10px;
+        }
+        li {
+            padding: 0 10px;
+        }
+    }
+}
+@include media-breakpoint-up(sm) {
+    .page-product {
+        #block-reassurance {
+            li {
+                width: (100%/3);
+            }
+        }
+    }
+}
+//max 991
+@include media-breakpoint-down(md) {
+    .cart-grid-right{
+        #block-reassurance {
+            ul {
+              display: flex;
+              margin: 0 -10px;
+            }
+            li {
+                padding: 0 10px;
+            }
+        }
+    }
+}
+//max 575
+@include media-breakpoint-down(xs) {
+    .page-product, .cart-grid-right{
+        #block-reassurance {
+            ul{
+                display: block;
+            }
+        }
+    }
+}

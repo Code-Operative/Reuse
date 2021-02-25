@@ -1,0 +1,13 @@
+.l-column{
+	.product-flags {
+		.online-only{
+		    left: auto;
+		    right: 18px;
+		    bottom: auto;
+		    top: 18px;
+		    ~ .new{
+		    	top: 90px;
+		    }
+		}
+	}
+}

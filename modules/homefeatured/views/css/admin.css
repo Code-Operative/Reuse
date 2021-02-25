@@ -1,0 +1,3 @@
+.form-wrapper .alpha-group:not(.carousel_on) ~ .carousel-options {
+	display: none;
+}

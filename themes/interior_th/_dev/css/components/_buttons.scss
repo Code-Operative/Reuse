@@ -1,0 +1,83 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+button{
+    cursor: pointer;
+    outline: none!important;
+}
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-tertiary {
+    border-radius: 0;
+    border:1px solid $black;
+    position: relative;
+    display: inline-block;
+    padding: 13px 32px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.25;
+    background: transparent;
+    color: $clr-eight;
+    cursor: pointer;
+    white-space: normal;
+    text-align: center;
+    text-transform: uppercase;
+    &:hover{
+        background: $black;
+        color: $white;
+    }
+    &:active{
+        background: lighten($black, 7%);
+        color: $white;
+        outline: none!important;
+    }
+    &:active, &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+    &.btn_skine-two{
+        background: $brand-primary;
+        border-color: $brand-primary;
+        color: $white;
+        &:hover{
+            background: lighten($brand-primary, 10%);
+            border-color: lighten($brand-primary, 10%);
+        }
+        &:active{
+            background: darken($brand-primary, 10%);
+            border-color: darken($brand-primary, 10%);
+        }
+    }
+    &.btn_skine-four{
+        background: $brand-second;
+        border-color: $brand-second;
+        color: $white;
+        &:hover{
+            background: $brand-primary;
+            border-color: $brand-primary;
+            color: $white;
+        }
+        &:active{
+            background: darken($brand-primary, 7%);
+            border-color: darken($brand-primary, 7%);
+            color: $white;
+        }
+    }
+}
+
+.btn-primary {
+    &.disabled, &:disabled{
+        background-color: transparent;
+        border-color: $black;
+    }
+}
+
+.btn{
+    &.disabled, &:disabled{
+        pointer-events: none;
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+}
+

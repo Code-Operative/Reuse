@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="back" source-language="ro-RO" target-language="ro-RO" datatype="plaintext">
+    <body>
+      <trans-unit id="e5a135b961eaceb101c09889717c36ae">
+        <source>No products with dropped prices</source>
+        <target>Nu există produse cu prețuri reduse</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="4fa02c865aedd399135dccfcba2a04e4">
+        <source>All promotions</source>
+        <target>Toate promoțiile</target>
+        <note>Line: </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

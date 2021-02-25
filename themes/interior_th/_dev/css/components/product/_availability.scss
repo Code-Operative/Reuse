@@ -1,0 +1,18 @@
+#product-availability {
+    display: block;
+    font-weight: 700;
+    margin: 20px 0 10px;
+    .material-icons {
+        line-height: 1;
+        font-size: 18px;
+    }
+    .product-available {
+        color: $brand-success;
+    }
+    .product-unavailable {
+        color: $brand-warning;
+    }
+    .product-last-items {
+        color: $brand-warning;
+    }
+}

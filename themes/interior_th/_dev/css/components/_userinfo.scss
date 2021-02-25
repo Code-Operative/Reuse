@@ -1,0 +1,46 @@
+@import '~bootstrap/scss/_mixins.scss';
+@import '../partials/_variables';
+
+
+
+@include media-breakpoint-up(lg) {
+    .header_user_info__toggle-btn{
+        display: none;
+    }
+    .header_user_info{
+        a {
+            display: inline-block;
+            padding: 0 $header-block-gutter-width/2;
+            text-transform: uppercase;
+            vertical-align: middle;
+            &:not(:last-child) {
+                border-right: 1px solid $clr-fourteen;
+            }
+            &:before {
+                padding-right: 5px;
+            }
+        }
+    }
+    .header_user_info__list{
+        margin: 0;
+        background: none;
+        color: inherit;
+        font-size: inherit;
+        position: static;
+        visibility: visible;
+        
+        max-width: none;
+
+        transform: none;
+        white-space: normal;
+
+        opacity: 1;
+        border: none;
+        display: block !important;
+    }
+    #_desktop_user_info {
+        .dropdown-menu {
+            background: none;
+        }
+    }
+}

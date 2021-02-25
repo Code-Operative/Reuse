@@ -1,0 +1,102 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+.page-stores {
+    .store-item {
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-bottom: 30px;
+    }
+    .store-picture {
+        img {
+            max-width: 100%;
+        }
+    }
+    .store-item-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: $large-space 0;
+        ul {
+            margin-bottom: 0;
+            font-size: $font-size-lg;
+        }
+        .divide-left {
+            border-left: $gray-light 1px solid;
+            tr {
+                height: 25px;
+            }
+            td {
+                padding-left: 6px;
+            }
+            th {
+                text-align: right;
+            }
+        }
+        .store-description {
+            font-size: $base-font-size;
+        }
+    }
+    .store-item-footer {
+        margin-top: 8px;
+        padding-top: 8px;
+        display: flex;
+        justify-content: space-around;
+        &.divide-top {
+            border-top: $gray-light 1px solid;
+        }
+        div:first-child {
+            flex: 0 0 65%;
+        }
+        i.material-icons {
+            margin-right: $small-space;
+            color: $gray;
+            font-size: $base-font-size;
+        }
+        li {
+            margin-bottom: $small-space;
+        }
+    }
+}
+
+/*** Responsive part ***/
+
+@include media-breakpoint-down(sm) {
+    .page-stores {
+        width: 100%;
+        .store-item-container {
+            padding: 16px 0;
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .page-stores {
+        .store-item-container {
+            display: block;
+            .divide-left {
+                border-left: none;
+            }
+            .store-description {
+                a {
+                    margin-bottom: 8px;
+                }
+                address {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+        .store-item-footer {
+            display: block;
+            &.divide-top {
+                border-top: $gray-light 1px solid;
+            }
+            li {
+                margin-bottom: $small-space;
+            }
+            .card-block {
+                padding: 12px 12px 0;
+            }
+        }
+    }
+}

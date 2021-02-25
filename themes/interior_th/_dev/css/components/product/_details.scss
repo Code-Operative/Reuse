@@ -1,0 +1,27 @@
+.product-features {
+    margin-top: $medium-space;
+    .h6 {
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    > dl.data-sheet {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        dd.value,
+        dt.name {
+            flex: 1 0 40%;
+            font-weight: normal;
+            background: $gray-light;
+            padding: $small-space;
+            margin-right: $small-space;
+            min-height: 40px;
+            word-break: break-all;
+        }
+        dt.name {
+            background: $brand-second;
+            color: $white;
+            text-transform: capitalize;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+/**
+ * Additional product infos
+ */
+  .product-additional-info {
+    .product-comments-additional-info {
+        display: none;
+    }
+ }
+ .additional-info-to {
+    display: flex;
+    min-height: 29px;
+    .comments-note, .reviews_count {
+        cursor: pointer;
+    }
+ }
+.product-comments-additional-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    line-height: .7;
+    .product-comments-additional-info {
+        display: none;
+    }
+    .reviews_count {
+        font-size: 14px;
+        font-weight: 600;
+        display: inline-block;
+        padding: 2px 5px 0 7px;
+    }
+}

@@ -1,0 +1,74 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+
+
+.product-discounts {
+    margin-bottom: 24px;
+    >.product-discounts-title {
+        font-weight: normal;
+        font-size: $font-size-sm;
+    }
+    >.table-product-discounts {
+        thead tr th {
+            width: 33%;
+            padding: $small-space $medium-space;
+            background: white;
+            border: 5px $gray-light solid;
+            text-align: center;
+        }
+        tbody tr {
+            background: $gray-lighter;
+            &:nth-of-type(even) {
+                background: white;
+            }
+            td {
+                padding: $small-space $medium-space;
+                text-align: center;
+                border: 5px $gray-light solid;
+            }
+        }
+    }
+}
+.product-pack {
+    margin-top: $extra-large-space;
+    .pack-product-container {
+        display: flex;
+        justify-content: space-around;
+        .pack-product-name {
+            flex: 0 0 50%;
+            font-size: 14px;
+            color: $gray;
+        }
+        .pack-product-quantity {
+            border-left: $gray-light 2px solid;
+            padding-left: $small-space;
+        }
+        .pack-product-name,
+        .pack-product-price,
+        .pack-product-quantity {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.product-refresh {
+    margin-top: $medium-space;
+}
+
+@include media-breakpoint-down(md) {
+    #product-modal .modal-content .modal-body {
+        flex-direction: column;
+        margin-left: 0;
+        img.product-cover-modal {
+            width: 100%;
+        }
+        .arrows {
+            display: none;
+        }
+    }
+    #product-modal .modal-content .modal-body .image-caption {
+        width: 100%;
+    }
+}

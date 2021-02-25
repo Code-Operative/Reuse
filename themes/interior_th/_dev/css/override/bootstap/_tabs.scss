@@ -1,0 +1,230 @@
+.nav {
+    &.nav-tabs {
+        margin-bottom: 30px;
+
+        text-align: center;
+
+        border: none;
+
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .nav-item {
+            position: relative;
+
+            display: inline-block;
+
+            padding: 0 20px;
+
+            vertical-align: top;
+
+            .nav-link {
+                font: {
+                    weight: 300;
+                    size: 20px;
+                }
+
+                ;
+                font-weight: 300;
+
+                display: block;
+
+                padding: 0;
+
+                text-transform: uppercase;
+
+                color: $clr-four;
+                border: none;
+            }
+        }
+    }
+
+    &.nav-inline {
+        .nav-item {
+            margin-right: 5px;
+        }
+
+        .nav-link {
+            padding: .6em 1em;
+
+            text-transform: uppercase;
+
+            background: $clr-two;
+
+            &.active,
+            &:hover {
+                color: $white;
+                background: $brand-primary;
+            }
+        }
+    }
+
+    &.nav-tabs_alternative {
+        margin-bottom: 10px;
+
+        flex-wrap: wrap;
+
+        .nav-item {
+            font-size: 14px;
+
+            display: inline-block;
+
+            vertical-align: top;
+            text-transform: uppercase;
+
+            color: $clr-four;
+
+            &:not(:last-child) {
+                margin: 0 20px 10px 0;
+            }
+
+            .nav-link {
+                display: block;
+
+                padding: 16px 30px;
+
+                border: 1px solid $clr-three;
+
+                &.active,
+                &:hover {
+                    color: $brand-primary;
+                    border-color: $brand-primary;
+                }
+
+                &:before {
+                    font-family: $first-icon-font;
+
+                    padding-right: 12px;
+
+                    vertical-align: middle;
+                }
+
+                &.data-sheet-tab {
+                    &:before {
+                        content: '\E873';
+                    }
+                }
+
+                &.comments-tab {
+                    &:before {
+                        content: '\E0B9';
+                    }
+                }
+
+                &.more-info-tab {
+                    &:before {
+                        font-family: $second-icon-font;
+
+                        content: '\e80c';
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tab-content {
+    >.tab-pane {
+        display: block;
+        visibility: hidden;
+
+        height: 0;
+
+        opacity: 0 !important;
+        overflow: hidden;
+
+        &.active {
+            visibility: visible;
+
+            height: auto;
+
+            opacity: 1 !important;
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .nav {
+        &.nav-tabs {
+            .nav-item {
+                &:not(:last-child) {
+                    &:after {
+                        position: absolute;
+                        top: 9px;
+                        right: -4px;
+
+                        width: 8px;
+                        height: 8px;
+
+                        content: '';
+                        transform: rotate(45deg);
+
+                        border: 1px solid $clr-three;
+                        border-radius: 2px;
+                    }
+                }
+
+                .nav-link {
+
+                    &:hover,
+                    &.active {
+                        color: $brand-primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .nav {
+        &.nav-tabs {
+            width: 100%;
+            margin: 30px 0 40px;
+
+            justify-content: center;
+
+            .nav-item {
+                width: 100%;
+                max-width: 50%;
+                margin-bottom: 0;
+                padding: 0 1px;
+
+                flex: 1;
+
+                .nav-link {
+                    font-size: 12px;
+                    font-weight: 600;
+
+                    padding: 6px 5px;
+
+                    text-align: center;
+
+                    border-radius: 0;
+
+                    &:hover,
+                    &.active {
+                        color: $white;
+                        background-color: $brand-primary;
+                    }
+                }
+            }
+        }
+
+        &.nav-tabs_alternative {
+            flex-direction: column;
+
+            .nav-item {
+                display: block;
+
+                &:not(:last-child) {
+                    margin-right: 0;
+                }
+
+                .nav-link {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

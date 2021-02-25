@@ -1,0 +1,35 @@
+//header
+@include media-breakpoint-up(lg) {
+    .lang-rtl {
+        .header-nav{
+            .inner-wrapper{
+                > div{
+                    &:nth-child(2){
+                        margin-left: 0;
+                        margin-right: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-up(xxs) {
+    .lang-rtl {
+        .top-logo{
+            left: 180px;
+            right: 50px;
+        }
+    }
+}
+@include media-breakpoint-down(md) {
+    .lang-rtl {
+        .menu-show{
+            #mobile_top_menu_wrapper{
+                left: 48px;
+            }
+            .header-nav,#wrapper,#notifications,#footer{
+                transform: translateX(calc(-100% + 48px));
+            }
+        }
+    }
+}

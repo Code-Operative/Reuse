@@ -1,0 +1,13 @@
+.post_meta {
+	> div {
+		font-size: 12px;
+		display: inline-block;
+		padding-right: 10px;
+	}
+	i{
+		font-size: 18px;
+	    margin-right: 2px;
+	    line-height: 14px;
+	    color: $brand-primary;
+	}
+}

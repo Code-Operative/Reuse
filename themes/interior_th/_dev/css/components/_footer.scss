@@ -1,0 +1,149 @@
+@import '~bootstrap/scss/_mixins.scss';
+@import '../partials/_variables';
+
+
+.footer-container {
+    font-size: 13px;
+
+    color: $clr-five;
+    background: $clr-nine;
+
+    .collapse {
+        display: block;
+    }
+}
+
+.links {
+
+    h3,
+    .h3 {
+        font-family: $first-font-bold;
+        font-size: 15px;
+
+        margin-bottom: 18px;
+
+        cursor: pointer;
+        text-transform: uppercase;
+
+        color: $white;
+    }
+
+    li {
+        font-size: 13px;
+
+        padding-bottom: 12px;
+
+        text-transform: uppercase;
+    }
+}
+
+.footer-one {
+    padding: 45px 0 33px;
+}
+
+.footer-two {
+    padding: 20px 0;
+
+    background: $clr-ten;
+
+    .inner-wrapper {
+        align-items: center;
+    }
+
+    .aeuc_footer_info {
+        padding: 15px $grid-gutter-width-base/2;
+    }
+}
+
+//max 768
+@include media-breakpoint-down(md) {
+    #footer {
+        padding-bottom: 75px;
+    }
+    .footer-container {
+        .links {
+            .h3 {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 1.5;
+
+                margin: 0;
+            }
+
+            .title {
+                position: relative;
+
+                display: flex;
+
+                margin-bottom: 9px;
+                padding-bottom: 7px;
+
+                cursor: pointer;
+                cursor: pointer;
+
+                border-bottom: 1px solid rgba($white, .4);
+
+                .pull-xs-right {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+
+                .collapse-icons .remove {
+                    display: none;
+                }
+            }
+
+            .title[aria-expanded='true'] .collapse-icons {
+                .add {
+                    display: none;
+                }
+
+                .remove {
+                    display: block;
+                }
+            }
+
+            .navbar-toggler {
+                display: inline-block;
+
+                padding: 0;
+            }
+
+            .collapse {
+                display: none;
+
+                &.show {
+                    display: block;
+                }
+            }
+
+            ul {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .footer-one {
+        padding: 25px 0 20px;
+    }
+
+    .footer-two {
+
+        .copyright,
+        .aeuc_footer_info {
+            width: 100%;
+
+            text-align: center;
+        }
+    }
+}
+
+//max 575
+@include media-breakpoint-down(xs) {
+    .footer-two {
+        .aeuc_footer_info {
+            font-size: 12px;
+        }
+    }
+}
