@@ -27,24 +27,24 @@
 <div class="pp-info" data-pp-info>
   <div class="row">
     <div class="col-md-6 item pp__mb-3">
-        {include file='module:paypal/views/templates/front/_partials/verified_user.tpl'}
+      <div><img src="{$urls.base_url}modules/paypal/views/img/advantage-logos/verified_user.png" alt=""></div>
       <div class="header pp__pt-1">{l s='Safer and more protected' mod='paypal'}</div>
       <div class="desc pp__pt-1">{l s='Buyer protection and free return shipping covers eligible purchase.' mod='paypal'}</div>
     </div>
     <div class="col-md-6 item pp__mb-3">
-        {include file='module:paypal/views/templates/front/_partials/language.tpl'}
+      <div><img src="{$urls.base_url}modules/paypal/views/img/advantage-logos/language.png" alt=""></div>
       <div class="header pp__pt-1">{l s='Simple and convenient' mod='paypal'}</div>
       <div class="desc pp__pt-1">{l s='Use your account from wherever in the world you shop.' mod='paypal'}</div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-6 item pp__mb-3">
-        {include file='module:paypal/views/templates/front/_partials/offline_bolt.tpl'}
+      <div><img src="{$urls.base_url}modules/paypal/views/img/advantage-logos/offline_bolt.png" alt=""></div>
       <div class="header pp__pt-1">{l s='Wherever you are' mod='paypal'}</div>
       <div class="desc pp__pt-1">{l s='Pay fast from any device without entering your financial details.' mod='paypal'}</div>
     </div>
     <div class="col-md-6 item pp__mb-3">
-        {include file='module:paypal/views/templates/front/_partials/monetization.tpl'}
+      <div><img src="{$urls.base_url}modules/paypal/views/img/advantage-logos/monetization.png" alt=""></div>
       <div class="header pp__pt-1">{l s='No additional fees' mod='paypal'}</div>
       <div class="desc pp__pt-1">{l s='Skip entering your financial info, PayPal keeps your data secure.' mod='paypal'}</div>
     </div>

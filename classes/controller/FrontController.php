@@ -1951,7 +1951,7 @@ class FrontControllerCore extends Controller
     private function initDebugguer()
     {
         if (true === _PS_MODE_DEV_) {
-            Debug::enable();
+            Debug::enable(error_reporting());
         }
     }
 

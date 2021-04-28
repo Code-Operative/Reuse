@@ -1,126 +1,126 @@
-.Ma_Membership {
-    padding: 0 10px;
-	margin-bottom: 50px;
-}
-.memberrow {
-    margin-left: -10px;
-}
-.memberCol {
-    float: left;
-    width: 25%;
-    padding-left: 10px;
-    padding-right: 10px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-}
-.Ma_Membership {
-    padding: 0 10px;
-    float: left;
-    width: 100%;
-}
-.planDescription {
-    background: #fff;
-    box-shadow: 0 0 5px #e8e8e8;
-}
-.buybutton {
-    background: #ff5501;
-    width: 100%;
-    display: inline-block;
-    padding: 3px;
-    text-align: center;
-    font-size: 15px;
-    color: #fff;
-}
-.memberDetails {
-    text-align: center;
-    border: 2px solid #f7f6f6;
-    border-radius: 2px;
-	padding: 10px;
-    background: #fdfdfd;
-}
-.planIcon {
-    max-width: 150px;
-    margin-bottom: 10px;
-}
-.planHeading {
-    font-size: 20px;
-    text-transform: uppercase;
-}
-.planPrice {
-    font-size: 24px;
-    padding: 15px 0;
-    font-weight: 600;
-    line-height: 1;
-}
-.planaddedproducts {
-    font-size: 16px;
-    background: #f7f7f7;
-    width: 80%;
-    margin: 0 auto 10px;
-    padding: 7px 2px;
-}
-.planDelivery {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-.buybutton {
-    background: #ff5501;
-    width: 100%;
-    display: inline-block;
-    padding: 8px 3px;
-    text-align: center;
-    font-size: 17px;
-    color: #fff !important;
-    text-transform: uppercase;
-    box-sizing: border-box;
-    font-weight: 600;
-    text-decoration: none !important;
-}
-.buybutton:hover {
-    background: #ec5104;
-}
-.memberDetails .planIcon {
-    margin: 0 auto;
-}
-.page-heading {
-    margin-top: 10px;
-	padding: 0 15px;
-}
-.productsFilter #selectProductSort {
-    max-width: 250px;
-    border-radius: 4px;
-    padding: 5px 15px;
-    line-height: 1;
-    height: auto;
-    display: inline-block;
-    margin-left: 10px;
-    font-size: 14px;
-    font-weight: 500;
-}
-.productsFilter {
-    text-align: right;
-	padding: 0 20px;
-}
-#kb-marketplace-layout{
-	margin-bottom: 30px;
-}
-@media(max-width:992px){
-	.memberCol {
-    width: 33%;
-	}
-}
-@media(max-width:767px){
-	.memberCol {
-    width: 50%;
-	}
-	.productsFilter #selectProductSort{
-		    width: auto;
-			margin-left: 5px;
-	}
-}
-@media(max-width:480px){
-	.memberCol {
-    width: 100%;
-	}
-	
+.Ma_Membership {
+    padding: 0 10px;
+	margin-bottom: 50px;
+}
+.memberrow {
+    margin-left: -10px;
+}
+.memberCol {
+    float: left;
+    width: 25%;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.Ma_Membership {
+    padding: 0 10px;
+    float: left;
+    width: 100%;
+}
+.planDescription {
+    background: #fff;
+    box-shadow: 0 0 5px #e8e8e8;
+}
+.buybutton {
+    background: #ff5501;
+    width: 100%;
+    display: inline-block;
+    padding: 3px;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+}
+.memberDetails {
+    text-align: center;
+    border: 2px solid #f7f6f6;
+    border-radius: 2px;
+	padding: 10px;
+    background: #fdfdfd;
+}
+.planIcon {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+.planHeading {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.planPrice {
+    font-size: 24px;
+    padding: 15px 0;
+    font-weight: 600;
+    line-height: 1;
+}
+.planaddedproducts {
+    font-size: 16px;
+    background: #f7f7f7;
+    width: 80%;
+    margin: 0 auto 10px;
+    padding: 7px 2px;
+}
+.planDelivery {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.buybutton {
+    background: #ff5501;
+    width: 100%;
+    display: inline-block;
+    padding: 8px 3px;
+    text-align: center;
+    font-size: 17px;
+    color: #fff !important;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    font-weight: 600;
+    text-decoration: none !important;
+}
+.buybutton:hover {
+    background: #ec5104;
+}
+.memberDetails .planIcon {
+    margin: 0 auto;
+}
+.page-heading {
+    margin-top: 10px;
+	padding: 0 15px;
+}
+.productsFilter #selectProductSort {
+    max-width: 250px;
+    border-radius: 4px;
+    padding: 5px 15px;
+    line-height: 1;
+    height: auto;
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.productsFilter {
+    text-align: right;
+	padding: 0 20px;
+}
+#kb-marketplace-layout{
+	margin-bottom: 30px;
+}
+@media(max-width:992px){
+	.memberCol {
+    width: 33%;
+	}
+}
+@media(max-width:767px){
+	.memberCol {
+    width: 50%;
+	}
+	.productsFilter #selectProductSort{
+		    width: auto;
+			margin-left: 5px;
+	}
+}
+@media(max-width:480px){
+	.memberCol {
+    width: 100%;
+	}
+	
 }

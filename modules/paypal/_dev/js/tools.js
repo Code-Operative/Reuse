@@ -32,4 +32,29 @@ export const Tools = {
     alert.appendChild(messageNode);
     return alert;
   },
+
+  hideConfiguration(name) {
+    let selector = `[name="${name}"]`;
+    let configuration = $(selector);
+    let formGroup = configuration.closest('.col-lg-9').closest('.form-group');
+
+    formGroup.hide();
+  },
+
+  showConfiguration(name) {
+    let selector = `[name="${name}"]`;
+    let configuration = $(selector);
+    let formGroup = configuration.closest('.col-lg-9').closest('.form-group');
+
+    formGroup.show();
+  },
+
+  isVisible(el) {
+    const style = window.getComputedStyle(el);
+    return  style.width !== "0" &&
+      style.height !== "0" &&
+      style.opacity !== "0" &&
+      style.display!=='none' &&
+      style.visibility!== 'hidden';
+  }
 }

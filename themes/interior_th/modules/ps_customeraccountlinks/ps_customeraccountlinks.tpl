@@ -46,6 +46,6 @@
           </a>
         </li>
     {/foreach}
-    {*{hook h='displayMyAccountBlock'}*}
+    {hook h='displayMyAccountBlock'}
 	</ul>
 </div>

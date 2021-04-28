@@ -234,6 +234,10 @@ class MethodPPP extends AbstractMethodPaypal
         if ($response->isSuccess()) {
             Configuration::updateValue('PAYPAL_CONNECTION_PPP_CONFIGURED', 1);
         } else {
+            $this->setConfig([
+                'clientId' => '',
+                'secret' => ''
+            ]);
             Configuration::updateValue('PAYPAL_CONNECTION_PPP_CONFIGURED', 0);
 
             if ($response->getError()) {

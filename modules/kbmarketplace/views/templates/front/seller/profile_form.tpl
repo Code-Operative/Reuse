@@ -484,6 +484,10 @@
                             {hook h="displayKbMarketPlaceSellerForm" block='general'}
                         </ul>
                     </div>
+                    <div class="kb-block" style="padding:5px 15px 5px 5px; text-align: right;">
+                        <div id="sellerprofile-updating-progress" class="input-loader" style="display:none;vertical-align: middle;"></div>
+                        <button id="sellerprofile-update-btn" type="button" class="kbbtn-big kbbtn-success" onclick="SellerProfileFormNextMeta()">{l s='Next' mod='kbmarketplace'}</button>
+                    </div>
                 </div>
                 <div id="metadata" class="kb_tab_content">
                     <div class="kb-block kb-form">
@@ -773,6 +777,10 @@
                             {/foreach}
                             {hook h="displayKbMarketPlaceSellerForm" block='meta'}
                         </ul>
+                    </div>
+                    <div class="kb-block" style="padding:5px 15px 5px 5px; text-align: right;">
+                        <div id="sellerprofile-updating-progress" class="input-loader" style="display:none;vertical-align: middle;"></div>
+                        <button id="sellerprofile-update-btn" type="button" class="kbbtn-big kbbtn-success" onclick="SellerProfileFormNextPolicy()">{l s='Next' mod='kbmarketplace'}</button>
                     </div>
                 </div>
                 <div id="policydata" class="kb_tab_content">
@@ -1077,6 +1085,10 @@
                             {hook h="displayKbMarketPlaceSellerForm" block='policy'}
                         </ul>
                     </div>
+                    <div class="kb-block" style="padding:5px 15px 5px 5px; text-align: right;">
+                        <div id="sellerprofile-updating-progress" class="input-loader" style="display:none;vertical-align: middle;"></div>
+                        <button id="sellerprofile-update-btn" type="button" class="kbbtn-big kbbtn-success" onclick="SellerProfileFormNextInfo()">{l s='Next' mod='kbmarketplace'}</button>
+                    </div>
                 </div>
                 <div id="paymentinfo" class="kb_tab_content">
                     <div class="kb-block kb-form">
@@ -1366,12 +1378,12 @@
                             {/foreach}
                         </ul>
                     </div>
+                    <div class="kb-block" style="padding:5px 15px 5px 5px; text-align: right;">
+                        <div id="sellerprofile-updating-progress" class="input-loader" style="display:none;vertical-align: middle;"></div>
+                        <button id="sellerprofile-update-btn" type="button" class="kbbtn-big kbbtn-success" onclick="validateSellerForm()">{l s='Save' mod='kbmarketplace'}</button>
+                    </div>
                 </div>
             </form>
-            <div class="kb-block" style="padding:5px 15px 5px 5px; text-align: right;">
-                <div id="sellerprofile-updating-progress" class="input-loader" style="display:none;vertical-align: middle;"></div>
-                <button id="sellerprofile-update-btn" type="button" class="kbbtn-big kbbtn-success" onclick="validateSellerForm()">{l s='Save' mod='kbmarketplace'}</button>
-            </div>
         </div>    
 </div>
 <script>

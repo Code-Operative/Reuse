@@ -22,9 +22,10 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-
+ 
 <div class="{if $carousel_tabs == 'true'}tab-pane fade{else}none-in-tabs{/if}{if $carousel_active  == 'true' && $carousel_arrows == 'true'} nav-active{/if}"{if $carousel_tabs == 'true'} id="homefeatured"{/if}>
     <div class="container">
+   
         {if $carousel_tabs != 'true'}
             <p class="headline-section products-title"><strong>{$homefeatured_category_name|escape:'html':'UTF-8'}</strong></p>
         {/if}
@@ -52,8 +53,11 @@
                 </div>
             </div>
         {/if}
-        <div class="text-center">
-            <a class="more-btn btn big" href="{$allProductsLink}">{l s='All products' d='Modules.Homefeatured.Shop'}</a>
+        <div class="text-center" >
+            <a class="more-btn btn big"  style ="background-color: #EDB263;border: none;border-radius: 4px;" href="{$allProductsLink}">{l s='Discover More Products' d='Modules.Homefeatured.Shop'} <span class ="MoreProducts_Arrow">&#8594;</span></a>
         </div>
+        
     </div>
+
+    
 </div>

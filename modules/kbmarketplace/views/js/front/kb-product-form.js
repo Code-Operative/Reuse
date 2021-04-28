@@ -1493,14 +1493,14 @@ function editCombination(id_product_attribute)
                     $('#kb-combination-modal-form #combination-loader').hide();
                     $('#kb-combination-modal-form #combination-form-content').show();
                 } else {
-                    jAlert(msg_combination_5 ,alert_heading);
+                    alert(msg_combination_5);
                     $('#kb-combination-modal-form #combination-loader').show();
                     $('#kb-combination-modal-form #combination-form-content').hide();
                     $('#kb-combination-modal-form').hide();
                 }
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) {
-                jAlert(kb_ajax_request_fail_err ,alert_heading);
+                alert(kb_ajax_request_fail_err);
                 $('#kb-combination-modal-form #combination-loader').show();
                 $('#kb-combination-modal-form #combination-form-content').hide();
                 $('#kb-combination-modal-form').hide();
@@ -1598,12 +1598,12 @@ function saveCombination()
                     $('#kb-combination-modal-form #combination-loader').show();
                     $('#kb-combination-modal-form #combination-form-content').hide();
                     storeUsedGroups = {};
-                    jAlert(json['msg'] ,alert_heading);
+                    alert(json['msg']);
                 } else {
                     var error_html = '';
                     for (var i = 0; i < json['errors'].length; i++)
-                        error_html += json['errors'][i] + '<br>';
-                    jAlert(error_html ,alert_heading);
+                        error_html += json['errors'][i] + '-';
+                    alert(error_html);
                 }
                 $('#combination-updating-progress').css('display', 'none');
             },

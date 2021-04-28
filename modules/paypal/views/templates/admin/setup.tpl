@@ -38,6 +38,10 @@
         {include './_partials/messages/roundingSettingsMessage.tpl'}
     {/if}
 
+    {if isset($showInstallmentPopup) && $showInstallmentPopup}
+        {include './_partials/paypalBanner/installmentPopup.tpl'}
+    {/if}
+
     {include './_partials/headerLogo.tpl'}
 
   <div class="pp__flex setup-blocks">

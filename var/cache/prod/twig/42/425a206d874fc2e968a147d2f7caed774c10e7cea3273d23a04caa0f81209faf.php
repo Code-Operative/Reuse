@@ -1046,6 +1046,6 @@ class __TwigTemplate_35a52c108a4aa3a284a566ffeea0d30fd69e740797385d3b68e45e0eaf7
 
     public function getSourceContext()
     {
-        return new Source("", "@PrestaShop/Admin/macros.html.twig", "/home/codeoperativeco/prestaoperative/src/PrestaShopBundle/Resources/views/Admin/macros.html.twig");
+        return new Source("", "@PrestaShop/Admin/macros.html.twig", "/home/codeoperativeco/public_html/src/PrestaShopBundle/Resources/views/Admin/macros.html.twig");
     }
 }

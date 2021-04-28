@@ -241,7 +241,7 @@ class PaypalOrderCreateRequest extends RequestAbstract
         $cartSummary = $this->context->cart->getSummaryDetails();
         $items = $this->getItems($currency, true);
         $subTotalExcl = 0;
-        $shippingTotal = $this->method->formatPrice(abs($cartSummary['total_shipping']));
+        $shippingTotal = $this->method->formatPrice($this->getTotalShipping());
         $subTotalTax = 0;
         $discountTotal = $this->method->formatPrice(abs($this->getDiscount()));
         $handling = $this->getHandling($currency);
@@ -442,17 +442,25 @@ class PaypalOrderCreateRequest extends RequestAbstract
     protected function getDiscount()
     {
         $discountTotal = $this->context->cart->getOrderTotal(true, \Cart::ONLY_DISCOUNTS);
-        $summaryDetails = $this->context->cart->getSummaryDetails();
-        $gifts = isset($summaryDetails['gift_products']) ? $summaryDetails['gift_products'] : [];
 
-        if (is_array($gifts)) {
-            foreach ($gifts as $gift) {
-                if (isset($gift['price_with_reduction'])) {
-                    $discountTotal += $gift['price_with_reduction'];
+        if (version_compare(_PS_VERSION_, '1.7.6', '<')) {
+            $summaryDetails = $this->context->cart->getSummaryDetails();
+            $gifts = isset($summaryDetails['gift_products']) ? $summaryDetails['gift_products'] : [];
+
+            if (is_array($gifts)) {
+                foreach ($gifts as $gift) {
+                    if (isset($gift['price_with_reduction'])) {
+                        $discountTotal += $gift['price_with_reduction'];
+                    }
                 }
             }
         }
 
         return $discountTotal;
+    }
+
+    protected function getTotalShipping()
+    {
+        return $this->context->cart->getOrderTotal(true, \Cart::ONLY_SHIPPING);
     }
 }

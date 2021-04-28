@@ -260,6 +260,6 @@ class __TwigTemplate_57f7de3f41fdca6f252595e438d69446a962049dff4071900d69be1acec
 
     public function getSourceContext()
     {
-        return new Source("", "@PrestaShop/Admin/layout.html.twig", "/home/codeoperativeco/prestaoperative/src/PrestaShopBundle/Resources/views/Admin/layout.html.twig");
+        return new Source("", "@PrestaShop/Admin/layout.html.twig", "/home/codeoperativeco/public_html/src/PrestaShopBundle/Resources/views/Admin/layout.html.twig");
     }
 }

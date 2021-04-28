@@ -1661,6 +1661,12 @@
     'type' => 'class',
     'override' => false,
   ),
+  'DealTool' => 
+  array (
+    'path' => 'override/classes/kbmarketplace/DealTool.php',
+    'type' => 'class',
+    'override' => false,
+  ),
   'Delivery' => 
   array (
     'path' => '',
@@ -2360,6 +2366,12 @@
   'KbSellerCloseShop' => 
   array (
     'path' => 'override/classes/kbmarketplace/KbSellerCloseShop.php',
+    'type' => 'class',
+    'override' => false,
+  ),
+  'KbSellerDeal' => 
+  array (
+    'path' => 'override/classes/kbmarketplace/KbSellerDeal.php',
     'type' => 'class',
     'override' => false,
   ),

@@ -77,8 +77,8 @@ const Shortcut = {
       Shortcut.button.style.width = Shortcut.getStyleSetting()['width'] + 'px';
     }
 
-    paypal.Buttons({
-      fundingSource: paypal.FUNDING.PAYPAL,
+    totPaypalSdk.Buttons({
+      fundingSource: totPaypalSdk.FUNDING.PAYPAL,
 
       style: Shortcut.getStyleSetting(),
 

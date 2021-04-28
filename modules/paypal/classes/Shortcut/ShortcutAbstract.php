@@ -85,11 +85,16 @@ abstract class ShortcutAbstract
         $JSscripts = [];
 
         foreach (Media::getJqueryPath() as $index => $lib) {
-            $JSscripts['jq-lib-' . $index] = $lib;
+            $JSscripts['jq-lib-' . $index] = ['src' => $lib];
         }
 
-        $JSscripts['paypal-lib'] = $this->method->getUrlJsSdkLib();
-        $JSscripts['shortcut'] = __PS_BASE_URI__ . 'modules/' . $this->module->name . '/views/js/shortcut.js?v=' . $this->module->version;
+        $JSscripts['tot-paypal-sdk'] = [
+            'src' => $this->method->getUrlJsSdkLib(),
+            'data-namespace' => 'totPaypalSdk'
+        ];
+        $JSscripts['shortcut'] = [
+            'src' => __PS_BASE_URI__ . 'modules/' . $this->module->name . '/views/js/shortcut.js?v=' . $this->module->version
+        ];
 
         return $JSscripts;
     }

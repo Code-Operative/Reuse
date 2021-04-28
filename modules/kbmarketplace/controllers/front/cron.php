@@ -67,9 +67,17 @@ class KbmarketplaceCronModuleFrontController extends ModuleFrontController
         if (Tools::getValue('id_seller_transaction')) {
             $str .= ' AND id_seller_transaction='.(int)Tools::getValue('id_seller_transaction');
         }
-        $payout_data = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'kb_mp_seller_transaction_request WHERE payout_item_id!="" AND (payout_status="PENDING" OR payout_status="PROCESSING" OR payout_status="ACKNOWLEDGED") '.$str);
+        $payout_data = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'kb_mp_seller_transaction_request WHERE payout_item_id!="" AND (payout_status="PENDING" OR payout_status="PROCESSING" OR payout_status="ACKNOWLEDGED" OR payout_status="UNCLAIMED") '.$str);
+        
+        //$payout_data = Db::getInstance()->executeS('SELECT * FROM '._DB_PREFIX_.'kb_mp_seller_transaction_request');
+        //print_r($payout_data);die;
+        
+        
         if (!empty($payout_data)) {
             foreach ($payout_data as $pay_data) {
+//                if ($pay_data['id_seller_transaction'] != 21){
+//                    continue;
+//                }
                 $paypal_setting = Tools::jsonDecode(Configuration::get('KB_MP_PAYOUT_SETTING'), true);
                 if (empty($paypal_setting)) {
                     echo $this->module->l('Paypal Configuration is empty.', 'cron');
@@ -98,6 +106,15 @@ class KbmarketplaceCronModuleFrontController extends ModuleFrontController
                     );
                     try {
                         $output = \PayPal\Api\PayoutItem::get($pay_data['payout_item_id'], $apiContext);
+                       
+//                                        $file = _PS_MODULE_DIR_.'kbmarketplace/payoutresponse.txt';
+//                                        $handle = fopen($file, 'a+');
+//                                        fwrite($handle, date('Y-m-d G:i:s'). "\r\n");
+//                                        fwrite($handle,'Reponse'.print_r($output,TRUE));
+//                                        fwrite($handle,"\r\n");
+//                                        fclose($handle);
+//
+// print_r($output);die;
                         if ($output->_propMap) {
                             $is_approved = 0;
                             $transaction_id = '';
@@ -105,10 +122,35 @@ class KbmarketplaceCronModuleFrontController extends ModuleFrontController
                                 $transaction_id = $output->_propMap['transaction_id'];
                                 $is_approved = 1;
                                 $kbPayoutRequest = new KbSellerTransactionRequest($pay_data['id_seller_transaction']);
+                             
                                 if ($output->_propMap['transaction_status'] == 'SUCCESS') {
                                     $kbPayoutRequest->approved = '1';
+                                    
+                                        $file = _PS_MODULE_DIR_.'kbmarketplace/payment_state_cron_log.txt';
+                                        $handle = fopen($file, 'a+');
+                                        fwrite($handle, date('Y-m-d G:i:s'). "\r\n");
+                                        fwrite($handle,'Payment : SUCCESS ,Payout Request ID #'.print_r($pay_data['id_seller_transaction'],TRUE).' , Seller ID #'.print_r($pay_data['id_seller'],TRUE).' , Transection ID :'.print_r($transaction_id,TRUE));
+                                        fwrite($handle,"\r\n");
+                                        fclose($handle);
+                                    
                                 } elseif ($output->_propMap['transaction_status'] == 'DENIED') {
                                     $kbPayoutRequest->approved = '2';
+                                    
+                                        $file = _PS_MODULE_DIR_.'kbmarketplace/payment_state_cron_log.txt';
+                                        $handle = fopen($file, 'a+');
+                                        fwrite($handle, date('Y-m-d G:i:s'). "\r\n");
+                                        fwrite($handle,'Payment : Denied , Payout Request ID #'.print_r($pay_data['id_seller_transaction'],TRUE).' , Seller ID #'.print_r($pay_data['id_seller'],TRUE).' , Transection ID :'.print_r($transaction_id,TRUE));
+                                        fwrite($handle,"\r\n");
+                                        fclose($handle);
+                                    
+                                }else if ($output->_propMap['transaction_status'] == 'UNCLAIMED'){
+                                      
+                                    $file = _PS_MODULE_DIR_.'kbmarketplace/payment_state_cron_log.txt';
+                                        $handle = fopen($file, 'a+');
+                                        fwrite($handle, date('Y-m-d G:i:s'). "\r\n");
+                                        fwrite($handle,'Payment : UNCLAIMED , Payout Request ID #'.print_r($pay_data['id_seller_transaction'],TRUE).' , Seller ID #'.print_r($pay_data['id_seller'],TRUE).' , Transection ID :'.print_r($transaction_id,TRUE));
+                                        fwrite($handle,"\r\n");
+                                        fclose($handle);
                                 }
                                 $kbPayoutRequest->payout_status = $output->_propMap['transaction_status'];
                                 if ($kbPayoutRequest->update()) {

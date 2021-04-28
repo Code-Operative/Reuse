@@ -50,7 +50,7 @@ var not_default_comb = "{l s='No.' mod='kbmarketplace'}";
                             <tbody id="new_combination_template">
                                 <tr id="id_product_attribute">                        
                                     {* changes by rishabh jain *}
-                                    <td style="width: 10%;"><img src="image" style="width: 100%;height: auto;"/>
+                                    <td style="width: 10%;"><img src="" style="width: 100%;height: auto;"/>
                                      {* changes over *}
                                     <td>combination</td>
                                     <td>reference</td>

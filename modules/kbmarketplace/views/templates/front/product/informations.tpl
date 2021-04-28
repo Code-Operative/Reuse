@@ -70,18 +70,21 @@
                         </select>
                     </div>
                 </li>
-                <li class="kb-form-l">
-                    <div class="kb-form-label-block">
-                        <span class="kblabel ">{l s='Condition' mod='kbmarketplace'}</span>
-                    </div>
-                    <div class="kb-form-field-block">
-                        <select name="condition" class="kb-inpselect">
-                            <option value="new" {if $condition eq 'new'}selected="selected"{/if}>{l s='New' mod='kbmarketplace'}</option>
-                            <option value="used" {if $condition eq 'used'}selected="selected"{/if}>{l s='Used' mod='kbmarketplace'}</option>
-                            <option value="refurbished" {if $condition eq 'refurbished'}selected="selected"{/if}>{l s='Refurbished' mod='kbmarketplace'}</option>
-                        </select>
-                    </div>
-                </li>
+{*              
+* Use feature to set the condition as it is more flexible that way 
+*  
+*                <li class="kb-form-l">
+*                    <div class="kb-form-label-block">
+*                        <span class="kblabel ">{l s='Condition' mod='kbmarketplace'}</span>
+*                    </div>
+*                    <div class="kb-form-field-block">
+*                        <select name="condition" class="kb-inpselect">
+*                            <option value="new" {if $condition eq 'new'}selected="selected"{/if}>{l s='New' mod='kbmarketplace'}</option>
+*                            <option value="used" {if $condition eq 'used'}selected="selected"{/if}>{l s='Used' mod='kbmarketplace'}</option>
+*                            <option value="refurbished" {if $condition eq 'refurbished'}selected="selected"{/if}>{l s='Refurbished' mod='kbmarketplace'}</option>
+*                        </select>
+*                    </div>
+*}                </li>
                 <li class="kb-form-r">
                     <div class="kb-form-label-block">
                         <span class="kblabel ">{l s='Display condition on product page' mod='kbmarketplace'}</span>
@@ -98,24 +101,25 @@
 						</select>
                     </div>
                 </li>
-                <li class="kb-form-l">
-                    <div class="kb-form-label-block">
-                        <span class="kblabel ">{l s='Manufacturer' mod='kbmarketplace'}</span>
-                        {if $is_enable_custom_manufacturer_addition}
-                        <div class="kb-form-field-inblock" style="float:right;padding:2px;">
-                                <a href="javascript:void(0)" class="kbbtn btn-info" onclick="addNewManufacturer();"><i class="kb-material-icons">add</i><span>{l s='Add New Manufacturer' mod='kbmarketplace'}</span></a>
-                        </div>
-                        {/if}
-                    </div>
-                    <div class="kb-form-field-block">
-                        <select name="id_manufacturer" class="kb-inpselect">
-                            <option value="0">{l s='Select Manufacturer' mod='kbmarketplace'}</option>
-                            {foreach $manufacturers as $manu}
-                                <option value="{$manu['id_manufacturer']|intval}" {if $manu['id_manufacturer'] == $id_manufacturer}selected="selected"{/if} >{$manu['name']|escape:'htmlall':'UTF-8'}</option>
-                            {/foreach}
-                        </select>
-                    </div>
-                </li>
+{* Reuse Network requested for manufacturer to be removed                
+*               <li class="kb-form-l">
+*                    <div class="kb-form-label-block">
+*                        <span class="kblabel ">{l s='Manufacturer' mod='kbmarketplace'}</span>
+*                        {if $is_enable_custom_manufacturer_addition}
+*                        <div class="kb-form-field-inblock" style="float:right;padding:2px;">
+*                                <a href="javascript:void(0)" class="kbbtn btn-info" onclick="addNewManufacturer();"><i class="kb-material-icons">add</i><span>{l s='Add New Manufacturer' mod='kbmarketplace'}</span></a>
+*                        </div>
+*                        {/if}
+*                    </div>
+*                    <div class="kb-form-field-block">
+*                        <select name="id_manufacturer" class="kb-inpselect">
+*                            <option value="0">{l s='Select Manufacturer' mod='kbmarketplace'}</option>
+*                            {foreach $manufacturers as $manu}
+*                                <option value="{$manu['id_manufacturer']|intval}" {if $manu['id_manufacturer'] == $id_manufacturer}selected="selected"{/if} >{$manu['name']|escape:'htmlall':'UTF-8'}</option>
+*                            {/foreach}
+*                        </select>
+*                    </div>
+*}                </li>
                 <li class="kb-form-fwidth">
                     <div class="kb-form-label-block">
                         <span class="kblabel ">{l s='Options' mod='kbmarketplace'}</span>

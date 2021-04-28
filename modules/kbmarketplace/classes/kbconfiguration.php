@@ -3428,8 +3428,23 @@ Your review has been deleted by admin on {{store_name}} for seller {shop_name}.<
             //changes by vishal for custom change
             $config = Tools::unSerialize(Configuration::get('KB_MARKETPLACE_CONFIG'));
             if(isset($config['paypal_automatic_transfer']) && $config['paypal_automatic_transfer']==1 && in_array($kb_order_status, $config['order_automatic_transfer_statuses'])){
-            $this->saveNewPayoutRequest($id_seller,(float) ($total_earning - $admin_earning));
+                $file = _PS_MODULE_DIR_.'kbmarketplace/order_auto_payment_log.txt';
+                $handle = fopen($file, 'a+');
+                fwrite($handle, date('Y-m-d G:i:s'). "\r\n");
+                fwrite($handle,'Order Id #'.print_r($order->id,TRUE).' , Order status Matches fOr paYment : Yes ');
+                fwrite($handle,"\r\n");
+                fclose($handle);
+                $this->saveNewPayoutRequest($id_seller,(float) ($total_earning - $admin_earning), $order->id);
+            }else{
+                $file = _PS_MODULE_DIR_.'kbmarketplace/order_auto_payment_log.txt';
+                $handle = fopen($file, 'a+');
+                fwrite($handle, date('Y-m-d G:i:s'). "\r\n");
+                fwrite($handle,'Order Id #'.print_r($order->id,TRUE).' , Order status Matches fOr paYment : NO ');
+                fwrite($handle,"\r\n");
+                fclose($handle);       
             }
+            
+
             //changes end
 
             Hook::exec('actionKbMarketPlaceSEarningSave', array('object' => $earning_obj));
@@ -5085,10 +5100,99 @@ Your review has been deleted by admin on {{store_name}} for seller {shop_name}.<
             'remote_address' => $user_ip,
         );
     }
-    
-    //changes by vishal for custon change
-    protected function saveNewPayoutRequest($seller_id, $payout_amount)
+    //changes by gopi 
+    protected function processPayout($paypal_setting, $paypal_subject, $paypal_id, $rand, $iso_code, $amount, $comment = null)
     {
+        $apiContext = new \PayPal\Rest\ApiContext(
+            new \PayPal\Auth\OAuthTokenCredential(
+                $paypal_setting['client_id'],
+                $paypal_setting['client_secret']
+            )
+        );
+        
+        $mode = 'sandbox';
+        if ($paypal_setting['mode']) {
+            $mode = 'live';
+        }
+        $apiContext->setConfig(
+            array(
+                'mode' => $mode,
+                'log.LogEnabled' => false,
+                'log.FileName' => '../PayPal.log',
+                'log.LogLevel' => 'DEBUG', // PLEASE USE `INFO` LEVEL FOR LOGGING IN LIVE ENVIRONMENTS
+                'cache.enabled' => false,
+            )
+        );
+
+
+        $payouts = new \PayPal\Api\Payout();
+        $senderBatchHeader = new \PayPal\Api\PayoutSenderBatchHeader();
+        $senderBatchHeader->setSenderBatchId(uniqid())->setEmailSubject($paypal_subject); //add field in paypal setting
+        $senderItem = new \PayPal\Api\PayoutItem();
+        $senderItem->setRecipientType('Email')
+            ->setReceiver($paypal_id)  //paypal id
+            ->setSenderItemId($rand) //rendom no.
+            ->setAmount(new \PayPal\Api\Currency('{
+                    "value":"'.$amount.'",
+                    "currency":"'.$iso_code.'"
+                }'));
+        if (!empty($comment)) {
+            $senderItem->setNote($comment); //comment
+        }
+        $payouts->setSenderBatchHeader($senderBatchHeader)
+                ->addItem($senderItem);
+        
+        $request = clone $payouts;
+        try {
+            /*Start -MK made changes on 27-08-18 to return the object of the payout item id*/
+            $batch_data = $payouts->createSynchronous($apiContext);
+            $payoutBatchId = $batch_data->getBatchHeader()->getPayoutBatchId();
+            $payoutBatch = \PayPal\Api\Payout::get($payoutBatchId, $apiContext);
+            $payoutItems = $payoutBatch->getItems();
+            $payoutItem = $payoutItems[0];
+            $payoutItemId = $payoutItem->getPayoutItemId();
+            return $output = \PayPal\Api\PayoutItem::get($payoutItemId, $apiContext);
+            /*End -MK made changes on 27-08-18 to return the object of the payout item id*/
+        } catch (Exception $ex) {
+            $this->context->cookie->kb_redirect_error = $ex->getMessage();
+        }
+    }
+    public function sendApproveTransactionMail($sellerTransaction, $transaction_id, $comment = null)
+    {
+        $seller_obj = new KbSeller($sellerTransaction->id_seller);
+        $seller_info = $seller_obj->getSellerInfo();
+        //send email to Admin
+        $template_vars = array(
+            '{{shop_title}}' => $seller_info['title'],
+            '{{seller_name}}' => $seller_info['seller_name'],
+            '{{amount}}' => Tools::displayPrice($sellerTransaction->amount, new Currency($sellerTransaction->id_currency)),
+            '{{comment}}' => $comment,
+            '{{transaction_id}}' => $transaction_id,
+        );
+        $email = new KbEmail(
+            KbEmail::getTemplateIdByName('mp_seller_payout_transaction_approve_admin'),
+            $seller_obj->id_default_lang
+        );
+        /*Start - MK made change on 30-05-18 to send notification based on the type*/
+        $notification_emails = $seller_obj->getEmailIdForNotification();
+        foreach ($notification_emails as $em) {
+            $email->send(
+                $em['email'],
+                $em['title'],
+                null,
+                $template_vars
+            );
+        }
+        /*End - MK made change on 30-05-18 to send notification based on the type*/
+
+        return true;
+    }
+    //change end
+    //changes by vishal for custon change
+    protected function saveNewPayoutRequest($seller_id, $payout_amount, $orderId)
+    {
+        
+        
         $paypal_setting = Tools::jsonDecode(Configuration::get('KB_MP_PAYOUT_SETTING'), true);
         if (isset($paypal_setting['enable_automatic_payout']) && $paypal_setting['enable_automatic_payout'] == 1) {
         $seller_obj = new KbSeller($seller_id);
@@ -5106,8 +5210,19 @@ Your review has been deleted by admin on {{store_name}} for seller {shop_name}.<
         $request_obj->comment = $this->l('Automatically generated by CRON', 'cron');
         $request_obj->approved = "0";
         $request_obj->admin_comment = '';
-           
+
+
+        
+        
         if ($request_obj->save()) {
+            
+            $file = _PS_MODULE_DIR_.'kbmarketplace/order_auto_payment_log.txt';
+            $handle = fopen($file, 'a+');
+            fwrite($handle, date('Y-m-d G:i:s'). "\r\n");
+            fwrite($handle,'Order Id #'.print_r($orderId,TRUE).' , Payout Request Amount generated : Yes ,  Amount Of Payout Request :'.print_r($amount_request,TRUE).', Payout ID :'.print_r($request_obj->id,TRUE));
+            fwrite($handle,"\r\n");
+            fclose($handle);
+            
             $id_seller_transaction = $request_obj->id;
             $kbPayoutRequest = new KbSellerTransactionRequest($id_seller_transaction);
             $query = 'Select pc.payment_info, CONCAT(c.`firstname`, \' \',  c.`lastname`) as customer_name, c.email
@@ -5118,18 +5233,41 @@ Your review has been deleted by admin on {{store_name}} for seller {shop_name}.<
             $data = array();
             $data['payment_info'] = unserialize($seller_data['payment_info']);
             if ($data['payment_info']['name'] == 'kbpaypal') {
+                                
                 $trans_comment = $this->l('Auto Approval through cron', 'cron');
                 $seller_email = $seller_data['email'];
                 $seller_name = $seller_data['customer_name'];
                 $payment_info = unserialize($seller_data['payment_info']);
                 $paypal_setting = Tools::jsonDecode(Configuration::get('KB_MP_PAYOUT_SETTING'), true);
                 if (empty($paypal_setting)) {
-                    $this->context->cookie->kb_redirect_error = $this->l('Paypal Configuration is empty.', 'cron');
+                    
+                    $file = _PS_MODULE_DIR_.'kbmarketplace/order_auto_payment_log.txt';
+                    $handle = fopen($file, 'a+');
+                    fwrite($handle, date('Y-m-d G:i:s'). "\r\n");
+                    fwrite($handle,'Order Id #'.print_r($orderId,TRUE).' , Seller ID  : '.print_r($kbPayoutRequest->id_seller,TRUE).' ,  Paypal Configuration is empty ');
+                    fwrite($handle,"\r\n");
+                    fclose($handle);
+                    //$this->context->cookie->kb_redirect_error = $this->l('Paypal Configuration is empty.', 'cron');
                 } elseif (!$paypal_setting['enable']) {
-                    $this->context->cookie->kb_redirect_success = $this->l('Paypal Configuration is disabled.', 'cron');
-}
+                    
+                    $file = _PS_MODULE_DIR_.'kbmarketplace/order_auto_payment_log.txt';
+                    $handle = fopen($file, 'a+');
+                    fwrite($handle, date('Y-m-d G:i:s'). "\r\n");
+                    fwrite($handle,'Order Id #'.print_r($orderId,TRUE).' , Seller ID  : '.print_r($kbPayoutRequest->id_seller,TRUE).' ,  Paypal Configuration is disabled ');
+                    fwrite($handle,"\r\n");
+                    fclose($handle);
+                   // $this->context->cookie->kb_redirect_success = $this->l('Paypal Configuration is disabled.', 'cron');
+                }
                 if (!empty($payment_info)) {
                     if ($payment_info['name'] == 'kbpaypal') {
+                        
+                        $file = _PS_MODULE_DIR_.'kbmarketplace/order_auto_payment_log.txt';
+                        $handle = fopen($file, 'a+');
+                        fwrite($handle, date('Y-m-d G:i:s'). "\r\n");
+                        fwrite($handle,'Order Id #'.print_r($orderId,TRUE).' , Seller ID  : '.print_r($kbPayoutRequest->id_seller,TRUE).' ,  Seller PayPalAccount Exist : Yes ');
+                        fwrite($handle,"\r\n");
+                        fclose($handle);
+                        
                         $paypal_id = $payment_info['data']['paypal_id']['value'];
                         $random_number = uniqid(rand(0, 9999));
                         $paypal_subject = $paypal_setting['paypal_email_subject'];
@@ -5145,6 +5283,14 @@ Your review has been deleted by admin on {{store_name}} for seller {shop_name}.<
                             );
                         }
                         $request = $this->processPayout($paypal_setting, $paypal_subject, $paypal_id, $random_number, $currency_iso, $amount, $trans_comment);
+                       
+                        
+//                        $file = _PS_MODULE_DIR_.'kbmarketplace/order_auto_payment_log.txt';
+//                        $handle = fopen($file, 'a+');
+//                        fwrite($handle, date('Y-m-d G:i:s'). "\r\n");
+//                        fwrite($handle,'Order Id #'.print_r($order->id,TRUE).' , Paypal response : ' . print_r($request,TRUE)  . "\r\n");
+//                        fclose($handle);
+                        
                         /* Start-MK made changes on 27-08-18 to update the process of payout transaction */
                         if (isset($request->_propMap)) {
                             $is_approved = '0';
@@ -5152,6 +5298,13 @@ Your review has been deleted by admin on {{store_name}} for seller {shop_name}.<
                             if (isset($request->_propMap['transaction_id'])) {
                                 $transaction_id = $request->_propMap['transaction_id'];
                                 $is_approved = '1';
+                                
+                                $file = _PS_MODULE_DIR_.'kbmarketplace/order_auto_payment_log.txt';
+                                $handle = fopen($file, 'a+');
+                                fwrite($handle, date('Y-m-d G:i:s'). "\r\n");
+                                fwrite($handle,'Order Id #'.print_r($orderId,TRUE).' , Transection : Suceess , Transection Id :' . print_r($transaction_id,TRUE)  . "\r\n");
+                                fclose($handle);
+                                
                             }
                             if (isset($request->_propMap['payout_item_id'])) {
                                 $kbPayoutRequest = new KbSellerTransactionRequest($kbPayoutRequest->id_seller_transaction);
@@ -5172,35 +5325,74 @@ Your review has been deleted by admin on {{store_name}} for seller {shop_name}.<
                                     $kbTransaction->comment = $trans_comment;
                                     if ($kbTransaction->add()) {
                                         $this->sendApproveTransactionMail($kbPayoutRequest, $transaction_id, $trans_comment);
-                                        $this->context->cookie->kb_redirect_success = $this->l('Transaction successfully approved.', 'cron');
+                                       // $this->context->cookie->kb_redirect_success = $this->l('Transaction successfully approved.', 'cron');
                                     }
                                 } else {
                                     if ($request->_propMap['transaction_status'] == 'PENDING') {
-                                        $this->context->cookie->kb_redirect_success = $this->l('Transaction is pending.', 'cron');
+                                        
+                                        $file = _PS_MODULE_DIR_.'kbmarketplace/order_auto_payment_log.txt';
+                                        $handle = fopen($file, 'a+');
+                                        fwrite($handle, date('Y-m-d G:i:s'). "\r\n");
+                                        fwrite($handle,'Order Id #'.print_r($orderId,TRUE).' , Transection : PENDING');
+                                        fwrite($handle,"\r\n");
+                                        fclose($handle);
+                                        
+                                       // $this->context->cookie->kb_redirect_success = $this->l('Transaction is pending.', 'cron');
                                     } elseif ($request->_propMap['transaction_status'] == 'SUCCESS') {
                                         $kbPayoutRequest->approved = '1';
                                         $kbPayoutRequest->update();
-                                        $this->context->cookie->kb_redirect_success = $this->l('Transaction is completed.', 'cron');
+                                       // $this->context->cookie->kb_redirect_success = $this->l('Transaction is completed.', 'cron');
                                     } elseif ($request->_propMap['transaction_status'] == 'DENIED') {
                                         $kbPayoutRequest->approved = '2';
+                                        
+                                        $file = _PS_MODULE_DIR_.'kbmarketplace/order_auto_payment_log.txt';
+                                        $handle = fopen($file, 'a+');
+                                        fwrite($handle, date('Y-m-d G:i:s'). "\r\n");
+                                        fwrite($handle,'Order Id #'.print_r($orderId,TRUE).' , Transection : DENIED');
+                                        fwrite($handle,"\r\n");
+                                        fclose($handle);
+                                        
                                         $kbPayoutRequest->update();
-                                        $this->context->cookie->kb_redirect_error = $this->l('Transaction is denied.', 'cron');
+                                       // $this->context->cookie->kb_redirect_error = $this->l('Transaction is denied.', 'cron');
                                     }
                                 }
                             } else {
-                                $this->context->cookie->kb_redirect_error = $this->l('Transaction failed.', 'cron');
+                                
+                                $file = _PS_MODULE_DIR_.'kbmarketplace/order_auto_payment_log.txt';
+                                $handle = fopen($file, 'a+');
+                                fwrite($handle, date('Y-m-d G:i:s'). "\r\n");
+                                fwrite($handle,'Order Id #'.print_r($orderId,TRUE).' , Transection : Failed');
+                                fwrite($handle,"\r\n");
+                                fclose($handle);
+                                
+                               // $this->context->cookie->kb_redirect_error = $this->l('Transaction failed.', 'cron');
                             }
                         } else {
-                            $this->context->cookie->kb_redirect_error = $this->l('Transaction failed.', 'cron');
+                                $file = _PS_MODULE_DIR_.'kbmarketplace/order_auto_payment_log.txt';
+                                $handle = fopen($file, 'a+');
+                                fwrite($handle, date('Y-m-d G:i:s'). "\r\n");
+                                fwrite($handle,'Order Id #'.print_r($orderId,TRUE).' , Transection : Failed');
+                                fwrite($handle,"\r\n");
+                                fclose($handle);
+                            //$this->context->cookie->kb_redirect_error = $this->l('Transaction failed.', 'cron');
                         }
+                        
                         /* End-MK made changes on 27-08-18 to update the process of payout transaction */
                     } else {
-                        $this->context->cookie->kb_redirect_error = $this->l('Transaction cannot be proceed', 'cron');
+                        //$this->context->cookie->kb_redirect_error = $this->l('Transaction cannot be proceed', 'cron');
                     }
                 } else {
-                    $this->context->cookie->kb_redirect_error = $this->l('No Payout Information found for the Seller.', 'cron');
+                    $file = _PS_MODULE_DIR_.'kbmarketplace/order_auto_payment_log.txt';
+                    $handle = fopen($file, 'a+');
+                    fwrite($handle, date('Y-m-d G:i:s'). "\r\n");
+                    fwrite($handle,'Order Id #'.print_r($orderId,TRUE).' , Seller ID  : '.print_r($kbPayoutRequest->id_seller,TRUE).' ,  Seller PayPalAccount Exist : No ');
+                    fwrite($handle,"\r\n");
+                    fclose($handle);
+                    
+                    //$this->context->cookie->kb_redirect_error = $this->l('No Payout Information found for the Seller.', 'cron');
                 }
             }
+            
         }
         return true;
     }

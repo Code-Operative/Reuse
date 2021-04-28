@@ -23,7 +23,7 @@
 * International Registered Trademark & Property of PrestaShop SA
 *}
 
-<div field-row class="pp__my-5 pp__label {if isset($css) && $css}{$css}{/if}">
+<div field-row class="{if isset($css) && $css}{$css}{/if}">
 
     {if isset($label) && $label}
         <div label>

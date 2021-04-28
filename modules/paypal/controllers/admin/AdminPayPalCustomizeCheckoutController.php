@@ -28,10 +28,10 @@ require_once _PS_MODULE_DIR_ . 'paypal/vendor/autoload.php';
 use PaypalAddons\classes\AdminPayPalController;
 use PaypalAddons\classes\AbstractMethodPaypal;
 use PaypalAddons\classes\Shortcut\Form\Definition\CustomizeButtonStyleSectionDefinition;
-use PaypalAddons\classes\Shortcut\Form\Field\InputChain;
-use PaypalAddons\classes\Shortcut\Form\Field\Select;
-use PaypalAddons\classes\Shortcut\Form\Field\SelectOption;
-use PaypalAddons\classes\Shortcut\Form\Field\TextInput;
+use PaypalAddons\classes\Form\Field\InputChain;
+use PaypalAddons\classes\Form\Field\Select;
+use PaypalAddons\classes\Form\Field\SelectOption;
+use PaypalAddons\classes\Form\Field\TextInput;
 use PaypalAddons\classes\Shortcut\ShortcutConfiguration;
 use PaypalAddons\classes\Shortcut\ShortcutPreview;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -681,6 +681,7 @@ Shipping costs will be estimated on the base of the cart total and default carri
     {
         $this->context->smarty->assign('confName', 'productPageWidgetCode');
         $this->context->smarty->assign('widgetCode', '{widget name=\'paypal\' action=\'paymentshortcut\'}');
+        $this->context->smarty->assign('isShowDescription', true);
         return $this->context->smarty->fetch($this->getTemplatePath() . '_partials/form/fields/widgetCode.tpl');
     }
 
@@ -757,6 +758,7 @@ Shipping costs will be estimated on the base of the cart total and default carri
     {
         $this->context->smarty->assign('widgetCode', '{widget name=\'paypal\' action=\'paymentshortcut\'}');
         $this->context->smarty->assign('confName', 'cartPageWidgetCode');
+        $this->context->smarty->assign('isShowDescription', true);
         return $this->context->smarty->fetch($this->getTemplatePath() . '_partials/form/fields/widgetCode.tpl');
     }
 
@@ -764,6 +766,7 @@ Shipping costs will be estimated on the base of the cart total and default carri
     {
         $this->context->smarty->assign('widgetCode', '{widget name=\'paypal\' action=\'paymentshortcut\'}');
         $this->context->smarty->assign('confName', 'signupPageWidgetCode');
+        $this->context->smarty->assign('isShowDescription', true);
         return $this->context->smarty->fetch($this->getTemplatePath() . '_partials/form/fields/widgetCode.tpl');
     }
 
@@ -897,6 +900,7 @@ Shipping costs will be estimated on the base of the cart total and default carri
             true
         );
         $colorSelect->setAfterSelectContent(Context::getContext()->smarty->fetch($this->getTemplatePath() . '_partials/form/colorDescriptions.tpl'));
+        $colorSelect->setCss('pp__my-5 pp__label');
 
         $configurations[] = $colorSelect;
 
@@ -919,6 +923,7 @@ Shipping costs will be estimated on the base of the cart total and default carri
             $shape,
             ShortcutConfiguration::CONFIGURATION_TYPE_SHAPE
         );
+        $shapeSelect->setCss('pp__my-5 pp__label');
 
         $configurations[] = $shapeSelect;
 
@@ -973,6 +978,7 @@ Shipping costs will be estimated on the base of the cart total and default carri
             $label,
             ShortcutConfiguration::CONFIGURATION_TYPE_LABEL
         );
+        $labelSelect->setCss('pp__my-5 pp__label');
 
         $configurations[] = $labelSelect;
 
@@ -1036,6 +1042,7 @@ Shipping costs will be estimated on the base of the cart total and default carri
         );
 
         $select->setCss('displayModeSection');
+        $select->setValue(Configuration::get($name));
 
         return $select->render();
     }

@@ -53,6 +53,22 @@
       color: #fff !important;
     }
 
+    {if version_compare($psVersion, '1.7.4', '<')}
+
+    .page-head .page-title {
+      color: #fff !important;
+    }
+
+    .page-head .page-head-tabs a{
+      color: #fff !important;
+    }
+
+    .page-head .page-head-tabs a.current{
+      border-bottom: 3px solid #fff !important;
+    }
+
+    {/if}
+
 
   </style>
 {/if}

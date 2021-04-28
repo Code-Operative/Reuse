@@ -36,16 +36,19 @@
 
 {block name='js'}
     {if isset($JSscripts) && is_array($JSscripts) && false === empty($JSscripts)}
-        {foreach from=$JSscripts key=keyScript item=JSscript}
+        {foreach from=$JSscripts key=keyScript item=JSscriptAttributes}
           <script>
-            var script = document.querySelector('script[data-key="{$keyScript}"]');
+              var script = document.querySelector('script[data-key="{$keyScript}"]');
 
-            if (null == script) {
-                var newScript = document.createElement('script');
-                newScript.setAttribute('src', '{$JSscript nofilter}');
-                newScript.setAttribute('data-key', '{$keyScript}');
-                document.body.appendChild(newScript);
-            }
+              if (null == script) {
+                  var newScript = document.createElement('script');
+                  {foreach from=$JSscriptAttributes key=attrName item=attrVal}
+                  newScript.setAttribute('{$attrName}', '{$attrVal nofilter}');
+                  {/foreach}
+
+                  newScript.setAttribute('data-key', '{$keyScript}');
+                  document.body.appendChild(newScript);
+              }
           </script>
         {/foreach}
     {/if}
@@ -54,7 +57,7 @@
 {block name='init-button'}
   <script>
       function waitPaypalIsLoaded() {
-          if (typeof paypal === 'undefined' || typeof Shortcut === 'undefined') {
+          if (typeof totPaypalSdk === 'undefined' || typeof Shortcut === 'undefined') {
               setTimeout(waitPaypalIsLoaded, 200);
               return;
           }

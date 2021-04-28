@@ -146,6 +146,7 @@ class AdminKbSellerTransPayoutRequestController extends AdminKbMarketplaceCoreCo
             return $output = \PayPal\Api\PayoutItem::get($payoutItemId, $apiContext);
             /*End -MK made changes on 27-08-18 to return the object of the payout item id*/
         } catch (Exception $ex) {
+            //print_r($ex);die;
             $this->context->cookie->kb_redirect_error = $ex->getMessage();
             Tools::redirectAdmin($this->context->link->getAdminlink('AdminKbSellerTransPayoutRequest'));
         }

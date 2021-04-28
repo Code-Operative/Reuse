@@ -26,7 +26,7 @@
 
 <!-- Block manufacturers module -->
 <div id="manufacturers-home" class="manufacturers-home nav-active container wow fadeInUp" data-wow-offset="100">
-	<h3 class="headline-section">{if $display_link_manufacturer}<a href="{$link->getPageLink('manufacturer')}" title="{l s='Manufacturers' d='Modules.Blockmanufactureri.Shop'}">{/if}<strong>{l s='Manufacturers' d='Modules.Blockmanufactureri.Shop'}{if $display_link_manufacturer}</strong></a>{/if}</h3>
+	<h3 class="headline-section">{if $display_link_manufacturer}<a href="{$link->getPageLink('manufacturer')}" title="{l s='Manufacturers' d='Modules.Blockmanufactureri.Shop'}">{/if}<strong>{l s='Manufacturers' d='Modules.Blockmanufactureri.Shop'}</strong>{if $display_link_manufacturer}</a>{/if}</h3>
 {if $manufacturers}
 	<div class="manufacturers-list js-man-carousel{if $text_list}  carousel-view{else}grid-view{/if}" {if $text_list}data-carousel="{$text_list}"{/if}>
 	{foreach from=$manufacturers item=manufacturer name=manufacturer_list}

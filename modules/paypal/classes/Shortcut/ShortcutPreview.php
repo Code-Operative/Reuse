@@ -77,7 +77,10 @@ class ShortcutPreview extends ShortcutAbstract
     protected function getJS()
     {
         $jsScripts = [];
-        $jsScripts['paypal-lib'] = $this->method->getUrlJsSdkLib();
+        $jsScripts['tot-paypal-sdk'] = [
+            'src' => $this->method->getUrlJsSdkLib(),
+            'data-namespace' => 'totPaypalSdk'
+        ];
 
         return $jsScripts;
     }

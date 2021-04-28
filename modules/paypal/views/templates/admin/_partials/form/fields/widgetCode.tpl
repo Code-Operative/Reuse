@@ -42,11 +42,14 @@
     </span>
   </div>
 
-  <div class="pp__mt-5">
-    <div class="alert alert-info">
-        {{l s='In order to display the PayPal button via [a @href1@]widget[/a] it will be necessary to add it to the template at the desired location.'}|paypalreplace:['@href1@' => 'https://devdocs.prestashop.com/1.7/modules/concepts/widgets/', '@target@' => {'target="blank"'}]}
+  {if isset($isShowDescription) && isShowDescription}
+    <div class="pp__mt-5">
+      <div class="alert alert-info">
+          {{l s='In order to display the PayPal button via [a @href1@]widget[/a] it will be necessary to add it to the template at the desired location.'}|paypalreplace:['@href1@' => 'https://devdocs.prestashop.com/1.7/modules/concepts/widgets/', '@target@' => {'target="blank"'}]}
+      </div>
     </div>
-  </div>
+  {/if}
+
 </div>
 
 

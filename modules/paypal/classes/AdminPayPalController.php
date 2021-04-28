@@ -63,8 +63,12 @@ class AdminPayPalController extends \ModuleAdminController
 
     public function init()
     {
+        header('Cache-Control: max-age=0');
+        header('Clear-Site-Data: "cache"');
         if (\Tools::getValue('action') === 'set_sandbox_mode') {
             \Configuration::updateValue('PAYPAL_SANDBOX', (int)\Tools::getValue('sandbox_mode'));
+            $methodObj = AbstractMethodPaypal::load($this->method);
+            $methodObj->isConfigured();
         }
 
         parent::init();
@@ -72,7 +76,6 @@ class AdminPayPalController extends \ModuleAdminController
 
     public function initContent()
     {
-        header('Clear-Site-Data: "cache"');
         $method = AbstractMethodPaypal::load();
 
         if ((int)\Configuration::get('PAYPAL_SANDBOX') == 1) {

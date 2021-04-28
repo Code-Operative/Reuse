@@ -38,6 +38,11 @@ use PaypalPPBTlib\Extensions\AbstractModuleExtension;
 use PrestaShop\PrestaShop\Core\Payment\PaymentOption;
 use PaypalPPBTlib\Extensions\ProcessLogger\ProcessLoggerHandler;
 use PaypalAddons\classes\AbstractMethodPaypal;
+use PaypalAddons\classes\InstallmentBanner\BannerManager;
+use PaypalAddons\classes\InstallmentBanner\ConfigurationMap as InstallmentConfiguration;
+use PaypalAddons\classes\Widget\ShortcutWidget;
+use PaypalAddons\classes\Widget\DummyWidget;
+use PaypalAddons\classes\Widget\InstallmentWidget;
 
 define('BT_CARD_PAYMENT', 'card-braintree');
 define('BT_PAYPAL_PAYMENT', 'paypal-braintree');
@@ -196,6 +201,8 @@ class PayPal extends \PaymentModule implements WidgetInterface
         'displayAdminOrderTabLink',
         'displayAdminOrderTabContent',
         'displayOrderPreview',
+        'displayNavFullWidth',
+        'actionLocalizationPageSave',
         ShortcutConfiguration::HOOK_REASSURANCE,
         ShortcutConfiguration::HOOK_AFTER_PRODUCT_ADDITIONAL_INFO,
         ShortcutConfiguration::HOOK_AFTER_PRODUCT_THUMBS,
@@ -270,6 +277,15 @@ class PayPal extends \PaymentModule implements WidgetInterface
         ),
         array(
             'name' => array(
+                'en' => 'Payment in 4x',
+                'fr' => 'Paiement en 4x',
+            ),
+            'class_name' => 'AdminPayPalInstallment',
+            'parent_class_name' => 'AdminPayPalConfiguration',
+            'visible' => true,
+        ),
+        array(
+            'name' => array(
                 'en' => 'Help',
                 'fr' => 'Aide',
                 'pt' => 'Ajuda',
@@ -319,7 +335,7 @@ class PayPal extends \PaymentModule implements WidgetInterface
     {
         $this->name = 'paypal';
         $this->tab = 'payments_gateways';
-        $this->version = '5.3.2';
+        $this->version = '5.4.1';
         $this->author = '202 ecommerce';
         $this->display = 'view';
         $this->module_key = '336225a5988ad434b782f2d868d7bfcd';
@@ -442,6 +458,8 @@ class PayPal extends \PaymentModule implements WidgetInterface
             Configuration::updateValue('PAYPAL_CRON_TIME', date('Y-m-d H:m:s'));
             Configuration::updateValue('PAYPAL_PREVIOUS_VERSION', $this->version);
         }
+
+        Hook::exec('ActionLocalizationPageSave', [], $this->id);
 
         return true;
     }
@@ -573,7 +591,14 @@ class PayPal extends \PaymentModule implements WidgetInterface
 
     public function hookDisplayProductActions($params)
     {
-        return $this->displayShortcutButton([
+        $content = '';
+        $bannerManager = new BannerManager();
+
+        if ($bannerManager->isBannerAvailable()) {
+            $content .= $bannerManager->renderForProductPage();
+        }
+
+        return $content .= $this->displayShortcutButton([
             'sourcePage' => ShortcutConfiguration::SOURCE_PAGE_PRODUCT,
             'hook' => ShortcutConfiguration::HOOK_PRODUCT_ACTIONS
         ]);
@@ -609,10 +634,18 @@ class PayPal extends \PaymentModule implements WidgetInterface
 
     public function hookDisplayExpressCheckout($params)
     {
-        return $this->displayShortcutButton([
+        $returnContent = $this->displayShortcutButton([
             'sourcePage' => ShortcutConfiguration::SOURCE_PAGE_CART,
             'hook' => ShortcutConfiguration::HOOK_EXPRESS_CHECKOUT
         ]);
+
+        $bannerManager = new BannerManager();
+
+        if ($bannerManager->isBannerAvailable()) {
+            $returnContent .= $bannerManager->renderForCartPage();
+        }
+
+        return $returnContent;
     }
 
     public function hookDisplayPersonalInformationTop($params)
@@ -625,6 +658,18 @@ class PayPal extends \PaymentModule implements WidgetInterface
             'sourcePage' => ShortcutConfiguration::SOURCE_PAGE_SIGNUP,
             'hook' => ShortcutConfiguration::HOOK_PERSONAL_INFORMATION_TOP
         ]);
+    }
+
+    public function hookDisplayNavFullWidth()
+    {
+        if ($this->context->controller instanceof IndexController
+            || $this->context->controller instanceof CategoryController) {
+            $bannerManager = new BannerManager();
+
+            if ($bannerManager->isBannerAvailable()) {
+                return $bannerManager->renderForHomePage();
+            }
+        }
     }
 
     public function getContent()
@@ -815,7 +860,7 @@ class PayPal extends \PaymentModule implements WidgetInterface
 
             // Show Shortcut on signup page if need
             // if ps version is '1.7.6' and bigger than use native hook displayPersonalInformationTop
-            if ($this->isShowShortcut() && !$this->context->customer->isLogged()) {
+            if ($this->isShowShortcut() && !$this->context->customer->isLogged() && !$this->context->customer->is_guest) {
                 if (version_compare(_PS_VERSION_, '1.7.6', '<')
                     && ((bool)Configuration::get(ShortcutConfiguration::CUSTOMIZE_STYLE) === false || (int)Configuration::get(ShortcutConfiguration::DISPLAY_MODE_SIGNUP) == ShortcutConfiguration::DISPLAY_MODE_TYPE_HOOK)) {
                     $Shortcut = new ShortcutSignup();
@@ -958,7 +1003,14 @@ class PayPal extends \PaymentModule implements WidgetInterface
     public function hookDisplayReassurance()
     {
         if ($this->context->controller instanceof ProductController) {
-            return $this->displayShortcutButton([
+            $content = '';
+            $bannerManager = new BannerManager();
+
+            if ($bannerManager->isBannerAvailable() && version_compare(_PS_VERSION_, '1.7.6', '<')) {
+                $content .= $bannerManager->renderForProductPage();
+            }
+
+            return $content .= $this->displayShortcutButton([
                 'sourcePage' => ShortcutConfiguration::SOURCE_PAGE_PRODUCT,
                 'hook' => ShortcutConfiguration::HOOK_REASSURANCE
             ]);
@@ -969,6 +1021,14 @@ class PayPal extends \PaymentModule implements WidgetInterface
                 'sourcePage' => ShortcutConfiguration::SOURCE_PAGE_CART,
                 'hook' => ShortcutConfiguration::HOOK_REASSURANCE
             ]);
+        }
+
+        if ($this->context->controller instanceof OrderController) {
+            $bannerManager = new BannerManager();
+
+            if ($bannerManager->isBannerAvailable()) {
+                return $bannerManager->renderForCheckoutPage();
+            }
         }
 
         return '';
@@ -1067,6 +1127,18 @@ class PayPal extends \PaymentModule implements WidgetInterface
      */
     public function needConvert()
     {
+        $countryDefault = new Country((int)Configuration::get('PS_COUNTRY_DEFAULT', null, null, $this->context->shop->id));
+
+        if (Validate::isLoadedObject($countryDefault) && Tools::strtolower($countryDefault->iso_code) === 'fr') {
+            if ((int)Configuration::get(InstallmentConfiguration::ENABLE_INSTALLMENT)) {
+                if (Tools::strtolower($this->context->language->iso_code) === 'fr') {
+                    if (Tools::strtolower($this->context->currency->iso_code) === 'eur') {
+                        return false;
+                    }
+                }
+            }
+        }
+
         $currency_mode = Currency::getPaymentCurrenciesSpecial($this->id);
         $mode_id = $currency_mode['id_currency'];
         if ($mode_id == -2) {
@@ -1418,6 +1490,33 @@ class PayPal extends \PaymentModule implements WidgetInterface
             $ps_order = new Order($params['id_order']);
             if (isset($capture['id_capture']) && $capture['id_capture']) {
                 $this->setTransactionId($ps_order, $capture['id_capture']);
+            }
+        }
+    }
+
+    public function hookActionLocalizationPageSave($params)
+    {
+        $countryDefault = new Country((int)Configuration::get('PS_COUNTRY_DEFAULT'));
+
+        if (Validate::isLoadedObject($countryDefault) === false) {
+            return;
+        }
+
+        $installmentTab = \Tab::getInstanceFromClassName('AdminPaypalInstallment');
+
+        if (Validate::isLoadedObject($installmentTab) === false) {
+            return;
+        }
+
+        if (Tools::strtolower($countryDefault->iso_code) === 'fr') {
+            if ($installmentTab->active == false) {
+                $installmentTab->active = true;
+                $installmentTab->save();
+            }
+        } else {
+            if ($installmentTab->active == true) {
+                $installmentTab->active = false;
+                $installmentTab->save();
             }
         }
     }
@@ -2012,7 +2111,8 @@ class PayPal extends \PaymentModule implements WidgetInterface
         $hooksUnregistered = array();
 
         foreach ($this->hooks as $hookName) {
-            $hookName = Hook::getNameById(Hook::getIdByName($hookName));
+            $alias = Hook::getNameById(Hook::getIdByName($hookName));
+            $hookName = $alias ? $alias : $hookName;
 
             if (Hook::isModuleRegisteredOnHook($this, $hookName, $this->context->shop->id)) {
                 continue;
@@ -2022,6 +2122,24 @@ class PayPal extends \PaymentModule implements WidgetInterface
         }
 
         return $hooksUnregistered;
+    }
+
+    public function unregisterHook($hook_id, $shop_list = null)
+    {
+        try {
+            return parent::unregisterHook($hook_id, $shop_list);
+        } catch (Exception $e) {
+            return false;
+        }
+    }
+
+    public function unregisterExceptions($hook_id, $shop_list = null)
+    {
+        try {
+            return parent::unregisterExceptions($hook_id, $shop_list);
+        } catch (Exception $e) {
+            return false;
+        }
     }
 
     public function resetHooks()
@@ -2169,25 +2287,9 @@ class PayPal extends \PaymentModule implements WidgetInterface
 
     public function renderWidget($hookName, array $configuration)
     {
-        if (false === isset($configuration['action']) || $configuration['action'] !== 'paymentshortcut') {
-            return '';
-        }
+        $widget = $this->getWidget($hookName, $configuration);
 
-        $sourcePage = null;
-
-        if ($this->context->controller instanceof ProductController && (int)Configuration::get(ShortcutConfiguration::DISPLAY_MODE_PRODUCT) === ShortcutConfiguration::DISPLAY_MODE_TYPE_WIDGET) {
-            $sourcePage = ShortcutConfiguration::SOURCE_PAGE_PRODUCT;
-        } elseif ($this->context->controller instanceof CartController && (int)Configuration::get(ShortcutConfiguration::DISPLAY_MODE_CART) === ShortcutConfiguration::DISPLAY_MODE_TYPE_WIDGET) {
-            $sourcePage = ShortcutConfiguration::SOURCE_PAGE_CART;
-        } elseif ($this->context->controller instanceof OrderController && (int)Configuration::get(ShortcutConfiguration::DISPLAY_MODE_SIGNUP) === ShortcutConfiguration::DISPLAY_MODE_TYPE_WIDGET) {
-            $sourcePage = ShortcutConfiguration::SOURCE_PAGE_SIGNUP;
-        }
-
-        if ($sourcePage === null) {
-            return '';
-        }
-
-        return $this->displayShortcutButton(['sourcePage' => $sourcePage]);
+        return $widget->render();
     }
 
     public function getWidgetVariables($hookName, array $configuration)
@@ -2201,5 +2303,23 @@ class PayPal extends \PaymentModule implements WidgetInterface
         } else {
             return Product::getIdProductAttributeByIdAttributes($idProduct, $idAttributes, $findBest);
         }
+    }
+
+    /**
+     * @param string $hookName
+     * @param array $configurations
+     * @return \PaypalAddons\classes\Widget\AbstractWidget
+     */
+    protected function getWidget($hookName, array $configuration)
+    {
+        if (isset($configuration['action']) && $configuration['action'] === 'paymentshortcut') {
+            return new ShortcutWidget($this, $configuration);
+        }
+
+        if (isset($configuration['action']) && $configuration['action'] === 'banner4x') {
+            return new InstallmentWidget($this, $configuration);
+        }
+
+        return new DummyWidget($this, $configuration);
     }
 }

@@ -36,6 +36,12 @@
     .cart-grid-body [data-container-express-checkout] {
       justify-content: flex-end;
     }
+
+    @media (max-width: 575px) {
+      [data-container-express-checkout] {
+        justify-content: flex-start;
+      }
+    }
   </style>
 
   <div data-container-express-checkout data-paypal-source-page="cart">

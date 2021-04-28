@@ -22,11 +22,17 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
+    
 
 {if $carousel_tabs == 'true'}
+
+
+
 <li class="nav-item">
 	<a data-toggle="tab" href="#homefeatured" class="homefeatured nav-link">
 		{$homefeatured_category_name|escape:'html':'UTF-8'}
 	</a>
 </li>
+
 {/if}
+

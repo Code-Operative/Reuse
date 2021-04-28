@@ -101,6 +101,11 @@ class AdminPayPalSetupController extends AdminPayPalController
 
         $tpl_vars['formStatus'] = $formStatus;
 
+        if ($this->isShowInstallmentPopup()) {
+            $tpl_vars['installmentController'] = $this->context->link->getAdminLink('AdminPayPalInstallment', true);
+            $tpl_vars['showInstallmentPopup'] = true;
+        }
+
         $this->context->smarty->assign($tpl_vars);
         $this->content = $this->context->smarty->fetch($this->getTemplatePath() . 'setup.tpl');
         $this->context->smarty->assign('content', $this->content);
@@ -361,5 +366,25 @@ class AdminPayPalSetupController extends AdminPayPalController
     protected function isPaymentModeSetted()
     {
         return in_array(Configuration::get('PAYPAL_API_INTENT'), array('sale', 'authorize'));
+    }
+
+    protected function isShowInstallmentPopup()
+    {
+        $countryDefault = new Country((int)Configuration::get('PS_COUNTRY_DEFAULT', null, null, $this->context->shop->id));
+
+        if (Validate::isLoadedObject($countryDefault) === false) {
+            return false;
+        }
+
+        if (Tools::strtolower($countryDefault->iso_code) != 'fr') {
+            return false;
+        }
+
+        if (false == (int)Configuration::get('PAYPAL_SHOW_INSTALLMENT_POPUP', null, null, $this->context->shop->id)) {
+            return false;
+        }
+
+        Configuration::updateValue('PAYPAL_SHOW_INSTALLMENT_POPUP', 0, false, null, $this->context->shop->id);
+        return true;
     }
 }

@@ -161,6 +161,30 @@
   content: '\f0eb' !important;
 }
 
+[installment-banner-style-section] {
+  flex-basis: 30%;
+}
+
+[installment-preview-container] {
+  flex-basis: 70%;
+}
+
+[installment-page-displaying-setting-container] {
+  .form-group {
+    display: flex;
+    align-items: center;
+  }
+
+  input[type="checkbox"] {
+    margin-top: 0;
+    margin-right: 10px;
+  }
+
+  label {
+    padding-top: 0 !important;
+  }
+}
+
 @media (max-width:768px) {
   .setup-blocks {
     flex-direction: column;

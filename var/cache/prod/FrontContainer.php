@@ -521,7 +521,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
      */
     protected function getDoctrine_Dbal_DefaultConnectionService()
     {
-        return $this->services['doctrine.dbal.default_connection'] = ${($_ = isset($this->services['doctrine.dbal.connection_factory']) ? $this->services['doctrine.dbal.connection_factory'] : ($this->services['doctrine.dbal.connection_factory'] = new \Doctrine\Bundle\DoctrineBundle\ConnectionFactory([]))) && false ?: '_'}->createConnection(['driver' => 'pdo_mysql', 'host' => '127.0.0.1', 'port' => '', 'dbname' => 'codeoper_prestaoperative', 'user' => 'codeoper_prestadmin', 'password' => 'NjHNmqi[igPg', 'charset' => 'utf8mb4', 'driverOptions' => [1002 => 'SET sql_mode=(SELECT REPLACE(@@sql_mode,\'ONLY_FULL_GROUP_BY\',\'\'))'], 'defaultTableOptions' => []], new \Doctrine\DBAL\Configuration(), new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), ['enum' => 'string']);
+        return $this->services['doctrine.dbal.default_connection'] = ${($_ = isset($this->services['doctrine.dbal.connection_factory']) ? $this->services['doctrine.dbal.connection_factory'] : ($this->services['doctrine.dbal.connection_factory'] = new \Doctrine\Bundle\DoctrineBundle\ConnectionFactory([]))) && false ?: '_'}->createConnection(['driver' => 'pdo_mysql', 'host' => '127.0.0.1', 'port' => '', 'dbname' => 'codeoper_reusenetwork', 'user' => 'codeoper_prestadmin', 'password' => 'NjHNmqi[igPg', 'charset' => 'utf8mb4', 'driverOptions' => [1002 => 'SET sql_mode=(SELECT REPLACE(@@sql_mode,\'ONLY_FULL_GROUP_BY\',\'\'))'], 'defaultTableOptions' => []], new \Doctrine\DBAL\Configuration(), new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), ['enum' => 'string']);
     }
 
     /**
@@ -536,12 +536,12 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
         $b = new \Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain();
 
         $c = ${($_ = isset($this->services['annotation_reader']) ? $this->services['annotation_reader'] : ($this->services['annotation_reader'] = new \Doctrine\Common\Annotations\AnnotationReader())) && false ?: '_'};
-        $d = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($c, [0 => '/home/codeoperativeco/prestaoperative/modules/productcomments/src/Entity']);
-        $d->addExcludePaths([0 => '/home/codeoperativeco/prestaoperative/modules/productcomments/src/Entity/index.php']);
-        $e = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($c, [0 => '/home/codeoperativeco/prestaoperative/modules/ps_checkout/src/Entity']);
-        $e->addExcludePaths([0 => '/home/codeoperativeco/prestaoperative/modules/ps_checkout/src/Entity/index.php']);
+        $d = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($c, [0 => '/home/codeoperativeco/public_html/modules/productcomments/src/Entity']);
+        $d->addExcludePaths([0 => '/home/codeoperativeco/public_html/modules/productcomments/src/Entity/index.php']);
+        $e = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($c, [0 => '/home/codeoperativeco/public_html/modules/ps_checkout/src/Entity']);
+        $e->addExcludePaths([0 => '/home/codeoperativeco/public_html/modules/ps_checkout/src/Entity/index.php']);
 
-        $b->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($c, [0 => '/home/codeoperativeco/prestaoperative/src/PrestaShopBundle/Entity']), 'PrestaShop');
+        $b->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($c, [0 => '/home/codeoperativeco/public_html/src/PrestaShopBundle/Entity']), 'PrestaShop');
         $b->addDriver($d, 'PrestaShop\\Module\\ProductComment\\Entity');
         $b->addDriver($e, 'PrestaShop\\Module\\PrestashopCheckout\\Entity');
 
@@ -550,7 +550,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
         $a->setQueryCacheImpl(${($_ = isset($this->services['doctrine_cache.providers.doctrine.orm.default_query_cache']) ? $this->services['doctrine_cache.providers.doctrine.orm.default_query_cache'] : $this->getDoctrineCache_Providers_Doctrine_Orm_DefaultQueryCacheService()) && false ?: '_'});
         $a->setResultCacheImpl(${($_ = isset($this->services['doctrine.orm.cache.provider.cache.doctrine.orm.default.result']) ? $this->services['doctrine.orm.cache.provider.cache.doctrine.orm.default.result'] : $this->getDoctrine_Orm_Cache_Provider_Cache_Doctrine_Orm_Default_ResultService()) && false ?: '_'});
         $a->setMetadataDriverImpl($b);
-        $a->setProxyDir('/home/codeoperativeco/prestaoperative/var/cache/prod//doctrine/orm/Proxies');
+        $a->setProxyDir('/home/codeoperativeco/public_html/var/cache/prod//doctrine/orm/Proxies');
         $a->setProxyNamespace('Proxies');
         $a->setAutoGenerateProxyClasses(false);
         $a->setClassMetadataFactoryName('Doctrine\\ORM\\Mapping\\ClassMetadataFactory');
@@ -579,7 +579,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_metadata_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
 
-        $instance->setNamespace('sf_orm_default_dade31dd7b4ad99208974f8ebaffe6fb071c97529caf3088191e3dd23a4dd395');
+        $instance->setNamespace('sf_orm_default_50eb03b52d76782cfada70532b5e32d78e29bee79a074c5cfcfaa8a6aaf6cf3a');
 
         return $instance;
     }
@@ -593,7 +593,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_query_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
 
-        $instance->setNamespace('sf_orm_default_dade31dd7b4ad99208974f8ebaffe6fb071c97529caf3088191e3dd23a4dd395');
+        $instance->setNamespace('sf_orm_default_50eb03b52d76782cfada70532b5e32d78e29bee79a074c5cfcfaa8a6aaf6cf3a');
 
         return $instance;
     }
@@ -755,7 +755,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
      */
     protected function getPrestashop_Core_Localization_Cldr_Cache_AdapterService()
     {
-        return $this->services['prestashop.core.localization.cldr.cache.adapter'] = new \Symfony\Component\Cache\Adapter\FilesystemAdapter('CLDR', 0, '/home/codeoperativeco/prestaoperative/var/cache/prod//localization');
+        return $this->services['prestashop.core.localization.cldr.cache.adapter'] = new \Symfony\Component\Cache\Adapter\FilesystemAdapter('CLDR', 0, '/home/codeoperativeco/public_html/var/cache/prod//localization');
     }
 
     /**
@@ -765,7 +765,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
      */
     protected function getPrestashop_Core_Localization_Cldr_Datalayer_LocaleCacheService()
     {
-        $this->services['prestashop.core.localization.cldr.datalayer.locale_cache'] = $instance = new \PrestaShop\PrestaShop\Core\Localization\CLDR\DataLayer\LocaleCache(${($_ = isset($this->services['prestashop.core.localization.cldr.cache.adapter']) ? $this->services['prestashop.core.localization.cldr.cache.adapter'] : ($this->services['prestashop.core.localization.cldr.cache.adapter'] = new \Symfony\Component\Cache\Adapter\FilesystemAdapter('CLDR', 0, '/home/codeoperativeco/prestaoperative/var/cache/prod//localization'))) && false ?: '_'});
+        $this->services['prestashop.core.localization.cldr.datalayer.locale_cache'] = $instance = new \PrestaShop\PrestaShop\Core\Localization\CLDR\DataLayer\LocaleCache(${($_ = isset($this->services['prestashop.core.localization.cldr.cache.adapter']) ? $this->services['prestashop.core.localization.cldr.cache.adapter'] : ($this->services['prestashop.core.localization.cldr.cache.adapter'] = new \Symfony\Component\Cache\Adapter\FilesystemAdapter('CLDR', 0, '/home/codeoperativeco/public_html/var/cache/prod//localization'))) && false ?: '_'});
 
         $instance->setLowerLayer(${($_ = isset($this->services['prestashop.core.localization.cldr.datalayer.locale_reference']) ? $this->services['prestashop.core.localization.cldr.datalayer.locale_reference'] : $this->getPrestashop_Core_Localization_Cldr_Datalayer_LocaleReferenceService()) && false ?: '_'});
 
@@ -1137,7 +1137,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
      */
     protected function getPsCheckout_LoggerService()
     {
-        return $this->services['ps_checkout.logger'] = ${($_ = isset($this->services['ps_checkout.logger.factory']) ? $this->services['ps_checkout.logger.factory'] : $this->getPsCheckout_Logger_FactoryService()) && false ?: '_'}->build(${($_ = isset($this->services['ps_checkout.logger.directory']) ? $this->services['ps_checkout.logger.directory'] : ($this->services['ps_checkout.logger.directory'] = new \PrestaShop\Module\PrestashopCheckout\Logger\LoggerDirectory('1.7.7.1', '/home/codeoperativeco/prestaoperative'))) && false ?: '_'});
+        return $this->services['ps_checkout.logger'] = ${($_ = isset($this->services['ps_checkout.logger.factory']) ? $this->services['ps_checkout.logger.factory'] : $this->getPsCheckout_Logger_FactoryService()) && false ?: '_'}->build(${($_ = isset($this->services['ps_checkout.logger.directory']) ? $this->services['ps_checkout.logger.directory'] : ($this->services['ps_checkout.logger.directory'] = new \PrestaShop\Module\PrestashopCheckout\Logger\LoggerDirectory('1.7.7.1', '/home/codeoperativeco/public_html'))) && false ?: '_'});
     }
 
     /**
@@ -1157,7 +1157,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
      */
     protected function getPsCheckout_Logger_DirectoryService()
     {
-        return $this->services['ps_checkout.logger.directory'] = new \PrestaShop\Module\PrestashopCheckout\Logger\LoggerDirectory('1.7.7.1', '/home/codeoperativeco/prestaoperative');
+        return $this->services['ps_checkout.logger.directory'] = new \PrestaShop\Module\PrestashopCheckout\Logger\LoggerDirectory('1.7.7.1', '/home/codeoperativeco/public_html');
     }
 
     /**
@@ -1197,7 +1197,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
      */
     protected function getPsCheckout_Logger_Handler_FactoryService()
     {
-        return $this->services['ps_checkout.logger.handler.factory'] = new \PrestaShop\Module\PrestashopCheckout\Logger\LoggerHandlerFactory(${($_ = isset($this->services['ps_checkout.logger.directory']) ? $this->services['ps_checkout.logger.directory'] : ($this->services['ps_checkout.logger.directory'] = new \PrestaShop\Module\PrestashopCheckout\Logger\LoggerDirectory('1.7.7.1', '/home/codeoperativeco/prestaoperative'))) && false ?: '_'}->getPath(), ${($_ = isset($this->services['ps_checkout.logger.filename']) ? $this->services['ps_checkout.logger.filename'] : $this->getPsCheckout_Logger_FilenameService()) && false ?: '_'}->get(), ${($_ = isset($this->services['ps_checkout.logger.configuration']) ? $this->services['ps_checkout.logger.configuration'] : $this->getPsCheckout_Logger_ConfigurationService()) && false ?: '_'}->getMaxFiles(), ${($_ = isset($this->services['ps_checkout.logger.configuration']) ? $this->services['ps_checkout.logger.configuration'] : $this->getPsCheckout_Logger_ConfigurationService()) && false ?: '_'}->getLevel());
+        return $this->services['ps_checkout.logger.handler.factory'] = new \PrestaShop\Module\PrestashopCheckout\Logger\LoggerHandlerFactory(${($_ = isset($this->services['ps_checkout.logger.directory']) ? $this->services['ps_checkout.logger.directory'] : ($this->services['ps_checkout.logger.directory'] = new \PrestaShop\Module\PrestashopCheckout\Logger\LoggerDirectory('1.7.7.1', '/home/codeoperativeco/public_html'))) && false ?: '_'}->getPath(), ${($_ = isset($this->services['ps_checkout.logger.filename']) ? $this->services['ps_checkout.logger.filename'] : $this->getPsCheckout_Logger_FilenameService()) && false ?: '_'}->get(), ${($_ = isset($this->services['ps_checkout.logger.configuration']) ? $this->services['ps_checkout.logger.configuration'] : $this->getPsCheckout_Logger_ConfigurationService()) && false ?: '_'}->getMaxFiles(), ${($_ = isset($this->services['ps_checkout.logger.configuration']) ? $this->services['ps_checkout.logger.configuration'] : $this->getPsCheckout_Logger_ConfigurationService()) && false ?: '_'}->getLevel());
     }
 
     /**
@@ -2374,7 +2374,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
         return [
             'database_host' => '127.0.0.1',
             'database_port' => '',
-            'database_name' => 'codeoper_prestaoperative',
+            'database_name' => 'codeoper_reusenetwork',
             'database_user' => 'codeoper_prestadmin',
             'database_password' => 'NjHNmqi[igPg',
             'database_prefix' => 'psrn_',
@@ -2396,12 +2396,12 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
             'kernel.bundles' => [
 
             ],
-            'kernel.root_dir' => '/home/codeoperativeco/prestaoperative/app',
-            'kernel.project_dir' => '/home/codeoperativeco/prestaoperative',
+            'kernel.root_dir' => '/home/codeoperativeco/public_html/app',
+            'kernel.project_dir' => '/home/codeoperativeco/public_html',
             'kernel.name' => 'app',
             'kernel.debug' => false,
             'kernel.environment' => 'prod',
-            'kernel.cache_dir' => '/home/codeoperativeco/prestaoperative/var/cache/prod/',
+            'kernel.cache_dir' => '/home/codeoperativeco/public_html/var/cache/prod/',
             'kernel.active_modules' => [
                 0 => 'contactform',
                 1 => 'dashactivity',
@@ -2412,85 +2412,97 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
                 6 => 'gridhtml',
                 7 => 'gsitemap',
                 8 => 'pagesnotfound',
-                9 => 'productcomments',
-                10 => 'ps_banner',
-                11 => 'ps_categorytree',
-                12 => 'ps_checkpayment',
-                13 => 'ps_contactinfo',
-                14 => 'ps_crossselling',
-                15 => 'ps_currencyselector',
-                16 => 'ps_customeraccountlinks',
-                17 => 'ps_customersignin',
-                18 => 'ps_customtext',
-                19 => 'ps_dataprivacy',
-                20 => 'ps_emailsubscription',
-                21 => 'ps_facetedsearch',
-                22 => 'ps_faviconnotificationbo',
-                23 => 'ps_featuredproducts',
-                24 => 'ps_imageslider',
-                25 => 'ps_languageselector',
-                26 => 'ps_linklist',
-                27 => 'ps_mainmenu',
-                28 => 'ps_searchbar',
-                29 => 'ps_sharebuttons',
-                30 => 'ps_shoppingcart',
-                31 => 'ps_socialfollow',
-                32 => 'ps_themecusto',
-                33 => 'ps_wirepayment',
-                34 => 'sekeywords',
-                35 => 'statsbestcategories',
-                36 => 'statsbestcustomers',
-                37 => 'statsbestproducts',
-                38 => 'statsbestsuppliers',
-                39 => 'statsbestvouchers',
-                40 => 'statscarrier',
-                41 => 'statscatalog',
-                42 => 'statscheckup',
-                43 => 'statsdata',
-                44 => 'statsequipment',
-                45 => 'statsforecast',
-                46 => 'statslive',
-                47 => 'statsnewsletter',
-                48 => 'statsorigin',
-                49 => 'statspersonalinfos',
-                50 => 'statsproduct',
-                51 => 'statsregistrations',
-                52 => 'statssales',
-                53 => 'statssearch',
-                54 => 'statsstock',
-                55 => 'statsvisits',
-                56 => 'welcome',
-                57 => 'gamification',
-                58 => 'emarketing',
-                59 => 'psaddonsconnect',
-                60 => 'psgdpr',
-                61 => 'ps_mbo',
-                62 => 'ps_buybuttonlite',
-                63 => 'ps_checkout',
-                64 => 'ps_accounts',
-                65 => 'blockreassurance',
-                66 => 'kbmarketplace',
-                67 => 'fancyboxthumb',
-                68 => 'htmlbanners1',
-                69 => 'htmlbanners2',
-                70 => 'htmlbanners3',
-                71 => 'htmlbanners8',
-                72 => 'homefeatured',
-                73 => 'homenewtab',
-                74 => 'homeonsaletab',
-                75 => 'homebestsellerstab',
-                76 => 'htmlbanners9',
-                77 => 'blockmanufactureri',
-                78 => 'htmlbanners5',
-                79 => 'htmlbanners7',
-                80 => 'ps_newproducts',
-                81 => 'ps_bestsellers',
-                82 => 'ps_specials',
-                83 => 'ps_categoryproducts',
-                84 => 'customtabs',
-                85 => 'paypal',
+                9 => 'ps_banner',
+                10 => 'ps_categorytree',
+                11 => 'ps_checkpayment',
+                12 => 'ps_contactinfo',
+                13 => 'ps_crossselling',
+                14 => 'ps_currencyselector',
+                15 => 'ps_customeraccountlinks',
+                16 => 'ps_customersignin',
+                17 => 'ps_customtext',
+                18 => 'ps_dataprivacy',
+                19 => 'ps_emailsubscription',
+                20 => 'ps_facetedsearch',
+                21 => 'ps_faviconnotificationbo',
+                22 => 'ps_featuredproducts',
+                23 => 'ps_imageslider',
+                24 => 'ps_languageselector',
+                25 => 'ps_linklist',
+                26 => 'ps_mainmenu',
+                27 => 'ps_searchbar',
+                28 => 'ps_sharebuttons',
+                29 => 'ps_shoppingcart',
+                30 => 'ps_socialfollow',
+                31 => 'ps_themecusto',
+                32 => 'ps_wirepayment',
+                33 => 'sekeywords',
+                34 => 'statsbestcategories',
+                35 => 'statsbestcustomers',
+                36 => 'statsbestproducts',
+                37 => 'statsbestsuppliers',
+                38 => 'statsbestvouchers',
+                39 => 'statscarrier',
+                40 => 'statscatalog',
+                41 => 'statscheckup',
+                42 => 'statsdata',
+                43 => 'statsequipment',
+                44 => 'statsforecast',
+                45 => 'statslive',
+                46 => 'statsnewsletter',
+                47 => 'statsorigin',
+                48 => 'statspersonalinfos',
+                49 => 'statsproduct',
+                50 => 'statsregistrations',
+                51 => 'statssales',
+                52 => 'statssearch',
+                53 => 'statsstock',
+                54 => 'statsvisits',
+                55 => 'welcome',
+                56 => 'gamification',
+                57 => 'emarketing',
+                58 => 'psaddonsconnect',
+                59 => 'psgdpr',
+                60 => 'ps_mbo',
+                61 => 'ps_buybuttonlite',
+                62 => 'ps_checkout',
+                63 => 'ps_accounts',
+                64 => 'blockreassurance',
+                65 => 'kbmarketplace',
+                66 => 'fancyboxthumb',
+                67 => 'htmlbanners1',
+                68 => 'htmlbanners2',
+                69 => 'htmlbanners3',
+                70 => 'htmlbanners8',
+                71 => 'homefeatured',
+                72 => 'homenewtab',
+                73 => 'homeonsaletab',
+                74 => 'homebestsellerstab',
+                75 => 'htmlbanners9',
+                76 => 'blockmanufactureri',
+                77 => 'htmlbanners5',
+                78 => 'htmlbanners7',
+                79 => 'ps_newproducts',
+                80 => 'ps_bestsellers',
+                81 => 'ps_specials',
+                82 => 'ps_categoryproducts',
+                83 => 'customtabs',
+                84 => 'paypal',
+                85 => 'saveforlater',
+                86 => 'kbmpdealmanager',
+                87 => 'contentbox',
+                88 => 'blockwishlist',
+                89 => 'xipblog',
+                90 => 'colorchange',
+                91 => 'cssmodule',
+                92 => 'shoppingcategoriesheader',
+                93 => 'productsheader',
+                94 => 'productcomments',
+                95 => 'wishlistlinkicon',
+                96 => 'mapofsellers',
+                97 => 'postcodecheck',
             ],
-            'ps_cache_dir' => '/home/codeoperativeco/prestaoperative/var/cache/prod/',
+            'ps_cache_dir' => '/home/codeoperativeco/public_html/var/cache/prod/',
             'mail_themes_uri' => '/mails/themes',
             'doctrine_cache.apc.class' => 'Doctrine\\Common\\Cache\\ApcCache',
             'doctrine_cache.apcu.class' => 'Doctrine\\Common\\Cache\\ApcuCache',
@@ -2601,7 +2613,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
             'doctrine.orm.second_level_cache.cache_configuration.class' => 'Doctrine\\ORM\\Cache\\CacheConfiguration',
             'doctrine.orm.second_level_cache.regions_configuration.class' => 'Doctrine\\ORM\\Cache\\RegionsConfiguration',
             'doctrine.orm.auto_generate_proxy_classes' => false,
-            'doctrine.orm.proxy_dir' => '/home/codeoperativeco/prestaoperative/var/cache/prod//doctrine/orm/Proxies',
+            'doctrine.orm.proxy_dir' => '/home/codeoperativeco/public_html/var/cache/prod//doctrine/orm/Proxies',
             'doctrine.orm.proxy_namespace' => 'Proxies',
         ];
     }

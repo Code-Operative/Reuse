@@ -3,7 +3,7 @@
   array (
     'database_host' => '127.0.0.1',
     'database_port' => '',
-    'database_name' => 'codeoper_prestaoperative',
+    'database_name' => 'codeoper_reusenetwork',
     'database_user' => 'codeoper_prestadmin',
     'database_password' => 'NjHNmqi[igPg',
     'database_prefix' => 'psrn_',
