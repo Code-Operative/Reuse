@@ -1,0 +1,130 @@
+.block-categories {
+    .h6{
+        margin-bottom: 2px;
+    }
+    .category-sub-menu {
+        .category-sub-link {
+        }
+        li {
+           position: relative;
+            &[data-depth="1"] {
+            }
+        }
+    }
+    li[data-depth] {
+        a {
+            border-bottom: 1px solid #e3e3e3;
+            display: block;
+            font-size: 16px;
+            line-height: 1;
+            padding: 16px 15px 16px 18px;
+            text-transform: uppercase;
+        }
+    }
+    .navbar-toggler,.arrows{
+        display: block;
+        position: absolute;
+        right: 9px;
+        top: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 0;
+        border: none;
+        width: 40px;
+        height: 40px;
+        text-align: right;
+        line-height: 40px;
+    }
+    .arrows{
+        right: 5px;
+    }
+    .collapse-icons {
+        &[aria-expanded="true"] {
+            .add{
+                display: none;
+            }
+            .remove {
+                display: block;
+            }
+        }
+        .remove {
+            display: none;
+        }
+    }
+    .arrows {
+        &[aria-expanded="true"] {
+            .arrow-down {
+                display: none;
+            }
+           .arrow-up {
+                display: block;
+            }
+        }
+        .arrow-up {
+            display: none;
+        }
+    }
+}
+/* Media */
+@include media-breakpoint-up(lg) {
+    .block-categories{
+        .navbar-toggler, .arrows{
+            transition: opacity 0.4s;
+           i{
+                &:before{
+                    font-family: $second-icon-font;
+                    content: '\e80d'
+                }
+           }
+        }
+        .collapse{
+            display: block!important;
+        }
+        li[data-depth="0"]{
+            &:hover{
+               > a{
+                    background: #f7f7f7;
+                }
+           }
+        }
+        li[data-depth] {
+            .category-sub-menu{
+                background: #f7f7f7;
+                border: 1px solid #e3e3e3;
+                display: block;
+                left: 140%;
+                min-width: 245px;
+                opacity: 0;
+                position: absolute;
+                visibility: hidden;
+                top: -1px;
+                transition: opacity 0.4s,left 0.4s,right 0.4s,visibility 0.4s;
+                white-space: nowrap;
+                z-index: 100;
+            }
+        }
+        li[data-depth] {
+            &:hover{
+                > .collapse{
+                    > .category-sub-menu{
+                        left: 100%;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+                > .navbar-toggler{
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-down(md) {
+    .block-categories{
+        .h6{
+            &:after{
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.lang-rtl{
+	.custom-checkbox{
+		input[type="checkbox"]{
+			+ span{
+				margin: 0 0 0 5px;
+			}
+		}
+		label{
+			text-align: right;
+		}
+	}
+}

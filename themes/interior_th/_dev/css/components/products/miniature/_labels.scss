@@ -1,0 +1,71 @@
+.product-flags {
+    margin-bottom: 0;
+
+    .new,
+    .online-only,
+    .on-sale,
+    .pack {
+        font: 10px $second-font;
+        line-height: 48px;
+
+        position: absolute;
+        z-index: 2;
+        top: 18px;
+        right: 18px;
+
+        overflow: hidden;
+
+        width: 48px;
+        height: 48px;
+
+        transform: rotate(45deg);
+        text-align: center;
+        white-space: nowrap;
+        text-transform: uppercase;
+
+        color: $clr-eight;
+        border: 1px solid;
+        border-radius: 5px;
+
+        span {
+            display: block;
+
+            transform: rotate(-45deg);
+        }
+    }
+
+    .on-sale {
+        font-size: 10px;
+
+        right: auto;
+        left: 18px;
+    }
+
+    .online-only {
+        top: auto;
+        right: auto;
+        bottom: 18px;
+        left: 18px;
+    }
+    .discount {
+        display: none;
+        top: auto;
+        right: auto;
+        bottom: 18px;
+        left: 18px;
+    }
+}
+
+
+
+.product-price-and-shipping .discount-percentage {
+    display: inline-block;
+
+    margin-left: 5px;
+    padding: 5px 10px;
+
+    vertical-align: bottom;
+
+    color: $white;
+    background: $clr-seven;
+}

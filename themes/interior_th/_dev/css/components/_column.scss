@@ -1,0 +1,48 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+.sidebar {
+	> div, > section{
+		margin-bottom: 40px;
+	}
+	.h6{
+		display: block;
+	    background: $clr-two;
+	    color: $clr-four;
+	    font-size: 20px;
+	    line-height: 1.1;
+	    padding: 17px 18px;
+	    text-transform: uppercase;
+	    margin-bottom: 10px;
+	}
+}
+@include media-breakpoint-down(md) {
+	.sidebar {
+		.h6{
+			position: relative;
+			padding-right: 25px;
+			&:after{
+				font-family: $second-icon-font;
+				content: '\E810';
+				position: absolute;
+				right: 10px;
+				font-size: 14px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			&.active{
+				&:after{
+					content: '\E80F';
+				}
+			}
+		}
+		.toggle-block{
+			display: none;
+		}
+		.open {
+			.toggle-block{
+				display: block;
+			}
+		}
+	}
+}

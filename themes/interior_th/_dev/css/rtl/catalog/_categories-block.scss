@@ -1,0 +1,32 @@
+.lang-rtl{
+    .block-categories {
+        .arrows, .navbar-toggler{
+            left: 0;
+            right: auto;
+            transform: scale(-1, 1);
+        }
+        .arrows{
+            left: 5px;
+        }
+    }
+}
+@include media-breakpoint-up(md) {
+    .lang-rtl{
+        .block-categories {
+             li[data-depth]{
+                .category-sub-menu{
+                    left: auto;
+                    right: 140%;
+                }
+                &:hover{
+                     > .collapse{
+                        > .category-sub-menu{
+                            left: auto;
+                            right: 100%;
+                        }
+                     }
+                }
+             }
+        }
+    }
+}

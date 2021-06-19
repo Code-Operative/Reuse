@@ -1,0 +1,34 @@
+/* page in my account ************************************************************************* */
+
+#module-blockwishlist-mywishlist {
+    .wrapper-columns{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #content-wrapper{
+        width: 100%;
+    }
+    fieldset {
+        padding: 0;
+    }
+    .text {
+        label {
+            display: inline-block;
+            padding-right: 10px;
+            width: 174px;
+            font-weight: bold;
+            font-size: 12px;
+            text-align: right;
+        }
+        input {
+            padding: 0 5px;
+            height: 20px;
+            width: 288px;
+            border: 1px solid #ccc;
+        }
+    }
+}
+
+#mywishlist .wishlist_delete {
+    text-align: center;
+}

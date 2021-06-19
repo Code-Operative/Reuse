@@ -1,0 +1,19 @@
+@include media-breakpoint-down(md) {
+	.lang-rtl{
+		#_mobile_currency_selector, #_mobile_language_selector{
+			margin-left: 0;
+			margin-right: auto;
+		}
+		#_mobile_currency_selector{
+			+ #_mobile_language_selector{
+				margin-left: 0;
+				margin-right: 15px;
+			}
+		}
+		.language-selector, .currency-selector{
+			select{
+				padding-right: 0;
+			}
+		}
+	}
+}

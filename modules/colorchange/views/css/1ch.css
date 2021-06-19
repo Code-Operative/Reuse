@@ -1,0 +1,123 @@
+
+                /*Theme color first*/
+                body a:hover, body .dropdown:hover .expand-more, body .owl-nav > div, body.page-my-account #content .links a:hover i, body .nav.nav-tabs_alternative .nav-item .nav-link.active, body .nav.nav-tabs_alternative .nav-item .nav-link:hover, body .contact-rich .block .icon,  body #product_comments_block_tab .comment_author_infos strong, body .dropdown-item:focus, body .dropdown-item:hover, body #_desktop_top_menu .top-menu[data-depth="1"] > li a:hover, body .header-slide .htmlcontent__html h2, body .home-banner .htmlcontent__title-one, body .general .blog_post .read_more, body .post-category .blog_post .read_more, body .post_meta i, body .htmlcontent-tabs li.active a, body .htmlcontent-tabs li a.active, .htmlcontent-tabs li a:hover, body .htmlcontent-tabs li a:hover, body .block-contact li:before, body .htmlcontent__item.tab-pane ul li:before, body .display-view .view-item.active, body .display-view .view-item:hover, body .pagination .current a, body .list .quick-view:hover, body .list .link-view:hover,body  .list .addToWishlist:hover, body .block_newsletter .form-control:focus, body .home-tabs .tab-pane ul li:before, body .header-slide .caption-description h2, body #_mobile_search_bar .search-bar .search-bar__text:focus, body .language-selector select:hover, body .language-selector select:focus, body .currency-selector select:hover, body .currency-selector select:focus, body .star-content .star-on, body .star-content .star-hover, body .block-promo .promo-code-button, body .product-line-info .value, body .breadcrumb li:last-child a, body .rte a, body .custom-checkbox a {
+                        color: #EEB363;
+                    }
+                body .cart-header .cart-products-count,
+                body .btn-to-top, body .btn-to-top:hover, body .btn-to-top:active, body .nav.nav-inline .nav-link.active, body .nav.nav-inline .nav-link:hover, body .block_newsletter .submit, body .dropdown-menu > a:hover, body .dropdown-menu li > a:hover, body .general .blog_post .slick-prev:hover, body .general .blog_post .slick-next:hover, body .post-category .blog_post .slick-prev:hover, body .post-category .blog_post .slick-next:hover, body a.post_thumbnail:before, body #_mobile_search_bar .search-bar .search-bar__btn, body .addresses-footer a, body .address-footer a, body .product-cover .zoom-in, #products .page-not-found .search-bar__btn, #pagenotfound .page-not-found .search-bar__btn, #products .page-not-found .search-bar__btn:hover, #pagenotfound .page-not-found .search-bar__btn:hover, body .slick-slider .slick-prev:hover, body .slick-slider .slick-next:hover, body .show .select-title i, body .ui-slider.ui-slider-horizontal .ui-slider-handle, body .ui-slider.ui-slider-horizontal .ui-slider-handle:hover, body .ui-slider.ui-slider-horizontal .ui-slider-handle.ui-state-active {
+                    background-color: #EEB363;
+                }
+                body .btn.btn_skine-two, body .btn-primary.btn_skine-two, body .btn-secondary.btn_skine-two, body .btn-tertiary.btn_skine-two, body .btn.btn_skine-two:hover, body .btn-primary.btn_skine-two:hover, body .btn-secondary.btn_skine-two:hover, body .btn-tertiary.btn_skine-two:hover, body .btn.btn_skine-two:active, body .btn-primary.btn_skine-two:active, body .btn-secondary.btn_skine-two:active, body .btn-tertiary.btn_skine-two:active, body .grid .add-cart:active, body .grid .add-cart:hover, body .grid .quick-view:active, body .grid .link-view:active, body .grid .addToWishlist:active, body .grid .quick-view:hover, body .grid .link-view:hover, body .grid .addToWishlist:hover, body .list .quick-view:hover i, body .list .link-view:hover i, body .list .addToWishlist:hover i, body .list .quick-view:active i, body .list .link-view:active i, body .list .addToWishlist:active i, body btn.btn_skine-four:hover, body .btn-primary.btn_skine-four:hover, body .btn-secondary.btn_skine-four:hover, body .btn-tertiary.btn_skine-four:hover, body btn.btn_skine-four:active, body .btn-primary.btn_skine-four:active, body .btn-secondary.btn_skine-four:active, body .btn-tertiary.btn_skine-four:active, body #_mobile_search_bar .search-bar .search-bar__btn, body #product-comments-list-pagination li:hover span:not(.current), body #product-comments-list-pagination li.active span {
+                    background-color: #EEB363;
+                    border-color: #EEB363;
+                }
+                body .owl-nav > div:hover, body .owl-controls .owl-dot, body .form-control:focus, body .block_newsletter .form-control:focus, body .product-variants-item .input-color:checked + span, body .product-variants-item .input-color:hover + span, body .product-variants-item .input-radio:checked + span, body .product-variants-item .input-radio:hover + span, body .nav.nav-inline .nav-link.active, body .product-images > .thumb-container > .thumb.selected, body .product-images > .thumb-container > .thumb:hover, body .checkout-step .address-item.selected, body #header.fixed-top.hide-bar, body .header-slide .htmlcontent__html, body .header-slide .htmlcontent__html:before, body .header-slide .htmlcontent__html:after, body .nav.nav-tabs_alternative .nav-item .nav-link.active, body .nav.nav-tabs_alternative .nav-item .nav-link:hover, body .header-slide .caption-description, body .header-slide .caption-description:before, body .header-slide .caption-description:after, #products .page-not-found .search-bar__text:hover, #pagenotfound .page-not-found .search-bar__text:hover, body .show .select-title, body .block-promo .promo-input:focus, body select:focus {
+                    border-color: #EEB363;
+                }
+                body .bootstrap-touchspin .btn.btn-touchspin:hover, body .bootstrap-touchspin .btn.btn-touchspin:active {
+                    border-color: #EEB363;
+                    background-color: #EEB363;
+                }
+                body .owl-nav > div:hover{
+                    -webkit-box-shadow: inset 0 0 0 30px #EEB363;
+                    box-shadow: inset 0 0 0 30px #EEB363;
+                }
+                body .owl-controls .owl-dot:hover, body .owl-controls .owl-dot.active{
+                    -webkit-box-shadow: inset 0 0 0 6px #EEB363;
+                    box-shadow: inset 0 0 0 6px #EEB363;
+                 }
+                @media (min-width: 576px) {
+                    body .nav.nav-tabs .nav-item .nav-link:hover, body .nav.nav-tabs .nav-item .nav-link.active {
+                        color: #EEB363;
+                    }
+                }
+                @media (min-width: 992px) {
+                    body .header-nav [class^="material-"], body .header-nav [class*=" material-"], body .header-nav [class^="font-"], body .header-nav [class*=" font-"], body .search-bar .search-bar__text:focus {
+                        color: #EEB363;
+                    }
+                }
+                @media (max-width: 991px) {
+                    body .header_user_info__toggle-btn {
+                        background-color: #EEB363;
+                    }
+                    #products .page-not-found .search-bar__btn, #pagenotfound .page-not-found .search-bar__btn {
+                        border-color: #EEB363;
+                    }
+                }
+                @media (max-width: 575px) {
+                    body .nav.nav-tabs .nav-item .nav-link:hover, body .nav.nav-tabs .nav-item .nav-link.active {
+                        background-color: #EEB363;
+                    }
+                }
+                /*Buttons/tabs text color(Theme color first)*/
+                body .cart-header .cart-products-count, body .dropdown-menu > a:hover, body .dropdown-menu li > a:hover, body .btn-to-top, body .btn-to-top:hover, body .btn-to-top:active, body .owl-nav > div:hover, body .btn.btn_skine-two, body .btn-primary.btn_skine-two, body .btn-secondary.btn_skine-two, body .btn-tertiary.btn_skine-two, body .btn.btn_skine-two:hover, body .btn-primary.btn_skine-two:hover, body .btn-secondary.btn_skine-two:hover, body .btn-tertiary.btn_skine-two:hover, body .btn.btn_skine-two:active, body .btn-primary.btn_skine-two:active, body .btn-secondary.btn_skine-two:active, body .btn-tertiary.btn_skine-two:active, body .grid .add-cart:active, body .grid .add-cart:hover, body .grid .quick-view:active, body .grid .link-view:active, body .grid .addToWishlist:active, body .grid .quick-view:hover, body .grid .link-view:hover, body .grid .addToWishlist:hover, body .list .quick-view:hover i, body .list .link-view:hover i, body .list .addToWishlist:hover i, body .list .quick-view:active i, body .list .link-view:active i, body .list .addToWishlist:active , body btn.btn_skine-four:hover, body .btn-primary.btn_skine-four:hover, body .btn-secondary.btn_skine-four:hover, body .btn-tertiary.btn_skine-four:hover, body btn.btn_skine-four:active, body .btn-primary.btn_skine-four:active, body .btn-secondary.btn_skine-four:active, body .btn-tertiary.btn_skine-four:active, body .slick-slider .slick-prev:hover, body .slick-slider .slick-next:hover, body .block_newsletter .submit, body .show .select-title i, body #product-comments-list-pagination li:hover span:not(.current), body #product-comments-list-pagination li.active span, body .nav.nav-inline .nav-link.active, body .nav.nav-inline .nav-link:hover, body .bootstrap-touchspin .btn.btn-touchspin:hover, body .bootstrap-touchspin .btn.btn-touchspin:active {
+                    color: #ffffff;
+                }
+                @media (max-width: 575px) {
+                    body .nav.nav-tabs .nav-item .nav-link:hover, body .nav.nav-tabs .nav-item .nav-link.active {
+                        color: #ffffff;
+                    }
+                }
+                /*Theme color second*/
+                body .fancybox-skin .fancybox-close:hover, body .custom-checkbox input[type="checkbox"]:checked + span, body .dropdown-menu, body .modal .close:hover, body .bootstrap-touchspin .btn.btn-touchspin, body .addresses-footer a:hover, body .address-footer a:hover, body .addresses-footer a:active, body .address-footer a:active, body .checkout-step .step-title, body .product-cover .zoom-in:hover, body .product-features > dl.data-sheet dt.name {
+                     background-color: #003C50;
+                }
+                body .btn, body .btn-primary, body .btn-secondary, body .btn-tertiary, body .page-footer a {
+                    border-color: #003C50;
+                    color: #003C50;
+                }
+                body .btn:hover, body .btn-primary:hover, body .btn-secondary:hover, body .btn-tertiary:hover, 
+                body .btn:active, body .btn-primary:active, body .btn-secondary:active, body .btn-tertiary:active, body .wishlist-btn:hover, body .wishlist-btn:active, body .social-sharing li a:hover, body .social-sharing li a:active, body .page-footer a:hover, body .page-footer a:active {
+                    border-color: #003C50;
+                    background-color: #003C50;
+                }
+                body .btn.btn_skine-four, body .btn-primary.btn_skine-four, body .btn-secondary.btn_skine-four, body .btn-tertiary.btn_skine-four, body .btn:active, body .btn-primary:active, body .btn-secondary:active, body .btn-tertiary:active {
+                    background-color: #003C50;
+                    border-color: #003C50;
+                }
+                body .custom-radio input[type="radio"]:checked + span, body .custom-checkbox input[type="checkbox"]:checked + span, body .bootstrap-touchspin .btn.btn-touchspin {
+                    border-color: #003C50;
+                }
+                body .custom-radio input[type="radio"]:checked + span {
+                    -webkit-box-shadow: inset 0 0 0 6px #003C50;
+                    box-shadow: inset 0 0 0 6px #003C50;
+                }
+                @media (max-width: 991px){
+                    body #mobile_top_menu_wrapper, body .btn-toggle-mobile, body .btn-toggle-mobile:hover, body .cart-header > .inner-wrapper i {
+                        background-color: #003C50;
+                    }
+                }
+                /*Buttons/tabs text color(Theme color second)*/
+                body .btn:hover, body .btn-primary:hover, body .btn-secondary:hover, body .btn-tertiary:hover, body .btn:active, body .btn-primary:active, body .btn-secondary:active, body .btn-tertiary:active, body .modal .close:hover, body .dropdown-menu > a, body .dropdown-menu li > a, body .checkout-step .step-title, body .bootstrap-touchspin .btn.btn-touchspin, body .product-features > dl.data-sheet dt.name,  body .wishlist-btn:hover, body .wishlist-btn:active, body .social-sharing li a:hover, body .social-sharing li a:active, body .fancybox-skin .fancybox-close:hover {
+                    color: #ffffff;
+                }
+                /*header bg*/
+                @media (min-width: 992px) {
+                    body .header-nav, body #_desktop_top_menu .top-menu .sub-menu {
+                        background-color: #003C50;
+                    }
+                }
+                /*header text color*/
+                @media (min-width: 992px){
+                    body .header-nav, body .language-selector, body .currency-selector, body .top-menu[data-depth="1"] > li a, body .top-menu[data-depth="2"] {
+                        color: #003C50;
+                    }
+                }
+                @media (min-width: 1200px){
+                    body .header_user_info a:not(:last-child){
+                        border-color: #003C50;
+                    }
+                }
+                /*Footer background*/
+                body #footer .footer-container, body #footer .footer-two {
+                    background-color: #003C50;
+                }
+                /*Footer text color*/
+                body #footer .footer-container, body .payment-logos li, body .block-social h3, body .block-social a, body .links h3, body .links .h3 {
+                    color: #ffffff;
+                }
+                body .block_newsletter .form-control {
+                    border-color: #ffffff;
+                    color: #ffffff;
+                }
+    

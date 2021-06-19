@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>postcodecheck</name>
+	<displayName><![CDATA[Post Code Check]]></displayName>
+	<version><![CDATA[1.0.0]]></version>
+	<description><![CDATA[Check the buyer\'s a seller\'s postcode to determine if shipping is possible. ]]></description>
+	<author><![CDATA[CodeOperative]]></author>
+	<tab><![CDATA[shipping_logistics]]></tab>
+	<is_configurable>1</is_configurable>
+	<need_instance>1</need_instance>
+</module>

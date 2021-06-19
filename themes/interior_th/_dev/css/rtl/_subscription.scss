@@ -1,0 +1,13 @@
+.lang-rtl{
+	.block_newsletter{
+		.form-control{
+			padding-right: 15px;
+			padding-right: 52px;
+		}
+		.submit{
+			right: auto;
+			left: 0;
+			transform: scale(-1, 1);
+		}
+	}
+}

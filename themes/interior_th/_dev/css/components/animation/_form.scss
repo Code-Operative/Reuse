@@ -1,0 +1,11 @@
+.form-control,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+div.selector {
+    transition: border-color .15s ease-in;
+}
+
+div.selector span:after {
+    transition: background .15s ease-in, color .15s ease-in;
+}

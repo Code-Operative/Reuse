@@ -1,0 +1,15 @@
+.product-description-short{
+	border-top: 1px solid $clr-three;
+    color: $clr-five;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-top: 10px;
+    padding-top: 30px;
+}
+.product-description ul{
+    list-style: square;
+    padding-left: 30px;
+}
+.product-description ol{
+  list-style: decimal;
+}

@@ -1,0 +1,23 @@
+.lang-rtl{
+	.checkout-step {
+		#customer-form, 
+		#delivery-address,
+		#invoice-address,
+		#login-form{
+			.form-control-label{
+				text-align: right;
+			}
+		}
+		.step-number{
+			padding: 0 0 0 15px;
+		}
+		&.-reachable.-complete{
+			h1 {
+				.step-edit{
+					margin-right: auto;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}

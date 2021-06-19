@@ -1,0 +1,102 @@
+//grid
+.products.view-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+//min 576
+.products.view-grid {
+    .product-miniature{
+        width: (100%/2);
+    }
+}
+//min 769
+@include media-breakpoint-up(md) {
+    .products.view-grid {
+        .product-miniature{
+            width: (100%/3);
+        }
+    }
+}
+//min 992
+@include media-breakpoint-up(lg) {
+    .products.view-grid {
+        .product-miniature{
+            width: (100%/4);
+        }
+    }
+}
+$num-iterations: 7;
+//min 1200
+@include media-breakpoint-up(xl) {
+    @for $i from 1 through $num-iterations {
+        .products.xlarge-#{$i} {
+            .product-miniature {
+                width: (100%/#{$i});
+            }
+        }
+    }
+}
+//max 1199
+@include media-breakpoint-down(lg) {
+    @for $i from 1 through $num-iterations {
+        .products.large-#{$i} {
+            .product-miniature {
+                width: (100%/#{$i});
+            }
+        }
+    }
+}
+//max 991
+@include media-breakpoint-down(md) {
+    @for $i from 1 through $num-iterations {
+        .products.medium-#{$i} {
+            .product-miniature {
+                width: (100%/#{$i});
+            }
+        }
+    }
+}
+//max 768
+@include media-breakpoint-down(sm) {
+    @for $i from 1 through $num-iterations {
+        .products.small-#{$i} {
+            .product-miniature {
+                width: (100%/#{$i});
+            }
+        }
+    }
+}
+//max 575
+@include media-breakpoint-down(xs) {
+    @for $i from 1 through $num-iterations {
+        .products.xsmall-#{$i} {
+            .product-miniature {
+                width: (100%/#{$i});
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .view-grid {
+        &.products {
+            display: block;
+            visibility: visible;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: none;
+            overflow: -moz-scrollbars-none;
+            white-space: nowrap;
+            margin-bottom: 10px;
+            font-size: 0;
+        }
+        .product-miniature {
+            font-size: 14px;
+            white-space: normal;
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+}

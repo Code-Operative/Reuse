@@ -1,0 +1,15 @@
+.category-miniature {
+	transition: border-color .5s;
+	transition: all .3s;
+    box-shadow: 0px 0px 0px rgba($black, .1);
+	&:hover{
+    	box-shadow: 0 5px 20px rgba($black, .1);
+    	transform: translateY(-4px);
+	}
+	a{
+		overflow: hidden;
+	}
+	img{
+		transition: transform .6s;
+	}
+}

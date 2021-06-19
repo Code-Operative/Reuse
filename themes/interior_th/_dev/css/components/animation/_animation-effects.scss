@@ -1,0 +1,10 @@
+input[type="button"],
+input[type="submit"],
+a,
+button,.btn{
+    transition: background .2s, color .2s, border-color .2s;
+}
+
+.-default-arrows .owl-buttons > div {
+    transition: color .3s;
+}

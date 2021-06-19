@@ -1,0 +1,46 @@
+.bootstrap-touchspin{
+    input.form-control{
+        border: 2px solid $clr-three;
+        border-right-width: 0;
+        height: 42px;
+        padding: 0 10px;
+        width: 60px;
+    }
+    .btn.btn-touchspin{
+        display: block;
+        height: 21px;
+        width: 21px;
+        padding: 0;
+        background: $brand-second;
+        border: 2px solid $brand-second;
+        color: $white;
+        font-size: 14px;
+        text-align: center;
+        &:hover{
+            background: $brand-primary;
+            border-color: $brand-primary;
+            color: $white;
+        }
+        &:active{
+            border-color: lighten($brand-primary, 10%);
+            background: lighten($brand-primary, 10%);
+            color: $white;
+        }
+        &:first-child{
+            border-bottom: none;
+        }
+        i{
+            font-size: inherit;
+        }
+    }
+    .touchspin-up {
+        &:after {
+            content: "\E5CE";
+        }
+    }
+    .touchspin-down {
+        &:after {
+            content: "\E5CF";
+        }
+    }
+}

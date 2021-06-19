@@ -1,0 +1,91 @@
+1619773424
+s:6279:"<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.prestashop.com/en/blog/feed.xml" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:og="http://ogp.me/ns#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <channel>
+    <title>Blog Feed</title>
+    <link>https://www.prestashop.com/en/blog/feed.xml</link>
+    <description></description>
+    <language>en</language>
+     <atom:link href="https://www.prestashop.com/en/blog/feed.xml" rel="self" type="application/rss+xml" />
+      <item>
+    <title>Use Case: How the online store Les Raffineurs managed to grow thanks to Klaviyo&amp;#039;s PrestaShop integration</title>
+    <link>https://www.prestashop.com/en/blog/klaviyo-prestashop-integration</link>
+    <description>In 2014, Julien Bergis and Romain Jourdan had the original idea for what would later become </description>
+     <pubDate>Fri, 16 Apr 2021 15:46:15 +0200</pubDate>
+ <dc:creator>PrestaShop Team</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/klaviyo-prestashop-integration</guid>
+  </item>
+  <item>
+    <title>3 customer acquisition tips for your online store</title>
+    <link>https://www.prestashop.com/en/blog/customer-acquisition-tips</link>
+    <description>For ecommerce businesses—whether you have 10 or 10,000 customers—increasing your customer base is essential to growing your br</description>
+     <pubDate>Wed, 14 Apr 2021 15:01:32 +0200</pubDate>
+ <dc:creator>Aubrey Harper</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/customer-acquisition-tips</guid>
+  </item>
+  <item>
+    <title>E-commerce in Germany: Opportunities and challenges amidst the Covid-19 pandemic</title>
+    <link>https://www.prestashop.com/en/blog/ecommerce-opportunities-challenges</link>
+    <description>The pandemic has sped up digital transformation and driven e-commerce growth all around the world. This is especially true for e-commerce in Germany.</description>
+     <pubDate>Mon, 12 Apr 2021 17:14:45 +0200</pubDate>
+ <dc:creator>Océane Juste</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/ecommerce-opportunities-challenges</guid>
+  </item>
+  <item>
+    <title>VAT: New rules applicable for the European Union from July 1st 2021</title>
+    <link>https://www.prestashop.com/en/blog/european-union-vat</link>
+    <description>On July 1, 2021, the VAT rules applicable to distance selling and more broadly to BtoC E-commerce will be profoundly modified for all European Union (EU) countries.</description>
+     <pubDate>Sun, 04 Apr 2021 09:37:27 +0200</pubDate>
+ <dc:creator>PrestaShop Team</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/european-union-vat</guid>
+  </item>
+  <item>
+    <title>Five simple steps to start an online store in 2021</title>
+    <link>https://www.prestashop.com/en/blog/simple-steps-online-store</link>
+    <description>Starting an online store has nowadays become easier compared to some years back, where lots of coding was needed.</description>
+     <pubDate>Mon, 29 Mar 2021 17:42:53 +0200</pubDate>
+ <dc:creator>John Ahya</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/simple-steps-online-store</guid>
+  </item>
+  <item>
+    <title>Why Consent Management applies to your online shop as well</title>
+    <link>https://www.prestashop.com/en/blog/consent-management-online-shop</link>
+    <description>We&#039;re all familiar with them: the cookie banners that pop up as soon as we visit a website. One can&#039;t help but wonder, why do we need such a banner in the first place?</description>
+     <pubDate>Mon, 22 Mar 2021 17:25:49 +0100</pubDate>
+ <dc:creator>Hanna Waldenmaier</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/consent-management-online-shop</guid>
+  </item>
+  <item>
+    <title>PSD2 SCA is here. Is your shopping cart ready?</title>
+    <link>https://www.prestashop.com/en/blog/psd2-sca-ready</link>
+    <description>If you’re a merchant who’s acquired in the EEA and the UK, and if you’re an issuer of cards in this area, then PSD2 and SCA probably applies to you.</description>
+     <pubDate>Thu, 11 Mar 2021 14:23:32 +0100</pubDate>
+ <dc:creator>CardinalCommerce</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/psd2-sca-ready</guid>
+  </item>
+  <item>
+    <title>Women in tech – Interview with our PrestaShop ambassadress Patricia Perochena</title>
+    <link>https://www.prestashop.com/en/blog/women-tech-patricia-perochena</link>
+    <description>It is a well-known fact that women are underrepresented in the technology sector. We would love to see that change.</description>
+     <pubDate>Mon, 08 Mar 2021 17:45:25 +0100</pubDate>
+ <dc:creator>Océane Juste</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/women-tech-patricia-perochena</guid>
+  </item>
+  <item>
+    <title>E-commerce in 2021: The challenge of customer retention</title>
+    <link>https://www.prestashop.com/en/blog/customer-retention-trends</link>
+    <description>In light of the ongoing health crisis, a number of merchants have seen an increase in customers.</description>
+     <pubDate>Wed, 03 Mar 2021 14:32:01 +0100</pubDate>
+ <dc:creator>PrestaShop Team</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/customer-retention-trends</guid>
+  </item>
+  <item>
+    <title>E-merchants have their say: 2021 Valentine&amp;#039;s Day Special</title>
+    <link>https://www.prestashop.com/en/blog/valentines-2021-merchants</link>
+    <description>A major event for people in love; Valentine&#039;s Day is one of the commercial highlights of the year and is even ranked in 3rd place in some business sectors.</description>
+     <pubDate>Fri, 12 Feb 2021 17:31:19 +0100</pubDate>
+ <dc:creator>PrestaShop Team</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/valentines-2021-merchants</guid>
+  </item>
+  </channel>
+</rss>
+";

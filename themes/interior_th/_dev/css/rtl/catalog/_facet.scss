@@ -1,0 +1,20 @@
+.lang-rtl{
+	#search_filters{
+		.facet{
+			.facet-label{
+				text-align: right;
+			}
+			li{
+				padding-right: 27px;
+				padding-left: 0;
+			}
+			.custom-radio, .custom-checkbox{
+				left: auto;
+				right: 0;
+			}
+			.magnitude{
+				float: left;
+			}
+		}
+	}
+}

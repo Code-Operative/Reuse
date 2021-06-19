@@ -1,0 +1,29 @@
+//in tabs
+.productstabs-section {
+    margin-top: 65px;
+}
+.page-home {
+    .container {
+        position: static;
+        padding-left: 0;
+        padding-right: 0;
+        width: auto;
+    }
+}
+@include media-breakpoint-down(md) {
+    .productstabs-section {
+        margin-top: 40px;
+    }
+}
+@include media-breakpoint-down(xs) {
+    .productstabs-section {
+        .tab-pane {
+            margin-left: -$grid-gutter-width-base/2;
+            margin-right: -$grid-gutter-width-base/2;
+            .products {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+}

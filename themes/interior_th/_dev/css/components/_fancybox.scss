@@ -1,0 +1,42 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+// Fancybox
+.fancybox-lock .fancybox-overlay.fancybox-overlay-fixed{
+  overflow-x: hidden;
+}
+.fancybox-skin {
+	background: $white !important;
+	padding: 40px 30px 12px 15px!important;
+}
+.fancybox-skin .fancybox-close {
+		background: $clr-two;
+		cursor: pointer;
+		display: block;
+		font: 14px/45px $second-icon-font;
+		height: 45px;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		top: 0;
+		width: 45px;
+		&:hover {
+			background: $brand-second;
+			color: $white;
+			opacity: 1;
+		}
+		&:after {
+			content: '\e812';
+		}
+}
+.fancybox-type-iframe {
+	.fancybox-inner{
+		overflow: hidden!important;
+	}
+}
+.video-frame{
+	.fancybox-skin{
+		background: $black!important;
+		padding: 0 !important;
+	}
+}

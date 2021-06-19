@@ -1,0 +1,15 @@
+.r-column{
+	h1{
+		font-size: 32px;
+		font-weight: 700;
+	}
+}
+//max 768
+@include media-breakpoint-down(md) {
+	.r-column{
+		margin-top: 20px;
+		h1{
+			font-size: 25px;
+		}
+	}
+}

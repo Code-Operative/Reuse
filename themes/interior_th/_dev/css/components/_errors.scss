@@ -1,0 +1,81 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+#products,
+#pagenotfound {
+    #main {
+        .page-header {
+            margin: 32px 0 48px;
+        }
+    }
+    .page-not-found {
+        h4 {
+            font-size: 20px;
+            color: inherit;
+            text-transform: uppercase;
+            margin: 8px 0 16px;
+        }
+        p {
+            font-size: 16px;
+        }
+        background: $brand-second;
+        padding: 60px 15px;
+        color: $white;
+        font-size: $font-size-sm;
+        max-width: 700px;
+        margin: 0 auto 30px;
+        text-align: center;
+        #_desktop_search_bar{
+            display: inline-block!important;
+            padding: 0;
+            margin-top: 15px;
+            width: 300px;
+            max-width: 100%;
+        }
+        .search-bar {
+            border: none;
+            padding: 0;
+        }
+        .search-bar__text {
+            color: inherit;
+            background: none;
+            border: 1px solid;
+            padding: 8px 10px;
+            height: auto;
+            &::placeholder {
+                color: inherit;
+            }
+            &:focus {
+                border-color: $brand-primary;
+            }
+        }
+        .search-bar__btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 100%;
+            background: $brand-primary;
+            color: $white;
+            i {
+                font-size: 18px;
+            }
+            &:hover {
+                background: darken($brand-primary, 10%);
+            }
+        }
+    }
+}
+#pagenotfound {
+    .page-header {
+        margin-top: 50px;
+    }
+    h1 {
+        text-align: center;
+    }
+}
+#content-wrapper.col-lg-9 {
+    .page-not-found {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,21 @@
+//social
+.lang-rtl {
+    .block-social{
+        li{
+            &:not(:first-child){
+                margin: 0 14px 0 0;
+            }
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .lang-rtl {
+        .footer-container{
+            .block-social{
+                margin-left: 0;
+                margin-right: auto;
+                text-align: left;
+            }
+        }
+    }
+}

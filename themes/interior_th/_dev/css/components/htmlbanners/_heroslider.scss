@@ -1,0 +1,242 @@
+.headerslider {
+    position: relative;
+
+    white-space: nowrap;
+
+    opacity: 0;
+
+    &.owl-carousel {
+        opacity: 1;
+    }
+}
+
+.header-slide {
+    position: relative;
+
+    display: inline-block;
+
+    width: 100%;
+
+    text-align: center;
+    white-space: normal;
+
+    .headerslider-figure {
+        margin: 0;
+    }
+
+    .slide-link {
+        position: relative;
+
+        display: block;
+
+        &:hover {
+            color: inherit;
+        }
+
+        .headerslider-img {
+            width: 100%;
+        }
+    }
+
+    .caption-description {
+        font-size: 16px;
+
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+
+        max-width: 640px;
+        padding: 3.5em 6em 3em;
+
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        color: $clr-four;
+        border: 1px solid $brand-primary;
+        background: rgba($white, .9);
+
+        &:before,
+        &:after {
+            position: absolute;
+            left: 0;
+
+            width: 100%;
+
+            content: '';
+
+            border-top: 1px solid $brand-primary;
+        }
+
+        &:before {
+            top: 10px;
+        }
+
+        &:after {
+            bottom: 10px;
+        }
+
+        h2 {
+            font: 300 1.5em/.9 $first-font-light;
+
+            margin-bottom: .84em;
+
+            text-transform: uppercase;
+
+            color: $brand-primary;
+        }
+
+        h3 {
+            font: 700 2em $first-font-bold;
+
+            margin-bottom: .64em;
+
+            text-transform: uppercase;
+        }
+    }
+
+    .btn {
+        font-size: .9em;
+
+        padding: .9em 2.1em;
+    }
+    &.fullscreen-mode {
+        .headerslider-figure {
+            position: relative;
+
+            width: 100%;
+            height: calc(100vh - 141px);
+            padding-top: 44%;
+        }
+
+        .headerslider-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .header-slide {
+        .caption-description {
+            font-size: 12px;
+
+            padding: 1.5em 5em 2em;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .header-slide {
+        .caption-description {
+            font-size: 12px;
+
+            border: none;
+
+            &:before,
+            &:after {
+                display: none;
+            }
+
+            h2 {
+                font-size: 1.3em;
+
+                margin-bottom: .5em;
+            }
+
+            h3 {
+                font-size: 1.7em;
+
+                margin-bottom: .4em;
+            }
+        }
+        &.fullscreen-mode {
+            .headerslider-figure {
+                height: auto;
+                padding-top: 34%;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .header-slide {
+        .caption-description {
+            font-size: 8px;
+
+            min-width: 200px;
+            padding: 1.4em 2em .2em;
+        }
+    }
+}
+
+.headerslider {
+    .owl-dots {
+        position: absolute;
+        bottom: 12px;
+        left: 0;
+
+        width: 100%;
+        margin: 0;
+    }
+
+    .owl-nav {
+        position: static;
+
+        div {
+            font-size: 30px;
+            line-height: 2em;
+
+            position: absolute;
+            top: 50%;
+
+            width: 2em;
+            height: 2em;
+
+            transform: translate(0, -50%);
+
+            color: $clr-six;
+            border: none;
+            background: rgba($white, .9);
+			border-radius: 0;
+			i {
+				transform: none;
+			}
+            &:hover {
+                color: $white;
+            }
+        }
+
+        .owl-prev {
+            left: 20px;
+        }
+
+        .owl-next {
+            right: 20px;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .headerslider {
+        .owl-controls {
+            display: none;
+        }
+    }
+}
+
+@include media-breakpoint-down(xxs) {
+    .header-slide {
+        .btn.btn_skine-two {
+            display: none;
+        }
+    }
+}

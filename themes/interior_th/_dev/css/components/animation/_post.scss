@@ -1,0 +1,46 @@
+a.post_thumbnail {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	&:before,
+	&:after {
+		opacity: 0;
+		transition: opacity .5s, transform .5s;
+		transform: scale(4);
+	}
+	&:before {
+		background: $brand-primary;
+		opacity: 0;
+		content: '';
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+	&:after {
+		background: $brand-second;
+		color: $white;
+		border-radius: 50%;
+		bottom: 0;
+		content: '\E8B6';
+		font: 16px/3em $first-icon-font;
+		height: 3em;
+		left: 0;
+		margin: auto;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		top: 0;
+		width: 3em;
+		z-index: 2;
+	}
+	&:hover {
+		&:before,
+		&:after {
+			opacity: 0.85;
+			transform: scale(1);
+		}
+	}
+}

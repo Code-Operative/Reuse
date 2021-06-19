@@ -1,0 +1,39 @@
+.block-contact{
+	li {
+		line-height: 1.4;
+		padding-left: 25px;
+		position: relative;
+		text-transform: none;
+		&:before{
+			color: $brand-primary;
+			font-size: 15px;
+			left: 0;
+			position: absolute;
+			top: 0;
+		}
+	}
+	.item-address {
+		&:before{
+			content: '\e806'; 
+			font-family: $second-icon-font;
+		}
+	}
+	.phone {
+		&:before{
+			content: '\e805';
+			font-family: $second-icon-font;
+		}
+	}
+	.fax {
+		&:before{
+			content: '\E0E1'; 
+			font-family: $first-icon-font;
+		}
+	}
+	.e-mail {
+		&:before{
+			content: '\E0E1'; 
+			font-family: $first-icon-font;
+		}
+	}
+}

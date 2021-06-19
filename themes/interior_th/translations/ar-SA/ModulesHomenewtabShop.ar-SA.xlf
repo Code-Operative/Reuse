@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="back" source-language="ar-SA" target-language="ar-SA" datatype="plaintext">
+    <body>
+      <trans-unit id="5b146072cf4406de9b293ca3935d352e">
+        <source>No new products found</source>
+        <target>لم يتم العثور على منتجات جديدة</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="60efcc704ef1456678f77eb9ee20847b">
+        <source>All new products</source>
+        <target>مشاهدة المزيد</target>
+        <note>Line: </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

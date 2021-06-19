@@ -1,0 +1,62 @@
+.social-sharing {
+	display: inline-block;
+	vertical-align: top;
+    ul {
+        margin-bottom: 0;
+    }
+    li {
+    	display: inline-block;
+    	vertical-align: top;
+    	margin: 0 0 10px 10px;
+        a {
+			background: $white;
+			border: 1px solid;
+			display: inline-block;
+			font-family: $second-icon-font;
+			color: $clr-five;
+			font-size: 18px;
+			height: 2.34em;
+			line-height: 2.34em;
+			padding: 0;
+			text-align: center;
+			vertical-align: bottom;
+			width: 2.34em;
+			&:hover{
+				background: $black;
+				color: $white;
+			}
+			&:active{
+				background: lighten($black, 10%);
+				color: $white;
+			}
+        }
+		&.facebook{
+			a{
+				&:before{
+				    content: '\F09A';
+				}
+			}
+		}
+		&.twitter{
+			a{
+				&:before{
+				    content: '\E818';
+				}
+			}
+		}
+		&.googleplus{
+			a{
+				&:before{
+				    content: '\E815';
+				}
+			}
+		}
+		&.pinterest{
+			a{
+				&:before{
+					content: '\e816';
+				}
+			}
+		}
+    }
+}

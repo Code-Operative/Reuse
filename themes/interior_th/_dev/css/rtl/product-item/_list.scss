@@ -1,0 +1,22 @@
+.lang-rtl{
+    .list{
+        .quick-view, .link-view, .addToWishlist{
+            text-align: right;
+            i{
+                margin: 0 0 0 8px;
+            }
+        }
+    }
+}
+@include media-breakpoint-up(sm) {
+    .lang-rtl{
+        .list {
+            .highlighted-informations{
+                padding: 10px;
+                padding-right: 25px;
+                border-right: 1px solid $clr-three;
+                border-left: none;
+            }
+        }
+    }
+}

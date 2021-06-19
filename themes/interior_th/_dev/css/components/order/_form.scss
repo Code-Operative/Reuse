@@ -1,0 +1,49 @@
+#checkout {
+    #content {
+        margin-bottom: 25px;
+    }
+    .additional-information {
+
+    }
+    .condition-label {
+        label {
+            text-align: inherit;
+        }
+    }
+    .cancel-address {
+        margin: 10px;
+        display: block;
+        color: $gray-dark;
+        text-decoration: underline;
+    }
+    .modal-content {
+        padding: $medium-space;
+        background-color: $gray-light;
+    }
+    #gift_message {
+        max-width: 100%;
+        border-color: $gray-darker;
+    }
+}
+.js-payment-binary {
+    display: none;
+    .accept-cgv {
+        display: none;
+    }
+    &.disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        .accept-cgv {
+            display: block;
+        }
+    }
+}

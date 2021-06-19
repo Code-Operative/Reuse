@@ -1,0 +1,183 @@
+button.btn.btn-delt {
+    background: #f43f3f;
+    color: #fff;
+    margin-right: 10px;
+}
+button.btn.btn-cart {
+    background: #42ae52;
+    color: #fff;
+}
+.wishBagActions .btn {
+    margin:0 3% 2%;
+}
+@media(max-width:767px){
+.wishlistTable thead {
+    display: none;
+}
+.wishlistTable tbody td {
+    display: inline-block;
+    border: 0 !important;
+        background-color: #fff !important;
+}
+.wishlistTable tbody td.cart_quantity.text-center {
+    width: 25%;
+	    padding-top: 27px;
+}
+.wishlistTable tbody td.wishBagActions.text-center {
+    padding: 0;
+    width: 60%;
+}
+.wishlistTable tbody tr {
+    border-bottom: 1px solid #ccc;
+    display: inline-block;
+    width: 100%;
+}
+.wishlistTable tbody td.cart_quantity.text-center .cart_quantity_input {
+    margin: 0 auto;
+}
+.wishlistTable tbody td.wishBagActions.text-center {
+    float: right;
+}
+}
+@media(max-width:608px){
+.wishlistTable tbody td.wishBagActions.text-center {
+    float: none;
+}
+}
+@media(max-width:420px){
+	.wishlistTable tbody td.wishBagActions.text-center {
+    padding: 0;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.wishlistTable tbody td.cart_quantity.text-center{
+	display:none;
+}
+}
+
+
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 18px 0;
+    border-radius: 0px; 
+}
+.pagination > li {
+    display: inline;
+}
+.pagination > li > a,
+.pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    line-height: 1.42857;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-left: -1px; 
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+    margin-left: 0;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px; 
+}
+.pagination > li > a:hover, .pagination > li > a:focus,
+.pagination > li > span:hover,
+.pagination > li > span:focus {
+    background-color: #f6f6f6;
+}
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus,
+.pagination > .active > span,
+.pagination > .active > span:hover,
+.pagination > .active > span:focus {
+    z-index: 2;
+    color: #fff;
+    background-color: #428bca;
+    border-color: #428bca;
+    cursor: default; 
+}
+.pagination > .disabled > span,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+    color: #999999;
+    background-color: #fff;
+    border-color: #ddd;
+    cursor: not-allowed; 
+}
+
+.pagination-lg > li > a,
+.pagination-lg > li > span {
+    padding: 10px 16px;
+    font-size: 17px; 
+}
+.pagination-lg > li:first-child > a,
+.pagination-lg > li:first-child > span {
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px; 
+}
+.pagination-lg > li:last-child > a,
+.pagination-lg > li:last-child > span {
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.pagination-sm > li > a,
+.pagination-sm > li > span {
+    padding: 5px 10px;
+    font-size: 12px; 
+}
+.pagination-sm > li:first-child > a,
+.pagination-sm > li:first-child > span {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px; 
+}
+.pagination-sm > li:last-child > a,
+.pagination-sm > li:last-child > span {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.sfl_remove:hover{
+    cursor: pointer;
+        opacity: 0.5;
+}
+
+
+
+@media(max-width:420px){
+
+    #share_wishlist{
+        font-size: 16px !important; 
+        padding-bottom: 10px;
+    }
+    
+    .share_container {
+       display: block !important;
+    }
+    
+    #block_right{
+            text-align: center !important; 
+            padding-bottom: 5px !important; 
+    }
+    
+    .twitter-share-button{
+         padding-left: 0px !important; 
+    }
+    
+    .svl_pagination .product-count{
+        width:100% !important; 
+           text-align: center !important; 
+    }
+    
+    .bottom-pagination-content{
+        margin-left: 10% !important; 
+       
+    }
+}

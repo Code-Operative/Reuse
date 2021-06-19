@@ -1,0 +1,6 @@
+#header.fixed-top{
+	transition: transform 0.3s;
+	&.hide-bar{
+		border-bottom-color: $brand-primary;
+	}
+}

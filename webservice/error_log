@@ -1,0 +1,262 @@
+[02-Apr-2021 14:15:40 Europe/London] [PHP Warning #2] SimpleXMLElement::__construct(): Entity: line 1: parser error : Start tag expected, '<' not found (/home/codeoperativeco/prestaoperative/classes/webservice/WebserviceRequest.php, line 1497)
+[02-Apr-2021 14:15:40 Europe/London] [PHP Warning #2] SimpleXMLElement::__construct(): { (/home/codeoperativeco/prestaoperative/classes/webservice/WebserviceRequest.php, line 1497)
+[02-Apr-2021 14:15:40 Europe/London] [PHP Warning #2] SimpleXMLElement::__construct(): ^ (/home/codeoperativeco/prestaoperative/classes/webservice/WebserviceRequest.php, line 1497)
+[02-Apr-2021 14:20:15 Europe/London] [PHP Warning #2] SimpleXMLElement::__construct(): Entity: line 1: parser error : Start tag expected, '<' not found (/home/codeoperativeco/prestaoperative/classes/webservice/WebserviceRequest.php, line 1497)
+[02-Apr-2021 14:20:15 Europe/London] [PHP Warning #2] SimpleXMLElement::__construct(): { (/home/codeoperativeco/prestaoperative/classes/webservice/WebserviceRequest.php, line 1497)
+[02-Apr-2021 14:20:15 Europe/London] [PHP Warning #2] SimpleXMLElement::__construct(): ^ (/home/codeoperativeco/prestaoperative/classes/webservice/WebserviceRequest.php, line 1497)
+[02-Apr-2021 14:24:57 Europe/London] [PHP Warning #2] SimpleXMLElement::__construct(): Entity: line 1: parser error : Start tag expected, '<' not found (/home/codeoperativeco/prestaoperative/classes/webservice/WebserviceRequest.php, line 1497)
+[02-Apr-2021 14:24:57 Europe/London] [PHP Warning #2] SimpleXMLElement::__construct(): ----------------------------908348180983458393833196 (/home/codeoperativeco/prestaoperative/classes/webservice/WebserviceRequest.php, line 1497)
+[02-Apr-2021 14:24:57 Europe/London] [PHP Warning #2] SimpleXMLElement::__construct(): ^ (/home/codeoperativeco/prestaoperative/classes/webservice/WebserviceRequest.php, line 1497)
+[27-Apr-2021 14:15:45 Europe/London] [PHP Warning #2] PDO::query(): MySQL server has gone away (/home/codeoperativeco/public_html/classes/db/DbPDO.php, line 165)
+[27-Apr-2021 14:15:46 Europe/London] [PHP Warning #2] PDO::query(): Error reading result set's header (/home/codeoperativeco/public_html/classes/db/DbPDO.php, line 165)
+[27-Apr-2021 14:15:45 Europe/London] [PHP Warning #2] PDO::query(): MySQL server has gone away (/home/codeoperativeco/public_html/classes/db/DbPDO.php, line 165)
+[27-Apr-2021 14:15:46 Europe/London] [PHP Warning #2] PDO::query(): Error reading result set's header (/home/codeoperativeco/public_html/classes/db/DbPDO.php, line 165)
+[27-Apr-2021 14:15:45 Europe/London] [PHP Warning #2] PDO::query(): MySQL server has gone away (/home/codeoperativeco/public_html/classes/db/DbPDO.php, line 165)
+[27-Apr-2021 14:15:46 Europe/London] [PHP Warning #2] PDO::query(): Error reading result set's header (/home/codeoperativeco/public_html/classes/db/DbPDO.php, line 165)
+[27-Apr-2021 14:15:45 Europe/London] [PHP Warning #2] PDO::query(): MySQL server has gone away (/home/codeoperativeco/public_html/classes/db/DbPDO.php, line 165)
+[27-Apr-2021 14:15:46 Europe/London] [PHP Warning #2] PDO::query(): Error reading result set's header (/home/codeoperativeco/public_html/classes/db/DbPDO.php, line 165)
+[27-Apr-2021 14:15:45 Europe/London] [PHP Warning #2] PDO::query(): MySQL server has gone away (/home/codeoperativeco/public_html/classes/db/DbPDO.php, line 165)
+[27-Apr-2021 14:15:46 Europe/London] [PHP Warning #2] PDO::query(): Error reading result set's header (/home/codeoperativeco/public_html/classes/db/DbPDO.php, line 165)
+[27-Apr-2021 14:15:45 Europe/London] [PHP Warning #2] PDO::query(): MySQL server has gone away (/home/codeoperativeco/public_html/classes/db/DbPDO.php, line 165)
+[27-Apr-2021 14:15:46 Europe/London] [PHP Warning #2] PDO::query(): Error reading result set's header (/home/codeoperativeco/public_html/classes/db/DbPDO.php, line 165)
+[27-Apr-2021 14:15:45 Europe/London] [PHP Warning #2] PDO::query(): MySQL server has gone away (/home/codeoperativeco/public_html/classes/db/DbPDO.php, line 165)
+[27-Apr-2021 14:15:46 Europe/London] [PHP Warning #2] PDO::query(): Error reading result set's header (/home/codeoperativeco/public_html/classes/db/DbPDO.php, line 165)
+[27-Apr-2021 14:15:45 Europe/London] [PHP Warning #2] PDO::query(): MySQL server has gone away (/home/codeoperativeco/public_html/classes/db/DbPDO.php, line 165)
+[27-Apr-2021 14:15:46 Europe/London] [PHP Warning #2] PDO::query(): Error reading result set's header (/home/codeoperativeco/public_html/classes/db/DbPDO.php, line 165)
+[27-Apr-2021 14:15:45 Europe/London] [PHP Warning #2] PDO::query(): MySQL server has gone away (/home/codeoperativeco/public_html/classes/db/DbPDO.php, line 165)
+[27-Apr-2021 14:15:46 Europe/London] [PHP Warning #2] PDO::query(): Error reading result set's header (/home/codeoperativeco/public_html/classes/db/DbPDO.php, line 165)
+[27-Apr-2021 14:15:46 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/public_html/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/public_html/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/public_html/classes/db/Db.php(613): DbCore->query('SELECT h.`name`...')
+#2 /home/codeoperativeco/public_html/classes/Hook.php(1161): DbCore->executeS('SELECT h.`name`...')
+#3 /home/codeoperativeco/public_html/classes/Hook.php(714): HookCore::getAllHookRegistrations(Object(Context), 'addWebserviceRe...')
+#4 /home/codeoperativeco/public_html/classes/Hook.php(798): HookCore::getHookModuleExecList('addWebserviceRe...')
+#5 /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php(356): HookCore::exec('addWebserviceRe...', Array, NULL, true, false)
+#6 /home/codeoperativeco/public_html/override/classes/webservice/WebserviceRequest.php(25): WebserviceRequestCore::getResources()
+#7 /home/codeoperativeco/public_ht in /home/codeoperativeco/public_html/classes/db/DbPDO.php on line 136
+[27-Apr-2021 14:15:46 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/public_html/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/public_html/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/public_html/classes/db/Db.php(613): DbCore->query('SELECT h.`name`...')
+#2 /home/codeoperativeco/public_html/classes/Hook.php(1161): DbCore->executeS('SELECT h.`name`...')
+#3 /home/codeoperativeco/public_html/classes/Hook.php(714): HookCore::getAllHookRegistrations(Object(Context), 'addWebserviceRe...')
+#4 /home/codeoperativeco/public_html/classes/Hook.php(798): HookCore::getHookModuleExecList('addWebserviceRe...')
+#5 /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php(356): HookCore::exec('addWebserviceRe...', Array, NULL, true, false)
+#6 /home/codeoperativeco/public_html/override/classes/webservice/WebserviceRequest.php(25): WebserviceRequestCore::getResources()
+#7 /home/codeoperativeco/public_ht in /home/codeoperativeco/public_html/classes/db/DbPDO.php on line 136
+[27-Apr-2021 14:15:46 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/public_html/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/public_html/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/public_html/classes/db/Db.php(613): DbCore->query('SELECT `name`, ...')
+#2 /home/codeoperativeco/public_html/classes/Hook.php(284): DbCore->executeS('SELECT `name`, ...')
+#3 /home/codeoperativeco/public_html/classes/Hook.php(315): HookCore::getAllHookAliases()
+#4 /home/codeoperativeco/public_html/classes/Hook.php(725): HookCore::getHookAliasesFor('addWebserviceRe...')
+#5 /home/codeoperativeco/public_html/classes/Hook.php(798): HookCore::getHookModuleExecList('addWebserviceRe...')
+#6 /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php(356): HookCore::exec('addWebserviceRe...', Array, NULL, true, false)
+#7 /home/codeoperativeco/public_html/override/classes/webservice/WebserviceRequest.php(25): Webser in /home/codeoperativeco/public_html/classes/db/DbPDO.php on line 136
+[27-Apr-2021 14:15:46 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/public_html/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/public_html/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/public_html/classes/db/Db.php(613): DbCore->query('SELECT h.`name`...')
+#2 /home/codeoperativeco/public_html/classes/Hook.php(1161): DbCore->executeS('SELECT h.`name`...')
+#3 /home/codeoperativeco/public_html/classes/Hook.php(714): HookCore::getAllHookRegistrations(Object(Context), 'addWebserviceRe...')
+#4 /home/codeoperativeco/public_html/classes/Hook.php(798): HookCore::getHookModuleExecList('addWebserviceRe...')
+#5 /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php(356): HookCore::exec('addWebserviceRe...', Array, NULL, true, false)
+#6 /home/codeoperativeco/public_html/override/classes/webservice/WebserviceRequest.php(25): WebserviceRequestCore::getResources()
+#7 /home/codeoperativeco/public_ht in /home/codeoperativeco/public_html/classes/db/DbPDO.php on line 136
+[01-May-2021 17:12:09 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:13:51 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:13:55 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:14:26 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:14:28 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:14:29 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:14:29 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:14:30 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:14:30 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:14:30 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:14:31 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:14:31 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:14:31 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:14:31 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:16:11 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:20:15 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:24:46 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:24:50 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:27:13 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:27:16 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:27:26 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:27:41 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:28:50 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:28:52 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:38:19 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:38:22 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:38:24 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:38:34 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:42:56 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:42:59 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:43:09 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:43:43 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:43:44 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:43:48 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:47:25 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:47:28 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 17:58:30 Europe/London] PHP Fatal error:  Uncaught Error: Class 'KbSeller' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'kbsellers', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[01-May-2021 18:10:58 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('FFA3LTM11WJIW8W...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566
+[02-May-2021 14:36:19 Europe/London] PHP Fatal error:  Uncaught Error: Class 'googlemap' not found in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php:566
+Stack trace:
+#0 /home/codeoperativeco/public_html/webservice/dispatcher.php(90): WebserviceRequestCore->fetch('2RRCL19N8KPXHW7...', 'GET', 'googleMapUrl', Array, false, NULL)
+#1 {main}
+  thrown in /home/codeoperativeco/public_html/classes/webservice/WebserviceRequest.php on line 566

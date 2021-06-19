@@ -1,0 +1,24 @@
+[07-May-2021 08:19:47 Europe/London] PHP Fatal error:  Uncaught Error: Call to undefined function prit_r() in /home/codeoperativeco/public_html/modules/kbmpdealmanager/kbmpproductlist.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/codeoperativeco/public_html/modules/kbmpdealmanager/kbmpproductlist.php on line 34
+[07-May-2021 08:19:47 Europe/London] PHP Fatal error:  Uncaught Error: Call to undefined function prit_r() in /home/codeoperativeco/public_html/modules/kbmpdealmanager/kbmpproductlist.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/codeoperativeco/public_html/modules/kbmpdealmanager/kbmpproductlist.php on line 34
+[07-May-2021 08:19:47 Europe/London] PHP Fatal error:  Uncaught Error: Call to undefined function prit_r() in /home/codeoperativeco/public_html/modules/kbmpdealmanager/kbmpproductlist.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/codeoperativeco/public_html/modules/kbmpdealmanager/kbmpproductlist.php on line 34
+[07-May-2021 08:19:47 Europe/London] PHP Fatal error:  Uncaught Error: Call to undefined function prit_r() in /home/codeoperativeco/public_html/modules/kbmpdealmanager/kbmpproductlist.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/codeoperativeco/public_html/modules/kbmpdealmanager/kbmpproductlist.php on line 34
+[07-May-2021 08:19:47 Europe/London] PHP Fatal error:  Uncaught Error: Call to undefined function prit_r() in /home/codeoperativeco/public_html/modules/kbmpdealmanager/kbmpproductlist.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/codeoperativeco/public_html/modules/kbmpdealmanager/kbmpproductlist.php on line 34
+[07-May-2021 08:19:48 Europe/London] PHP Fatal error:  Uncaught Error: Call to undefined function prit_r() in /home/codeoperativeco/public_html/modules/kbmpdealmanager/kbmpproductlist.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/codeoperativeco/public_html/modules/kbmpdealmanager/kbmpproductlist.php on line 34

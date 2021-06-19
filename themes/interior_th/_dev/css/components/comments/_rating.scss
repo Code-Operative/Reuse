@@ -1,0 +1,73 @@
+.star-wrapper {
+    display: inline-block;
+    position: relative;
+}
+.star-content {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1;
+    min-height: 14px;
+    .star,
+    .star-on,
+    .star-hover {
+        color: $clr-three;
+        display: inline-block;
+        font-size: 18px;
+        width: 16px;
+        height: 14px;
+        margin: 0 1px;
+        line-height: 1;
+        vertical-align: middle;
+        position: relative;
+        overflow: hidden;
+        &:before {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: $first-icon-font;
+            content: '\e838';
+        }
+    }
+    .star-on, .star-hover{
+        color: $brand-primary;
+    }
+    .star-hover {
+        cursor: pointer;
+    }
+    .star {
+        &[style*="margin"] {
+            &:before {
+                transform: translate(0,-50%);
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+    .star {
+        &[style*=";width"], &[style*="; width"], 
+        &[style*=";visibility"], &[style*="; visibility"] {
+            margin-right: 0;
+        }
+    }
+    .star-on {
+        &[style*="width"] {
+            &:before {
+                transform: translate(0,-50%);
+                left: 0;
+            }
+        }
+    }
+}
+//additional info
+.grade-stars {
+    display: inline-block;
+    position: relative;
+    min-width: 92px;
+    .star-full {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}

@@ -1,0 +1,120 @@
+.ui-menu.ui-widget {
+	z-index: 10000!important;
+    background: $brand-second;
+    border: none;
+    margin: 0px 0 0 8px;
+    .ui-menu-item {
+    	a {
+		    padding: 6px 15px;
+		    color: $white;
+    	}
+		.ui-state-hover, 
+		.ui-state-focus {
+			background: $brand-primary;
+			border-color: $brand-primary;
+			color: $brand-second;
+		}
+    }
+}
+@include media-breakpoint-up(lg) {
+	#_desktop_search_bar {
+		line-height: 1;
+		width: 18%;
+		.dropdown-menu {
+			visibility: visible;
+			opacity: 1;
+			transform: none;
+		    background: none;
+		    border: none;
+		    color: inherit;
+		    max-width: none;
+		    font-size: inherit;
+		    position: static;
+		    margin: 0;
+		    width: 100%;
+		    float: none;
+		}
+	}
+	.search-bar{
+		border-right: 1px solid $clr-fourteen;
+		border-left: 1px solid $clr-fourteen;
+		padding-left: $grid-gutter-width-base/2;
+		padding-right: $grid-gutter-width-base/2;
+		.search-bar__wrap{
+			display: block;
+			position: relative;
+		}
+		.search-bar__btn{
+			padding: 0;
+			background: none;
+			border: none;
+			position: absolute;
+			right: 0;
+		    top: 50%;
+		    transform: translate(0,-50%);
+		}
+		.search-bar__text {
+			background: none;
+			height: 22px;
+			border: none;
+			color: inherit;
+			outline: none;
+			width: 100%;
+			padding-right: 25px;
+			&:focus {
+				color: $brand-primary;
+			}
+			&:-ms-input-placeholder{
+				color: inherit;
+			}
+			&::-ms-input-placeholder{
+				color: inherit;
+			}
+			&::-webkit-input-placeholder{
+				color: inherit;
+			}
+			&:-moz-placeholder{
+				color: inherit;
+			}
+			&::-moz-placeholder{
+				color: inherit;
+			}
+			&::placeholder{
+				color: inherit;
+			}
+		}
+	}
+}
+@include media-breakpoint-down(md) {
+	#_mobile_search_bar{
+		.search-bar__wrap{
+			position: relative;
+		    padding: 0 5px 0 10px;
+		}
+		.search-bar__text{
+		    background: none;
+		    border: 3px solid #e3e3e3;
+		    color: #a7a6a7;
+		    height: 50px;
+		    padding: 0 30px 0 15px;
+		    width: 100%;
+		    outline: none;
+		    font-size: 14px;
+		    &:focus{
+		    	border-color: $brand-primary;
+		    }
+		}
+		.search-bar__btn {
+			background: none;
+			border: none;
+			padding: 0;
+		    bottom: 0;
+		    color: $brand-primary;
+		    font-size: 18px;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		    width: 50px;
+		}
+	}
+}

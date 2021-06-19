@@ -1,0 +1,45 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+#notifications {
+  width: 100%;
+}
+.alert {
+    color: $white;
+    font-size: 13px;
+    margin-top: 15px;
+}
+.alert-warning {
+    background: $brand-warning;
+    .material-icons {
+        color: $warning;
+        font-size: 32px;
+        margin-right: $small-space;
+        padding-top: $extra-small-space;
+    }
+    .alert-text {
+        font-size: 15px;
+        padding-top: $small-space;
+    }
+    .alert-link {
+        border-radius: 2px;
+        border-width: 2px;
+        margin-left: $small-space;
+        padding: $extra-small-space $medium-space;
+        font-weight: 600;
+        font-size: 13px;
+        color: $btn-tertiary-color;
+    }
+    ul li:last-child .alert-link {
+        color: white;
+    }
+    .warning-buttons {
+        margin-top: $extra-small-space;
+    }
+}
+.alert-danger{
+    background: $brand-danger;
+}
+.alert-success{
+    background: $brand-success;
+}

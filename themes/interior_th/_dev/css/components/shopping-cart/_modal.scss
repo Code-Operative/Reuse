@@ -1,0 +1,146 @@
+#blockcart-modal {
+    padding: 0 !important;
+
+    .modal-dialog {
+        width: 100%;
+        max-width: 950px;
+    }
+
+    .modal-body {
+        padding: 0;
+    }
+
+    .divide-right {
+        padding: 0;
+    }
+
+    .product-image {
+        min-height: 100%;
+        padding-top: 100%;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto 100%;
+    }
+}
+
+.cart-content {
+    display: flex;
+    flex-direction: column;
+
+    padding: 40px 45px;
+
+    justify-content: center;
+
+    .h6 {
+        font-size: 32px;
+
+        display: block;
+
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 16px;
+
+        margin: 0;
+
+        text-transform: uppercase;
+
+        &:after {
+            display: table;
+            clear: both;
+
+            content: '';
+        }
+
+        strong {
+            display: block;
+            float: left;
+
+            margin-bottom: 10px;
+
+            color: $clr-five;
+        }
+
+        span {
+            font-weight: 700;
+
+            display: block;
+            float: right;
+
+            margin-bottom: 10px;
+        }
+    }
+
+    .cart-products-count {
+        font-weight: 600;
+
+        margin-bottom: 10px;
+
+        text-transform: none;
+    }
+}
+
+.cart-content-btn {
+    margin-top: 25px;
+
+    .btn {
+        font-size: 12px;
+
+        padding: 14px 20px;
+    }
+
+    .btn-secondary {
+        float: left;
+    }
+
+    .btn-primary {
+        float: right;
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    #blockcart-modal {
+        .modal-dialog {
+            margin: 0;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    #blockcart-modal {
+        .product-image {
+            padding-top: 50%;
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .cart-content {
+        padding-right: 30px;
+        padding-left: 30px;
+
+        .h6 {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 14px;
+
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .cart-content-btn {
+        .btn {
+            width: 100%;
+
+            &:first-child {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

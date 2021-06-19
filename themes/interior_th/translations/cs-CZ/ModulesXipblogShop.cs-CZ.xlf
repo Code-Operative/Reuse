@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="back" source-language="cs-CZ" target-language="cs-CZ" datatype="plaintext">
+    <body>
+      <trans-unit id="43340e6cc4e88197d57f8d6d5ea50a46">
+        <source>Read more</source>
+        <target>Přečtěte si více</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="820ce35c4b7acc9fcff07fb3f96544c7">
+        <source>All comments</source>
+        <target>Všechny komentáře</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="25d8df6e580905091a0d5ef5b9e05bf0">
+        <source>Reply</source>
+        <target>Odpověď</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="ed93afb699b5178783974b6a9291b980">
+        <source>Leave a reply</source>
+        <target>Zanechte odpověď</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="221a1031b8dbdfc36dfba7bbb259317b">
+        <source>Cancel reply</source>
+        <target>Zrušit odpověď</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="a2ed44743411cf8b80e397448fce104c">
+        <source>Your name:</source>
+        <target>Tvé jméno:</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="a9b85163228af854adbd9822cac35a8a">
+        <source>Your Email:</source>
+        <target>Tvůj e-mail:</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="540b90ca7be708d54b703f1d0e1ea2ee">
+        <source>Website Url:</source>
+        <target>Adresa URL webových stránek:</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="47a0be8d1015d526a1fbaa56c3102135">
+        <source>Subject:</source>
+        <target>Předmět:</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="240f3031f25601fa128bd4e15f0a37de">
+        <source>Comment:</source>
+        <target>Komentář:</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="8324d056b6c576dc840f4ca7231746a5">
+        <source>Send comment</source>
+        <target>Odeslat komentář</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="faa455360740c326bc526ca6ba48a695">
+        <source>Successfully comment added</source>
+        <target>Komentář byl úspěšně přidán</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="be709cb25a728f88b875d7953769665b">
+        <source>Something wrong! please try again</source>
+        <target>Něco špatně! prosím zkuste to znovu</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="25e8f2fd2871c8423bbe4e254066cd98">
+        <source>Please wait...</source>
+        <target>Prosím, čekejte...</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="ed4832a84ee072b00a6740f657183598">
+        <source>Views</source>
+        <target>Zobrazení</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="53e5aa2c97fef1555d2511de8218c544">
+        <source>By</source>
+        <target>Podle</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="efeb369cccbd560588a756610865664c">
+        <source>In</source>
+        <target>V</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="187b60ac731adde874b77f25f22f5df3">
+        <source>No Blog Post Found</source>
+        <target>Nebyl nalezen žádný blogový příspěvek</target>
+        <note>Line: </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

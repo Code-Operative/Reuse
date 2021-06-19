@@ -1,0 +1,43 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+.form-control-label {
+  padding-top: 10px;
+}
+
+/*fix inner shadow in Chrome and Safari mobile*/
+input[type="text"],input[type="password"],input[type="button"],input[type="submit"],input[type="email"],
+input[type="number"],textarea{
+	 -webkit-appearance: none;
+	 	border-radius: 0;
+}
+textarea{
+	resize: none;
+	&.form-control{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		height: auto;
+	}
+}
+.form-control {
+	border-radius: 0;
+	display: block;
+	width: 100%;
+	padding: 5px 15px;
+	height: 40px;
+	background-color: $white;
+	border: 2px solid $clr-three;
+	outline: none;
+	&:focus{
+		border-color: $brand-primary;
+	}
+}
+.input-group {
+	.form-control:focus {
+		outline: none;
+	}
+	.input-group-btn > .btn {
+	    font-size: 11px;
+	    line-height: 1;
+	}
+}

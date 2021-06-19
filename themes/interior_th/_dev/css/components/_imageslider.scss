@@ -1,0 +1,56 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+.carousel {
+  .direction {
+    z-index: auto;
+  }
+  .carousel-inner {
+    height: 340px;
+  }
+  .carousel-item {
+    height: 100%;
+    img {
+      width: 100%;
+      margin-left: 0;
+    }
+    .caption {
+      position: absolute;
+      bottom: 28px;
+      left: 90px;
+      color: white;
+      max-width: 340px;
+      .caption-description p {
+        color: white;
+      }
+    }
+  }
+  .carousel-control {
+    opacity: 1;
+    .icon-next,
+    .icon-prev {
+      &::before {
+        content: "";
+      }
+      i {
+        font-size: 50px;
+        color: white;
+      }
+      &:hover {
+        i {
+          color: $brand-primary;
+        }
+      }
+    }
+    .icon-prev {
+      left: 16px;
+    }
+    .icon-next {
+      right: 32px;
+    }
+    &.left,
+    &.right {
+      background: none;
+    }
+  }
+}

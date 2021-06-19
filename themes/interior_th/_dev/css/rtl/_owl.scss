@@ -1,0 +1,10 @@
+.lang-rtl {
+    .owl-carousel{
+        .owl-stage-outer{
+            direction: ltr !important;
+        }
+    }
+    .owl-nav{
+        direction: ltr !important;
+    }
+}
