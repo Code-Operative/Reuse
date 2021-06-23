@@ -1,0 +1,11 @@
+.lang-rtl {
+  * {
+	direction: rtl !important;
+  }
+  main {
+	text-align: right !important;
+  }
+}
+ul{
+	padding-right: 0;
+}

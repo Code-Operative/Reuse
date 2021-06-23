@@ -1,0 +1,14 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+#custom-text {
+    border-radius: 2px;
+    margin-bottom: 24px;
+    padding: 50px 50px;
+    text-align: center;
+}
+
+@include media-breakpoint-down(md) {
+    #block-cmsinfo {
+        padding: $medium-space $large-space;
+    }
+}

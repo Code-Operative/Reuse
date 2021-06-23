@@ -1,0 +1,31 @@
+/* wlp_bought_list */
+
+.wlp_bought_list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    li {
+        position: relative;
+        margin-bottom: 24px;
+    }
+    .product-name {
+        font-weight: 700;
+        margin: 15px 0;
+    }
+    .btn_action {
+        clear: both;
+        margin-top: 10px;
+        .lnksave {
+            float: right;
+        }
+    }
+    .lnkdel {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        display: block;
+        height: 12px;
+        width: 12px;
+    }
+}

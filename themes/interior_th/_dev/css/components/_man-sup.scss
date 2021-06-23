@@ -1,0 +1,50 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+.page-manufacturer,.page-supplier {
+    #main{
+        > ul{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 (-$grid-gutter-width-base/2);
+        }
+    }
+    .brand{
+        padding: 0 $grid-gutter-width-base/2;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 33.333%;
+        img{
+            display: inline-block;
+        }
+    }
+    .brand-infos{
+        margin-top: 10px;
+        .h3{
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+    }
+    .brand-products{
+        a {
+            display: inline-block;
+            margin-right: 10px;
+            color: $brand-primary;
+            text-transform: uppercase;
+        }
+    }
+}
+@include media-breakpoint-down(sm) {
+    .page-manufacturer,.page-supplier{
+        .brand{
+            width: 50%;
+        }
+    }
+}
+@include media-breakpoint-down(xs) {
+    .page-manufacturer,.page-supplier{
+        .brand{
+            width: 100%;
+        }
+    }
+}

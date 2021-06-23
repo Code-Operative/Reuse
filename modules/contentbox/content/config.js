@@ -1,0 +1,1 @@
+const config = {googleAPIKey: "AIzaSyAFw8eGYOlrJ8WF7iBvD20syHjdUFCm2B4"};

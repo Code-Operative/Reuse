@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="back" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="2377be3c2ad9b435ba277a73f0f1ca76">
+        <source>Manufacturers</source>
+        <target>Fabricantes</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="49fa2426b7903b3d4c89e2c1874d9346">
+        <source>More about</source>
+        <target>Más sobre</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="1c407c118b89fa6feaae6b0af5fc0970">
+        <source>No manufacturer</source>
+        <target>Ningún fabricante</target>
+        <note>Line: </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

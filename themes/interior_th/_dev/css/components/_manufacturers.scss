@@ -1,0 +1,72 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+
+.manufacturers-home {
+	margin-top: 50px;
+	.carousel-view {
+	    display: block;
+	    white-space: nowrap;
+	    .manufacturer-items {
+	    	display: inline-block;
+	    	vertical-align: top;
+	    	white-space: normal;
+	    }
+	}
+	.grid-view {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		.manufacturer-items {
+			flex: 0 0 20%;
+			max-width: 20%;
+		}
+	}
+	.manufacturer-items {
+		text-align: center;
+		padding: 0 $grid-gutter-width-base/2;
+		a {
+			display: block;
+		}
+		img {
+			display: inline-block;
+		}
+	}
+}
+.owl-item {
+	.manufacturer-items {
+		width: 100%;
+	}
+}
+@include media-breakpoint-down(md) {
+	.manufacturers-home {
+		margin-top: 50px;
+		.grid-view {
+			.manufacturer-items {
+				flex: 0 0 25%;
+				max-width: 25%;
+			}
+		}
+	}
+}
+@include media-breakpoint-down(sm) {
+	.manufacturers-home {
+		.grid-view {
+			.manufacturer-items {
+				flex: 0 0 33.333%;
+				max-width: 33.333%;
+			}
+		}
+	}
+}
+@include media-breakpoint-down(xs) {
+	.manufacturers-home {
+		margin-top: 30px;
+		.grid-view {
+			.manufacturer-items {
+				flex: 0 0 50%;
+				max-width: 50%;
+			}
+		}
+	}
+}

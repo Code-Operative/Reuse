@@ -1,0 +1,8 @@
+.lang-rtl {
+	.slick-slider{
+		direction: ltr !important;
+		*{
+			direction: ltr !important;
+		}
+	}
+}

@@ -1,0 +1,11 @@
+.lang-rtl {
+    .grid{
+        .highlighted-informations{
+            > *{
+                &:not(:last-child){
+                    margin: 0 0 10px 10px;
+                }
+            }
+        }
+    }
+}

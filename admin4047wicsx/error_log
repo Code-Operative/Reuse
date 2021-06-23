@@ -1,0 +1,709 @@
+[22-Feb-2021 21:33:12 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[22-Feb-2021 21:33:12 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[22-Feb-2021 21:33:12 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[22-Feb-2021 21:33:12 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[22-Feb-2021 21:33:12 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[22-Feb-2021 21:33:12 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[22-Feb-2021 21:33:16 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[22-Feb-2021 21:33:16 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[22-Feb-2021 21:33:16 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[22-Feb-2021 21:33:16 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[22-Feb-2021 21:33:16 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[22-Feb-2021 21:33:16 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[22-Feb-2021 21:40:15 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[22-Feb-2021 21:40:15 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[22-Feb-2021 21:40:15 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[22-Feb-2021 21:40:15 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[22-Feb-2021 21:40:15 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[22-Feb-2021 21:40:15 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[23-Feb-2021 20:56:21 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[23-Feb-2021 20:56:21 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[23-Feb-2021 20:56:21 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[23-Feb-2021 20:56:21 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[23-Feb-2021 20:56:21 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[23-Feb-2021 20:56:21 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[23-Feb-2021 21:25:44 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[23-Feb-2021 21:25:44 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[23-Feb-2021 21:25:44 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[23-Feb-2021 21:25:44 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[23-Feb-2021 21:25:44 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[23-Feb-2021 21:25:44 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[23-Feb-2021 21:51:40 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[23-Feb-2021 21:51:40 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[23-Feb-2021 21:51:40 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[23-Feb-2021 21:51:40 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[23-Feb-2021 21:51:40 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[23-Feb-2021 21:51:40 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[02-Mar-2021 12:11:40 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[02-Mar-2021 12:11:40 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[02-Mar-2021 12:11:40 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[02-Mar-2021 12:11:40 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[02-Mar-2021 12:11:40 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[02-Mar-2021 12:11:40 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[02-Mar-2021 12:11:45 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[02-Mar-2021 12:11:45 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[02-Mar-2021 12:11:45 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[02-Mar-2021 12:11:45 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[02-Mar-2021 12:11:45 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[02-Mar-2021 12:11:45 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[02-Mar-2021 12:13:23 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[02-Mar-2021 12:13:23 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[02-Mar-2021 12:13:23 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[02-Mar-2021 12:13:23 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[02-Mar-2021 12:13:23 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[02-Mar-2021 12:13:23 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[03-Mar-2021 09:48:23 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[03-Mar-2021 09:48:23 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[03-Mar-2021 09:48:23 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[03-Mar-2021 09:48:23 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[03-Mar-2021 09:48:23 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[03-Mar-2021 09:48:23 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[03-Mar-2021 09:53:24 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[03-Mar-2021 09:53:24 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[03-Mar-2021 09:53:24 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[03-Mar-2021 09:53:24 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[03-Mar-2021 09:53:24 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[03-Mar-2021 09:53:24 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[03-Mar-2021 10:21:26 Europe/London] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/codeoperativeco/prestaoperative/controllers/admin/AdminAttributesGroupsController.php:933) in /home/codeoperativeco/prestaoperative/classes/controller/AdminController.php on line 1936
+[03-Mar-2021 10:21:27 Europe/London] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/codeoperativeco/prestaoperative/controllers/admin/AdminAttributesGroupsController.php:933) in /home/codeoperativeco/prestaoperative/classes/controller/AdminController.php on line 1936
+[03-Mar-2021 10:43:23 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[03-Mar-2021 10:43:23 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[03-Mar-2021 10:43:23 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[03-Mar-2021 10:43:23 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[03-Mar-2021 10:43:23 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[03-Mar-2021 10:43:23 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[03-Mar-2021 11:24:21 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[03-Mar-2021 11:24:21 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[03-Mar-2021 11:24:21 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[03-Mar-2021 11:24:21 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[03-Mar-2021 11:24:21 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[03-Mar-2021 11:24:21 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[03-Mar-2021 11:36:25 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[03-Mar-2021 11:36:25 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[03-Mar-2021 11:36:25 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[03-Mar-2021 11:36:25 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[03-Mar-2021 11:36:25 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[03-Mar-2021 11:36:25 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[03-Mar-2021 14:48:38 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[03-Mar-2021 14:48:38 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[03-Mar-2021 14:48:38 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[03-Mar-2021 14:48:38 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[03-Mar-2021 14:48:38 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[03-Mar-2021 14:48:38 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[03-Mar-2021 14:48:42 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[03-Mar-2021 14:48:42 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[03-Mar-2021 14:48:42 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[03-Mar-2021 14:48:42 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[03-Mar-2021 14:48:42 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[03-Mar-2021 14:48:42 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[03-Mar-2021 14:48:45 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[03-Mar-2021 14:48:45 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[03-Mar-2021 14:48:45 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[03-Mar-2021 14:48:45 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[03-Mar-2021 14:48:45 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[03-Mar-2021 14:48:45 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[03-Mar-2021 14:48:49 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[03-Mar-2021 14:48:49 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[03-Mar-2021 14:48:49 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[03-Mar-2021 14:48:49 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[03-Mar-2021 14:48:49 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[03-Mar-2021 14:48:49 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[04-Mar-2021 11:55:18 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[04-Mar-2021 11:55:18 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[04-Mar-2021 11:55:18 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[04-Mar-2021 11:55:18 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[04-Mar-2021 11:55:18 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[04-Mar-2021 11:55:18 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[04-Mar-2021 11:55:25 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[04-Mar-2021 11:55:25 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[04-Mar-2021 11:55:25 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[04-Mar-2021 11:55:25 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[04-Mar-2021 11:55:25 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[04-Mar-2021 11:55:25 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[04-Mar-2021 11:55:28 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[04-Mar-2021 11:55:28 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[04-Mar-2021 11:55:28 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[04-Mar-2021 11:55:28 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[04-Mar-2021 11:55:28 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[04-Mar-2021 11:55:28 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[04-Mar-2021 12:14:33 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[04-Mar-2021 12:14:33 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[04-Mar-2021 12:14:33 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[04-Mar-2021 12:14:33 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[04-Mar-2021 12:14:33 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[04-Mar-2021 12:14:33 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[04-Mar-2021 12:14:37 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[04-Mar-2021 12:14:37 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[04-Mar-2021 12:14:37 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[04-Mar-2021 12:14:37 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[04-Mar-2021 12:14:37 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[04-Mar-2021 12:14:37 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[08-Mar-2021 10:08:26 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[08-Mar-2021 10:08:26 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[08-Mar-2021 10:08:26 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[08-Mar-2021 10:08:26 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[08-Mar-2021 10:08:26 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[08-Mar-2021 10:08:26 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[08-Mar-2021 17:24:01 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[08-Mar-2021 17:24:01 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[08-Mar-2021 17:24:01 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[08-Mar-2021 17:24:01 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[08-Mar-2021 17:24:01 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[08-Mar-2021 17:24:01 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[12-Mar-2021 09:20:47 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[12-Mar-2021 09:20:47 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[12-Mar-2021 09:20:47 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[12-Mar-2021 09:20:47 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[12-Mar-2021 09:20:47 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[12-Mar-2021 09:20:47 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[15-Mar-2021 20:47:42 Europe/London] PHP Warning:  require(/home/codeoperativeco/prestaoperative/var/cache/prod/ContainerWia7flx/getPrestashop_Core_Foundation_VersionService.php): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/var/cache/prod/ContainerWia7flx/appProdProjectContainer.php on line 2404
+[15-Mar-2021 20:47:42 Europe/London] PHP Warning:  require(/home/codeoperativeco/prestaoperative/var/cache/prod/ContainerWia7flx/getPrestashop_Core_Foundation_VersionService.php): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/var/cache/prod/ContainerWia7flx/appProdProjectContainer.php on line 2404
+[15-Mar-2021 20:47:42 Europe/London] PHP Fatal error:  require(): Failed opening required '/home/codeoperativeco/prestaoperative/var/cache/prod/ContainerWia7flx/getPrestashop_Core_Foundation_VersionService.php' (include_path='/home/codeoperativeco/prestaoperative/vendor/pear/pear_exception:/home/codeoperativeco/prestaoperative/vendor/pear/console_getopt:/home/codeoperativeco/prestaoperative/vendor/pear/pear-core-minimal/src:/home/codeoperativeco/prestaoperative/vendor/pear/archive_tar:.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home/codeoperativeco/prestaoperative/var/cache/prod/ContainerWia7flx/appProdProjectContainer.php on line 2404
+[23-Mar-2021 14:46:58 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[23-Mar-2021 14:46:58 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[23-Mar-2021 14:46:58 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[23-Mar-2021 14:46:58 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[23-Mar-2021 14:46:58 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[23-Mar-2021 14:46:58 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[23-Mar-2021 14:48:56 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[23-Mar-2021 14:48:56 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[23-Mar-2021 14:48:56 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[23-Mar-2021 14:48:56 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[23-Mar-2021 14:48:56 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[23-Mar-2021 14:48:56 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[23-Mar-2021 14:59:57 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[23-Mar-2021 14:59:57 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[23-Mar-2021 14:59:57 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[23-Mar-2021 14:59:57 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[23-Mar-2021 14:59:57 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[23-Mar-2021 14:59:57 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[26-Mar-2021 18:12:37 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[26-Mar-2021 18:12:37 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[26-Mar-2021 18:12:37 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[26-Mar-2021 18:12:37 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[26-Mar-2021 18:12:37 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[26-Mar-2021 18:12:37 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[26-Mar-2021 21:51:03 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[26-Mar-2021 21:51:03 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[26-Mar-2021 21:51:04 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[26-Mar-2021 21:51:04 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[26-Mar-2021 21:51:04 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[26-Mar-2021 21:51:04 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[26-Mar-2021 21:51:04 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[26-Mar-2021 21:51:04 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[27-Mar-2021 09:14:02 Europe/London] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/codeoperativeco/prestaoperative/var/cache/prod/smarty/compile/15/53/9b/15539ba99823d94ac79eb7b044d2c8c662d4fa65_0.file.view.tpl.php on line 225
+[29-Mar-2021 21:45:45 Europe/London] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('mysql:host=127....', 'codeoper_presta...', 'NjHNmqi[igPg', Array)
+#1 /home/codeoperativeco/prestaoperative/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(22): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'codeoper_presta...', 'NjHNmqi[igPg', Array)
+#2 /home/codeoperativeco/prestaoperative/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(356): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'codeoper_presta...', 'NjHNmqi[igPg', Array)
+#3 /home/codeoperativeco/prestaoperative/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(422): Doctrine\DBAL\Connection->connect()
+#4 /home/codeoperativeco/prestaoperative/vendor/doctrine/dbal/lib/Doctrine/DBAL/C in /home/codeoperativeco/prestaoperative/vendor/doctrine/doctrine-bundle/ConnectionFactory.php on line 79
+[29-Mar-2021 21:45:45 Europe/London] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('mysql:host=127....', 'codeoper_presta...', 'NjHNmqi[igPg', Array)
+#1 /home/codeoperativeco/prestaoperative/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(22): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'codeoper_presta...', 'NjHNmqi[igPg', Array)
+#2 /home/codeoperativeco/prestaoperative/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(356): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'codeoper_presta...', 'NjHNmqi[igPg', Array)
+#3 /home/codeoperativeco/prestaoperative/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(422): Doctrine\DBAL\Connection->connect()
+#4 /home/codeoperativeco/prestaoperative/vendor/doctrine/dbal/lib/Doctrine/DBAL/C in /home/codeoperativeco/prestaoperative/vendor/doctrine/doctrine-bundle/ConnectionFactory.php on line 79
+[30-Mar-2021 14:39:40 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[30-Mar-2021 14:39:40 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[30-Mar-2021 14:39:40 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[30-Mar-2021 14:39:40 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[30-Mar-2021 14:39:40 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[30-Mar-2021 14:39:40 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[30-Mar-2021 14:39:55 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[30-Mar-2021 14:39:55 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[30-Mar-2021 14:39:55 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[30-Mar-2021 14:39:55 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[30-Mar-2021 14:39:55 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[30-Mar-2021 14:39:55 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[30-Mar-2021 14:40:01 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[30-Mar-2021 14:40:01 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[30-Mar-2021 14:40:01 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[30-Mar-2021 14:40:01 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[30-Mar-2021 14:40:01 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[30-Mar-2021 14:40:01 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[30-Mar-2021 14:40:17 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[30-Mar-2021 14:40:17 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[30-Mar-2021 14:40:17 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[30-Mar-2021 14:40:17 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[30-Mar-2021 14:40:17 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[30-Mar-2021 14:40:17 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[30-Mar-2021 14:40:26 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[30-Mar-2021 14:40:26 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[30-Mar-2021 14:40:26 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[30-Mar-2021 14:40:26 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[30-Mar-2021 14:40:26 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[30-Mar-2021 14:40:26 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[30-Mar-2021 14:40:31 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[30-Mar-2021 14:40:31 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[30-Mar-2021 14:40:31 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[30-Mar-2021 14:40:31 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[30-Mar-2021 14:40:31 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[30-Mar-2021 14:40:31 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[30-Mar-2021 14:40:39 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[30-Mar-2021 14:40:39 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[30-Mar-2021 14:40:39 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[30-Mar-2021 14:40:39 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[30-Mar-2021 14:40:39 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[30-Mar-2021 14:40:39 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[30-Mar-2021 14:40:50 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[30-Mar-2021 14:40:50 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[30-Mar-2021 14:40:50 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[30-Mar-2021 14:40:50 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[30-Mar-2021 14:40:50 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[30-Mar-2021 14:40:50 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[30-Mar-2021 14:49:25 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[30-Mar-2021 14:49:25 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[30-Mar-2021 14:49:25 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[30-Mar-2021 14:49:25 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[30-Mar-2021 14:49:25 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[30-Mar-2021 14:49:25 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[30-Mar-2021 15:21:56 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[30-Mar-2021 15:21:56 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[30-Mar-2021 15:21:56 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[30-Mar-2021 15:21:56 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[30-Mar-2021 15:21:56 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[30-Mar-2021 15:21:56 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[30-Mar-2021 15:22:56 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[30-Mar-2021 15:22:56 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[30-Mar-2021 15:22:56 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[30-Mar-2021 15:22:56 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[30-Mar-2021 15:22:56 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[30-Mar-2021 15:22:56 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[30-Mar-2021 15:26:32 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[30-Mar-2021 15:26:32 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[30-Mar-2021 15:26:32 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[30-Mar-2021 15:26:32 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[30-Mar-2021 15:26:32 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[30-Mar-2021 15:26:32 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[30-Mar-2021 15:26:43 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[30-Mar-2021 15:26:43 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[30-Mar-2021 15:26:43 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[30-Mar-2021 15:26:43 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[30-Mar-2021 15:26:43 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[30-Mar-2021 15:26:43 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[30-Mar-2021 15:26:50 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[30-Mar-2021 15:26:50 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[30-Mar-2021 15:26:50 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[30-Mar-2021 15:26:50 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[30-Mar-2021 15:26:50 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[30-Mar-2021 15:26:50 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[30-Mar-2021 15:26:56 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[30-Mar-2021 15:26:56 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[30-Mar-2021 15:26:56 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[30-Mar-2021 15:26:56 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[30-Mar-2021 15:26:56 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[30-Mar-2021 15:26:56 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[30-Mar-2021 15:27:04 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[30-Mar-2021 15:27:04 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[30-Mar-2021 15:27:04 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[30-Mar-2021 15:27:04 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[30-Mar-2021 15:27:04 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[30-Mar-2021 15:27:04 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[30-Mar-2021 15:27:11 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[30-Mar-2021 15:27:11 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[30-Mar-2021 15:27:11 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[30-Mar-2021 15:27:11 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[30-Mar-2021 15:27:11 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[30-Mar-2021 15:27:11 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[30-Mar-2021 15:27:17 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[30-Mar-2021 15:27:17 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[30-Mar-2021 15:27:17 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[30-Mar-2021 15:27:17 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[30-Mar-2021 15:27:17 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[30-Mar-2021 15:27:17 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[31-Mar-2021 11:21:38 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[31-Mar-2021 11:21:38 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[31-Mar-2021 11:21:40 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[31-Mar-2021 11:21:40 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[31-Mar-2021 11:21:40 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[31-Mar-2021 11:21:40 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[31-Mar-2021 11:21:40 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[31-Mar-2021 11:21:40 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[31-Mar-2021 11:21:40 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[31-Mar-2021 11:21:40 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[31-Mar-2021 11:21:40 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[31-Mar-2021 11:21:40 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[31-Mar-2021 11:21:40 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[31-Mar-2021 11:21:40 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[31-Mar-2021 11:21:40 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[31-Mar-2021 11:21:40 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[31-Mar-2021 14:25:06 Europe/London] PHP Warning:  Base directory /home/codeoperativeco/prestaoperative/var/cache/prod/purifier does not exist,
+                    please create or change using %Cache.SerializerPath in /home/codeoperativeco/prestaoperative/vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache/Serializer.php on line 235
+[31-Mar-2021 14:25:06 Europe/London] PHP Warning:  Base directory /home/codeoperativeco/prestaoperative/var/cache/prod/purifier does not exist,
+                    please create or change using %Cache.SerializerPath in /home/codeoperativeco/prestaoperative/vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache/Serializer.php on line 235
+[31-Mar-2021 14:25:06 Europe/London] PHP Warning:  Base directory /home/codeoperativeco/prestaoperative/var/cache/prod/purifier does not exist,
+                    please create or change using %Cache.SerializerPath in /home/codeoperativeco/prestaoperative/vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache/Serializer.php on line 235
+[31-Mar-2021 20:48:46 Europe/London] PHP Warning:  require(/home/codeoperativeco/prestaoperative/var/cache/prod/ContainerBkm0bch/getPrestashop_Core_Foundation_VersionService.php): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/var/cache/prod/ContainerBkm0bch/appProdProjectContainer.php on line 2404
+[31-Mar-2021 20:48:46 Europe/London] PHP Warning:  require(/home/codeoperativeco/prestaoperative/var/cache/prod/ContainerBkm0bch/getPrestashop_Core_Foundation_VersionService.php): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/var/cache/prod/ContainerBkm0bch/appProdProjectContainer.php on line 2404
+[31-Mar-2021 20:48:46 Europe/London] PHP Fatal error:  require(): Failed opening required '/home/codeoperativeco/prestaoperative/var/cache/prod/ContainerBkm0bch/getPrestashop_Core_Foundation_VersionService.php' (include_path='/home/codeoperativeco/prestaoperative/vendor/pear/pear_exception:/home/codeoperativeco/prestaoperative/vendor/pear/console_getopt:/home/codeoperativeco/prestaoperative/vendor/pear/pear-core-minimal/src:/home/codeoperativeco/prestaoperative/vendor/pear/archive_tar:.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home/codeoperativeco/prestaoperative/var/cache/prod/ContainerBkm0bch/appProdProjectContainer.php on line 2404
+[03-Apr-2021 11:32:51 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[03-Apr-2021 11:32:51 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[03-Apr-2021 11:32:51 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[03-Apr-2021 11:32:51 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[03-Apr-2021 11:32:51 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[03-Apr-2021 11:32:51 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[03-Apr-2021 11:32:51 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[03-Apr-2021 11:32:51 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[03-Apr-2021 11:32:51 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[03-Apr-2021 11:32:51 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[03-Apr-2021 11:32:51 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[03-Apr-2021 11:32:51 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[03-Apr-2021 11:32:51 Europe/London] PHP Warning:  Empty row packet body in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[03-Apr-2021 11:32:51 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[03-Apr-2021 11:32:51 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[03-Apr-2021 11:32:51 Europe/London] PHP Warning:  Empty row packet body in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[03-Apr-2021 11:32:51 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[03-Apr-2021 11:32:51 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[03-Apr-2021 11:32:51 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[03-Apr-2021 11:32:51 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[03-Apr-2021 11:32:51 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/prestaoperative/classes/db/Db.php(613): DbCore->query('\n              ...')
+#2 /home/codeoperativeco/prestaoperative/classes/module/Module.php(322): DbCore->executeS('\n              ...')
+#3 /home/codeoperativeco/prestaoperative/modules/kbmarketplace/classes/kbconfiguration.php(64): ModuleCore->__construct()
+#4 /home/codeoperativeco/prestaoperative/modules/kbmarketplace/kbmarketplace.php(46): KbConfiguration->__construct()
+#5 [internal function]: KbMarketPlace->__construct()
+#6 /home/codeoperativeco/prestaoperative/src/Core/Foundation/IoC/Container.php(123): ReflectionClass->newInstance()
+#7 /home/codeoperativeco/prestaoperative/src/Core/Foundation/IoC/Container.php(153): PrestaShop\PrestaShop\Core\Foundation\I in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 136
+[03-Apr-2021 11:32:51 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/prestaoperative/classes/db/Db.php(613): DbCore->query('\n            SE...')
+#2 /home/codeoperativeco/prestaoperative/classes/Access.php(111): DbCore->executeS('\n            SE...')
+#3 /home/codeoperativeco/prestaoperative/src/PrestaShopBundle/Security/Admin/EmployeeProvider.php(83): AccessCore::getRoles(1)
+#4 /home/codeoperativeco/prestaoperative/src/PrestaShopBundle/Security/Admin/EmployeeProvider.php(108): PrestaShopBundle\Security\Admin\EmployeeProvider->loadUserByUsername('contact@code-op...')
+#5 /home/codeoperativeco/prestaoperative/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Firewall/ContextListener.php(183): PrestaShopBundle\Security\Admin\EmployeeProvider->refreshUser(Object(PrestaShopBun in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 136
+[03-Apr-2021 11:32:51 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/prestaoperative/classes/db/Db.php(613): DbCore->query('SELECT m.page, ...')
+#2 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(643): DbCore->executeS('SELECT m.page, ...')
+#3 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(249): DispatcherCore->loadRoutes()
+#4 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(207): DispatcherCore->__construct(Object(Symfony\Component\HttpFoundation\Request))
+#5 /home/codeoperativeco/prestaoperative/admin4047wicsx/index.php(93): DispatcherCore::getInstance()
+#6 {main}
+
+Next PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php:136
+Stac in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 136
+[03-Apr-2021 11:32:51 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/prestaoperative/classes/db/Db.php(613): DbCore->query('\n              ...')
+#2 /home/codeoperativeco/prestaoperative/classes/module/Module.php(322): DbCore->executeS('\n              ...')
+#3 /home/codeoperativeco/prestaoperative/modules/kbmarketplace/classes/kbconfiguration.php(64): ModuleCore->__construct()
+#4 /home/codeoperativeco/prestaoperative/modules/kbmarketplace/kbmarketplace.php(46): KbConfiguration->__construct()
+#5 [internal function]: KbMarketPlace->__construct()
+#6 /home/codeoperativeco/prestaoperative/src/Core/Foundation/IoC/Container.php(123): ReflectionClass->newInstance()
+#7 /home/codeoperativeco/prestaoperative/src/Core/Foundation/IoC/Container.php(153): PrestaShop\PrestaShop\Core\Foundation\I in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 136
+[03-Apr-2021 11:32:51 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/prestaoperative/classes/db/Db.php(613): DbCore->query('\n              ...')
+#2 /home/codeoperativeco/prestaoperative/classes/module/Module.php(322): DbCore->executeS('\n              ...')
+#3 /home/codeoperativeco/prestaoperative/modules/kbmarketplace/classes/kbconfiguration.php(64): ModuleCore->__construct()
+#4 /home/codeoperativeco/prestaoperative/modules/kbmarketplace/kbmarketplace.php(46): KbConfiguration->__construct()
+#5 [internal function]: KbMarketPlace->__construct()
+#6 /home/codeoperativeco/prestaoperative/src/Core/Foundation/IoC/Container.php(123): ReflectionClass->newInstance()
+#7 /home/codeoperativeco/prestaoperative/src/Core/Foundation/IoC/Container.php(153): PrestaShop\PrestaShop\Core\Foundation\I in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 136
+[03-Apr-2021 11:32:51 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/prestaoperative/classes/db/Db.php(613): DbCore->query('SELECT h.`name`...')
+#2 /home/codeoperativeco/prestaoperative/classes/Hook.php(1161): DbCore->executeS('SELECT h.`name`...')
+#3 /home/codeoperativeco/prestaoperative/classes/Hook.php(714): HookCore::getAllHookRegistrations(Object(Context), 'moduleRoutes')
+#4 /home/codeoperativeco/prestaoperative/classes/Hook.php(798): HookCore::getHookModuleExecList('moduleRoutes')
+#5 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(596): HookCore::exec('moduleRoutes', Array, NULL, true, false)
+#6 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(249): DispatcherCore->loadRoutes()
+#7 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(207): Dis in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 136
+[03-Apr-2021 11:32:51 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/prestaoperative/classes/db/Db.php(613): DbCore->query('SELECT m.page, ...')
+#2 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(643): DbCore->executeS('SELECT m.page, ...')
+#3 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(249): DispatcherCore->loadRoutes()
+#4 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(207): DispatcherCore->__construct(Object(Symfony\Component\HttpFoundation\Request))
+#5 /home/codeoperativeco/prestaoperative/admin4047wicsx/index.php(93): DispatcherCore::getInstance()
+#6 {main}
+
+Next PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php:136
+Stac in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 136
+[03-Apr-2021 11:32:51 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/prestaoperative/classes/db/Db.php(613): DbCore->query('\n              ...')
+#2 /home/codeoperativeco/prestaoperative/classes/module/Module.php(322): DbCore->executeS('\n              ...')
+#3 /home/codeoperativeco/prestaoperative/modules/kbmarketplace/classes/kbconfiguration.php(64): ModuleCore->__construct()
+#4 /home/codeoperativeco/prestaoperative/modules/kbmarketplace/kbmarketplace.php(46): KbConfiguration->__construct()
+#5 [internal function]: KbMarketPlace->__construct()
+#6 /home/codeoperativeco/prestaoperative/src/Core/Foundation/IoC/Container.php(123): ReflectionClass->newInstance()
+#7 /home/codeoperativeco/prestaoperative/src/Core/Foundation/IoC/Container.php(153): PrestaShop\PrestaShop\Core\Foundation\I in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 136
+[03-Apr-2021 11:32:52 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/prestaoperative/classes/db/Db.php(613): DbCore->query('SELECT `name`, ...')
+#2 /home/codeoperativeco/prestaoperative/classes/Hook.php(284): DbCore->executeS('SELECT `name`, ...')
+#3 /home/codeoperativeco/prestaoperative/classes/Hook.php(315): HookCore::getAllHookAliases()
+#4 /home/codeoperativeco/prestaoperative/classes/Hook.php(725): HookCore::getHookAliasesFor('moduleRoutes')
+#5 /home/codeoperativeco/prestaoperative/classes/Hook.php(798): HookCore::getHookModuleExecList('moduleRoutes')
+#6 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(596): HookCore::exec('moduleRoutes', Array, NULL, true, false)
+#7 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(249): DispatcherCore->loadRoutes()
+#8  in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 136
+[04-Apr-2021 16:35:45 Europe/London] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/codeoperativeco/prestaoperative/var/cache/prod/smarty/compile/15/53/9b/15539ba99823d94ac79eb7b044d2c8c662d4fa65_0.file.view.tpl.php on line 225
+[05-Apr-2021 12:10:21 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[05-Apr-2021 12:10:21 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[05-Apr-2021 12:10:21 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[05-Apr-2021 12:10:21 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[05-Apr-2021 12:10:21 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[05-Apr-2021 12:10:21 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[12-Apr-2021 15:15:49 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[12-Apr-2021 15:15:49 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[12-Apr-2021 15:15:49 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[12-Apr-2021 15:15:49 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[12-Apr-2021 15:15:49 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[12-Apr-2021 15:15:49 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[12-Apr-2021 15:16:08 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[12-Apr-2021 15:16:08 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[12-Apr-2021 15:16:08 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[12-Apr-2021 15:16:08 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[12-Apr-2021 15:16:08 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[12-Apr-2021 15:16:08 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[12-Apr-2021 16:02:47 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[12-Apr-2021 16:02:47 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[12-Apr-2021 16:02:47 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[12-Apr-2021 16:02:47 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[12-Apr-2021 15:02:47 UTC] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[12-Apr-2021 15:02:47 UTC] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[12-Apr-2021 16:02:47 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/prestaoperative/classes/db/Db.php(663): DbCore->query('SELECT *\nFROM `...')
+#2 /home/codeoperativeco/prestaoperative/src/Adapter/EntityMapper.php(75): DbCore->getRow('SELECT *\nFROM `...')
+#3 /home/codeoperativeco/prestaoperative/classes/ObjectModel.php(264): PrestaShop\PrestaShop\Adapter\EntityMapper->load(2, NULL, Object(Language), Array, 1, true)
+#4 /home/codeoperativeco/prestaoperative/config/config.inc.php(200): ObjectModelCore->__construct(2)
+#5 /home/codeoperativeco/prestaoperative/admin4047wicsx/index.php(40): require('/home/codeopera...')
+#6 {main}
+  thrown in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 136
+[12-Apr-2021 16:02:47 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[12-Apr-2021 16:02:47 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[12-Apr-2021 16:02:47 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[12-Apr-2021 16:02:47 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[12-Apr-2021 16:02:47 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[12-Apr-2021 16:02:47 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[12-Apr-2021 16:02:47 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[12-Apr-2021 16:02:47 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[12-Apr-2021 16:02:47 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[12-Apr-2021 16:02:47 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[12-Apr-2021 16:02:47 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[12-Apr-2021 16:02:47 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[12-Apr-2021 16:02:48 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[12-Apr-2021 16:02:48 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[14-Apr-2021 10:26:45 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[14-Apr-2021 10:26:45 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[14-Apr-2021 10:26:45 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[14-Apr-2021 10:26:45 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[14-Apr-2021 10:26:45 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[14-Apr-2021 10:26:45 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[14-Apr-2021 10:26:45 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[14-Apr-2021 10:26:45 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[14-Apr-2021 10:26:45 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[14-Apr-2021 10:26:45 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[14-Apr-2021 10:26:45 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[14-Apr-2021 10:26:45 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[14-Apr-2021 10:26:45 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[14-Apr-2021 10:26:45 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[14-Apr-2021 10:26:45 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[14-Apr-2021 10:26:45 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[14-Apr-2021 10:26:45 Europe/London] PHP Warning:  PDO::query(): MySQL server has gone away in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[14-Apr-2021 10:26:45 Europe/London] PHP Warning:  PDO::query(): Error reading result set's header in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 165
+[14-Apr-2021 10:26:45 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/prestaoperative/classes/db/Db.php(613): DbCore->query('SELECT *\n\t\t\t\t\t\t...')
+#2 /home/codeoperativeco/prestaoperative/src/Adapter/EntityMapper.php(82): DbCore->executeS('SELECT *\n\t\t\t\t\t\t...')
+#3 /home/codeoperativeco/prestaoperative/classes/ObjectModel.php(264): PrestaShop\PrestaShop\Adapter\EntityMapper->load('1', NULL, Object(Currency), Array, 1, true)
+#4 /home/codeoperativeco/prestaoperative/classes/Currency.php(246): ObjectModelCore->__construct('1', NULL, NULL)
+#5 /home/codeoperativeco/prestaoperative/classes/controller/AdminController.php(2934): CurrencyCore->__construct('1')
+#6 /home/codeoperativeco/prestaoperative/classes/controller/AdminController.php(531): AdminControllerCore->initShopContex in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 136
+[14-Apr-2021 10:26:45 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/prestaoperative/classes/db/Db.php(613): DbCore->query('SELECT h.`name`...')
+#2 /home/codeoperativeco/prestaoperative/classes/Hook.php(1161): DbCore->executeS('SELECT h.`name`...')
+#3 /home/codeoperativeco/prestaoperative/classes/Hook.php(714): HookCore::getAllHookRegistrations(Object(Context), 'moduleRoutes')
+#4 /home/codeoperativeco/prestaoperative/classes/Hook.php(798): HookCore::getHookModuleExecList('moduleRoutes')
+#5 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(596): HookCore::exec('moduleRoutes', Array, NULL, true, false)
+#6 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(249): DispatcherCore->loadRoutes()
+#7 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(207): Dis in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 136
+[14-Apr-2021 10:26:45 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/prestaoperative/classes/db/Db.php(613): DbCore->query('SELECT h.`name`...')
+#2 /home/codeoperativeco/prestaoperative/classes/Hook.php(1161): DbCore->executeS('SELECT h.`name`...')
+#3 /home/codeoperativeco/prestaoperative/classes/Hook.php(714): HookCore::getAllHookRegistrations(Object(Context), 'moduleRoutes')
+#4 /home/codeoperativeco/prestaoperative/classes/Hook.php(798): HookCore::getHookModuleExecList('moduleRoutes')
+#5 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(596): HookCore::exec('moduleRoutes', Array, NULL, true, false)
+#6 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(249): DispatcherCore->loadRoutes()
+#7 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(207): Dis in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 136
+[14-Apr-2021 10:26:45 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/prestaoperative/classes/db/Db.php(613): DbCore->query('SELECT h.`name`...')
+#2 /home/codeoperativeco/prestaoperative/classes/Hook.php(1161): DbCore->executeS('SELECT h.`name`...')
+#3 /home/codeoperativeco/prestaoperative/classes/Hook.php(714): HookCore::getAllHookRegistrations(Object(Context), 'moduleRoutes')
+#4 /home/codeoperativeco/prestaoperative/classes/Hook.php(798): HookCore::getHookModuleExecList('moduleRoutes')
+#5 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(596): HookCore::exec('moduleRoutes', Array, NULL, true, false)
+#6 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(249): DispatcherCore->loadRoutes()
+#7 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(207): Dis in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 136
+[14-Apr-2021 10:26:45 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/prestaoperative/classes/db/Db.php(613): DbCore->query('SELECT h.`name`...')
+#2 /home/codeoperativeco/prestaoperative/classes/Hook.php(1161): DbCore->executeS('SELECT h.`name`...')
+#3 /home/codeoperativeco/prestaoperative/classes/Hook.php(714): HookCore::getAllHookRegistrations(Object(Context), 'moduleRoutes')
+#4 /home/codeoperativeco/prestaoperative/classes/Hook.php(798): HookCore::getHookModuleExecList('moduleRoutes')
+#5 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(596): HookCore::exec('moduleRoutes', Array, NULL, true, false)
+#6 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(249): DispatcherCore->loadRoutes()
+#7 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(207): Dis in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 136
+[14-Apr-2021 10:26:45 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/prestaoperative/classes/db/Db.php(613): DbCore->query('SELECT h.`name`...')
+#2 /home/codeoperativeco/prestaoperative/classes/Hook.php(1161): DbCore->executeS('SELECT h.`name`...')
+#3 /home/codeoperativeco/prestaoperative/classes/Hook.php(714): HookCore::getAllHookRegistrations(Object(Context), 'moduleRoutes')
+#4 /home/codeoperativeco/prestaoperative/classes/Hook.php(798): HookCore::getHookModuleExecList('moduleRoutes')
+#5 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(596): HookCore::exec('moduleRoutes', Array, NULL, true, false)
+#6 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(249): DispatcherCore->loadRoutes()
+#7 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(207): Dis in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 136
+[14-Apr-2021 10:26:45 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/prestaoperative/classes/db/Db.php(613): DbCore->query('SELECT h.`name`...')
+#2 /home/codeoperativeco/prestaoperative/classes/Hook.php(1161): DbCore->executeS('SELECT h.`name`...')
+#3 /home/codeoperativeco/prestaoperative/classes/Hook.php(714): HookCore::getAllHookRegistrations(Object(Context), 'moduleRoutes')
+#4 /home/codeoperativeco/prestaoperative/classes/Hook.php(798): HookCore::getHookModuleExecList('moduleRoutes')
+#5 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(596): HookCore::exec('moduleRoutes', Array, NULL, true, false)
+#6 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(249): DispatcherCore->loadRoutes()
+#7 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(207): Dis in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 136
+[14-Apr-2021 10:26:45 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/prestaoperative/classes/db/Db.php(613): DbCore->query('SELECT h.`name`...')
+#2 /home/codeoperativeco/prestaoperative/classes/Hook.php(1161): DbCore->executeS('SELECT h.`name`...')
+#3 /home/codeoperativeco/prestaoperative/classes/Hook.php(714): HookCore::getAllHookRegistrations(Object(Context), 'moduleRoutes')
+#4 /home/codeoperativeco/prestaoperative/classes/Hook.php(798): HookCore::getHookModuleExecList('moduleRoutes')
+#5 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(596): HookCore::exec('moduleRoutes', Array, NULL, true, false)
+#6 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(249): DispatcherCore->loadRoutes()
+#7 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(207): Dis in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 136
+[14-Apr-2021 10:26:45 Europe/London] PHP Fatal error:  Uncaught PrestaShopException: Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php:136
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/classes/db/Db.php(379): DbPDOCore->connect()
+#1 /home/codeoperativeco/prestaoperative/classes/db/Db.php(613): DbCore->query('SELECT h.`name`...')
+#2 /home/codeoperativeco/prestaoperative/classes/Hook.php(1161): DbCore->executeS('SELECT h.`name`...')
+#3 /home/codeoperativeco/prestaoperative/classes/Hook.php(714): HookCore::getAllHookRegistrations(Object(Context), 'moduleRoutes')
+#4 /home/codeoperativeco/prestaoperative/classes/Hook.php(798): HookCore::getHookModuleExecList('moduleRoutes')
+#5 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(596): HookCore::exec('moduleRoutes', Array, NULL, true, false)
+#6 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(249): DispatcherCore->loadRoutes()
+#7 /home/codeoperativeco/prestaoperative/classes/Dispatcher.php(207): Dis in /home/codeoperativeco/prestaoperative/classes/db/DbPDO.php on line 136
+[15-Apr-2021 15:45:24 Europe/London] PHP Fatal error:  Uncaught RuntimeException: Unable to create the Doctrine Proxy directory "/home/codeoperativeco/prestaoperative/var/cache/prod/doctrine/orm/Proxies". in /home/codeoperativeco/prestaoperative/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/CacheWarmer/ProxyCacheWarmer.php:57
+Stack trace:
+#0 /home/codeoperativeco/prestaoperative/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/CacheWarmer/CacheWarmerAggregate.php(52): Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer->warmUp('/home/codeopera...')
+#1 /home/codeoperativeco/prestaoperative/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(686): Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate->warmUp('/home/codeopera...')
+#2 /home/codeoperativeco/prestaoperative/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(135): Symfony\Component\HttpKernel\Kernel->initializeContainer()
+#3 /home/codeoperativeco/prestaoperative/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(195): Symfony\Component\ in /home/codeoperativeco/prestaoperative/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/CacheWarmer/ProxyCacheWarmer.php on line 57
+[20-Apr-2021 12:37:57 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[20-Apr-2021 12:37:57 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[20-Apr-2021 12:37:57 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[20-Apr-2021 12:37:57 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[20-Apr-2021 12:37:57 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[20-Apr-2021 12:37:57 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[20-Apr-2021 12:54:10 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[20-Apr-2021 12:54:10 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[20-Apr-2021 12:54:10 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[20-Apr-2021 12:54:10 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[20-Apr-2021 12:54:10 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[20-Apr-2021 12:54:10 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[20-Apr-2021 14:08:21 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[20-Apr-2021 14:08:21 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[20-Apr-2021 14:08:21 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[20-Apr-2021 14:08:21 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[20-Apr-2021 14:08:21 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[20-Apr-2021 14:08:21 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[20-Apr-2021 14:20:49 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[20-Apr-2021 14:20:49 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[20-Apr-2021 14:20:49 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[20-Apr-2021 14:20:49 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[20-Apr-2021 14:20:49 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[20-Apr-2021 14:20:49 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[20-Apr-2021 14:46:37 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[20-Apr-2021 14:46:37 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[20-Apr-2021 14:46:37 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[20-Apr-2021 14:46:37 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[20-Apr-2021 14:46:37 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[20-Apr-2021 14:46:37 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[22-Apr-2021 20:56:02 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[22-Apr-2021 20:56:02 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[22-Apr-2021 20:56:02 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[22-Apr-2021 20:56:02 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[22-Apr-2021 20:56:02 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[22-Apr-2021 20:56:02 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[22-Apr-2021 21:05:10 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 101
+[22-Apr-2021 21:05:10 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 102
+[22-Apr-2021 21:05:10 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 103
+[22-Apr-2021 21:05:10 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/prestaoperative/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 105
+[22-Apr-2021 21:05:10 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 106
+[22-Apr-2021 21:05:10 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/prestaoperative/override/classes/kbmarketplace/KbEmail.php on line 107
+[27-Apr-2021 14:15:47 Europe/London] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/codeoperativeco/public_html/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27
+Stack trace:
+#0 /home/codeoperativeco/public_html/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('mysql:host=127....', 'codeoper_presta...', 'NjHNmqi[igPg', Array)
+#1 /home/codeoperativeco/public_html/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOMySql/Driver.php(22): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'codeoper_presta...', 'NjHNmqi[igPg', Array)
+#2 /home/codeoperativeco/public_html/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(356): Doctrine\DBAL\Driver\PDOMySql\Driver->connect(Array, 'codeoper_presta...', 'NjHNmqi[igPg', Array)
+#3 /home/codeoperativeco/public_html/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(422): Doctrine\DBAL\Connection->connect()
+#4 /home/codeoperativeco/public_html/vendor/doctrine/dbal/lib/Doctrine/DBAL/Connection.php(382): Doct in /home/codeoperativeco/public_html/vendor/doctrine/doctrine-bundle/ConnectionFactory.php on line 79
+[28-Apr-2021 15:07:21 Europe/London] PHP Warning:  PDOStatement::execute(): MySQL server has gone away in /home/codeoperativeco/public_html/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php on line 117
+[28-Apr-2021 15:07:21 Europe/London] PHP Warning:  PDOStatement::execute(): Error reading result set's header in /home/codeoperativeco/public_html/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php on line 117
+[07-May-2021 06:10:32 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/public_html/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 101
+[07-May-2021 06:10:32 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 102
+[07-May-2021 06:10:32 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 103
+[07-May-2021 06:10:32 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/public_html/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 105
+[07-May-2021 06:10:32 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 106
+[07-May-2021 06:10:32 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 107
+[08-May-2021 07:05:21 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/public_html/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 101
+[08-May-2021 07:05:21 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 102
+[08-May-2021 07:05:21 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 103
+[08-May-2021 07:05:21 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/public_html/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 105
+[08-May-2021 07:05:21 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 106
+[08-May-2021 07:05:21 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 107
+[21-Jun-2021 09:56:01 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/public_html/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 101
+[21-Jun-2021 09:56:01 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 102
+[21-Jun-2021 09:56:01 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 103
+[21-Jun-2021 09:56:01 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/public_html/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 105
+[21-Jun-2021 09:56:01 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 106
+[21-Jun-2021 09:56:01 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 107
+[21-Jun-2021 09:56:16 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/public_html/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 101
+[21-Jun-2021 09:56:16 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 102
+[21-Jun-2021 09:56:16 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 103
+[21-Jun-2021 09:56:16 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/public_html/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 105
+[21-Jun-2021 09:56:16 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 106
+[21-Jun-2021 09:56:16 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 107
+[21-Jun-2021 09:56:39 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/public_html/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 101
+[21-Jun-2021 09:56:39 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 102
+[21-Jun-2021 09:56:39 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 103
+[21-Jun-2021 09:56:39 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/public_html/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 105
+[21-Jun-2021 09:56:39 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 106
+[21-Jun-2021 09:56:39 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 107
+[21-Jun-2021 09:56:44 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/public_html/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 101
+[21-Jun-2021 09:56:44 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 102
+[21-Jun-2021 09:56:44 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 103
+[21-Jun-2021 09:56:44 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/public_html/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 105
+[21-Jun-2021 09:56:44 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 106
+[21-Jun-2021 09:56:44 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 107
+[21-Jun-2021 16:41:32 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/public_html/modules/kbmarketplace/mails/gb/kb_marketplace_email.html): failed to open stream: No such file or directory in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 101
+[21-Jun-2021 16:41:32 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 102
+[21-Jun-2021 16:41:32 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 103
+[21-Jun-2021 16:41:32 Europe/London] PHP Warning:  fopen(/home/codeoperativeco/public_html/modules/kbmarketplace/mails/gb/kb_marketplace_email.txt): failed to open stream: No such file or directory in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 105
+[21-Jun-2021 16:41:32 Europe/London] PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 106
+[21-Jun-2021 16:41:32 Europe/London] PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /home/codeoperativeco/public_html/override/classes/kbmarketplace/KbEmail.php on line 107

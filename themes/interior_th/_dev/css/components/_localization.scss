@@ -1,0 +1,32 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+@include media-breakpoint-up(lg) {
+    .language-selector,.currency-selector{
+        padding: 0 $header-block-gutter-width/2;
+        position: relative;
+        border-right: 1px solid $clr-fourteen;
+        .dropdown-menu{
+            margin-top: 17px;
+            left: auto;
+            right: 20px;
+        }
+        .expand-more {
+            text-transform: uppercase;
+            cursor: pointer;
+            color: inherit;
+        }
+        > a{
+            cursor: pointer;
+        }
+    }
+    .language-selector {
+        .lang-flag {
+            display: inline-block;
+            vertical-align: -1px;
+            height: auto;
+            max-width: 16px;
+            margin-right: 3px;
+        }
+    }
+}

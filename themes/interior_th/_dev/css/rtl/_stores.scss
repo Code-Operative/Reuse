@@ -1,0 +1,12 @@
+@include media-breakpoint-up(sm) {
+    .lang-rtl{
+        .page-stores{
+            .store-item-container{
+                .divide-left{
+                    border-left: none;
+                    border-right: $gray-light 1px solid;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.view-carousel {
+	.owl-stage {
+	    display: flex;
+	    align-items: stretch;
+	}
+    .owl-nav {
+        top: 8px;
+    }
+	.owl-item {
+		&:hover {
+			z-index: 1;
+		}
+	}
+}
+//in several rows
+.wrapper-item {
+    .product-miniature {
+        + .product-miniature {
+            margin-top: 20px;
+        }
+    }
+}
+//nav active
+.nav-active {
+    .headline-section {
+        margin-bottom: 30px;
+    }
+    .owl-stage-outer {
+        padding-top: 75px;
+    }
+}
+@include media-breakpoint-down(xs) {
+    .wrapper-item {
+        .product-miniature {
+            +.product-miniature {
+                margin-top: 4px;
+            }
+        }
+    }
+}

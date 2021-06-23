@@ -1,0 +1,244 @@
+.checkout-step {
+    background-color: white;
+    border: 1px $gray-light solid;
+    padding: 0 0 15px;
+    .step-title {
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 22px;
+        background: $clr-eight;
+        color: $white;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+    }
+    .content {
+        padding: 0 37px;
+    }
+    .step-edit {
+        text-transform: lowercase;
+        font-weight: normal;
+        .edit {
+            font-size: $base-font-size;
+        }
+    }
+    .not-allowed {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+    .content,
+    .done,
+    .step-edit {
+        display: none;
+    }
+    &.-unreachable {
+      .step-title {
+        cursor: not-allowed;
+      }
+    }
+    &.-current {
+      .step-title {
+        cursor: default;
+      }
+        .content {
+            display: block;
+        }
+    }
+    &.-current.-reachable.-complete {
+        .done,
+        .step-edit {
+            display: none;
+        }
+        .step-number {
+            display: inline-block;
+        }
+        .content {
+            display: block;
+        }
+    }
+    &.-reachable.-complete {
+        h1 {
+            .done {
+                display: inline-block;
+            }
+            .step-number {
+                display: none;
+            }
+            .step-edit {
+                cursor: pointer;
+                display: block;
+                color: inherit!important;
+                margin-left: auto;
+            }
+        }
+        .content {
+            display: none;
+        }
+    }
+    small {
+        color: $gray;
+    }
+    .default-input {
+        min-width: 40%;
+        &[name=address1],
+        &[name=address2] {
+            min-width: 60%;
+        }
+    }
+    .radio-field {
+        margin-top: 30px;
+        label {
+            display: inline;
+        }
+    }
+    .checkbox-field div {
+        margin-top: 60px;
+    }
+    .checkbox-field + .checkbox-field div {
+        margin-top: 0;
+    }
+    .select-field div {
+        background: $gray-lighter;
+        padding: 10px 50px;
+    }
+    .form-footer {
+        text-align: center;
+    }
+    #conditions-to-approve {
+        padding-top: 16px;
+        li {
+            display: flex;
+        }
+    }
+    .payment-options {
+        label {
+            margin: 0;
+        }
+        .custom-radio {
+            margin-right: 10px;
+        }
+        .payment-option {
+            background: $gray-light;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 8px;
+        }
+    }
+    .step-number {
+        display: inline-block;
+        padding-right: 15px;
+    }
+    .address-selector {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .address-item {
+        background: $gray-lighter;
+        flex: 0 0 49%;
+        margin-bottom: $small-space;
+        &.selected {
+            background: white;
+            border: $brand-primary 3px solid;
+        }
+    }
+    .address-alias {
+        display: inline-block;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .address {
+        margin-left: 25px;
+        font-weight: normal;
+    }
+    .radio-block {
+        padding: 15px;
+        text-align: left;
+    }
+    .delete-address,
+    .edit-address {
+        color: $white!important;
+        display: inline-block;
+        margin: 0 5px;
+        &:hover{
+            color: $white!important;
+        }
+        .delete,
+        .edit {
+            font-size: $base-font-size;
+        }
+    }
+    hr {
+        margin: 0;
+    }
+    .address-footer {
+        text-align: center;
+        padding: 10px;
+    }
+    #delivery-addresses,
+    #invoice-addresses {
+        margin-top: 20px;
+    }
+    .add-address {
+        margin-top: 20px;
+        a {
+            color: $gray-darker;
+            i {
+                font-size: $font-size-lg;
+            }
+        }
+    }
+    .delivery-option {
+        background: $gray-lighter;
+        padding: 15px 0;
+        margin-bottom: 15px;
+        align-items: center;
+        .row{
+            align-items: center;
+        }
+        img {
+            display: inline-block;
+            margin: 10px 0;
+        }
+        label {
+            text-align: inherit;
+            margin: 0;
+            > .row{
+                align-items: center;
+            }
+        }
+    }
+    .carrier-delay,
+    .carrier-name {
+        display: inline-block;
+        word-break: break-word;
+        text-align: left;
+        margin: 0;
+    }
+    #customer-form,
+    #delivery-address,
+    #invoice-address,
+    #login-form {
+        margin-left: 5px;
+        margin-top: 25px;
+        .form-control-label {
+            text-align: left;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .radio-inline {
+            padding: 0;
+        }
+    }
+    .sign-in {
+        font-size: $font-size-sm;
+    }
+    .forgot-password {
+        margin-left: rem(230px);
+    }
+}
+#delivery_message{
+    margin-bottom: 20px;
+}

@@ -1,0 +1,9 @@
+//single
+.none-in-tabs {
+    margin-top: 80px;
+}
+@include media-breakpoint-down(md) {
+    .none-in-tabs {
+        margin-top: 50px;
+    }
+}

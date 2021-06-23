@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>postcodecheck</name>
+    <displayName><![CDATA[Post Code Check]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[Check the buyer&#039;s a seller&#039;s postcode to determine if shipping is possible. ]]></description>
+    <author><![CDATA[CodeOperative]]></author>
+    <tab><![CDATA[shipping_logistics]]></tab>
+	<confirmUninstall><![CDATA[Are you sure you want to uninstall? Uninstalling will disable the shipping varification feature. ]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

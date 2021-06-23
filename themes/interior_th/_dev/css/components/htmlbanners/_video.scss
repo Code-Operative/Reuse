@@ -1,0 +1,108 @@
+.promo-home {
+	margin: 50px 0 0;
+	color: $white;
+	text-align: center;
+	font-size: 16px;
+	.img-banner {
+		width: 100%;
+	}
+	h1,h2,h3,h4,h5,h6{
+		color: inherit;
+		text-transform: uppercase;
+		margin-bottom: 6px;
+	}
+	h4{
+		font-size: 1.5em;
+		font-weight: 400;
+	}
+	h5{
+		font-size: 2em;
+		font-weight: 700;
+		margin-bottom: 15px;
+	}
+	.banner-link {
+		position: relative;
+		overflow: hidden;
+		&:before {
+		    content: '';
+		    background: rgba($black, .3);
+		    position: absolute;
+		    z-index: 1;
+		    left: 0;
+		    top: 0;
+		    width: 100%;
+		    height: 100%;
+		}
+		&:after{
+			border-top: 1px solid;
+			border-bottom: 1px solid;
+			bottom: 10px;
+			content: '';
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 10px;
+			z-index: 2;
+		}
+	}
+	.banner-description {
+	    padding: 15px;
+	    position: absolute;
+	    width: 100%;
+	    top: 50%;
+	    left: 0;
+	    right: 0;
+	    transform: translate(0, -50%);
+		z-index: 3;
+	}
+	.btn{
+		font-size: 0.9em;
+		padding: .9em 2.1em;
+	}
+	.video-promo__wrapper {
+		height: 100%;
+	}
+}
+.video-promo {
+	background: $black;
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+@include media-breakpoint-down(lg){
+	.promo-home{
+		.banner-description{
+			font-size: 14px;
+		}
+	}
+}
+@include media-breakpoint-down(md){
+	.promo-home {
+		.banner-description{
+			font-size: 11px;
+		}
+	}
+}
+@include media-breakpoint-down(sm){
+	.promo-home {
+		.banner-link {
+			&:after{
+				display: none;
+			}
+		}
+		h4, h5{
+			display: none;
+		}
+		.banner-description {
+			font-size: 10px;
+			p{
+				margin: 0;
+			}
+		}
+	}
+}
+@include media-breakpoint-down(sm) {
+	.promo-home {
+		padding: 0;
+	}
+}

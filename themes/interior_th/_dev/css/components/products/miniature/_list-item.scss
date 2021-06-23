@@ -1,0 +1,148 @@
+.list {
+    .product-miniature {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .thumbnail-container {
+        display: flex;
+
+        flex-wrap: wrap;
+    }
+
+    .thumbnail-wrapper,
+    .product-description,
+    .highlighted-informations {
+        float: left;
+
+        padding: 0 10px;
+    }
+
+    .thumbnail-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        width: 30%;
+
+        justify-content: center;
+    }
+
+    .product-description {
+        display: flex;
+        flex-direction: column;
+
+        width: 45%;
+    }
+
+    .highlighted-informations {
+        width: 25%;
+        padding-left: 25px;
+
+        border-left: 1px solid $clr-three;
+    }
+
+    .product-title {
+        margin-bottom: 10px;
+    }
+
+    .product-list-reviews, .star-wrapper {
+        margin-bottom: 15px;
+    }
+
+    .product_desc {
+        line-height: 1.5;
+
+        color: $clr-five;
+    }
+
+    .product-price-and-shipping {
+        margin-top: 0;
+    }
+
+    .variant-links {
+        margin-top: 10px;
+
+        order: 1;
+    }
+
+    .add-to-cart-or-refresh {
+        margin-bottom: 15px;
+    }
+
+    .add-cart {
+        color: $clr-five;
+        border-color: $clr-five;
+    }
+
+    .quick-view,
+    .link-view,
+    .addToWishlist {
+        font-size: 13px;
+        font-weight: 700;
+
+        display: block;
+        display: block;
+
+        margin-bottom: 15px;
+
+        text-align: left;
+        text-transform: uppercase;
+
+        color: $clr-five;
+
+        i {
+            font-size: 19px;
+            line-height: 1.7em;
+
+            display: inline-block;
+            display: inline-block;
+
+            width: 1.8em;
+            height: 1.8em;
+            margin-right: 8px;
+            padding: 0;
+
+            text-align: center;
+            vertical-align: middle;
+
+            color: $clr-five;
+            border: 1px solid;
+            background: $white;
+        }
+
+        &:hover {
+            color: $brand-primary;
+
+            i {
+                color: $white;
+                border-color: $brand-primary;
+                background: $brand-primary;
+            }
+        }
+
+        &:active {
+            i {
+                color: $white;
+                border-color: darken($brand-primary, 10%);
+                background: darken($brand-primary, 10%);
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .list {
+
+        .thumbnail-wrapper,
+        .product-description,
+        .highlighted-informations {
+            width: 100%;
+        }
+
+        .highlighted-informations {
+            padding: 0 10px;
+
+            border: none;
+        }
+    }
+}

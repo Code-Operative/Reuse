@@ -1,0 +1,289 @@
+/**
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+* versions in the future. If you wish to customize PrestaShop for your
+* needs please refer to http://www.prestashop.com for more information.
+* We offer the best and most useful modules PrestaShop and modifications for your online store. 
+*
+* @category  PrestaShop Module
+* @author    knowband.com <support@knowband.com>
+* @copyright 2016 Knowband
+* @license   see file: LICENSE.txt
+*/
+
+ul.kbmpdeal-toc{
+    margin:0;
+    padding:0;
+    list-style-type: disc;
+    padding-left:20px;
+}
+
+.kbmpdeal-list{
+    
+}
+
+.kbmpdeal-list li{
+    -webkit-box-shadow: 0px 0px 6px 1px rgba(140,140,140,1);
+    -moz-box-shadow: 0px 0px 6px 1px rgba(140,140,140,1);
+    box-shadow: 0px 0px 6px 1px rgba(140,140,140,1);
+}
+
+.kbmpdeal-list h3{
+    font-size: 17px;
+    margin: 8px 0;
+    position:relative;
+}
+
+.kbmpdeal-list h3 a{
+    bottom: 0;
+    right: 0px;
+    font-size: 11px;
+    padding: 8px 8px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.kbmpdeal-list .kbmp-shop-now-block{
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position:relative;
+}
+
+.kbmpdeal-list .kbmp-shop-now-block a, .kbmpdeal-list h3 a{
+    background: #269620;
+    background-image: -webkit-linear-gradient(top, #269620, #03990d);
+    background-image: -moz-linear-gradient(top, #269620, #03990d);
+    background-image: -ms-linear-gradient(top, #269620, #03990d);
+    background-image: -o-linear-gradient(top, #269620, #03990d);
+    background-image: linear-gradient(to bottom, #269620, #03990d);
+    font-family: Arial;
+    color: #ffffff;
+    text-decoration: none;
+    position: absolute;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.kbmpdeal-list .kbmp-shop-now-block a{
+    bottom: 10px;
+    left: 15px;
+    font-size: 15px;
+    padding: 10px 17px;
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+}
+
+.kbmpdeal-list .kbmp-shop-now-block a:hover, .kbmpdeal-list h3 a:hover{
+    background: #379e0b;
+    background-image: -webkit-linear-gradient(top, #379e0b, #37940c);
+    background-image: -moz-linear-gradient(top, #379e0b, #37940c);
+    background-image: -ms-linear-gradient(top, #379e0b, #37940c);
+    background-image: -o-linear-gradient(top, #379e0b, #37940c);
+    background-image: linear-gradient(to bottom, #379e0b, #37940c);
+    text-decoration: none;
+}
+
+.kbmpdeal-list img{
+    width: 100%;
+    height: 300px;
+}
+
+.kbmpdeal-info{
+    display: table;
+    width: 100%;
+    padding: 7px 0;
+}
+
+.kbmpdeal-info .kbmpdeal-info-title{
+    display: table-cell;
+    width: 50%;
+    font-size: 20px;
+    text-align: left;
+}
+
+.kbmpdeal-info .kbmpdeal-info-title .desc-row{
+    display:table;
+    width:100%;
+}
+
+.kbmpdeal-info .kbmpdeal-info-title .desc-row span.cell{
+    display:table-cell;
+    width:50%;
+}
+
+.kbmpdeal-info .kbmpdeal-info-title .desc-row .deal-title{
+    
+}
+
+.kbmpdeal-info .kbmpdeal-info-title .desc-row .deal-code{
+    margin-left: 50px;
+    background-color: #1933BD;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.kbmpdeal-info .kbmpdeal-info-expire{
+    display: table-cell;
+    width: 50%;
+    text-align: right;
+}
+
+.kbmpdeal-info .kbmpdeal-info-expire .kbmp-expire-text{
+    font-size: 20px;
+    font-weight: bold;
+    display: inline;
+    margin-right: 10px;
+}
+
+.kbmpdeal-info .kbmpdeal-info-expire .kbmp-timer-text{
+    display: inline;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.kbmpdeal-info .kbmpdeal-info-expire .kbmp-timer-text:last-child{
+    margin-right:0;
+}
+
+.kbmpdeal-info .kbmpdeal-info-expire .kbmp-timer-text span{
+    font-size: 18px;
+    margin-right: 2px;
+}
+
+#ui-datepicker-div dl dt {
+    font-weight:normal;
+    font-size:12px;
+}
+
+#ui-datepicker-div dl dd{
+    margin-left:20px;
+}
+
+@media (max-width: 320px){
+    .kbmpdeal-info .kbmpdeal-info-expire .kbmp-expire-text{
+        margin-bottom:6px;
+        display:block;
+    }
+}
+
+@media (max-width: 480px){
+    .kbmpdeal-list .kbmp-shop-now-block{
+        height:150px;
+    }
+    .kbmpdeal-list .kbmp-shop-now-block a {
+        bottom: 5px;
+        left: 6px;
+        font-size: 11px;
+        padding: 4px 6px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+    
+    .kbmpdeal-list h3 a {
+        padding: 6px 6px;
+    }
+    
+    .kbmpdeal-info {
+        display: block;
+        width: 100%;
+    }
+    
+    .kbmpdeal-info .kbmpdeal-info-title {
+        display: block;
+        width: 100%;
+        font-size: 17px;
+        text-align: left;
+        padding-bottom: 5px;
+        margin-bottom: 7px;
+        border-bottom: 1px solid #D8D8D8;
+    }
+    
+    .kbmpdeal-info .kbmpdeal-info-expire {
+        display:block;
+        width:100%;
+        text-align:left;
+    }
+    
+    .kbmpdeal-info .kbmpdeal-info-expire .kbmp-expire-text{
+        font-size:18px;
+    }
+
+}
+
+@media (min-width: 481px) and (max-width: 568px){
+    .kbmpdeal-info {
+        display: block;
+        width: 100%;
+    }
+    
+    .kbmpdeal-info .kbmpdeal-info-title {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding-bottom: 5px;
+        margin-bottom: 7px;
+        border-bottom: 1px solid #D8D8D8;
+    }
+    
+    .kbmpdeal-info .kbmpdeal-info-expire {
+        display:block;
+        width:100%;
+        text-align: left;
+    }
+    
+    .kbmpdeal-info .kbmpdeal-info-expire .kbmp-expire-text{
+
+    }
+}
+
+@media (min-width: 481px) and (max-width: 640px){
+    .kbmpdeal-list .kbmp-shop-now-block a {
+        bottom: 8px;
+        left: 10px;
+        font-size: 13px;
+        padding: 6px 8px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+    
+    .kbmpdeal-list h3 a {
+        padding: 6px 8px;
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+
+.datetimepicker {
+        z-index: 10000009 !important;
+        position: absolute !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        -webkit-transform: none !important;
+        display: none;
+    }
+   
+    .datetimepicker.dropdown-menu {
+        display: none;
+    }
+   
+    .dropdown-menu {
+        min-width: auto !important;
+    }
+    
+    #kb-seller-per-product-deal-form .inplbl{
+            height: 35px;
+    }
+    
+    #popup_container #popup_message{
+        color: black !Important;
+    }

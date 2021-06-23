@@ -1,0 +1,32 @@
+//navs
+.lang-rtl {
+	.nav.nav-tabs_alternative{
+	    .nav-item{
+	        .nav-link{
+	            &:before{
+	                padding: 0 0 0 12px;
+	            }
+	        }
+	    }
+	}
+}
+@include media-breakpoint-up(sm) {
+    .lang-rtl {
+        .nav.nav-tabs {
+            .nav-item{
+                &:not(:last-child):after{
+                    left: -4px;
+                    right: auto;
+                }
+            }
+        }
+        .nav.nav-tabs_alternative{
+            .nav-item{
+                &:not(:last-child){
+                    margin-right: 0;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}

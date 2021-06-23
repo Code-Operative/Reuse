@@ -1,0 +1,94 @@
+.btn-comment,
+.btn-comment-inverse  {
+    .material-icons {
+        font-size: 17px;
+        margin-right: 1px;
+    }
+}
+
+#product-comment-posted-modal ,
+#product-comment-post-error,
+#update-comment-usefulness-post-error {
+    .post-comment-buttons {
+        margin-top: 30px;
+    }
+}
+
+/**
+ *  Product comments list
+ */
+
+ #empty-product-comment {
+    width: 100%;
+    text-align: center;
+ }
+
+.product-comment-list-item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    .grade-stars {
+        margin-bottom: 16px;
+    }
+    .comment-date {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    .comment-author {
+        font-weight: 600;
+    }
+    .comment-title {
+        font-size: 15px;
+        line-height: 1.4;
+        font-weight: 600;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+    }
+    .comment-post {
+        font-style: italic;
+        line-height: 1.8;
+    }
+}
+.comment-buttons {
+    display: flex;
+    margin-top: 15px;
+    a {
+        color: $clr-fourteen;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+    .thumb_up {
+        color: $brand-success;
+    }
+    .thumb_down {
+        color: $brand-danger;
+    }
+    .outlined_flag {
+        &:hover {
+            color: $brand-danger;
+        }
+    }
+    i {
+        font-size: 20px;
+        line-height: 1;
+        margin-right: 4px;
+    }
+}
+
+
+
+#product-comments-list-footer {
+    position: relative;
+    text-align: center;
+}
+
+
+@include media-breakpoint-up(lg) {
+    .product-comment-list-item {
+        width: 50%;
+    }
+}

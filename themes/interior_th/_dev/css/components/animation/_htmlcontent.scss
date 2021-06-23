@@ -1,0 +1,100 @@
+@import "header-slider";
+
+.anim-first {
+    .banner-link {
+        overflow: hidden;
+        &:before {
+            transition: opacity .6s;
+        }
+    }
+    .img-banner {
+        transition: transform .6s;
+    }
+    .banner-description {
+        transition: opacity .6s, top .6s;
+    }
+    &:hover {
+        .banner-link {
+            &:before {
+                opacity: 0;
+            }
+        }
+        .banner-description {
+            opacity: 0;
+            top: 110%;
+        }
+        .img-banner {
+            transform: scale(1.15);
+        }
+    }
+}
+
+
+/*end animation first*/
+
+.anim-second {
+    .banner-link {
+        overflow: hidden;
+        position: relative;
+    }
+    .img-banner {
+        transition: transform 1s;
+    }
+    .banner-description {
+        >* {
+            position: relative;
+            left: 0;
+            &:nth-child(1) {
+                transition: left 1s, opacity 1s, -webkit-filter 1s, transform 1s;
+            }
+            &:nth-child(2) {
+                transition: left .8s .2s, opacity .8s .2s, -webkit-filter .8s .2s, transform .8s .2s;
+            }
+            &:nth-child(3) {
+                transition: left .6s .4s, opacity .6s .4s, -webkit-filter .6s .4s, transform .6s .4s;
+            }
+        }
+    }
+    &:hover {
+        .img-banner {
+            transform: scale(1.15);
+        }
+        .banner-description {
+            >* {
+                left: 100%;
+                opacity: 0;
+                transform: scale(2);
+            }
+        }
+    }
+}
+
+
+/*end animation second*/
+
+.promo-home {
+    .banner-link {
+        overflow: hidden;
+        &:after {
+            transition: top .5s, bottom .5s;
+        }
+    }
+    .img-banner {
+        transition: transform 1s;
+    }
+    &:hover {
+        .banner-link {
+            &:after {
+                bottom: 0;
+                top: 0;
+            }
+        }
+        .img-banner {
+            transform: scale(1.5);
+            transition: transform 15s;
+        }
+    }
+}
+
+
+/*end video animation*/

@@ -1,0 +1,60 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+@include media-breakpoint-down(md) {
+	//wrapper
+	.dropdown-mobile {
+		position: relative;
+	}
+	//btn
+	.btn-toggle-mobile {
+	    font-size: 16px;
+	    cursor: pointer;
+	    width: 2em;
+	    height: 2em;
+	    background-color: $brand-second;
+	    color: $white;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    border-radius: 50%;
+	    transition: background-color .4s, color .4s;
+	    &:hover {
+	    	background-color: lighten($brand-second, 5%);
+	    }
+	}
+	//dropdown
+	.dropdown-toggle-mobile {
+		background: rgba($white, .95);
+	    box-shadow: 0px 2px 6px 0px rgba($black, 0.1);
+		color: $clr-six;
+		opacity: 0;
+		visibility: hidden;
+		transform: translate(0, -40px);
+		transition: visibility 0.25s, opacity 0.25s, transform 0.25s;
+		white-space: nowrap;
+		max-width: 240px;
+		min-width: 100%;
+		font-size: 14px;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		z-index: 100;
+		a {
+			display: block;
+		    padding: 8px 15px;
+		    line-height: 1.2;
+			&:hover{
+				background: $brand-primary;
+				color: $white;
+			}
+		}
+	}
+	.active + {
+		.dropdown-toggle-mobile {
+		    opacity: 1;
+		    visibility: visible;
+		    transform: translate(0, 10px);
+		}
+	}
+}

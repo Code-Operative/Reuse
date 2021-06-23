@@ -1,0 +1,66 @@
+.no-style{
+    display: none;
+}
+.custom-checkbox {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    label {
+        font-weight: $font-weight-light;
+    }
+    > label {
+        display: flex;
+        width: 100%;
+        cursor: pointer;
+    }
+    a {
+        @extend .btn-link;
+    }
+    input[type="checkbox"] {
+        opacity: 0;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        z-index: 1;
+        + span {
+            border: 1px solid $gray-200;
+            display: inline-block;
+            height: 20px;
+            max-height: 20px;
+            position: relative;
+            width: 20px;
+            min-width: 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-right: 8px;
+            vertical-align: middle;
+            @extend %trans-btn;
+            .checkbox-checked {
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 19px;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity .2s, visibility .2s;
+            }
+        }
+        &:checked + span {
+            border-color: $brand-primary;
+            background: $brand-primary;
+            color: $white;
+            .checkbox-checked {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        &:focus {
+            + span {
+                @extend %focus-shadow;
+            }
+        }
+    }
+}

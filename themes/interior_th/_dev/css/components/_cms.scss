@@ -1,0 +1,13 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+.page-cms {
+    #content-wrapper{
+        width: 100%;
+    }
+    .cms-box {
+        img {
+            max-width: 100%;
+        }
+    }
+}

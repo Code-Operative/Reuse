@@ -1,0 +1,92 @@
+2021-04-05 9:00:08
+ReponsePayPal\Api\PayoutItemDetails Object
+(
+    [_propMap] => Array
+        (
+            [payout_item_id] => 2SC42CC5J6K3A
+            [transaction_id] => 5JP652525T485225D
+            [activity_id] => 7T721653G9588743Y
+            [transaction_status] => UNCLAIMED
+            [payout_item_fee] => PayPal\Api\Currency Object
+                (
+                    [_propMap] => Array
+                        (
+                            [currency] => GBP
+                            [value] => 0.02
+                        )
+
+                )
+
+            [payout_batch_id] => RMSCU4JK4FMUJ
+            [sender_batch_id] => 60670b192a0db
+            [payout_item] => PayPal\Api\PayoutItem Object
+                (
+                    [_propMap] => Array
+                        (
+                            [recipient_type] => EMAIL
+                            [amount] => PayPal\Api\Currency Object
+                                (
+                                    [_propMap] => Array
+                                        (
+                                            [currency] => GBP
+                                            [value] => 0.90
+                                        )
+
+                                )
+
+                            [note] => Auto Approval through cron
+                            [receiver] => kenjoo.dev@gmail.com
+                            [sender_item_id] => 354360670b1926438
+                            [recipient_wallet] => PAYPAL
+                        )
+
+                )
+
+            [time_processed] => 2021-04-02T12:16:29Z
+            [errors] => PayPal\Api\Error Object
+                (
+                    [_propMap] => Array
+                        (
+                            [name] => RECEIVER_UNREGISTERED
+                            [message] => The recipient for this payout does not have an account. A link to sign up for an account was sent to the recipient. However, if the recipient does not claim this payout within 30 days, the funds will be returned to your account.
+                            [information_link] => https://developer.paypal.com/docs/api/payments.payouts-batch/#errors
+                            [payout_error_details] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [links] => Array
+                (
+                    [0] => PayPal\Api\Links Object
+                        (
+                            [_propMap] => Array
+                                (
+                                    [href] => https://api.sandbox.paypal.com/v1/payments/payouts-item/2SC42CC5J6K3A
+                                    [rel] => self
+                                    [method] => GET
+                                    [enctype] => application/json
+                                )
+
+                        )
+
+                    [1] => PayPal\Api\Links Object
+                        (
+                            [_propMap] => Array
+                                (
+                                    [href] => https://api.sandbox.paypal.com/v1/payments/payouts/RMSCU4JK4FMUJ
+                                    [rel] => batch
+                                    [method] => GET
+                                    [enctype] => application/json
+                                )
+
+                        )
+
+                )
+
+        )
+
+)
+

@@ -1,0 +1,105 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+.block-social {
+	ul {
+		margin: 0;
+	}
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 4px 0;
+		&:not(:first-child){
+			margin-left: 14px;
+		}
+	}
+	a {
+		border: 1px solid;
+		display: block;
+		font-size: 15px;
+		height: 30px;
+		line-height: 28px;
+		text-align: center;
+		width: 30px;
+		&:before{
+			font-family: $second-icon-font;
+		}
+	}
+	.facebook{
+		a{
+			&:before{
+				content: '\f09a';
+			}
+		}
+	}
+	.twitter{
+		a{
+			&:before{
+				content: '\e818';
+			}
+		}
+	}
+	.rss{
+		a{
+			&:before{
+				content: '\e817';
+			}
+		}
+	}
+	.youtube{
+		a{
+			&:before{
+				content: '\e81a';
+			}
+		}
+	}
+	.linkedin {
+		a {
+			a:before {
+	    		content: 'in';
+	    		font-family: 'Verdana';
+	    		font-weight: 700;
+	    	}
+		}
+	}
+	.pinterest{
+		a{
+			&:before{
+				content: '\e816';
+			}
+		}
+	}
+	.vimeo{
+		a{
+			&:before{
+				content: '\e819';
+			}
+		}
+	}
+	.instagram{
+		a{
+			&:before{
+				content: '\f32d';
+			}
+		}
+	}
+}
+
+/* Layout */
+.footer-container{
+	.block-social{
+		margin-left: auto;
+		text-align: right;
+		padding: 0 $grid-gutter-width-base/2;
+	}
+}
+//max 991
+@include media-breakpoint-down(md) {
+	.footer-container{
+		.block-social{
+			width: 100%;
+			text-align: center;
+			margin-top: 15px;
+		}
+	}
+}

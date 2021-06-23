@@ -1,0 +1,104 @@
+@include media-breakpoint-down(md) {
+    #js-checkout-summary{
+        margin-top: 15px;
+    }
+    .done {
+        margin: 0;
+        padding: 0;
+    }
+    #checkout .checkout-step .address-item {
+        flex-grow: 1;
+    }
+    #checkout .checkout-step .delivery-option-2 {
+        flex-direction: column;
+    }
+    .delivery-option {
+        display: flex;
+        margin: auto;
+        .custom-radio {
+            flex: 0 0 auto;
+        }
+    }
+    .condition-label {
+        label[for="conditions_to_approve[terms-and-conditions]"] {
+            text-align: left;
+        }
+    }
+    #order-confirmation {
+        #registration-form {
+            width: 100%;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    #checkout {
+        .checkout-step {
+            .content {
+                padding: 15px;
+            }
+        }
+        .form-group {
+            margin-bottom: 8px;
+        }
+    }
+    #order-items {
+        border-right: 0;
+        margin-bottom: 40px;
+        .card-title {
+            border-bottom: 1px solid $gray-light;
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+        }
+        hr {
+            border-top-color: $gray-light;
+        }
+    }
+    .bold {
+        font-weight: bold;
+    }
+    #order-details {
+        padding-left: 15px;
+        .card-title {
+            border-bottom: 1px solid $gray-light;
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+        }
+    }
+    .checkout-step{
+        .step-title{
+            font-size: 18px;
+        }
+    }
+    #order-summary-content {
+        h4.h4{
+            font-size: 18px;
+        }
+        h4.black{
+            font-size: 20px;
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .checkout-step{
+        .step-title{
+            font-size: 12px;
+        }
+        .delivery-option{
+            text-align: center;
+            img {
+                margin-top: 10px;
+            }
+        }
+    }
+    #payment-confirmation {
+        button {
+            font-size: 14px;
+            &.btn {
+                white-space: normal;
+            }
+        }
+    }
+}
+

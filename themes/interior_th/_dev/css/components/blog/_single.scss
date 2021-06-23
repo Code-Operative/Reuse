@@ -1,0 +1,36 @@
+.single {
+	.blog_post {
+		.blog_post_content {
+			border: none;
+			text-align: inherit;
+		}
+		.post_content {
+			color: inherit;
+			line-height: 2;
+		}
+		.post_thumbnail {
+			img {
+				width: auto;
+			}
+		}
+		.post_title {
+			font-size: 28px;
+		}
+	}
+	.post_meta {
+		margin-bottom: 20px;
+	}
+	.blog_post_content_bottom {
+		padding: 0;
+		margin-top: 15px;
+	}
+}
+@include media-breakpoint-down(xs) {
+	.single {
+		.blog_post {
+			.post_title {
+				font-size: 20px;
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+.page-product{
+	.wrapper-columns{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	#main{
+		> .row{
+			align-items: flex-start;
+		}
+	}
+	.page-content{
+		position: relative;
+	}
+}

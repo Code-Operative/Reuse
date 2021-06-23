@@ -1,0 +1,39 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+//header links widget
+#header {
+	.links {
+	    flex: 0 0 auto;
+	    max-width: 100%;
+	    width: auto;
+	    margin: 0;
+	    line-height: inherit;
+	    padding: 0;
+	    .row {
+	    	margin: 0;
+	    }
+	}
+	.wrapper {
+	    flex: 0 0 auto;
+	    max-width: 100%;
+	    width: auto;
+	    margin: 0;
+	    padding: 0;
+	    .h3, .title {
+	    	display: none;
+	    }
+	    .collapse {
+	    	display: flex;
+	    	flex-wrap: wrap;
+	    	margin: 0;
+	    }
+	    li {
+	    	padding: 2px 10px 3px 0;
+	    }
+	    a {
+	    	&:hover {
+	    		color: $brand-primary;
+	    	}
+	    }
+	}
+}

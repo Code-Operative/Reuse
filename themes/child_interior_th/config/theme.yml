@@ -1,0 +1,84 @@
+parent: interior_th
+name: child_interior_th
+display_name: Child theme of interior_th's theme
+version: 1.0.0
+assets:
+  use_parent_assets: true
+  js:
+    index:
+      - id: owl-carousel
+        path: assets/js/owl.carousel.min.js
+        priority: 55
+      - id: wow-library
+        path: assets/js/wow.js
+        priority: 60
+      - id: carousels
+        path: assets/js/carousels.js
+        priority: 65
+      - id: index-extra-scripts
+        path: assets/js/index.js
+        priority: 70
+      - id: add-to-cart
+        path: assets/js/add-to-cart.js
+        priority: 80
+    category:
+      - id: owl-carousel
+        path: assets/js/owl.carousel.min.js
+        priority: 55
+      - id: add-to-cart
+        path: assets/js/add-to-cart.js
+        priority: 65
+    best-sales:
+      - id: add-to-cart
+        path: assets/js/add-to-cart.js
+        priority: 60
+    manufacturer:
+      - id: add-to-cart
+        path: assets/js/add-to-cart.js
+        priority: 60
+    new-products:
+      - id: add-to-cart
+        path: assets/js/add-to-cart.js
+        priority: 60
+    prices-drop:
+      - id: add-to-cart
+        path: assets/js/add-to-cart.js
+        priority: 60
+    search:
+      - id: add-to-cart
+        path: assets/js/add-to-cart.js
+        priority: 60
+    supplier:
+      - id: add-to-cart
+        path: assets/js/add-to-cart.js
+        priority: 60
+    product:
+      - id: owl-carousel
+        path: assets/js/owl.carousel.min.js
+        priority: 55
+      - id: carousels
+        path: assets/js/carousels.js
+        priority: 60
+      - id: add-to-cart
+        path: assets/js/add-to-cart.js
+        priority: 65
+    order-confirmation:
+      - id: owl-carousel
+        path: assets/js/owl.carousel.min.js
+        priority: 55
+      - id: carousels
+        path: assets/js/carousels.js
+        priority: 60
+      - id: add-to-cart
+        path: assets/js/add-to-cart.js
+        priority: 65
+    cart:
+      - id: owl-carousel
+        path: assets/js/owl.carousel.min.js
+        priority: 55
+      - id: carousels
+        path: assets/js/carousels.js
+        priority: 60
+      - id: add-to-cart
+        path: assets/js/add-to-cart.js
+        priority: 65

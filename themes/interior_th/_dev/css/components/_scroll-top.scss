@@ -1,0 +1,29 @@
+@import "~bootstrap/scss/_mixins.scss";
+@import "../partials/_variables";
+
+
+.btn-to-top{
+	background: $brand-primary;
+	bottom: 80px;
+	color: $white;
+	cursor: pointer;
+	font-family: $second-icon-font;
+	font-size: 20px;
+	height: 40px;
+	line-height: 40px;
+	position: fixed;
+	right: 30px;
+	text-align: center;
+	width: 40px;
+	z-index: 2;
+	transition: background .4s ease;
+	&:before{
+		content: '\e80f';
+	}
+	&:hover{
+		background: lighten($brand-primary, 10%);
+	}
+	&:active{
+		background: darken($brand-primary, 10%);
+	}
+}

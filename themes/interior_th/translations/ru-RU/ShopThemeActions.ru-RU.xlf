@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="back" source-language="ru-RU" target-language="ru-RU" datatype="plaintext">
+    <body>
+      <trans-unit id="8f1e77e0d2be21da93cd4d9a939148f7">
+        <source>Change Password</source>
+        <target>Изменить пароль</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="95e6faaba5e8b016e5f9bcf5ea6c8270">
+        <source>Back to Login</source>
+        <target>Вернуться на страницу аутентификации</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="733ae3eecadd5777cea5ce9a32379d7a">
+        <source>Send reset link</source>
+        <target>Отправить ссылку сброса пароля</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="daf51d7d9e10e6a469434ae548d9a173">
+        <source>Print out</source>
+        <target>Распечатать</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="332c80b1838dc515f5031e09da3b7f3f">
+        <source>Reorder</source>
+        <target>Изменение порядка </target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="5144a9adfce5a7d475bb8194a4a310a5">
+        <source>Create new address</source>
+        <target>Создать новый адрес</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="c9cc8cce247e49bae79f15173ce97354">
+        <source>Save</source>
+        <target>Сохранить</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="f2a6c498fb90ee345d997f888fce3b18">
+        <source>Delete</source>
+        <target>Удалить</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="961f2247a2070bedff9f9cd8d64e2650">
+        <source>Choose</source>
+        <target>Выбрать</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="e512598333dceaaaf22889038b89a4a4">
+        <source>add new address</source>
+        <target>Добавьте новый адрес</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="de95b43bceeb4b998aed4aed5cef1ae7">
+        <source>edit</source>
+        <target>Редактировать</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="a0bfb8e59e6c13fc8d990781f77694fe">
+        <source>Continue</source>
+        <target>Продолжить</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="12a7a93d72ded50311b52c7d0a853e3c">
+        <source>Take advantage of our exclusive offers:</source>
+        <target>Воспользуйтесь нашими эксклюзивными предложениями:</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="ec211f7c20af43e742bf2570c3cb84f9">
+        <source>Add</source>
+        <target>Добавлять</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="acb0f29bb6d39aaabc7d2d62aaa4a57d">
+        <source>show details</source>
+        <target>показать детали</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="7e0bf6d67701868aac3116ade8fea957">
+        <source>Proceed to checkout</source>
+        <target>оформление заказа</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="ea4788705e6873b424c65e91c2846b19">
+        <source>Cancel</source>
+        <target>Отмена</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="06933067aafd48425d67bcb01bba5cb6">
+        <source>Update</source>
+        <target>Обновить</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="801ab24683a4a8c433c6eb40c48bcd9d">
+        <source>Download</source>
+        <target>Скачать</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="63a6a88c066880c5ac42394a22803ca6">
+        <source>Refresh</source>
+        <target>Обновить</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="e0626222614bdee31951d84c64e5e9ff">
+        <source>Select</source>
+        <target>Выбрать</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="d7778d0c64b6ba21494c97f77a66885a">
+        <source>Filter</source>
+        <target>Фильтр</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="f346acd7aed7508df8fec4da8353c81e">
+        <source>Save Customization</source>
+        <target>Сохранить настройки</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="fc35ec973f5b3a16f0d4b009834f39a6">
+        <source>Remove Image</source>
+        <target>Удалить изображение</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="c91e4ee170226d66e90f99ba917e4c20">
+        <source>Quick view</source>
+        <target>Быстрый просмотр</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="2d0f6b8300be19cf35e89e66f0677f95">
+        <source>Add to cart</source>
+        <target>В корзину</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="62a5e490880a92eef74f167d9dc6dca0">
+        <source>Hide</source>
+        <target>Спрятать</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="498f79c4c5bbde77f1bceb6c86fd0f6d">
+        <source>Show</source>
+        <target>Показать</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="6ff063fbc860a79759a7369ac32cee22">
+        <source>Checkout</source>
+        <target>Оформление заказа</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="4de8cf7f71c90bd5276f3eeb67da1803">
+        <source>remove from cart</source>
+        <target>удалить из корзины</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="300225ee958b6350abc51805dab83c24">
+        <source>Continue shopping</source>
+        <target>Продолжить покупки</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="81aa2078d1eceede831b2976dbf32e62">
+        <source>Clear all</source>
+        <target>Очистить все</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="5015f5f6af450ad9492bc74f1059244b">
+        <source>Filter By</source>
+        <target>Сортировать по</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="e0aa021e21dddbd6d8cecec71e9cf564">
+        <source>OK</source>
+        <target>OK</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="c87aacf5673fada1108c9f809d354311">
+        <source>Sign out</source>
+        <target>Выход</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="b6d4223e60986fa4c9af77ee5f7149c5">
+        <source>Sign in</source>
+        <target>Войти</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="94966d90747b97d1f0f206c98a8b1ac3">
+        <source>Send</source>
+        <target>Отправить</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="cbe55e77ffa67d13322eb1ce7d22f1ba">
+        <source>Choose file</source>
+        <target>Выберите файл</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="2d96bb66d8541a89620d3c158ceef42b">
+        <source>Add to wishlist</source>
+        <target>В список желаний</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="c1f52fba179ff982b10e3881670b61ef">
+        <source>Buy Now</source>
+        <target>купить сейчас</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="71948aa4f6e12cdaa5e2e63a5eb8f142">
+        <source>More info</source>
+        <target>Подробнее</target>
+        <note>Line: </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
