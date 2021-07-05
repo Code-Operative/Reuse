@@ -22,6 +22,6 @@ jobs:
         with:
             protocol: ftps
             local-dir: ./githubFTP
-            server: ${{ secrets.FTP_HOST }}
-            username: ${{ secrets.FTP_USER }}
-            password: ${{ secrets.FTP_PASSWORD }}
+            server: ${{ secrets.FTP_IP }}
+            username: ${{ secrets.FTP_username }}
+            password: ${{ secrets.FTP_password }}
