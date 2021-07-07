@@ -1,0 +1,75 @@
+version: '3.5'
+
+services:
+  demo-server-web:
+    container_name: demo-server-web
+    build:
+      context: ./docker/nginx
+      args:
+        UID: $U_ID
+    ports:
+      - 250:80
+    volumes:
+      # punto de entrada de la app symfony
+      - ./:/appdata/www/
+    depends_on:
+      - demo-server-be
+    networks:
+      - demo-server-network
+
+  demo-server-be:
+    container_name: demo-server-be
+    build:
+      context: docker/php
+      args:
+        UID: $U_ID
+        http_proxy: ${http_proxy}
+        https_proxy: ${http_proxy}
+    environment:
+      PHP_IDE_CONFIG: serverName=Docker
+      PHP_XDEBUG_ENABLED: 1
+      XDEBUG_CONFIG: remote_host=172.17.0.1 remote_port=9005  # linux users
+    volumes:
+      - ./:/appdata/www
+      - ./docker/php/xdebug-linux.ini:/usr/local/etc/php/conf.d/xdebug.ini
+      - ~/.ssh/id_rsa:/home/appuser/.ssh/id_rsa
+    depends_on:
+      - demo-server-db
+    networks:
+      - demo-server-network
+
+  demo-server-db:
+    container_name: demo-server-db
+    build:
+      context: ./docker/database
+    ports:
+      - 36001:3306
+    environment:
+      MYSQL_DATABASE: 'mprod_stafedepie_bna'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    command: mysqld --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - demo-server-db-data:/var/lib/mysql
+      - './docker/database/mysqld.cnf:/etc/mysql/mysqld.cnf'
+    networks:
+      - demo-server-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8080:80
+    environment:
+      PMA_HOST: demo-server-db
+    depends_on:
+      - demo-server-db
+    networks:
+      - demo-server-network
+
+volumes:
+  demo-server-db-data:
+
+networks:
+  demo-server-network:
+    external: true
