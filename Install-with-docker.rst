@@ -15,21 +15,20 @@ Steps
 
 - Go to browser at localhost:250
 
-Comandos
+Commands
 --------
 
-- Para entrar al servidor backend:
+- backend server container:
 
   - make ssh-be
   - make ssh-be-root #root access
 
-
-- Para correr el proyecto una vez instalado
+- Run and stop containers
 
   - make run
   - make stop
 
-- Mas comandos
+- Help commands (form more commands)
 
   - make help
 
