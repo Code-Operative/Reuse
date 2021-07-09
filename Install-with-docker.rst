@@ -3,10 +3,16 @@ Install with docker
 ===================
 
 Steps
+-----
 
-- Clone project
+- Clone project(only for first install)
 
   - git clone https://gitlab.com/renerecalde/prestashop.git
+
+- Go to feature/addDocker
+
+  - git checkout -b feature/addDocker
+  - git pull origin feature/addDocker
 
 - Go to folder project and build
 
