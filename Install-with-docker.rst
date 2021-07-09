@@ -7,7 +7,7 @@ Steps
 
 - Clone project(only for first install)
 
-  - git clone https://gitlab.com/renerecalde/prestashop.git
+  - git clone https://github.com/Code-Operative/Reuse.git
 
 - Go to feature/addDocker
 
