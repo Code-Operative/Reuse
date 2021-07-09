@@ -16,7 +16,7 @@ Steps
 
 - Go to folder project and build
 
-  - cd prestashop
+  - cd Reuse
   - make build
 
 - Go to browser at localhost:250
@@ -38,7 +38,10 @@ Commands
 
   - make help
 
+Config xdebug with phpstorm
+---------------------------
 
+  - Go to https://docs.google.com/document/d/1cF5st89t7dRiad_n9sH5d8mYEU4BQAITLAjWIQmGd7s/edit?usp=sharing
 
 
 
