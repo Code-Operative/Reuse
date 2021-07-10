@@ -9,17 +9,17 @@ Steps
 
   - Linux
 
-    - See .. _Install: https://docs.docker.com/engine/install/
+    - See https://docs.docker.com/engine/install/
 
   - Mac
 
-    - Go to .. _Install-Mac: https://docs.docker.com/docker-for-mac/install/ and follow the instruction.
+    - Go to https://docs.docker.com/docker-for-mac/install/ and follow the instruction.
 
 - Install docker-compose
 
   - Linux
 
-    - Go to .. _Install-compose: https://docs.docker.com/compose/install/ and follow the instruction.
+    - Go to https://docs.docker.com/compose/install/ and follow the instruction.
 
   - Mac
 
@@ -61,7 +61,7 @@ Commands
 Config xdebug and db manager with phpstorm
 ---------------------------
 
-  - Go to .. config: https://docs.google.com/document/d/1cF5st89t7dRiad_n9sH5d8mYEU4BQAITLAjWIQmGd7s/edit?usp=sharing
+  - Go to https://docs.google.com/document/d/1cF5st89t7dRiad_n9sH5d8mYEU4BQAITLAjWIQmGd7s/edit?usp=sharing
 
 
 
