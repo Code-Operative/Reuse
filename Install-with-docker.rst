@@ -27,7 +27,7 @@ Steps
 
 - Clone project(only for first install)
 
-  - git clone https://github.com/Code-Operative/Reuse.git
+  - git clone -b development1 https://github.com/Code-Operative/Reuse.git
 
 - Go to feature/addDocker
 
