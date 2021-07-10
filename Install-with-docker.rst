@@ -5,6 +5,26 @@ Install with docker
 Steps
 -----
 
+- Install Docker
+
+  - Linux
+
+    - See .. _Install: https://docs.docker.com/engine/install/
+
+  - Mac
+
+    - Go to .. _Install-Mac: https://docs.docker.com/docker-for-mac/install/ and follow the instruction.
+
+- Install docker-compose
+
+  - Linux
+
+    - Go to .. _Install-compose: https://docs.docker.com/compose/install/ and follow the instruction.
+
+  - Mac
+
+    - Docker Desktop for Mac includes Compose along with other Docker apps, so Mac users do not need to install Compose separately. For installation instructions, see Install Docker Desktop on Mac.
+
 - Clone project(only for first install)
 
   - git clone https://github.com/Code-Operative/Reuse.git
@@ -16,7 +36,7 @@ Steps
 
 - Go to folder project and build
 
-  - cd Reuse
+  - cd Reuse #or custom project folder name.
   - make build
 
 - Go to browser at localhost:250
@@ -38,10 +58,10 @@ Commands
 
   - make help
 
-Config xdebug with phpstorm
+Config xdebug and db manager with phpstorm
 ---------------------------
 
-  - Go to https://docs.google.com/document/d/1cF5st89t7dRiad_n9sH5d8mYEU4BQAITLAjWIQmGd7s/edit?usp=sharing
+  - Go to .. config: https://docs.google.com/document/d/1cF5st89t7dRiad_n9sH5d8mYEU4BQAITLAjWIQmGd7s/edit?usp=sharing
 
 
 

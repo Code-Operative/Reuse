@@ -1,6 +1,7 @@
 #!/bin/bash
 include .makerc
 
+DOCKER_WEB = ${PROJECT_NAME}-server-web
 DOCKER_DB = ${PROJECT_NAME}-server-db
 DOCKER_BE = ${PROJECT_NAME}-server-be
 DOCKER_NETWORK = ${PROJECT_NAME}-server-network
@@ -83,3 +84,9 @@ run-all-fixtures:
 run-assets:
   U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} ./tools/assets/build.sh
 
+# Server commands
+ssh-web-root: ## ssh's into the be container
+	U_ID=${UID} docker exec -it --user 0 ${DOCKER_WEB} bash
+
+ssh-web: ## ssh's into the be container
+	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_WEB} bash

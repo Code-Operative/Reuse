@@ -1,15 +1,15 @@
 <?php return array (
   'parameters' => 
   array (
-    'database_host' => '127.0.0.1',
-    'database_port' => '',
-    'database_name' => 'codeoper_development',
-    'database_user' => 'codeoper_prestadmin',
-    'database_password' => 'NjHNmqi[igPg',
+    'database_host' => 'localhost',
+    'database_port' => '36001',
+    'database_name' => 'prestashop',
+    'database_user' => 'root',
+    'database_password' => 'root',
     'database_prefix' => 'psrn_',
     'database_engine' => 'InnoDB',
     'mailer_transport' => 'smtp',
-    'mailer_host' => '127.0.0.1',
+    'mailer_host' => 'localhost',
     'mailer_user' => NULL,
     'mailer_password' => NULL,
     'secret' => 'FxRgpHKKp4cULj9xOytPV33hqjtZecgIKDHvO6MTdw8qn2GnFWCx05Q7SZGQGCwW',
