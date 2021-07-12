@@ -80,7 +80,7 @@ Config db
   
     - In the path of project execute "make ssh-db-root" to run container shell
     - cd home
-    - mysql -u root -p  prestashop < prestashop.sql
+    - mysql -u root -p  prestashop < prestashop.sql #pass root
 
   - Config parameters.php
    
