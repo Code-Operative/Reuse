@@ -63,6 +63,11 @@ Config xdebug and db manager with phpstorm
 
   - Go to https://docs.google.com/document/d/1cF5st89t7dRiad_n9sH5d8mYEU4BQAITLAjWIQmGd7s/edit?usp=sharing
 
+Set to dev mode
+---------------
+
+  - Set define('_PS_MODE_DEV_', false); #to true in /config/defines.inc.php
+
 Config db
 ---------
 
@@ -77,7 +82,21 @@ Config db
     - mysql -u root -p  prestashop < prestashop.sql
 
   - Config parameters.php
-
-
-
+   
+    +--------------------------------------+
+    | 'database_host' => 'demo-server-db', |
+    +--------------------------------------+
+    | 'database_port' => '3306',           |
+    +--------------------------------------+
+    | 'database_name' => 'prestashop',     |
+    +--------------------------------------+
+    | 'database_user' => 'root',           |
+    +--------------------------------------+
+    | 'database_password' => 'root',       |
+    +--------------------------------------+
+    | 'database_prefix' => 'psrn\_',       |
+    +--------------------------------------+
+    | 'database_engine' => 'InnoDB',       |
+    +--------------------------------------+
+    
 
