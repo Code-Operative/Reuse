@@ -82,10 +82,17 @@ run-all-fixtures:
 
 run-assets:
   U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} ./tools/assets/build.sh
+# End backend commands
 
-# Server commands
+# Server front commands
 ssh-web-root: ## ssh's into the be container
 	U_ID=${UID} docker exec -it --user 0 ${DOCKER_WEB} bash
 
 ssh-web: ## ssh's into the be container
 	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_WEB} bash
+# End front commands
+
+# Server db commands
+ssh-db-root: ## ssh's into the be container
+	U_ID=${UID} docker exec -it --user 0 ${DOCKER_DB} bash
+# End db commands
