@@ -1,6 +1,4 @@
-FROM mysql:8
-#FROM mysql:5.6 not work
-
+FROM mysql:5.6.51
 
 # Setup the custom configuration
-ADD mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
+#ADD mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
