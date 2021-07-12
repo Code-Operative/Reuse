@@ -52,6 +52,9 @@ ssh-be-root: ## ssh's into the be container
 ssh-be: ## ssh's into the be container
 	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} bash
 
+ssh-db-root: ## ssh's into the db container
+	U_ID=${UID} docker exec -it --user 0 ${DOCKER_DB} bash
+
 code-style: ## Runs php-cs to fix code styling following Symfony rules
 	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} php-cs-fixer fix src --rules=@Symfony
 	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} php-cs-fixer fix tests --rules=@Symfony
