@@ -29,14 +29,17 @@ Steps
 
   - git clone -b development1 https://github.com/Code-Operative/Reuse.git
 
+- Go to folder project and build
+
+  - cd Reuse #or custom project folder name.
+
 - Go to feature/addDocker
 
   - git checkout -b feature/addDocker
   - git pull origin feature/addDocker
 
-- Go to folder project and build
+- Build proyect
 
-  - cd Reuse #or custom project folder name.
   - make build
 
 - Go to browser at localhost:250
@@ -48,6 +51,10 @@ Commands
 
   - make ssh-be
   - make ssh-be-root #root access
+
+- db server container:
+
+  - make ssh-db-root #root access
 
 - Run and stop containers
 
