@@ -63,5 +63,21 @@ Config xdebug and db manager with phpstorm
 
   - Go to https://docs.google.com/document/d/1cF5st89t7dRiad_n9sH5d8mYEU4BQAITLAjWIQmGd7s/edit?usp=sharing
 
+Config db
+---------
+
+  - Get test db
+
+    - Get test db an rename to prestashop.sql
+    - Copy prestashop.sql to db container. Execute "docker cp /path-to-db/prestashop.sql demo-server-db:/home/prestashop.sql"
+
+  - Run prestashop.sql in container
+    - In the path of project execute "make ssh-db-root" to run container shell
+    - cd home
+    - mysql -u root -p  prestashop < prestashop.sql
+
+  - Config parameters.php
+
+
 
 
