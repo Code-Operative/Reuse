@@ -24,5 +24,9 @@
  * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require dirname(__FILE__).'/config/config.inc.php';
 Dispatcher::getInstance()->dispatch();
