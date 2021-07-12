@@ -84,9 +84,10 @@ Config db
     - Copy prestashop.sql to db container. Execute "docker cp /path-to-db/prestashop.sql demo-server-db:/home/prestashop.sql"
 
   - Run prestashop.sql in container
+  
     - In the path of project execute "make ssh-db-root" to run container shell
     - cd home
-    - mysql -u root -p  prestashop < prestashop.sql
+    - mysql -u root -p  prestashop < prestashop.sql #pass root
 
   - Config parameters.php
    
