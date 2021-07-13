@@ -52,9 +52,6 @@ ssh-be-root: ## ssh's into the be container
 ssh-be: ## ssh's into the be container
 	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} bash
 
-ssh-db-root: ## ssh's into the db container
-	U_ID=${UID} docker exec -it --user 0 ${DOCKER_DB} bash
-
 code-style: ## Runs php-cs to fix code styling following Symfony rules
 	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} php-cs-fixer fix src --rules=@Symfony
 	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} php-cs-fixer fix tests --rules=@Symfony
@@ -74,17 +71,14 @@ install-yarn:
 	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} yarn install
 	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} composer install
 
-run-fixtures:
-	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} bin/console doctrine:fixtures:load --group=mapaPolitico
-	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} bin/console doctrine:fixtures:load --group=usuarios
-	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} bin/console doctrine:fixtures:load --group=configuracion
-	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} bin/console doctrine:fixtures:load --group=actividades
-
 run-all-fixtures:
 	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} bin/console doctrine:fixtures:load
 
 run-assets:
   U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} ./tools/assets/build.sh
+
+cache-clear:
+  U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE}  rm -r ./var/cache/dev/*
 # End backend commands
 
 # Server front commands
