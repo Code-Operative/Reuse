@@ -1,0 +1,6 @@
+UPDATE psrn_configuration SET value='${SHOP_DOMAIN}' WHERE name='PS_SHOP_DOMAIN';
+UPDATE psrn_configuration SET value='${SHOP_DOMAIN}' WHERE name='PS_SHOP_DOMAIN_SSL';
+UPDATE psrn_configuration SET value=0 WHERE name='PS_SSL_ENABLED';
+UPDATE psrn_configuration SET value=0 WHERE name='PS_SSL_ENABLED_EVERYWHERE';
+UPDATE psrn_configuration SET value='${SHOP_DOMAIN}' WHERE name='REVERSO_ADDRESS';
+UPDATE psrn_shop_url SET domain='${SHOP_DOMAINPORT}', domain_ssl='${SHOP_DOMAIN}';
