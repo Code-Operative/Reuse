@@ -77,8 +77,9 @@ run-all-fixtures:
 run-assets:
   U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} ./tools/assets/build.sh
 
-cache-clear:
-  U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE}  rm -r ./var/cache/dev/*
+run-cache-clear: ## Clear dev cache
+	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} rm -r ./var/cache/dev/*
+
 # End backend commands
 
 # Server front commands
