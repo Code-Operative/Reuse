@@ -61,9 +61,6 @@ generate-ssh-keys: ## Generates SSH keys for the JWT library
 	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} openssl genrsa -passout pass:b4a42db9c2995ae84a9e1fe8aae5b95f -out config/jwt/private.pem -aes256 4096
 	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} openssl rsa -pubout -passin pass:b4a42db9c2995ae84a9e1fe8aae5b95f -in config/jwt/private.pem -out config/jwt/public.pem
 
-create-presta-db:
-     U_ID=${UID} docker exec ${DOCKER_DB} sh -c 'exec mysqldump --all-databases -uroot -p root' < /docker/database/configPrestaDb.sql
-
 config-db-user:
      U_ID=${UID} docker exec ${DOCKER_DB} sh -c 'exec mysqldump --all-databases -uroot -p root' < /docker/database/configUser.sql
 
@@ -93,4 +90,9 @@ ssh-web: ## ssh's into the be container
 # Server db commands
 ssh-db-root: ## ssh's into the be container
 	U_ID=${UID} docker exec -it --user 0 ${DOCKER_DB} bash
+
+create-presta-db: ## Create db prestashop
+	U_ID=${UID} docker cp ./docker/database/configPrestaDb.sql ${DOCKER_DB}:/home
+	U_ID=${UID} docker exec --user 0 -i ${DOCKER_DB} sh -c 'exec mysql -uroot -proot </home/configPrestaDb.sql'
+
 # End db commands
