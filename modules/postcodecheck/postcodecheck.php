@@ -268,17 +268,20 @@ class Postcodecheck extends Module
     public function hookDisplayProductPriceBlock($params)
     {   
 
-        //get the carrier id of the product
-        $product_id = $_GET['id_product'];
-        $db = \Db::getInstance();
-        $sql_carrier = " select `id_carrier_reference` from `psrn_product_carrier` where `id_product` = ".$product_id;
-        $carrier_query_result = $db->executeS($sql_carrier);
-        $carrier_id = $carrier_query_result[0]["id_carrier_reference"];
+        $carrier_name = "";
+        if(!empty($_GET['id_product'])){
+            //get the carrier id of the product
+            $product_id = $_GET['id_product'];
+            $db = \Db::getInstance();
+            $sql_carrier = " select `id_carrier_reference` from `psrn_product_carrier` where `id_product` = ".$product_id;
+            $carrier_query_result = $db->executeS($sql_carrier);
+            $carrier_id = $carrier_query_result[0]["id_carrier_reference"];
 
-        //get carrier id name 
-        $carrier_name_query = " select `name` from `psrn_carrier` where `id_carrier` = ".$carrier_id;
-        $carrier_name_result = $db->executeS($carrier_name_query);
-        $carrier_name = $carrier_name_result[0]["name"];
+            //get carrier id name 
+            $carrier_name_query = " select `name` from `psrn_carrier` where `id_carrier` = ".$carrier_id;
+            $carrier_name_result = $db->executeS($carrier_name_query);
+            $carrier_name = $carrier_name_result[0]["name"];
+        }
         // $carrier_name_cut = substr($carrier_name_cut,0);
         // return strlen($carrier_name);
         // $isCollection = strlen($carrier_name) > 30;
