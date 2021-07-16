@@ -9,6 +9,7 @@ npm-debug.log.*
 .cache/
 
 # Cache
+/var/cache/*
 /cache/*
 !/cache/.htaccess
 !/cache/cachefs/index.php
@@ -218,16 +219,13 @@ themes/default-bootstrap/modules/*/mails/*
 /build/
 /phpunit.xml
 /var/*
-!/var/cache
+/var/cache
 /var/cache/*
-!var/cache/.gitkeep
-!/var/logs
+/var/logs
 /var/logs/*
-!var/logs/.gitkeep
-!/var/sessions
+/var/sessions
 /var/sessions/*
-!var/sessions/.gitkeep
-!var/SymfonyRequirements.php
+var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
 
@@ -313,6 +311,8 @@ $RECYCLE.BIN/
 sftp-config.json
 
 
+### Vscode ###
+.vscode
 ### PhpStorm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio
 
