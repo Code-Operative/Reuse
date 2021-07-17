@@ -259,6 +259,7 @@ class postcodecheckcheckpostcodeModuleFrontController extends ModuleFrontControl
             //     return "collection only";
             // }
             // else {
+                $returnObj = new stdClass;
                 if (in_array($buyer_postcode_prefix_lower, $seller_postcodeprefix_array_lowercase)) {
                   $returnObj->id = 1;
                   $returnObj->msg = "This product can be delivered to your address.";
