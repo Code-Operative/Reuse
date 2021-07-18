@@ -356,6 +356,9 @@ nb-configuration.xml
 .settings/
 .externalToolBuilders/
 
+### Vim ###
+.phpcomplete_extended
+
 ### Release creation ###
 tools/build/releases/*
 !tools/build/releases/.gitkeep
