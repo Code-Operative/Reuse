@@ -77,6 +77,9 @@ run-assets:
 run-cache-clear: ## Clear dev cache
 	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} rm -r ./var/cache/dev/*
 
+run-cache-clear-prod: ## Clear prod cache
+	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} rm -r ./var/cache/prod/*
+
 # End backend commands
 
 # Server front commands
