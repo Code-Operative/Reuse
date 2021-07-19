@@ -292,6 +292,9 @@ $RECYCLE.BIN/
 *.lnk
 
 
+### VSCode ###
+.vscode
+
 ### SublimeText ###
 # cache files for sublime text
 *.tmlanguage.cache
