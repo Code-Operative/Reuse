@@ -102,6 +102,11 @@ class PersonalInformation
     private $isActive;
 
     /**
+    * @var bool
+    */
+    private $postcode;
+
+    /**
      * @param string $firstName
      * @param string $lastName
      * @param string $email
@@ -147,6 +152,7 @@ class PersonalInformation
         $this->languageName = $languageName;
         $this->subscriptions = $subscriptions;
         $this->isActive = $isActive;
+        $this->postcode = $postcode;
     }
 
     /**
@@ -259,5 +265,13 @@ class PersonalInformation
     public function isActive()
     {
         return $this->isActive;
+    }
+
+    /**
+    * @return string
+    */
+    public function getPostcode()
+    {
+        return $this->postcode;
     }
 }
