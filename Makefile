@@ -29,13 +29,13 @@ stop: ## Stop the containers
 restart: ## Restart the containers
 	$(MAKE) stop && $(MAKE) run
 
-build: ## Rebuilds all the containers
+build: ## Builds all the containers
 	U_ID=${UID} docker-compose stop && U_ID=${UID} docker-compose build && $(MAKE) run && $(MAKE) prepare
 
 prepare: ## Runs backend commands
 	$(MAKE) config-db-user && $(MAKE) create-presta-db && $(MAKE) run-assets
 
-rebuild:
+rebuild: ## Rebuilds all the containers
 	U_ID=${UID} docker-compose stop && U_ID=${UID} docker-compose build && $(MAKE) run
 
 # Backend commands
