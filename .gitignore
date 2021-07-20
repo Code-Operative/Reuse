@@ -227,6 +227,8 @@ var/logs/*
 /var/sessions/*
 var/SymfonyRequirements.php
 /vendor/
+vendor
+vendor/*
 /web/bundles/
 
 
