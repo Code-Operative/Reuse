@@ -29,7 +29,7 @@ use PrestaShop\PrestaShop\Adapter\ServiceLocator;
 /***
  * Class CustomerCore
  */
-class CustomerCore extends ObjectModel
+class Customer extends CustomerCore
 {
     /** @var int Customer ID */
     public $id;

@@ -25,7 +25,7 @@
  */
 use Symfony\Component\Translation\TranslatorInterface;
 
-class CustomerFormatterCore implements FormFormatterInterface
+class CustomerFormatter extends CustomerFormatterCore
 {
     private $translator;
     private $language;

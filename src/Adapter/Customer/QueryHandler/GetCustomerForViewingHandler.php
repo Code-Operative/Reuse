@@ -213,7 +213,8 @@ final class GetCustomerForViewingHandler implements GetCustomerForViewingHandler
             $customerShop->name,
             $customerLanguage->name,
             $customerSubscriptions,
-            (bool) $customer->active
+            (bool) $customer->active,
+            $customer->postcode
         );
     }
 
