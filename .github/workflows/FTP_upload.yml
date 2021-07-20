@@ -3,7 +3,10 @@
 name: CI
 
 # Controls when the workflow will run
-on: push
+on: 
+  push:
+    branches:
+      - development1
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -17,11 +20,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
-      - name: 📂 Upload files
+      - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
             protocol: ftps
-            server-dir: ./githubFTP/
+            server-dir: ./prestaoperative/
             server: ${{ secrets.FTP_IP }}
             username: ${{ secrets.FTP_USERNAME }}
             password: ${{ secrets.FTP_PASSWORD }}
