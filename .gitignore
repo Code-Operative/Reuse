@@ -219,12 +219,15 @@ themes/default-bootstrap/modules/*/mails/*
 /var/*
 /var/cache
 /var/cache/*
+var/logs/*
 /var/logs
 /var/logs/*
 /var/sessions
 /var/sessions/*
 var/SymfonyRequirements.php
 /vendor/
+vendor
+vendor/*
 /web/bundles/
 
 
@@ -288,6 +291,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+
+### VSCode ###
+.vscode
 
 ### SublimeText ###
 # cache files for sublime text

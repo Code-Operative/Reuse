@@ -171,6 +171,16 @@ class CustomerFormatterCore implements FormFormatterInterface
             )
             ->setRequired(true);
 
+        $format['postcode'] = (new FormField)
+            ->setName('postcode')
+            ->setLabel(
+                $this->translator->trans(
+                    'Postcode', [], 'Shop.Forms.Labels'
+                )
+            )
+            ->setRequired(true)
+        ;    
+
         if ($this->ask_for_password) {
             $format['password'] = (new FormField())
                 ->setName('password')

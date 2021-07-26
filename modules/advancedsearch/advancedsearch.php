@@ -16,7 +16,7 @@ class AdvancedSearch extends Module
         $this->name = 'advancedsearch';
         $this->tab = 'front_office_features';
         $this->version = '1.0.0';
-        $this->author = 'Rene Recalde';
+        $this->author = 'Coprinf';
         $this->need_instance = 0;
         $this->ps_versions_compliancy = [
             'min' => '1.6',

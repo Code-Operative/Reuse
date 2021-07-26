@@ -82,6 +82,8 @@ class SearchControllerCore extends ProductListingFrontController
         $this->doProductSearch('catalog/listing/search', ['entity' => 'search']);
     }
 
+    //acṕa los dos action
+
     protected function getProductSearchQuery()
     {
         $query = new ProductSearchQuery();

@@ -143,6 +143,9 @@ class CustomerCore extends ObjectModel
 
     public $groupBox;
 
+    /** @var string postcode */
+    public $postcode;
+
     /** @var string Unique token for forgot passsword feature */
     public $reset_password_token;
 
@@ -172,6 +175,7 @@ class CustomerCore extends ObjectModel
         'table' => 'customer',
         'primary' => 'id_customer',
         'fields' => [
+            'postcode' => array('type' => self::TYPE_STRING, 'required' => true),
             'secure_key' => ['type' => self::TYPE_STRING, 'validate' => 'isMd5', 'copy_post' => false],
             'lastname' => ['type' => self::TYPE_STRING, 'validate' => 'isCustomerName', 'required' => true, 'size' => 255],
             'firstname' => ['type' => self::TYPE_STRING, 'validate' => 'isCustomerName', 'required' => true, 'size' => 255],

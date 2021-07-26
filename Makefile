@@ -29,11 +29,14 @@ stop: ## Stop the containers
 restart: ## Restart the containers
 	$(MAKE) stop && $(MAKE) run
 
-build: ## Rebuilds all the containers
+build: ## Builds all the containers
 	U_ID=${UID} docker-compose stop && U_ID=${UID} docker-compose build && $(MAKE) run && $(MAKE) prepare
 
 prepare: ## Runs backend commands
 	$(MAKE) config-db-user && $(MAKE) create-presta-db && $(MAKE) run-assets
+
+rebuild: ## Re builds all the containers
+	U_ID=${UID} docker-compose stop && U_ID=${UID} docker-compose build && $(MAKE) run
 
 # Backend commands
 composer-install: ## Installs composer dependencies
@@ -76,6 +79,9 @@ run-assets:
 
 run-cache-clear: ## Clear dev cache
 	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} rm -r ./var/cache/dev/*
+
+run-cache-clear-prod: ## Clear prod cache
+	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} rm -r ./var/cache/prod/*
 
 # End backend commands
 

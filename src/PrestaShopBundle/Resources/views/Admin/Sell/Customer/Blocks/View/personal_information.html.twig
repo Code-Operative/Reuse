@@ -79,6 +79,12 @@
       <div class="col-8 customer-last-visit-date">
         {{ customerInformation.personalInformation.lastVisitDate }}
       </div>
+      <div class="col-4 text-right">
+        {{ 'Postcode'|trans({}, 'Admin.Orderscustomers.Feature') }}
+      </div>
+      <div class="col-8 customer-postcode">
+        {{ customerInformation.personalInformation.postcode }}
+      </div>
     </div>
 
     {% if customerInformation.personalInformation.rankBySales %}
