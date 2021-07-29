@@ -14,7 +14,7 @@ RUN echo "StrictHostKeyChecking no" >> /home/appuser/.ssh/config
 #conf de la console
 RUN echo "export COLUMNS=300" >> /home/appuser/.bashrc
 #sf ejecuta bin/console.
-RUN echo "alias sf=/appdata/www/bin/console" >> /home/appuser/.bashrc
+RUN echo "alias sf='php bin/console'" >> /home/appuser/.bashrc
 
 COPY ./php.ini /usr/local/etc/php/php.ini
 
