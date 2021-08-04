@@ -126,7 +126,7 @@ class AdvancedSearch extends Module
 
     public function hookCollectionSearch($parameters): void
     {
-        //we need use $helper->currentIndex
+        // need obtain lat and long
 
     }
 
@@ -135,7 +135,7 @@ class AdvancedSearch extends Module
 
     }
 
-
+    //queries
     public function getSellersCovered(): array
     {
         $db = \Db::getInstance();
@@ -222,6 +222,22 @@ class AdvancedSearch extends Module
                  OR COALESCE(cv.cp_district, 0) <> 0 AND cv.cp_area = "HA" AND cv.cp_district = "1") AS a
         GROUP BY a.id_seller
         ';
+
         return $db->executeS($request);
     }
+
+    //google api queries
+    public function getLatAndLong($outputFormat, $key):void
+    {
+
+    }
+
+    public function getOutputFormat(): string
+    {
+        return '';
+    }
+
+
+
+
 }
