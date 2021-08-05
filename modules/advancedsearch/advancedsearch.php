@@ -7,6 +7,9 @@ if (!defined('_PS_VERSION_')) {
 class AdvancedSearch extends Module
 {
     const AVAILABLE_HOOKS = [
+        'displayTop',
+        'actionCustomerAccountUpdate',
+        'actionFrontControllerSetMedia',
         'collectionSearch',
         'deliverySearch',
     ];
@@ -62,6 +65,47 @@ class AdvancedSearch extends Module
     public function deliverySearch($parameters)
     {
 
+    }
+
+    public function hookDisplayTop($params)
+    {
+        $this->context->smarty->assign([
+            'regExPostCode' => '[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}',
+            'postcodecheck_controller_url' => $this->context->link->getModuleLink('advancedsearch','asearch', ['ajax'=>true]),
+        ]);
+
+        return $this->display(__FILE__, 'advancedsearch.tpl');
+    }
+
+    public function hookActionFrontControllerSetMedia()
+    {
+        $this->context->controller->registerStylesheet(
+            'advancedsearch-style',
+            $this->_path.'views/css/advancedsearch.css',
+            [
+                'media' => 'all',
+                'priority' => 1000,
+            ]
+        );
+
+        $this->context->controller->registerJavascript(
+            'advancedsearch-javascript',
+            $this->_path.'views/js/advancedsearch.js',
+            [
+                'position' => 'bottom',
+                'priority' => 1000,
+            ]
+        );
+    }
+
+    public function hookActionCustomerAccountUpdate($parameters){
+        /** @var \Db $db */
+        $db = \Db::getInstance();
+        $idcustomer = $parameters['customer']->{'id'};
+        $request = "UPDATE `psrn_customer` SET lat = NULL , lon = NULL WHERE `id_customer` =  $idcustomer ";
+
+        /** @var bool $result */
+        $result = $db->execute($request);
     }
 
 
