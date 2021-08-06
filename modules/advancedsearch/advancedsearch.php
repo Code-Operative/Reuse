@@ -124,13 +124,13 @@ class AdvancedSearch extends Module
     }
 
 
-    public function hookCollectionSearch($parameters): void
+    public function collectionSearch($parameters): void
     {
         // need obtain lat and long
 
     }
 
-    public function hookDeliverySearch($parameters): void
+    public function deliverySearch($parameters): void
     {
 
     }
