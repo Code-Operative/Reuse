@@ -189,8 +189,7 @@ class AdvancedSearch extends Module
 
         $db = \Db::getInstance();
 
-        $request = '
-        SELECT a.id_seller, a.distance
+        $request = 'SELECT a.id_seller, a.distance
         FROM (SELECT geo.id_seller,
                      (((acos(sin(('.$latitude.' * pi() / 180)) * -- Latitud
                              sin((geo.lat * pi() / 180)) + cos(('.$latitude.' * pi() / 180)) * -- Latitud
@@ -220,9 +219,7 @@ class AdvancedSearch extends Module
               FROM ' . _DB_PREFIX_ . '_kb_mp_seller_shipping_coverage cv
               WHERE COALESCE(cv.cp_district, 0) = 0 AND cv.cp_area = "HA"
                  OR COALESCE(cv.cp_district, 0) <> 0 AND cv.cp_area = "HA" AND cv.cp_district = "1") AS a
-        GROUP BY a.id_seller
-        ';
-
+              GROUP BY a.id_seller';
         return $db->executeS($request);
     }
 
@@ -236,8 +233,5 @@ class AdvancedSearch extends Module
     {
         return '';
     }
-
-
-
 
 }
