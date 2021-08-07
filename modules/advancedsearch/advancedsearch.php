@@ -127,18 +127,6 @@ class AdvancedSearch extends Module
     }
 
 
-    public function hookCollectionSearch($parameters): void
-    {
-        //we need use $helper->currentIndex
-
-    }
-
-    public function hookDeliverySearch($parameters): void
-    {
-
-    }
-
-
     public function getSellersCovered(): array
     {
         $db = \Db::getInstance();
