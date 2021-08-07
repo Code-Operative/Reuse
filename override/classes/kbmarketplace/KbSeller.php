@@ -30,7 +30,9 @@ class KbSeller extends ObjectModel
     public $logo;
     public $banner;
     //changes by Ken
-    // public $google_url;
+    public $google_url;
+    public $eBay_account;
+    public $eBay_Auth;
     //changes over
     public $address;
     // changes by rishabh jain
@@ -117,12 +119,6 @@ class KbSeller extends ObjectModel
                 'type' => self::TYPE_STRING,
                 'validate' => 'isGenericName'
             ),
-            //changes by Ken
-            // 'google_url' => array(
-            //     'type' => self::TYPE_STRING,
-            //     'validate' => 'isString'
-            // ),
-            //changes over
             'address' => array(
                 'type' => self::TYPE_STRING,
                 'validate' => 'isAddress'
@@ -202,9 +198,20 @@ class KbSeller extends ObjectModel
                 'type' => self::TYPE_HTML,
                 'lang' => true,
                 'validate' => 'isCleanHtml',
+            ),
+            //changes by Ken
+            'eBay_account' => array(
+                'type' => self::TYPE_STRING,
+            ),
+            'eBay_auth' => array(
+                'type' => self::TYPE_STRING,
             )
+            //changes over
         ),
         'associations' => array(
+            //changes by Ken
+            'google_url' => array('type' => self::HAS_ONE,'validate' => 'isString'),
+            //changes over
             'customer' =>   array('type' => self::HAS_ONE, 'field' => 'id_customer', 'object' => 'Customer'),
             'language' =>   array('type' => self::HAS_ONE, 'field' => 'id_default_lang', 'object' => 'Language'),
             'shop' =>   array('type' => self::HAS_ONE, 'field' => 'id_seller_shop', 'object' => 'Shop'),
@@ -228,7 +235,9 @@ class KbSeller extends ObjectModel
             'logo' => array('getter' => 'getLogoWs'),
             'banner' => array('getter' => 'getBannerWs'),
             //changes by Ken
-            // 'google_url' => array('getter' => 'getGoogleURL'),
+            'eBay_account' => array('getter' => 'geteBayAccount'),
+            'eBay_auth' => array('getter' => 'geteBayAuth'),
+            'google_url' => array('getter' => 'getGoogleURL'),
             //changes over
             'id_country' => array('xlink_resource' => 'countries'),
             'rating' => array('getter' => 'getRatingWs'),
@@ -576,15 +585,35 @@ class KbSeller extends ObjectModel
     }
 
     //changes by Ken
-    // public function getGoogleURL()
-    // {
-    //     $result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS(
-    //         'SELECT `value` as id
-    //         FROM `'._DB_PREFIX_.'kb_mp_custom_field_seller_mapping` 
-    //         WHERE `id_field` IN (24) AND `id_seller` = '.(int)$this->id
-    //     );
-    //     return $result[0];
-    // }
+    public function getGoogleURL()
+    {
+        $result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS(
+            'SELECT `value` as id
+            FROM `'._DB_PREFIX_.'kb_mp_custom_field_seller_mapping` 
+            WHERE `id_field` IN (24) AND `id_seller` = '.(int)$this->id
+        );
+        return $result[0]['id'];
+    }
+
+    public function geteBayAccount()
+    {
+        $result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS(
+            'SELECT `eBay_account` 
+            FROM `'._DB_PREFIX_.'kb_mp_seller` 
+            WHERE `id_seller` = '.(int)$this->id
+        );
+        return $result[0]['eBay_account'];
+    }
+
+    public function geteBayAuth()
+    {
+        $result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS(
+            'SELECT `eBay_Auth` 
+            FROM `'._DB_PREFIX_.'kb_mp_seller` 
+            WHERE `id_seller` = '.(int)$this->id
+        );
+        return $result[0]['eBay_Auth'];
+    }
     //changes over
 
     public function getRatingWs()
