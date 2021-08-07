@@ -1,5 +1,11 @@
 let pCode = document.getElementById("advanceSearchButton");
-let postcodeinputvalidation = document.getElementById("advanceSearchKeywordsInput");
+let postcodeinputvalidation = document.getElementById("advanceSearchLocationInput");
+let dropdown = document.querySelector("#advanceSearchOptionsSelect");
+let distanceInput = document.querySelector("#advanceSearchDistanceInput");
+
+dropdown.value == "delivery"? distanceInput.disabled = true:distanceInput.disabled = false;
+dropdown.addEventListener("change", ()=> {dropdown.value == "delivery"? distanceInput.disabled = true:distanceInput.disabled = false;})
+
 
 postcodeinputvalidation.oninput =() => {
   postcodeinputvalidation.setCustomValidity('');
