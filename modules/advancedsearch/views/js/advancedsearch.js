@@ -7,6 +7,7 @@ postcodeinputvalidation.oninput =() => {
 }
 
 aSearch.onclick = function () {
+    //validate all fields here
     if (postcodeinputvalidation.checkValidity() == false) {
         postcodeinputvalidation.setCustomValidity('Please enter a valid UK postcode');
         postcodeinputvalidation.reportValidity();
