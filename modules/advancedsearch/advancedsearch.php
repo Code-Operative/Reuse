@@ -139,39 +139,6 @@ class AdvancedSearch extends Module
         return $db->executeS($request);
     }
 
-    public function getSellerByDistance($latitude, $longitude): array
-    {
-        if (!$latitude || !$longitude) {
-            return [];
-        }
-
-        $db = \Db::getInstance();
-
-        $request = 'SELECT geo.id_seller,
-       (((acos(sin((' . $latitude . ' * pi() / 180)) * -- Latitud
-               sin((geo.lat * pi() / 180)) + cos((' . $latitude . ' * pi() / 180)) * -- Latitud
-                                             cos((geo.lat * pi() / 180)) * cos(((' . $longitude . ' - geo.lon) * -- Longitud
-                                                                                pi() / 180)))) * 180 / pi()) * 60 *
-        1.1515
-           ) as distance
-        FROM (SELECT id_seller, SUM(lat) AS lat, SUM(lon) AS lon
-              FROM (SELECT id_seller,
-                           CASE
-                               WHEN id_field = (SELECT id_field FROM' . _DB_PREFIX_ . '_kb_mp_custom_fields WHERE field_name = "field_lat")
-                                   THEN sm.value
-                               ELSE 0 END AS lat,
-                           CASE
-                               WHEN id_field = (SELECT id_field FROM ' . _DB_PREFIX_ . '_kb_mp_custom_fields WHERE field_name = "field_lon")
-                                   THEN sm.value
-                               ELSE 0 END AS lon
-                    FROM ' . _DB_PREFIX_ . '_kb_mp_custom_field_seller_mapping sm
-                    WHERE id_field = (SELECT id_field FROM ' . _DB_PREFIX_ . '_kb_mp_custom_fields WHERE field_name = "field_lat")
-                       OR id_field = (SELECT id_field FROM ' . _DB_PREFIX_ . '_kb_mp_custom_fields WHERE field_name = "field_lon")) AS sm
-              GROUP BY sm.id_seller) AS geo
-        HAVING distance < 10';
-
-        return $db->executeS($request);
-    }
 
     public function hookDisplayTop($params)
     {
@@ -255,16 +222,4 @@ class AdvancedSearch extends Module
               GROUP BY a.id_seller';
         return $db->executeS($request);
     }
-
-    //google api queries
-    public function getLatAndLong($outputFormat, $key):void
-    {
-
-    }
-
-    public function getOutputFormat(): string
-    {
-        return '';
-    }
-
 }
