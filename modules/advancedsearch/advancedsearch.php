@@ -127,6 +127,7 @@ class AdvancedSearch extends Module
     }
 
 
+    //queries
     public function getSellersCovered(): array
     {
         $db = \Db::getInstance();
@@ -251,7 +252,19 @@ class AdvancedSearch extends Module
               FROM ' . _DB_PREFIX_ . '_kb_mp_seller_shipping_coverage cv
               WHERE COALESCE(cv.cp_district, 0) = 0 AND cv.cp_area = "HA"
                  OR COALESCE(cv.cp_district, 0) <> 0 AND cv.cp_area = "HA" AND cv.cp_district = "1") AS a
-        GROUP BY a.id_seller';
+              GROUP BY a.id_seller';
         return $db->executeS($request);
     }
+
+    //google api queries
+    public function getLatAndLong($outputFormat, $key):void
+    {
+
+    }
+
+    public function getOutputFormat(): string
+    {
+        return '';
+    }
+
 }

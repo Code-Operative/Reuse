@@ -27,19 +27,27 @@ class AdvancedsearchaSearchModuleFrontController extends ModuleFrontController
         ];
     }
 
-    public function getURLMap($address, $key):string
+    public function getURLMap($postcode, $address, $key):string
     {
-        $url = 'https://maps.googleapis.com/maps/api/geocode/json?address='.urlencode($address).'&key='.urlencode($key);
+        $urlApiBase ='https://maps.googleapis.com/maps/api/geocode/json?address=';
+        $urlKeyComponent = '&key='.urlencode($key);
+        $urlCountyComponent = '&components=country:UK';
+        if($address){
+            $url = $urlApiBase.urlencode($address).$urlCountyComponent.'|postal_code'.$postcode.$urlKeyComponent;
+        }else{
+            $url = $urlApiBase.urlencode($address).$urlCountyComponent.$urlKeyComponent;
+        }
         return $url;
-
     }
 
     public function getAdddresSeller($idSeller):string
     {
         $db = \Db::getInstance();
 
-        //TODO query
-        $request = '';
+        $request = 'SELECT address
+                    FROM '._DB_PREFIX_.'_kb_mp_seller
+                    WHERE id_seller = '.$idSeller;
+
         return $db->executeS($request);
     }
 
@@ -47,8 +55,10 @@ class AdvancedsearchaSearchModuleFrontController extends ModuleFrontController
     {
         $db = \Db::getInstance();
 
-        //TODO query
-        $request = '';
+        $request = 'SELECT address1
+                    FROM'. _DB_PREFIX_ . '_address AS address
+                    WHERE address.id_customer = '. $idCustomer.';';
+
         return $db->executeS($request);
     }
 
@@ -68,7 +78,7 @@ class AdvancedsearchaSearchModuleFrontController extends ModuleFrontController
         $products = getProductBySellers($productform,$distanceform,$seller);
 
         showresult($products);
-        
+
     }
 
     public function postProcess() {
