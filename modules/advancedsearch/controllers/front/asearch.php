@@ -9,39 +9,13 @@ class AdvancedsearchaSearchModuleFrontController extends ModuleFrontController
         $this->setTemplate('module:advancedsearch/views/templates/front/display.tpl');
     }
 
-    public function getLatAndLog($postcode, $idSeller, $idCustomer, $key): array
-    {
-        //busco la direcciòn si existe
-        if ($idSeller) {
-            $address = getAdddresSeller($idSeller);
-        } elseif (idCustomer) {
-            $address = getAddresCustomer($idCustomer);
-        }
-
-        //armo la url
-        //https://maps.googleapis.com/maps/api/geocode/json?address=SW5+0RQ&sensor=false&components=country:UK
-        $url = getUrlMaps($postcode, $key);
-        //llamo al api
-        return [
-            'latitude' => $latitude,
-            'longitude' => $longitude,
-        ];
-    }
-
-    public function getURLMap($postcode, $address, $key): string
-    {
-        $urlApiBase = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
-        $urlKeyComponent = '&key=' . urlencode($key);
-        $urlCountyComponent = '&components=country:UK';
-        if ($address) {
-            $url = $urlApiBase . urlencode($address) . $urlCountyComponent . '|postal_code' . $postcode . $urlKeyComponent;
-        } else {
-            $url = $urlApiBase . urlencode($address) . $urlCountyComponent . $urlKeyComponent;
-        }
-        return $url;
-    }
-
-    public function getAdddresSeller($idSeller): string
+    /**
+     * Return seller address
+     * @param $idSeller
+     * @return string
+     * @throws PrestaShopDatabaseException
+     */
+    public function getAddressSeller($idSeller): string
     {
         $db = \Db::getInstance();
 
@@ -52,7 +26,13 @@ class AdvancedsearchaSearchModuleFrontController extends ModuleFrontController
         return $db->executeS($request);
     }
 
-    public function getAddresCustomer($idCustomer): string
+    /**
+     * Return customer address
+     * @param $idCustomer
+     * @return string
+     * @throws PrestaShopDatabaseException
+     */
+    public function getAddressCustomer($idCustomer): string
     {
         $db = \Db::getInstance();
 
@@ -63,55 +43,124 @@ class AdvancedsearchaSearchModuleFrontController extends ModuleFrontController
         return $db->executeS($request);
     }
 
-    public function getPostCodeCustomer(): string
+    /**
+     * Build url for google geocoding
+     * @param $postcode
+     * @param $address
+     * @param $key
+     * @return string
+     */
+    public function getURLMaps($postcode, $address, $key): string
     {
-        //obtener idCustomer
+        $urlApiBase = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
+        $urlKeyComponent = '&key=' . urlencode($key);
+        $urlCountyComponent = '&components=country:UK';
+        if ($address) {
+            $url = $urlApiBase . urlencode($address) . $urlCountyComponent . '|postal_code' . $postcode . $urlKeyComponent;
+        } else {
+            $url = $urlApiBase . $urlCountyComponent . $urlKeyComponent;
+        }
 
-        $db = \Db::getInstance();
-
-        $request = '' . $idCustomer . ';';
-        $postcode = $db->executeS($request);
-
-        return $postcode;
+        return htmlspecialchars($url);
     }
 
-    public function getDirectionCustomer(): array
+    /**
+     * Call to google api geocoding
+     * @param $url
+     * @return array
+     */
+    public function getApiGeocoding($url):array
     {
+        $arr = [];
 
+        $curl = curl_init($url);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        $curl_response = curl_exec($curl);
+
+        if($curl_response['status'] !== 'OK'){
+            //TODO handle exception
+        }else{
+            $decodedresponse = json_decode($curl_response, true);
+            $arr['latitude'] =  $decodedresponse['response']['lat'];
+            $arr['longitude'] = $decodedresponse['response']['long'];
+        }
+
+        curl_close($curl);
+
+        return $arr;
     }
+
+    /**
+     * Get lat and long in array from api geocoding
+     * @param $postcode
+     * @param $idSeller
+     * @param $idCustomer
+     * @param $key
+     * @return array
+     * @throws PrestaShopDatabaseException
+     */
+    public function getLatAndLog($postcode, $idSeller, $idCustomer, $key): array
+    {
+        if ($idSeller) {
+            $address = $this->getAddressSeller($idSeller);
+        } elseif ($idCustomer) {
+            $address = $this->getAddressCustomer($idCustomer);
+        }
+
+        $url = $this->getURLMaps($postcode, $address, $key);
+
+        return  $this->getApiGeocoding($url);
+    }
+
+    public function getPostCodeCustomer(): void
+    {
+//        obtener idCustomer
+//
+//        $db = \Db::getInstance();
+
+//        $request = '' . $idCustomer . ';';
+//        $postcode = $db->executeS($request);
+
+//        return $postcode;
+    }
+//
+//    public function getDirectionCustomer(): array
+//    {
+//
+//    }
 
     public function collectionSearch($parameters)
     {
-        $postcode = $parameters['postcode'];
-
-        if (!esta logeado){
-        $postcode = $parameters['postcode'];
-    }else{
-        $customerpostcode = getPostCodeCustomer();
-        //hago comparación postcode parameter con poscode array si son iguales ya tengo lat y long. Sino tengo que calcular
-    }
-
-        $sellers = getSellerByDistance($latitude, $longitude);
-
-        //... productForm= el producto que escribio en el imput
-        // distancia que escribiio en el formulario
-        // sellers arreglo de sellers con todas las distancias
-        // que hace esta funcion  ?
-        $products = getProductBySellers($productform, $distanceform, $sellers);
-
-        showresult($products);
+//        $postcode = $parameters['postcode'];
+//
+//        if (!esta logeado){
+//        $postcode = $parameters['postcode'];
+//    }else{
+//        $customerpostcode = getPostCodeCustomer();
+//        hago comparación postcode parameter con poscode array si son iguales ya tengo lat y long. Sino tengo que calcular
+//    }
+//
+//        $sellers = getSellerByDistance($latitude, $longitude);
+//
+//        ... productForm= el producto que escribio en el imput
+//         distancia que escribiio en el formulario
+//         sellers arreglo de sellers con todas las distancias
+//         que hace esta funcion  ?
+//        $products = getProductBySellers($productform, $distanceform, $sellers);
+//
+//        showresult($products);
 
     }
 
     public function getProductBySellers($productform, $distanceform, $sellers):array
     {
         $product = [];
-        foreach ($sellers as $seller) {
-            if ($distanceform <= $seller['distance']) {
-                $product[] = getProductBySeller($seller['id_seller'], $productform);
-            }
-        }
-
+//        foreach ($sellers as $seller) {
+//            if ($distanceform <= $seller['distance']) {
+//                $product[] = getProductBySeller($seller['id_seller'], $productform);
+//            }
+//        }
+//
         return $product;
     }
 

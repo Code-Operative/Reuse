@@ -171,10 +171,15 @@ class AdvancedSearch extends Module
         );
     }
 
+    /**
+     * Cuando se modifica
+     * @param $parameters
+     */
     public function hookActionCustomerAccountUpdate($parameters){
         /** @var \Db $db */
         $db = \Db::getInstance();
         $idcustomer = $parameters['customer']->{'id'};
+        //acá modifica el ale
         $request = "UPDATE `psrn_customer` SET lat = NULL , lon = NULL WHERE `id_customer` =  $idcustomer ";
 
         /** @var bool $result */
