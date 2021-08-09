@@ -25,12 +25,6 @@
  */
 $sql = array();
 
-$sql[] = 'CREATE TABLE IF NOT EXISTS `' . _DB_PREFIX_ . 'pruebaSql` (
-    `id_pruebaSql` int(11) NOT NULL AUTO_INCREMENT,
-    PRIMARY KEY  (`id_pruebaSql`)
-) ENGINE=' . _MYSQL_ENGINE_ . ' DEFAULT CHARSET=utf8;';
-
-
 $sql[] = 'SET FOREIGN_KEY_CHECKS=0';
 $sql[] = 'DROP TABLE IF EXISTS `' . _DB_PREFIX_ . '_kb_mp_seller_shipping_coverage`';
 $sql[] = 'CREATE TABLE `' . _DB_PREFIX_ . '_kb_mp_seller_shipping_coverage` (
@@ -41,6 +35,10 @@ $sql[] = 'CREATE TABLE `' . _DB_PREFIX_ . '_kb_mp_seller_shipping_coverage` (
           `cp_district` varchar(3) DEFAULT NULL,
           PRIMARY KEY (`id_coverage`)
         ) ENGINE=' . _MYSQL_ENGINE_ . ' AUTO_INCREMENT=9 DEFAULT CHARSET=utf8';
+$sql[] = 'SET FOREIGN_KEY_CHECKS=1';
+
+$sql[] = 'ALTER TABLE ' . _DB_PREFIX_ . '_customer MODIFY lat varchar(25)';
+$sql[] = 'ALTER TABLE ' . _DB_PREFIX_ . '_customer MODIFY lon varchar(25)';
 
 foreach ($sql as $query) {
     if (Db::getInstance()->execute($query) == false) {

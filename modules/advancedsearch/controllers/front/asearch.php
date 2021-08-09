@@ -44,6 +44,49 @@ class AdvancedsearchaSearchModuleFrontController extends ModuleFrontController
     }
 
     /**
+     * Return poscode customer
+     * @return string
+     * @throws PrestaShopDatabaseException
+     */
+    public function getPostCodeCustomer(): string
+    {
+        if ($this->context->customer->isLogged()) {
+            $idCustomer = $this->context->customer->id;
+            $db = \Db::getInstance();
+
+            $request = 'SELECT postcode FROM' . _DB_PREFIX_ . 'WHERE id_customer = ' . $idCustomer . ';';
+
+            $result = $db->executeS($request);
+        } else {
+            $result = '';
+        }
+
+        return $result;
+    }
+
+    /**
+     * Get latitude, longitude and postcode
+     * @return array postcode, latitude, longitude
+     * @throws PrestaShopDatabaseException
+     */
+    public function getDirectionCustomer(): array
+    {
+        if ($this->context->customer->isLogged()) {
+            $idCustomer = $this->context->customer->id;
+            $db = \Db::getInstance();
+
+            $request = 'SELECT postcode, lat as latitude, lon as longitude FROM '. _DB_PREFIX_ . '_customer 
+                        WHERE id_customer = '.$idCustomer;
+
+            $result = $db->executeS($request);
+        } else {
+            $result = '';
+        }
+
+        return $result;
+    }
+
+    /**
      * Build url for google geocoding
      * @param $postcode
      * @param $address
@@ -69,7 +112,7 @@ class AdvancedsearchaSearchModuleFrontController extends ModuleFrontController
      * @param $url
      * @return array
      */
-    public function getApiGeocoding($url):array
+    public function getApiGeocoding($url): array
     {
         $arr = [];
 
@@ -77,11 +120,11 @@ class AdvancedsearchaSearchModuleFrontController extends ModuleFrontController
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         $curl_response = curl_exec($curl);
 
-        if($curl_response['status'] !== 'OK'){
+        if ($curl_response['status'] !== 'OK') {
             //TODO handle exception
-        }else{
+        } else {
             $decodedresponse = json_decode($curl_response, true);
-            $arr['latitude'] =  $decodedresponse['response']['lat'];
+            $arr['latitude'] = $decodedresponse['response']['lat'];
             $arr['longitude'] = $decodedresponse['response']['long'];
         }
 
@@ -109,69 +152,7 @@ class AdvancedsearchaSearchModuleFrontController extends ModuleFrontController
 
         $url = $this->getURLMaps($postcode, $address, $key);
 
-        return  $this->getApiGeocoding($url);
-    }
-
-    public function getPostCodeCustomer(): void
-    {
-//        obtener idCustomer
-//
-//        $db = \Db::getInstance();
-
-//        $request = '' . $idCustomer . ';';
-//        $postcode = $db->executeS($request);
-
-//        return $postcode;
-    }
-//
-//    public function getDirectionCustomer(): array
-//    {
-//
-//    }
-
-    public function collectionSearch($parameters)
-    {
-//        $postcode = $parameters['postcode'];
-//
-//        if (!esta logeado){
-//        $postcode = $parameters['postcode'];
-//    }else{
-//        $customerpostcode = getPostCodeCustomer();
-//        hago comparación postcode parameter con poscode array si son iguales ya tengo lat y long. Sino tengo que calcular
-//    }
-//
-//        $sellers = getSellerByDistance($latitude, $longitude);
-//
-//        ... productForm= el producto que escribio en el imput
-//         distancia que escribiio en el formulario
-//         sellers arreglo de sellers con todas las distancias
-//         que hace esta funcion  ?
-//        $products = getProductBySellers($productform, $distanceform, $sellers);
-//
-//        showresult($products);
-
-    }
-
-    public function getProductBySellers($productform, $distanceform, $sellers):array
-    {
-        $product = [];
-//        foreach ($sellers as $seller) {
-//            if ($distanceform <= $seller['distance']) {
-//                $product[] = getProductBySeller($seller['id_seller'], $productform);
-//            }
-//        }
-//
-        return $product;
-    }
-
-    public function getProductBySeller($id_seller, $productform):array
-    {
-        //estudiar un poco mas
-        $db = \Db::getInstance();
-
-        $request = '' . _DB_PREFIX_  ;
-
-        return $db->executeS($request);
+        return $this->getApiGeocoding($url);
     }
 
     /**
@@ -212,6 +193,66 @@ class AdvancedsearchaSearchModuleFrontController extends ModuleFrontController
         HAVING distance < 10';
 
         return $db->executeS($request);
+    }
+
+    /**
+     * @param $idSeller
+     * @return array
+     * @throws PrestaShopDatabaseException
+     */
+    public function getProductBySeller($idSeller): array
+    {
+        $db = \Db::getInstance();
+
+        $request = 'SELECT id_product FROM ' . _DB_PREFIX_. '_kb_mp_seller_product WHERE id_seller ='. $idSeller;
+        return $db->executeS($request);
+    }
+
+    /**
+     * @throws PrestaShopDatabaseException
+     */
+    public function getProductBySellers($distanceform, $sellers): array
+    {
+        $product = [];
+        foreach ($sellers as $seller) {
+            if ($distanceform <= $seller['distance']) {
+                $product[] = $this->getProductBySeller($seller['id_seller']);
+            }
+        }
+
+        return $product;
+    }
+
+    /**
+     * @throws PrestaShopDatabaseException
+     */
+    public function collectionSearch($parameters): void
+    {
+        $postcode = $parameters['postcode'];
+        $distanceform = $parameters['distance'];
+        //hago comparación postcode parameter con poscode array si son iguales ya tengo lat y long. Sino tengo que calcular
+        if (!$this->context->customer->isLogged()) {
+            $postcode = $parameters['postcode'];
+            $arr = $this->getLatAndLog($postcode, null, null, 'AIzaSyAFw8eGYOlrJ8WF7iBvD20syHjdUFCm2B4');
+            $latitude = $arr['latitude'];
+            $longitude = $arr['longitude'];
+        } else {
+            $customerDirection = $this->getDirectionCustomer();
+            if ($customerDirection['postcode'] === $postcode) {
+                $latitude = $customerDirection['latitude'];
+                $longitude = $customerDirection['longitude'];
+            } else {
+                $idCustomer = $this->context->customer->id;
+                $arr = $this->getLatAndLog($postcode, null, $idCustomer, 'AIzaSyAFw8eGYOlrJ8WF7iBvD20syHjdUFCm2B4');
+                $latitude = $arr['latitude'];
+                $longitude = $arr['longitude'];
+            }
+        }
+
+        $sellers = $this->getSellerByDistance($latitude, $longitude);
+        $products = $this->getProductBySellers( $distanceform, $sellers);
+
+//        showresult($products);
     }
 
     public function postProcess()
