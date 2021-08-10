@@ -97,7 +97,6 @@
                                     <input id="seller_state" data-tab="general" type="text" class="kb-inpfield required" validate="isGenericName" name="seller_state" value="{$seller.state|escape:'htmlall':'UTF-8'}" />
                                 </div>
                             </li>
-                       
                             {assign var=indexRow value=0}
                             {foreach $kb_available_field as $kbfield}
                                 {if ($kbfield['type'] == 'text') && ($kbfield['id_section'] == 1)}
@@ -419,29 +418,6 @@
                                     }
                                     //changes end
                                 </script>
-                            </li>
-                            <li class="kb-form-fwidth">
-                                <div class="kb-form-label-block">
-                                    <span class="kblabel">
-                                        <i class="kb-material-icons" data-toggle="tooltip" data-placement="top" title="ebay account information for API to integrate reuse home to eBay">info_outline</i>
-                                        {l s='eBay Account' mod='kbmarketplace'}
-                                    </span>
-                                </div>
-                                <div class="kb-form-field-block">
-                                    <input data-tab="general" type="text" class="kb-inpfield" name="eBay_account"  id='seller_eBay_acc' value="{$seller.eBay_account|escape:'htmlall':'UTF-8'}" placeholder="Fill in this input for eBay intergration"/>
-                                </div>
-                            </li>
-                            <li class="kb-form-fwidth">
-
-                                <div class="kb-form-label-block">
-                                    <span class="kblabel">
-                                        <i class="kb-material-icons" data-toggle="tooltip" data-placement="top" title="ebay API Authentication key">info_outline</i>
-                                        {l s='eBay API Authentication Key' mod='kbmarketplace'}
-                                    </span>
-                                </div>
-                                <div class="kb-form-field-block">
-                                    <input data-tab="general" type="text" class="kb-inpfield" name="eBay_auth"  id='seller_eBay_Auth' value="{$seller.eBay_Auth|escape:'htmlall':'UTF-8'}" placeholder="Fill in this input for eBay intergration"/>
-                                </div>
                             </li>
                             <li class="kb-form-fwidth">
                                 <div class="kb-form-label-block">

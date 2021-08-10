@@ -7,7 +7,6 @@ npm-debug.log.*
 *.swp
 *.swo
 .cache/
-.DS_Store
 
 # Cache
 /var/cache/*
@@ -174,7 +173,7 @@ app/config/config.php
 # Themes, modules and overrides
 
 modules/*
-# themes/*/
+themes/*/
 !themes/classic
 themes/classic/assets
 !themes/_core
