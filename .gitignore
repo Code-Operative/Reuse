@@ -173,7 +173,7 @@ app/config/config.php
 
 # Themes, modules and overrides
 
-# modules/*
+modules/*
 # themes/*/
 !themes/classic
 themes/classic/assets
