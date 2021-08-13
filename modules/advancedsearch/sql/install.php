@@ -40,6 +40,26 @@ $sql[] = 'SET FOREIGN_KEY_CHECKS=1';
 $sql[] = 'ALTER TABLE ' . _DB_PREFIX_ . '_customer MODIFY lat varchar(25)';
 $sql[] = 'ALTER TABLE ' . _DB_PREFIX_ . '_customer MODIFY lon varchar(25)';
 
+$sql[] = 'INSERT INTO'._DB_PREFIX_.'_kb_mp_custom_fields (id_section, field_name, type, validation, html_id,
+            html_class, file_extension, allow_multifile, max_length, min_length,
+            required, editable, multiselect, show_registration_form,
+            show_text_editor, show_seller_profile, active, position, date_add,
+            date_upd)
+          VALUES (2, `field_lat`, `text`, ``, `field_1627502742`, `field_1627502742`, ``, 0, 25, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+            current_timestamp(), null)';
+$sql[] = 'INSERT INTO'._DB_PREFIX_.'_kb_mp_custom_fields (id_section, field_name, type, validation, html_id,
+            html_class, file_extension, allow_multifile, max_length, min_length,
+            required, editable, multiselect, show_registration_form,
+            show_text_editor, show_seller_profile, active, position, date_add,
+            date_upd)
+          VALUES ( 2, `field_lon`, `text`, ``, `field_1627502885`, `field_1627502885`, ``, 0, 25, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+            current_timestamp(), null)';
+
+$sql[] = 'ALTER TABLE'._DB_PREFIX_.'_customer ADD COLUMN postcode VARCHAR(8)';
+$sql[] = 'ALTER TABLE'._DB_PREFIX_.'_customer ADD COLUMN lat VARCHAR(25)';
+$sql[] = 'ALTER TABLE'._DB_PREFIX_.'_customer ADD COLUMN lon VARCHAR(25)';
+
+
 foreach ($sql as $query) {
     if (Db::getInstance()->execute($query) == false) {
         return false;
