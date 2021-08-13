@@ -28,7 +28,7 @@ $sql = array();
 $sql[] = 'SET FOREIGN_KEY_CHECKS=0';
 $sql[] = 'DROP TABLE IF EXISTS `' . _DB_PREFIX_ . '_kb_mp_seller_shipping_coverage`';
 $sql[] = 'CREATE TABLE `' . _DB_PREFIX_ . '_kb_mp_seller_shipping_coverage` (
-        `id_coverage` int(10) NOT NULL AUTO_INCREMENT,
+          `id_coverage` int(10) NOT NULL AUTO_INCREMENT,
           `id_seller` int(10) DEFAULT NULL,
           `id_carrier` int(10) DEFAULT NULL,
           `cp_area` varchar(3) DEFAULT NULL,
@@ -36,9 +36,6 @@ $sql[] = 'CREATE TABLE `' . _DB_PREFIX_ . '_kb_mp_seller_shipping_coverage` (
           PRIMARY KEY (`id_coverage`)
         ) ENGINE=' . _MYSQL_ENGINE_ . ' AUTO_INCREMENT=9 DEFAULT CHARSET=utf8';
 $sql[] = 'SET FOREIGN_KEY_CHECKS=1';
-
-$sql[] = 'ALTER TABLE ' . _DB_PREFIX_ . '_customer MODIFY lat varchar(25)';
-$sql[] = 'ALTER TABLE ' . _DB_PREFIX_ . '_customer MODIFY lon varchar(25)';
 
 $sql[] = 'INSERT INTO'._DB_PREFIX_.'_kb_mp_custom_fields (id_section, field_name, type, validation, html_id,
             html_class, file_extension, allow_multifile, max_length, min_length,
@@ -58,7 +55,6 @@ $sql[] = 'INSERT INTO'._DB_PREFIX_.'_kb_mp_custom_fields (id_section, field_name
 $sql[] = 'ALTER TABLE'._DB_PREFIX_.'_customer ADD COLUMN postcode VARCHAR(8)';
 $sql[] = 'ALTER TABLE'._DB_PREFIX_.'_customer ADD COLUMN lat VARCHAR(25)';
 $sql[] = 'ALTER TABLE'._DB_PREFIX_.'_customer ADD COLUMN lon VARCHAR(25)';
-
 
 foreach ($sql as $query) {
     if (Db::getInstance()->execute($query) == false) {

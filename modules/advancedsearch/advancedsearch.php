@@ -4,7 +4,7 @@ if (!defined('_PS_VERSION_')) {
     exit;
 }
 
-include_once _PS_MODULE_DIR_.'advancedsearch/classes/CustomSearchEngine.php';
+include_once _PS_MODULE_DIR_ . 'advancedsearch/classes/CustomSearchEngine.php';
 
 class AdvancedSearch extends Module
 {
@@ -156,7 +156,7 @@ class AdvancedSearch extends Module
     {
         $this->context->controller->registerStylesheet(
             'advancedsearch-style',
-            $this->_path.'views/css/advancedsearch.css',
+            $this->_path . 'views/css/advancedsearch.css',
             [
                 'media' => 'all',
                 'priority' => 1000,
@@ -165,7 +165,7 @@ class AdvancedSearch extends Module
 
         $this->context->controller->registerJavascript(
             'advancedsearch-javascript',
-            $this->_path.'views/js/advancedsearch.js',
+            $this->_path . 'views/js/advancedsearch.js',
             [
                 'position' => 'bottom',
                 'priority' => 1000,
@@ -177,11 +177,13 @@ class AdvancedSearch extends Module
      * Cuando se modifica
      * @param $parameters
      */
-    public function hookActionCustomerAccountAdd($parameters){
+    public function hookActionCustomerAccountAdd($parameters)
+    {
         $this->hookActionCustomerAccountUpdate($parameters);
     }
 
-    public function hookActionCustomerAccountUpdate($parameters){
+    public function hookActionCustomerAccountUpdate($parameters)
+    {
         /** @var \Db $db */
         $db = \Db::getInstance();
         $idcustomer = $parameters['customer']->{'id'};
@@ -195,6 +197,7 @@ class AdvancedSearch extends Module
     /**
      * @param $latitude
      * @param $longitude
+     * @param $distance
      * @return array devuelve un arreglo con el idSeler y las distancias
      * @throws PrestaShopDatabaseException
      */
@@ -233,7 +236,7 @@ class AdvancedSearch extends Module
     {
         $db = \Db::getInstance();
 
-        $request = 'SELECT id_product FROM ' . _DB_PREFIX_. '_kb_mp_seller_product WHERE id_seller ='. $idSeller;
+        $request = 'SELECT id_product FROM ' . _DB_PREFIX_ . '_kb_mp_seller_product WHERE id_seller =' . $idSeller;
         return $db->executeS($request);
     }
 
@@ -245,7 +248,7 @@ class AdvancedSearch extends Module
         $product = [];
         foreach ($sellers as $seller) {
 //            if ($distanceform <= $seller['distance']) {
-                $product[] = $this->getProductBySeller($seller['id_seller']);
+            $product[] = $this->getProductBySeller($seller['id_seller']);
 //            }
         }
 
@@ -262,10 +265,10 @@ class AdvancedSearch extends Module
 
         $request = 'SELECT a.id_seller, a.distance
         FROM (SELECT geo.id_seller,
-                     (((acos(sin(('.$latitude.' * pi() / 180)) * -- Latitud
-                             sin((geo.lat * pi() / 180)) + cos(('.$latitude.' * pi() / 180)) * -- Latitud
+                     (((acos(sin((' . $latitude . ' * pi() / 180)) * -- Latitud
+                             sin((geo.lat * pi() / 180)) + cos((' . $latitude . ' * pi() / 180)) * -- Latitud
                                                            cos((geo.lat * pi() / 180)) *
-                                                           cos((( '.$longitude.'- geo.lon) * -- Longitud
+                                                           cos((( ' . $longitude . '- geo.lon) * -- Longitud
                                                                 pi() / 180)))) * 180 / pi()) * 60 * 1.1515
                          ) as distance
               FROM (SELECT id_seller, SUM(lat) AS lat, SUM(lon) AS lon
@@ -315,7 +318,7 @@ class AdvancedSearch extends Module
         return $result;
     }
 
-     /**
+    /**
      * Return customer address
      * @param $idCustomer
      * @return string
@@ -386,7 +389,7 @@ class AdvancedSearch extends Module
     public function getURLMaps($postcode, $address, $key): string
     {
         //$urlApiBase = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
-        $url = 'https://api.postcodes.io/postcodes/'.$postcode;
+        $url = 'https://api.postcodes.io/postcodes/' . $postcode;
         //$urlKeyComponent = '&key=' . urlencode($key);
         //$urlCountyComponent = '&components=country:UK';
         //if ($address) {
@@ -431,8 +434,8 @@ class AdvancedSearch extends Module
             $idCustomer = $this->context->customer->id;
             $db = \Db::getInstance();
 
-            $request = 'SELECT postcode, lat as latitude, lon as longitude FROM '. _DB_PREFIX_ . 'customer 
-                        WHERE id_customer = '.$idCustomer;
+            $request = 'SELECT postcode, lat as latitude, lon as longitude FROM ' . _DB_PREFIX_ . 'customer 
+                        WHERE id_customer = ' . $idCustomer;
 
             $result = $db->executeS($request);
         } else {
@@ -475,18 +478,16 @@ class AdvancedSearch extends Module
         var_dump($sellers);
         $products = $this->getProductBySellers($distanceform, $sellers);
         var_dump($products);
-        return $products;
 
+        return $products;
     }
 
     public function hookProductSearchProvider(array $params)
     {
-        if(null != Tools::getValue('retrieve') && Tools::getValue('retrieve') == "collection"){
+        if (null != Tools::getValue('retrieve') && Tools::getValue('retrieve') == "collection") {
             $products = $this->collectionSearch($params);
         }
 
         return new CustomSearchEngine($products);
     }
-
-
 }
