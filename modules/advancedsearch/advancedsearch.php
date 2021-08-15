@@ -7,11 +7,9 @@ if (!defined('_PS_VERSION_')) {
 class AdvancedSearch extends Module
 {
     const AVAILABLE_HOOKS = [
-        'displayTop',
+        'displayTopColumn',
         'actionCustomerAccountUpdate',
         'actionFrontControllerSetMedia',
-        'collectionSearch',
-        'deliverySearch',
     ];
 
 
@@ -140,11 +138,14 @@ class AdvancedSearch extends Module
     }
 
 
-    public function hookDisplayTop($params)
+    public function hookDisplayTopColumn($params)
     {
         $this->context->smarty->assign([
             'regExPostCode' => '[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}',
-            'postcodecheck_controller_url' => $this->context->link->getModuleLink('advancedsearch','asearch', ['ajax'=>true]),
+            'postcodecheck_controller_url' => $this
+                ->context
+                ->link
+                ->getModuleLink('advancedsearch','asearch', ['ajax'=>true]),
         ]);
 
         return $this->display(__FILE__, 'advancedsearch.tpl');

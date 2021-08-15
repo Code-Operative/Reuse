@@ -101,7 +101,8 @@ class AdvancedsearchaSearchModuleFrontController extends ModuleFrontController
         if ($address) {
             $url = $urlApiBase . urlencode($address) . $urlCountyComponent . '|postal_code' . $postcode . $urlKeyComponent;
         } else {
-            $url = $urlApiBase . $urlCountyComponent . $urlKeyComponent;
+            // no entra al eslse
+            $url = $urlApiBase. $postcode . $urlCountyComponent . $urlKeyComponent;
         }
 
         return htmlspecialchars($url);
