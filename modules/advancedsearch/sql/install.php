@@ -57,7 +57,7 @@ $sql[] = 'ALTER TABLE'._DB_PREFIX_.'_customer ADD COLUMN lat VARCHAR(25)';
 $sql[] = 'ALTER TABLE'._DB_PREFIX_.'_customer ADD COLUMN lon VARCHAR(25)';
 
 foreach ($sql as $query) {
-    if (Db::getInstance()->execute($query) == false) {
+    if (Db::getInstance()->execute($query) === false) {
         return false;
     }
 }

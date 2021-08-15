@@ -374,7 +374,7 @@ class AdvancedSearch extends Module
         $curl = curl_init($url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         $curl_response = curl_exec($curl);
-        $response = json_decode($curl_response, true);
+        $response = json_decode($curl_response);
         if ($response->status !== 200) {
             //TODO handle exception
         } else {
@@ -462,6 +462,7 @@ class AdvancedSearch extends Module
      */
     public function hookProductSearchProvider(array $params): CustomSearchEngine
     {
+
         if (null != Tools::getValue('retrieve') && Tools::getValue('retrieve') == "collection") {
             $products = $this->collectionSearch($params);
         }
