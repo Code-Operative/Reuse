@@ -4,12 +4,16 @@ if (!defined('_PS_VERSION_')) {
     exit;
 }
 
+include_once _PS_MODULE_DIR_ . 'advancedsearch/classes/CustomSearchEngine.php';
+
 class AdvancedSearch extends Module
 {
     const AVAILABLE_HOOKS = [
         'displayTopColumn',
+        'actionCustomerAccountAdd',
         'actionCustomerAccountUpdate',
         'actionFrontControllerSetMedia',
+        'productSearchProvider',
     ];
 
 
@@ -128,7 +132,7 @@ class AdvancedSearch extends Module
     //queries
     public function getSellersCovered(): array
     {
-        $db = \Db::getInstance();
+        $db = Db::getInstance();
 
         $request = 'SELECT DISTINCT id_seller FROM' . _DB_PREFIX_ . '_kb_mp_seller_shipping_coverage cv
                     WHERE COALESCE(cv.cp_district,0)=0 AND cv.cp_area="HA"
@@ -137,25 +141,25 @@ class AdvancedSearch extends Module
         return $db->executeS($request);
     }
 
-
     public function hookDisplayTopColumn($params)
     {
         $this->context->smarty->assign([
             'regExPostCode' => '[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}',
-            'postcodecheck_controller_url' => $this
+            'search_controller_url' => $this
                 ->context
                 ->link
-                ->getModuleLink('advancedsearch','asearch', ['ajax'=>true]),
+                ->getPageLink('search', null, null, null, false, null, true),
         ]);
 
         return $this->display(__FILE__, 'advancedsearch.tpl');
     }
 
+
     public function hookActionFrontControllerSetMedia()
     {
         $this->context->controller->registerStylesheet(
             'advancedsearch-style',
-            $this->_path.'views/css/advancedsearch.css',
+            $this->_path . 'views/css/advancedsearch.css',
             [
                 'media' => 'all',
                 'priority' => 1000,
@@ -164,7 +168,7 @@ class AdvancedSearch extends Module
 
         $this->context->controller->registerJavascript(
             'advancedsearch-javascript',
-            $this->_path.'views/js/advancedsearch.js',
+            $this->_path . 'views/js/advancedsearch.js',
             [
                 'position' => 'bottom',
                 'priority' => 1000,
@@ -176,15 +180,144 @@ class AdvancedSearch extends Module
      * Cuando se modifica
      * @param $parameters
      */
-    public function hookActionCustomerAccountUpdate($parameters){
-        /** @var \Db $db */
-        $db = \Db::getInstance();
-        $idcustomer = $parameters['customer']->{'id'};
-        //acá modifica el ale
-        $request = "UPDATE `psrn_customer` SET lat = NULL , lon = NULL WHERE `id_customer` =  $idcustomer ";
+    public function hookActionCustomerAccountAdd($parameters): void
+    {
+        $this->hookActionCustomerAccountUpdate($parameters);
+    }
 
-        /** @var bool $result */
+    public function hookActionCustomerAccountUpdate($parameters): void
+    {
+        $postcode = $parameters["customer"]->{'postcode'};
+
+        $url = $this->getURLApiPostcodes($postcode);
+
+        $respApi = $this->getApiGeocoding($url);
+
+        $db = Db::getInstance();
+        $idcustomer = $parameters['customer']->{'id'};
+        $request = "UPDATE `psrn_customer` SET lat = "
+            . $respApi["latitude"] . ", lon = " . $respApi["longitude"] . " WHERE `id_customer` =  $idcustomer ";
+
         $result = $db->execute($request);
+    }
+
+    /**
+     * @return void
+     * @throws PrestaShopDatabaseException
+     */
+    public function checkSellersLatLon(): void
+    {
+        $db = Db::getInstance();
+
+        $sellers = [];
+        $request = 'SELECT id_customer, id_employee, id_seller, id_field, value FROM '
+            . _DB_PREFIX_
+            . 'kb_mp_custom_field_seller_mapping WHERE id_field=(SELECT id_field FROM '
+            . _DB_PREFIX_ . 'kb_mp_custom_fields WHERE field_name="collection_postcode") AND value is not null';
+        $sellers = $db->executeS($request);
+        foreach ($sellers as $seller) {
+            $request = 'SELECT count(*) as num FROM '
+                . _DB_PREFIX_
+                . 'kb_mp_custom_field_seller_mapping WHERE id_seller = '
+                . $seller["id_seller"]
+                . ' AND ((id_field=(SELECT id_field FROM '
+                . _DB_PREFIX_
+                . 'kb_mp_custom_fields WHERE field_name="field_lat") AND value is not null) OR (id_field=(SELECT id_field FROM '
+                . _DB_PREFIX_ . 'kb_mp_custom_fields WHERE field_name="field_lon") AND value is not null))';
+            $sellerc = $db->executeS($request);
+            $latlon = [];
+            if ($sellerc[0]["num"] == 0) {
+                $latlon = $this->getLatAndLog($seller["value"]);
+                if (isset($latlon["latitude"])) {
+                    $request = 'INSERT INTO '
+                        . _DB_PREFIX_
+                        . 'kb_mp_custom_field_seller_mapping VALUES (default,'
+                        . $seller["id_customer"]
+                        . ','
+                        . $seller["id_seller"]
+                        . ', '
+                        . $seller["id_employee"]
+                        . ',(SELECT id_field FROM psrn_kb_mp_custom_fields WHERE field_name="field_lat"),"'
+                        . $latlon["latitude"] . '", now(), now() )';
+                    $db->execute($request);
+                }
+                if (isset($latlon["longitude"])) {
+                    $request = 'INSERT INTO '
+                        . _DB_PREFIX_
+                        . 'kb_mp_custom_field_seller_mapping VALUES (default,'
+                        . $seller["id_customer"]
+                        . ','
+                        . $seller["id_seller"]
+                        . ', '
+                        . $seller["id_employee"]
+                        . ',(SELECT id_field FROM psrn_kb_mp_custom_fields WHERE field_name="field_lon"),"'
+                        . $latlon["longitude"] . '", now(), now() )';
+                    $db->execute($request);
+                }
+            }
+        }
+    }
+
+    /**
+     * @param $latitude
+     * @param $longitude
+     * @param $distance
+     * @return array devuelve un arreglo con el idSeler y las distancias
+     * @throws PrestaShopDatabaseException
+     */
+    public function getSellerByDistance($latitude, $longitude, $distance): array
+    {
+        if (!$latitude || !$longitude) {
+            return [];
+        }
+
+        //temporary patch to set lat&lon sellers's
+        $this->checkSellersLatLon();
+
+        $db = Db::getInstance();
+
+        $request = 'SELECT geo.id_seller, (((acos(sin((' . $latitude . '*pi()/180)) *        
+            sin((geo.lat*pi()/180))+cos((' . $latitude . '*pi()/180)) *  
+            cos((geo.lat*pi()/180)) * cos(((' . $longitude . ' - geo.lon)* 
+            pi()/180))))*180/pi())*60*1.1515
+        ) as distance 
+        FROM (SELECT id_seller, SUM(lat) AS lat, SUM(lon) AS lon FROM
+								(SELECT id_seller, 
+												CASE WHEN id_field=(SELECT id_field FROM psrn_kb_mp_custom_fields WHERE field_name="field_lat") THEN sm.value ELSE 0 END AS lat, 
+												CASE WHEN id_field=(SELECT id_field FROM psrn_kb_mp_custom_fields WHERE field_name="field_lon") THEN sm.value ELSE 0 END AS lon 
+									FROM psrn_kb_mp_custom_field_seller_mapping sm 
+									WHERE id_field=(SELECT id_field FROM psrn_kb_mp_custom_fields WHERE field_name="field_lat") 
+                     OR id_field=(SELECT id_field FROM psrn_kb_mp_custom_fields WHERE field_name="field_lon")) AS sm
+									GROUP BY sm.id_seller) AS geo
+        HAVING distance < ' . $distance;
+
+        return $db->executeS($request);
+    }
+
+    /**
+     * @param $idSeller
+     * @return array
+     * @throws PrestaShopDatabaseException
+     */
+    public function getProductBySeller($idSeller): array
+    {
+        $db = Db::getInstance();
+
+        $request = 'SELECT id_product FROM ' . _DB_PREFIX_ . 'kb_mp_seller_product WHERE id_seller =' . $idSeller;
+        return $db->executeS($request);
+    }
+
+    /**
+     * @throws PrestaShopDatabaseException
+     */
+    public function getProductBySellers($sellers): array
+    {
+        $product = [];
+        foreach ($sellers as $seller) {
+            $product[] = $this->getProductBySeller($seller['id_seller']);
+        }
+
+        return $product;
     }
 
     public function getSellersCoveredDistance($latitude, $longitude): array
@@ -193,14 +326,14 @@ class AdvancedSearch extends Module
             return [];
         }
 
-        $db = \Db::getInstance();
+        $db = Db::getInstance();
 
         $request = 'SELECT a.id_seller, a.distance
         FROM (SELECT geo.id_seller,
-                     (((acos(sin(('.$latitude.' * pi() / 180)) * -- Latitud
-                             sin((geo.lat * pi() / 180)) + cos(('.$latitude.' * pi() / 180)) * -- Latitud
+                     (((acos(sin((' . $latitude . ' * pi() / 180)) * -- Latitud
+                             sin((geo.lat * pi() / 180)) + cos((' . $latitude . ' * pi() / 180)) * -- Latitud
                                                            cos((geo.lat * pi() / 180)) *
-                                                           cos((( '.$longitude.'- geo.lon) * -- Longitud
+                                                           cos((( ' . $longitude . '- geo.lon) * -- Longitud
                                                                 pi() / 180)))) * 180 / pi()) * 60 * 1.1515
                          ) as distance
               FROM (SELECT id_seller, SUM(lat) AS lat, SUM(lon) AS lon
@@ -227,5 +360,112 @@ class AdvancedSearch extends Module
                  OR COALESCE(cv.cp_district, 0) <> 0 AND cv.cp_area = "HA" AND cv.cp_district = "1") AS a
               GROUP BY a.id_seller';
         return $db->executeS($request);
+    }
+
+    /**
+     * Call to google api geocoding
+     * @param $url
+     * @return array
+     */
+    public function getApiGeocoding($url): array
+    {
+        $arr = [];
+
+        $curl = curl_init($url);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        $curl_response = curl_exec($curl);
+        $response = json_decode($curl_response, true);
+        if ($response->status !== 200) {
+            //TODO handle exception
+        } else {
+            $decodedresponse = $response->result;
+            $arr['latitude'] = $decodedresponse->latitude;
+            $arr['longitude'] = $decodedresponse->longitude;
+        }
+
+        curl_close($curl);
+
+        return $arr;
+    }
+
+    /**
+     * Build url for google geocoding
+     * @param $postcode
+     * @return string
+     */
+    public function getURLApiPostcodes($postcode): string
+    {
+        return 'https://api.postcodes.io/postcodes/' . $postcode;
+    }
+
+    /**
+     * Get lat and long in array from api geocoding
+     * @param $postcode
+     * @return array
+     */
+    public function getLatAndLog($postcode): array
+    {
+        $url = $this->getURLApiPostcodes($postcode);
+        return $this->getApiGeocoding($url);
+    }
+
+    /**
+     * Get latitude, longitude and postcode
+     * @return array postcode, latitude, longitude
+     * @throws PrestaShopDatabaseException
+     */
+    public function getDirectionCustomer(): array
+    {
+        if ($this->context->customer->isLogged()) {
+            $idCustomer = $this->context->customer->id;
+            $db = Db::getInstance();
+
+            $request = 'SELECT postcode, lat as latitude, lon as longitude FROM ' . _DB_PREFIX_ . 'customer 
+                        WHERE id_customer = ' . $idCustomer;
+
+            $result = $db->executeS($request);
+        } else {
+            $result = '';
+        }
+
+        return $result;
+    }
+
+    /**
+     * @throws PrestaShopDatabaseException
+     */
+    public function collectionSearch($parameters): array
+    {
+        $postcode = Tools::getValue('postcode');
+        $distanceform = Tools::getValue('distance');
+        if (!$this->context->customer->isLogged()) {
+            $arr = $this->getLatAndLog($postcode);
+            $latitude = $arr['latitude'];
+            $longitude = $arr['longitude'];
+        } else {
+            $customerDirection = $this->getDirectionCustomer();
+            if ($customerDirection['postcode'] === $postcode) {
+                $latitude = $customerDirection['latitude'];
+                $longitude = $customerDirection['longitude'];
+            } else {
+                $arr = $this->getLatAndLog($postcode);
+                $latitude = $arr['latitude'];
+                $longitude = $arr['longitude'];
+            }
+        }
+        $sellers = $this->getSellerByDistance($latitude, $longitude, $distanceform);
+        return $this->getProductBySellers($sellers);
+    }
+
+    /**
+     * @throws PrestaShopDatabaseException
+     */
+    public function hookProductSearchProvider(array $params): CustomSearchEngine
+    {
+        if (null != Tools::getValue('retrieve') && Tools::getValue('retrieve') == "collection") {
+            $products = $this->collectionSearch($params);
+        }
+
+        return new CustomSearchEngine($products, Tools::getValue('search'));
     }
 }
