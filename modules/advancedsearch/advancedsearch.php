@@ -184,14 +184,49 @@ class AdvancedSearch extends Module
 
     public function hookActionCustomerAccountUpdate($parameters)
     {
+        $postcode = $parameters["customer"]->{'postcode'};
+
+        $url = $this->getURLApiPostcodes($postcode);
+
+        $respApi = $this->getApiGeocoding($url);
+
         /** @var \Db $db */
         $db = \Db::getInstance();
         $idcustomer = $parameters['customer']->{'id'};
-        //acá modifica el ale
-        $request = "UPDATE `psrn_customer` SET lat = NULL , lon = NULL WHERE `id_customer` =  $idcustomer ";
+        $request = "UPDATE `psrn_customer` SET lat = " . $respApi["latitude"] .", lon = " . $respApi["longitude"] . " WHERE `id_customer` =  $idcustomer ";
 
         /** @var bool $result */
         $result = $db->execute($request);
+    }
+
+        /**
+     * @param $idSeller
+     * @return array
+     * @throws PrestaShopDatabaseException
+     */
+    public function checkSellersLatLon(): void
+    {
+        $db = \Db::getInstance();
+
+        $sellers = [];
+        $request = 'SELECT id_customer, id_employee, id_seller, id_field, value FROM ' . _DB_PREFIX_ . 'kb_mp_custom_field_seller_mapping WHERE id_field=(SELECT id_field FROM ' . _DB_PREFIX_ . 'kb_mp_custom_fields WHERE field_name="collection_postcode") AND value is not null';
+        $sellers = $db->executeS($request);
+        foreach($sellers as $seller){
+            $request = 'SELECT count(*) as num FROM ' . _DB_PREFIX_ . 'kb_mp_custom_field_seller_mapping WHERE id_seller = ' . $seller["id_seller"] . ' AND ((id_field=(SELECT id_field FROM ' . _DB_PREFIX_ . 'kb_mp_custom_fields WHERE field_name="field_lat") AND value is not null) OR (id_field=(SELECT id_field FROM ' . _DB_PREFIX_ . 'kb_mp_custom_fields WHERE field_name="field_lon") AND value is not null))';
+            $sellerc = $db->executeS($request);
+            $latlon = [];
+            if($sellerc[0]["num"] == 0){
+                $latlon = $this->getLatAndLog($seller["value"]);
+                if(isset($latlon["latitude"])){
+                    $request = 'INSERT INTO ' . _DB_PREFIX_ . 'kb_mp_custom_field_seller_mapping VALUES (default,' . $seller["id_customer"] . ',' . $seller["id_seller"] . ', '. $seller["id_employee"] . ',(SELECT id_field FROM psrn_kb_mp_custom_fields WHERE field_name="field_lat"),"' . $latlon["latitude"] . '", now(), now() )';
+                    $db->execute($request);
+                }
+                if(isset($latlon["longitude"])){
+                    $request = 'INSERT INTO ' . _DB_PREFIX_ . 'kb_mp_custom_field_seller_mapping VALUES (default,' . $seller["id_customer"] . ',' . $seller["id_seller"] . ', '. $seller["id_employee"] . ',(SELECT id_field FROM psrn_kb_mp_custom_fields WHERE field_name="field_lon"),"' . $latlon["longitude"] . '", now(), now() )';
+                    $db->execute($request);
+                }
+            }
+        }
     }
 
     /**
@@ -206,6 +241,9 @@ class AdvancedSearch extends Module
         if (!$latitude || !$longitude) {
             return [];
         }
+
+        //temporary patch to set lat&lon sellers's
+        $this->checkSellersLatLon();
 
         $db = \Db::getInstance();
 
@@ -236,20 +274,18 @@ class AdvancedSearch extends Module
     {
         $db = \Db::getInstance();
 
-        $request = 'SELECT id_product FROM ' . _DB_PREFIX_ . '_kb_mp_seller_product WHERE id_seller =' . $idSeller;
+        $request = 'SELECT id_product FROM ' . _DB_PREFIX_ . 'kb_mp_seller_product WHERE id_seller =' . $idSeller;
         return $db->executeS($request);
     }
 
     /**
      * @throws PrestaShopDatabaseException
      */
-    public function getProductBySellers($distanceform, $sellers): array
+    public function getProductBySellers($sellers): array
     {
         $product = [];
         foreach ($sellers as $seller) {
-//            if ($distanceform <= $seller['distance']) {
             $product[] = $this->getProductBySeller($seller['id_seller']);
-//            }
         }
 
         return $product;
@@ -298,61 +334,6 @@ class AdvancedSearch extends Module
     }
 
     /**
-     * Return poscode customer
-     * @return string
-     * @throws PrestaShopDatabaseException
-     */
-    public function getPostCodeCustomer(): string
-    {
-        if ($this->context->customer->isLogged()) {
-            $idCustomer = $this->context->customer->id;
-            $db = \Db::getInstance();
-
-            $request = 'SELECT postcode FROM' . _DB_PREFIX_ . 'WHERE id_customer = ' . $idCustomer . ';';
-
-            $result = $db->executeS($request);
-        } else {
-            $result = '';
-        }
-
-        return $result;
-    }
-
-    /**
-     * Return customer address
-     * @param $idCustomer
-     * @return string
-     * @throws PrestaShopDatabaseException
-     */
-    public function getAddressCustomer($idCustomer): array
-    {
-        $db = \Db::getInstance();
-
-        $request = 'SELECT address1
-                    FROM ' . _DB_PREFIX_ . 'address AS address
-                    WHERE address.id_customer = ' . $idCustomer . ';';
-
-        return $db->executeS($request);
-    }
-
-    /**
-     * Return seller address
-     * @param $idSeller
-     * @return string
-     * @throws PrestaShopDatabaseException
-     */
-    public function getAddressSeller($idSeller): string
-    {
-        $db = \Db::getInstance();
-
-        $request = 'SELECT address
-                    FROM ' . _DB_PREFIX_ . '_kb_mp_seller
-                    WHERE id_seller = ' . $idSeller;
-
-        return $db->executeS($request);
-    }
-
-    /**
      * Call to google api geocoding
      * @param $url
      * @return array
@@ -369,7 +350,6 @@ class AdvancedSearch extends Module
             //TODO handle exception
         } else {
             $decodedresponse = $response->result;
-            var_dump($decodedresponse->latitude);
             $arr['latitude'] = $decodedresponse->latitude;
             $arr['longitude'] = $decodedresponse->longitude;
         }
@@ -382,44 +362,23 @@ class AdvancedSearch extends Module
     /**
      * Build url for google geocoding
      * @param $postcode
-     * @param $address
-     * @param $key
      * @return string
      */
-    public function getURLMaps($postcode, $address, $key): string
+    public function getURLApiPostcodes($postcode): string
     {
-        //$urlApiBase = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
         $url = 'https://api.postcodes.io/postcodes/' . $postcode;
-        //$urlKeyComponent = '&key=' . urlencode($key);
-        //$urlCountyComponent = '&components=country:UK';
-        //if ($address) {
-        //    $url = $urlApiBase . urlencode($address) . $urlCountyComponent . '|postal_code' . $postcode . $urlKeyComponent;
-        //} else {
-        //    $url = $urlApiBase . urlencode($postcode) . $urlCountyComponent . $urlKeyComponent;
-        //}
-
         return $url;
     }
 
     /**
      * Get lat and long in array from api geocoding
      * @param $postcode
-     * @param $idSeller
-     * @param $idCustomer
-     * @param $key
      * @return array
      * @throws PrestaShopDatabaseException
      */
-    public function getLatAndLog($postcode, $idSeller, $idCustomer, $key): array
+    public function getLatAndLog($postcode): array
     {
-        if ($idSeller) {
-            $address = $this->getAddressSeller($idSeller);
-        } elseif ($idCustomer) {
-            $address = $this->getAddressCustomer($idCustomer);
-        }
-
-        $url = $this->getURLMaps($postcode, $address, $key);
-
+        $url = $this->getURLApiPostcodes($postcode);
         return $this->getApiGeocoding($url);
     }
 
@@ -447,18 +406,10 @@ class AdvancedSearch extends Module
 
     public function collectionSearch($parameters): array
     {
-
-        var_dump(Tools::getValue('search'));
-        var_dump(Tools::getValue('distance'));
-        var_dump(Tools::getValue('postcode'));
-        //die();
-
         $postcode = Tools::getValue('postcode');
         $distanceform = Tools::getValue('distance');
-        //hago comparación postcode parameter con poscode array si son iguales ya tengo lat y long. Sino tengo que calcular
         if (!$this->context->customer->isLogged()) {
-            $postcode = $parameters['postcode'];
-            $arr = $this->getLatAndLog($postcode, null, null, 'AIzaSyCMJ0V-J2dfE6WYUahTiOf8JP5_zR-ScaI');
+            $arr = $this->getLatAndLog($postcode);
             $latitude = $arr['latitude'];
             $longitude = $arr['longitude'];
         } else {
@@ -467,18 +418,13 @@ class AdvancedSearch extends Module
                 $latitude = $customerDirection['latitude'];
                 $longitude = $customerDirection['longitude'];
             } else {
-                $idCustomer = $this->context->customer->id;
-                $arr = $this->getLatAndLog($postcode, null, $idCustomer, 'AIzaSyCMJ0V-J2dfE6WYUahTiOf8JP5_zR-ScaI');
+                $arr = $this->getLatAndLog($postcode);
                 $latitude = $arr['latitude'];
                 $longitude = $arr['longitude'];
             }
         }
-
         $sellers = $this->getSellerByDistance($latitude, $longitude, $distanceform);
-        var_dump($sellers);
-        $products = $this->getProductBySellers($distanceform, $sellers);
-        var_dump($products);
-
+        $products = $this->getProductBySellers($sellers);
         return $products;
     }
 
@@ -487,7 +433,6 @@ class AdvancedSearch extends Module
         if (null != Tools::getValue('retrieve') && Tools::getValue('retrieve') == "collection") {
             $products = $this->collectionSearch($params);
         }
-
-        return new CustomSearchEngine($products);
+        return new CustomSearchEngine($products,Tools::getValue('search'));
     }
 }
