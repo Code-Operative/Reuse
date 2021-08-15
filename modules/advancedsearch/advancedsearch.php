@@ -177,7 +177,6 @@ class AdvancedSearch extends Module
     }
 
     /**
-     * Cuando se modifica
      * @param $parameters
      */
     public function hookActionCustomerAccountAdd($parameters): void
@@ -376,7 +375,7 @@ class AdvancedSearch extends Module
         $curl_response = curl_exec($curl);
         $response = json_decode($curl_response);
         if ($response->status !== 200) {
-            //TODO handle exception
+            //TODO handle ex
         } else {
             $decodedresponse = $response->result;
             $arr['latitude'] = $decodedresponse->latitude;
@@ -462,8 +461,9 @@ class AdvancedSearch extends Module
      */
     public function hookProductSearchProvider(array $params): CustomSearchEngine
     {
+        $products = [];
 
-        if (null != Tools::getValue('retrieve') && Tools::getValue('retrieve') == "collection") {
+        if ( Tools::getValue('retrieve') && Tools::getValue('retrieve') == "collection") {
             $products = $this->collectionSearch($params);
         }
 
