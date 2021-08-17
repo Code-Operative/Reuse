@@ -778,6 +778,7 @@ class KbmarketplaceKbproductModuleFrontController extends KbmarketplaceCoreModul
         $this->context->smarty->assign('type_pack', Product::PTYPE_PACK);
         $this->context->smarty->assign('product_form_heading', $product_form_heading);
         $formkey = Tools::encrypt($this->seller_info['id_seller'] . $this->controller_name . 'productform');
+        $this->context->smarty->assign('id_seller', $this->seller_info['id_seller']);
         $this->context->smarty->assign('formkey', $formkey);
         $this->context->smarty->assign('id_product', $id_product);
         $this->context->smarty->assign('editor_lang', $editor_lang);
