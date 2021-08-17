@@ -33,9 +33,9 @@ build: ## Builds all the containers
 	U_ID=${UID} docker-compose stop && U_ID=${UID} docker-compose build && $(MAKE) run && $(MAKE) prepare
 
 prepare: ## Runs backend commands
-	$(MAKE) config-db-user && $(MAKE) create-presta-db && $(MAKE) run-assets
+	$(MAKE) config-db-user && $(MAKE) create-presta-db && $(MAKE) run-assets && $(MAKE) composer-install
 
-rebuild: ## Rebuilds all the containers
+rebuild: ## Re builds all the containers
 	U_ID=${UID} docker-compose stop && U_ID=${UID} docker-compose build && $(MAKE) run
 
 # Backend commands

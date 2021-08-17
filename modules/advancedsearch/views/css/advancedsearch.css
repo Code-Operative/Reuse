@@ -1,0 +1,24 @@
+.advanceSearchwrapper{ 
+    max-width: 60%;
+    margin: 0 auto;
+    border: 1px solid black;
+    display: flex;
+    justify-content:space-around;
+    padding: 20px;
+}
+
+.advanceSearchKeywords {
+  display:block;
+}
+
+.advanceSearchLocation {
+  display:block
+}
+
+.advanceSearchLocation_title {
+  display:flex;
+}
+
+.fontAwesome {
+  font-family: 'Helvetica', FontAwesome, sans-serif;
+}
