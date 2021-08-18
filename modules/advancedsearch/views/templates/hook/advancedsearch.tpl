@@ -18,13 +18,13 @@
           <!-- <input id="postcode-input" name="postcode" pattern="{$regExPostCode}" title="Please enter a valid UK postcode" placeholder="Enter your postcode"/> -->
         </div>
         <div class=advanceSearchDistance>
-          <label class=advanceSearchDistance_title for="advanceSearchDistanceInput">
+          <label class=advanceSearchDistance_title for="distance-input">
             Distance (miles)
           </label>
           <input name="distance" id="distance-input"/>
         </div>
         <div class=advanceSearchOptions>
-          <label class=advanceSearchOptions_title for="advanceSearchOptionsSelect">
+          <label class=advanceSearchOptions_title for="retrieve-method">
             Handling Options
           </label>
           <select id="retrieve-method" name="retrieve">

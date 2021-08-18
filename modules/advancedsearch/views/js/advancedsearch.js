@@ -3,11 +3,11 @@ let postcodeinputvalidation1 = document.getElementById("postcode-input");
 
 // let pCode = document.getElementById("advanceSearchButton");
 // let postcodeinputvalidation1 = document.getElementById("advanceSearchLocationInput");
-let dropdown = document.querySelector("#advanceSearchOptionsSelect");
-let distanceInput = document.querySelector("#advanceSearchDistanceInput");
+let dropdownAdvanceSearchModule = document.querySelector("#retrieve-method");
+let distanceInputAdvanceSearchModule = document.querySelector("#distance-input");
 
-dropdown.value == "delivery"? distanceInput.disabled = true:distanceInput.disabled = false;
-dropdown.addEventListener("change", ()=> {dropdown.value == "delivery"? distanceInput.disabled = true:distanceInput.disabled = false;})
+dropdownAdvanceSearchModule.value == "delivery"? distanceInputAdvanceSearchModule.disabled = true:distanceInputAdvanceSearchModule.disabled = false;
+dropdownAdvanceSearchModule.addEventListener("change", ()=> {dropdownAdvanceSearchModule.value == "delivery"? distanceInputAdvanceSearchModule.disabled = true:distanceInputAdvanceSearchModule.disabled = false;})
 
 
 postcodeinputvalidation1.oninput =() => {
