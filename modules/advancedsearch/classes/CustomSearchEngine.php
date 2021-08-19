@@ -28,6 +28,12 @@ class CustomSearchEngine implements ProductSearchProviderInterface{
         }
     }
 
+    /**
+     * @param ProductSearchContext $context
+     * @param ProductSearchQuery $query
+     * @return ProductSearchResult
+     * @throws PrestaShopException
+     */
     public function runQuery(ProductSearchContext $context, ProductSearchQuery $query){
 
         $products = [];
@@ -66,12 +72,12 @@ class CustomSearchEngine implements ProductSearchProviderInterface{
         }
 
         $sellerprods = array_intersect($prods,$this->products);
-
         $new_products = new ProductSearchResult();
         if (!empty($this->products)) {
             $array_list = $sellerprods;
             $new_products->setProducts($array_list);
         }
+
         return $new_products;
     }
 }
