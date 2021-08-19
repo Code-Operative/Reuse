@@ -6,7 +6,8 @@ if (!defined('_PS_VERSION_')) {
 
 include_once _PS_MODULE_DIR_ . 'advancedsearch/classes/CustomSearchEngine.php';
 
-class AdvancedSearch extends Module
+use PrestaShop\PrestaShop\Core\Module\WidgetInterface;
+class AdvancedSearch extends Module implements WidgetInterface
 {
     const AVAILABLE_HOOKS = [
         'displayTopColumn',
@@ -477,4 +478,23 @@ class AdvancedSearch extends Module
 
         return new CustomSearchEngine($products, Tools::getValue('search'));
     }
+
+    public function renderWidget($hookName, array $configuration) 
+    {
+        $this->smarty->assign($this->getWidgetVariables($hookName, $configuration));
+
+        return $this->fetch('module:'.$this->name.'/views/templates/widget/advancedsearch.tpl');
+    }
+ 
+    public function getWidgetVariables($hookName , array $configuration)
+    {
+        // $myParamKey = $configuration['my_param_key'] ?? null;
+        
+        return [
+            'regExPostCode' => '[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}',
+            'search_controller_url' => $this->context->link->getPageLink('search', null, null, null, false, null, true),
+        ];
+
+    }
+
 }

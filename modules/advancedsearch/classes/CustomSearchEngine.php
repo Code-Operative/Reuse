@@ -59,12 +59,13 @@ class CustomSearchEngine implements ProductSearchProviderInterface{
             $products = $result['result'];
             $count = $result['total'];
 
-            Hook::exec('actionSearch', [ 'searched_query' => $queryString, 'total' => $count, ]);
+            Hook::exec('actionSearch', [ 
+                'searched_query' => $queryString,
+                 'total' => $count, 
+                // deprecated since 1.7.x
+                'expr' => $queryString,
+            ]);
         }
-
-            // deprecated since 1.7.x
-            'expr' => $queryString,
-        ]);
         
         $prods = [];
         foreach($products as $product){
