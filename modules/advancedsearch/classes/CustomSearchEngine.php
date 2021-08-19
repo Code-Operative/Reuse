@@ -27,15 +27,23 @@ class CustomSearchEngine implements ProductSearchProviderInterface{
         }
     }
 
+    /**
+     * @param ProductSearchContext $context
+     * @param ProductSearchQuery $query
+     * @return ProductSearchResult
+     * @throws PrestaShopException
+     */
     public function runQuery(ProductSearchContext $context, ProductSearchQuery $query){
 
         $products = [];
         $count = 0;
         $query->setSearchString(true);
 
+//        var_dump($this->string);
         if (($string = $query->getSearchString())) {
             $queryString = Tools::replaceAccentedChars(urldecode($this->string));
 
+            //esta acá el problema.
             $result = Search::find(
                 $context->getIdLang(),
                 $queryString,
@@ -50,10 +58,7 @@ class CustomSearchEngine implements ProductSearchProviderInterface{
             $products = $result['result'];
             $count = $result['total'];
 
-            Hook::exec('actionSearch', [
-                'searched_query' => $queryString,
-                'total' => $count,
-            ]);
+            Hook::exec('actionSearch', [ 'searched_query' => $queryString, 'total' => $count, ]);
         }
 
         $prods = [];
@@ -62,6 +67,9 @@ class CustomSearchEngine implements ProductSearchProviderInterface{
             $prods[] = $prds;
         }
 
+//        var_dump($products);
+//
+//        var_dump($this->products);
         $sellerprods = array_intersect($this->products,$prods);
 
         $new_products = new ProductSearchResult();
@@ -69,6 +77,7 @@ class CustomSearchEngine implements ProductSearchProviderInterface{
             $array_list = $sellerprods;
             $new_products->setProducts($array_list);
         }
+
         return $new_products;
     }
 }

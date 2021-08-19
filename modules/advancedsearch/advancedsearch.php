@@ -48,11 +48,15 @@ class AdvancedSearch extends Module
             Shop::setContext(Shop::CONTEXT_ALL);
         }
 
+        include_once _PS_MODULE_DIR_ . 'advancedsearch/sql/install.php';
+
         return (parent::install() && $this->registerHook(self::AVAILABLE_HOOKS));
     }
 
     public function uninstall(): bool
     {
+        include_once _PS_MODULE_DIR_ . 'advancedsearch/sql/uninstall.php';
+
         return (
             parent::uninstall()
             && Configuration::deleteByName('ADVANCED_SEARCH')
@@ -201,6 +205,8 @@ class AdvancedSearch extends Module
     }
 
     /**
+     * Find all seller, check is the sellers have lat and lon.
+     *
      * @return void
      * @throws PrestaShopDatabaseException
      */
@@ -399,12 +405,14 @@ class AdvancedSearch extends Module
 
     /**
      * Get lat and long in array from api geocoding
+     *
      * @param $postcode
      * @return array
      */
     public function getLatAndLog($postcode): array
     {
         $url = $this->getURLApiPostcodes($postcode);
+
         return $this->getApiGeocoding($url);
     }
 
