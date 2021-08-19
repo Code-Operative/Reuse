@@ -14,6 +14,7 @@
 
             <input type="hidden" name="productformkey" value="{$formkey}" />
             <input type="hidden" name="id_product" value="{$id_product|intval}" />
+            <input type="hidden" name="id_seller" value="{$id_seller}" />
             <div id="kb-product-form-global-msg" class="kbalert kbalert-danger" style="display:none;"><i class="icon-exclamation-sign"></i></div>
             {if $id_product > 0}
             <div class="kbbtn-group kb-tright">

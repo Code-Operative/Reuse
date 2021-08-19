@@ -4,6 +4,7 @@ use PrestaShop\PrestaShop\Core\Product\Search\ProductSearchContext;
 use PrestaShop\PrestaShop\Core\Product\Search\ProductSearchProviderInterface;
 use PrestaShop\PrestaShop\Core\Product\Search\ProductSearchQuery;
 use PrestaShop\PrestaShop\Core\Product\Search\ProductSearchResult;
+use PrestaShop\PrestaShop\Core\Product\Search\SortOrder;
 
 class CustomSearchEngine implements ProductSearchProviderInterface{
 
@@ -37,7 +38,7 @@ class CustomSearchEngine implements ProductSearchProviderInterface{
 
         $products = [];
         $count = 0;
-        $query->setSearchString(true);
+        $query->setSearchString($this->string);
 
 //        var_dump($this->string);
         if (($string = $query->getSearchString())) {
@@ -61,6 +62,10 @@ class CustomSearchEngine implements ProductSearchProviderInterface{
             Hook::exec('actionSearch', [ 'searched_query' => $queryString, 'total' => $count, ]);
         }
 
+            // deprecated since 1.7.x
+            'expr' => $queryString,
+        ]);
+        
         $prods = [];
         foreach($products as $product){
             $prds["id_product"] = $product["id_product"];
@@ -71,6 +76,7 @@ class CustomSearchEngine implements ProductSearchProviderInterface{
 //
 //        var_dump($this->products);
         $sellerprods = array_intersect($this->products,$prods);
+
 
         $new_products = new ProductSearchResult();
         if (!empty($this->products)) {
