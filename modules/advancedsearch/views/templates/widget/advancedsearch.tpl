@@ -15,7 +15,7 @@
           <label class=advanceSearchLocation_title for="postcode-input" >
             Location
           </label>
-          <input id="postcode-input" name="postcode-input" placeholder="Enter your postcode" pattern="{$regExPostCode}"/>
+          <input id="postcode-input" name="postcode" placeholder="Enter your postcode" pattern="{$regExPostCode}"/>
           <!-- <input id="postcode-input" name="postcode" pattern="{$regExPostCode}" title="Please enter a valid UK postcode" placeholder="Enter your postcode"/> -->
         </div>
         <div class=advanceSearchDistance>
