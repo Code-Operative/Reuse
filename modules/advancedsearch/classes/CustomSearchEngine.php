@@ -40,32 +40,28 @@ class CustomSearchEngine implements ProductSearchProviderInterface{
         $count = 0;
         $query->setSearchString($this->string);
 
-//        var_dump($this->string);
-        if (($string = $query->getSearchString())) {
-            $queryString = Tools::replaceAccentedChars(urldecode($this->string));
+        $queryString = Tools::replaceAccentedChars(urldecode($this->string));
 
-            //esta acá el problema.
-            $result = Search::find(
-                $context->getIdLang(),
-                $queryString,
-                $query->getPage(),
-                $query->getResultsPerPage(),
-                $query->getSortOrder()->toLegacyOrderBy(),
-                $query->getSortOrder()->toLegacyOrderWay(),
-                false, // ajax, what's the link?
-                false, // $use_cookie, ignored anyway
-                null
-            );
-            $products = $result['result'];
-            $count = $result['total'];
+        $result = Search::find(
+            $context->getIdLang(),
+            $queryString,
+            $query->getPage(),
+            $query->getResultsPerPage(),
+            $query->getSortOrder()->toLegacyOrderBy(),
+            $query->getSortOrder()->toLegacyOrderWay(),
+            false, // ajax, what's the link?
+            false, // $use_cookie, ignored anyway
+            null
+        );
+        $products = $result['result'];
+        $count = $result['total'];
 
-            Hook::exec('actionSearch', [ 
-                'searched_query' => $queryString,
-                 'total' => $count, 
-                // deprecated since 1.7.x
-                'expr' => $queryString,
-            ]);
-        }
+        Hook::exec('actionSearch', [ 
+            'searched_query' => $queryString,
+            'total' => $count, 
+            // deprecated since 1.7.x
+            'expr' => $queryString,
+        ]);
         
         $prods = [];
         foreach($products as $product){
@@ -73,11 +69,7 @@ class CustomSearchEngine implements ProductSearchProviderInterface{
             $prods[] = $prds;
         }
 
-//        var_dump($products);
-//
-//        var_dump($this->products);
-        $sellerprods = array_intersect($this->products,$prods);
-
+        $sellerprods = array_intersect($prods,$this->products);
 
         $new_products = new ProductSearchResult();
         if (!empty($this->products)) {
