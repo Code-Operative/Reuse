@@ -375,14 +375,17 @@ class AdvancedSearch extends Module implements WidgetInterface
     }
 
     /**
-     * Call to google api geocoding
+     * Call to postcode.io api geocoding
      * @param $url
      * @return array
      */
-    public function getApiGeocoding($url): array
+    public function getApiGeocoding($url,$postcode): array
     {
         $arr = [];
         $curl = curl_init();
+        $postcode = curl_escape($curl, $postcode);
+        $url = $url.$postcode;
+
         curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
             CURLOPT_RETURNTRANSFER => true,
@@ -414,10 +417,9 @@ class AdvancedSearch extends Module implements WidgetInterface
      * @param $postcode
      * @return string
      */
-    public function getURLApiPostcodes($postcode): string
+    public function getURLApiPostcodes(): string
     {
-        $postcode = str_replace(' ', '%20', $postcode);
-        return 'https://api.postcodes.io/postcodes/' . $postcode;
+        return 'https://api.postcodes.io/postcodes/';
     }
 
     /**
@@ -428,9 +430,9 @@ class AdvancedSearch extends Module implements WidgetInterface
      */
     public function getLatAndLog($postcode): array
     {
-        $url = $this->getURLApiPostcodes($postcode);
+        $url = $this->getURLApiPostcodes();
 
-        return $this->getApiGeocoding($url);
+        return $this->getApiGeocoding($url,$postcode);
     }
 
     /**
