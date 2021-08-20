@@ -54,7 +54,11 @@ class CustomSearchEngine implements ProductSearchProviderInterface{
             null
         );
 
+
         $products = $result['result'];
+
+        var_dump($products);
+
         $count = $result['total'];
 
         Hook::exec('actionSearch', [
@@ -72,6 +76,7 @@ class CustomSearchEngine implements ProductSearchProviderInterface{
         }
 
         $sellerprods = array_intersect($prods,$this->products);
+
         $new_products = new ProductSearchResult();
         if (!empty($this->products)) {
             $array_list = $sellerprods;
