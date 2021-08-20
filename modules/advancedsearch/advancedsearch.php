@@ -6,7 +6,8 @@ if (!defined('_PS_VERSION_')) {
 
 include_once _PS_MODULE_DIR_ . 'advancedsearch/classes/CustomSearchEngine.php';
 
-class AdvancedSearch extends Module
+use PrestaShop\PrestaShop\Core\Module\WidgetInterface;
+class AdvancedSearch extends Module implements WidgetInterface
 {
     const AVAILABLE_HOOKS = [
         'displayTopColumn',
@@ -48,11 +49,15 @@ class AdvancedSearch extends Module
             Shop::setContext(Shop::CONTEXT_ALL);
         }
 
+        include_once _PS_MODULE_DIR_ . 'advancedsearch/sql/install.php';
+
         return (parent::install() && $this->registerHook(self::AVAILABLE_HOOKS));
     }
 
     public function uninstall(): bool
     {
+        include_once _PS_MODULE_DIR_ . 'advancedsearch/sql/uninstall.php';
+
         return (
             parent::uninstall()
             && Configuration::deleteByName('ADVANCED_SEARCH')
@@ -201,6 +206,8 @@ class AdvancedSearch extends Module
     }
 
     /**
+     * Find all seller, check is the sellers have lat and lon.
+     *
      * @return void
      * @throws PrestaShopDatabaseException
      */
@@ -405,12 +412,14 @@ class AdvancedSearch extends Module
 
     /**
      * Get lat and long in array from api geocoding
+     *
      * @param $postcode
      * @return array
      */
     public function getLatAndLog($postcode): array
     {
         $url = $this->getURLApiPostcodes($postcode);
+
         return $this->getApiGeocoding($url);
     }
 
@@ -475,4 +484,23 @@ class AdvancedSearch extends Module
 
         return new CustomSearchEngine($products, Tools::getValue('search'));
     }
+
+    public function renderWidget($hookName, array $configuration) 
+    {
+        $this->smarty->assign($this->getWidgetVariables($hookName, $configuration));
+
+        return $this->fetch('module:'.$this->name.'/views/templates/widget/advancedsearch.tpl');
+    }
+ 
+    public function getWidgetVariables($hookName , array $configuration)
+    {
+        // $myParamKey = $configuration['my_param_key'] ?? null;
+        
+        return [
+            'regExPostCode' => '[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}',
+            'search_controller_url' => $this->context->link->getPageLink('search', null, null, null, false, null, true),
+        ];
+
+    }
+
 }
