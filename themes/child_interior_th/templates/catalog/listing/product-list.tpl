@@ -46,6 +46,7 @@
       {elseif $page.page_name == 'search'}
          <span>{l s='Search' d='Shop.Theme.Catalog'}</span>
       {/if}
+      {widget name='advancedsearch'}
       <span class="heading-counter">
         {if $listing.pagination.total_items > 1}
           {l s='There are %product_count% products.' d='Shop.Theme.Catalog' sprintf=['%product_count%' => $listing.pagination.total_items]}

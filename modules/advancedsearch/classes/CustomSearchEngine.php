@@ -6,24 +6,24 @@ use PrestaShop\PrestaShop\Core\Product\Search\ProductSearchQuery;
 use PrestaShop\PrestaShop\Core\Product\Search\ProductSearchResult;
 use PrestaShop\PrestaShop\Core\Product\Search\SortOrder;
 
-class CustomSearchEngine implements ProductSearchProviderInterface{
+class CustomSearchEngine implements ProductSearchProviderInterface
+{
 
     protected $products;
     protected $string;
 
-    public function __construct($params,$string)
+    public function __construct($params, $string)
     {
-        if($params != null && $string != false){
+        if ($params != null && $string != false) {
             $this->string = $string;
             $product = [];
-            foreach($params as $param){
-                foreach($param as $prod){
+            foreach ($params as $param) {
+                foreach ($param as $prod) {
                     $product[] = $prod;
                 }
             }
             $this->products = $product;
-        }
-        else{
+        } else {
             $this->products = [];
         }
     }
@@ -34,7 +34,8 @@ class CustomSearchEngine implements ProductSearchProviderInterface{
      * @return ProductSearchResult
      * @throws PrestaShopException
      */
-    public function runQuery(ProductSearchContext $context, ProductSearchQuery $query){
+    public function runQuery(ProductSearchContext $context, ProductSearchQuery $query)
+    {
 
         $products = [];
         $count = 0;
@@ -56,9 +57,6 @@ class CustomSearchEngine implements ProductSearchProviderInterface{
 
 
         $products = $result['result'];
-
-        var_dump($products);
-
         $count = $result['total'];
 
         Hook::exec('actionSearch', [
@@ -68,14 +66,14 @@ class CustomSearchEngine implements ProductSearchProviderInterface{
             // deprecated since 1.7.x
             'expr' => $queryString,
         ]);
-        
+
         $prods = [];
-        foreach($products as $product){
+        foreach ($products as $product) {
             $prds["id_product"] = $product["id_product"];
             $prods[] = $prds;
         }
 
-        $sellerprods = array_intersect($prods,$this->products);
+        $sellerprods = array_intersect($prods, $this->products);
 
         $new_products = new ProductSearchResult();
         if (!empty($this->products)) {
