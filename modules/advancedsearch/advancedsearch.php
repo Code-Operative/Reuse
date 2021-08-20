@@ -489,8 +489,10 @@ class AdvancedSearch extends Module implements WidgetInterface
     public function getWidgetVariables($hookName , array $configuration)
     {
         // $myParamKey = $configuration['my_param_key'] ?? null;
-        
+        $postcode = Tools::getValue('postcode');
+
         return [
+            'postcode' => $postcode,
             'regExPostCode' => '[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}',
             'search_controller_url' => $this->context->link->getPageLink('search', null, null, null, false, null, true),
         ];

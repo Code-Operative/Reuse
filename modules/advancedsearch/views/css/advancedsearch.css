@@ -1,4 +1,4 @@
-/* .advanceSearchwrapper{ 
+/* .advanceSearchwrapper{
     max-width: 60%;
     margin: 0 auto;
     border: 1px solid black;
@@ -38,10 +38,6 @@
   justify-content: space-between;
   flex-wrap: wrap;
   background-color: white;
-}
-
-.advanceSearchfieldset.module {
-  border: none;
 }
 
 .advanceSearchfieldset > div {
@@ -114,6 +110,34 @@
   display:block
 }
 
+/*------------------------*/
+/* Listing Page Search  */
+/*------------------------*/
+
+/*override h2.pageheading - NOTE: These styles can be remove if the module is repositioned*/
+h2.page-heading .advanceSearchfieldset > div label {
+    font-family: 'Roboto', sans-serif;
+    text-transform: initial;
+    letter-spacing: initial;
+}
+/*END override h2.pageheading*/
+
+.advanceSearchfieldset.module {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.advanceSearchwrapperModule .advanceSearchfieldset > div {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+.advanceSearchwrapperModule .advanceSearchfieldset > button {
+  margin-left: 0;
+  margin-right: 0;
+  flex: 0 0 100%;
+}
 
 
 /*------------------------*/
@@ -121,6 +145,8 @@
 /*------------------------*/
 
 @media (max-width: 480px) {
+
+
 
 }
 
@@ -148,10 +174,14 @@
     flex: 0 0 calc(33% - 1rem);
   }
 
+
 }
 
 @media (max-width: 991px) {
 
+  .advanceSearchfieldset.module{
+    display: none;
+  }
 }
 
 @media (min-width: 992px) {
@@ -191,6 +221,14 @@
     margin-bottom: 0.5rem;
   }
 
+  /*------------------------*/
+  /* Listing Page Search  */
+  /*------------------------*/
+
+  .advanceSearchwrapperModule .advanceSearchfieldset > button {
+    flex: unset;
+  }
+
 
 }
 
@@ -210,5 +248,18 @@
   .advanceSearchOptions {
     flex: 0 0 150px;
   }
+
+  /*------------------------*/
+  /* Listing Page Search  */
+  /*------------------------*/
+
+  .advanceSearchwrapperModule .advanceSearchfieldset > div {
+      margin-right: 0.5em;
+  }
+  .advanceSearchwrapperModule .advanceSearchfieldset > button,
+  .advanceSearchwrapperModule .advanceSearchfieldset > div:not(:first-of-type) {
+      margin-left: 0.5em;
+  }
+
 
 }
