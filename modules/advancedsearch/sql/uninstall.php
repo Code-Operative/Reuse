@@ -32,7 +32,7 @@
 $sql = array();
 
 $sql[] = 'SET FOREIGN_KEY_CHECKS=0';
-$sql[] = 'DROP TABLE IF EXISTS `' . _DB_PREFIX_ . 'kb_mp_seller_shipping_coverage`';
+$sql[] = 'DROP TABLE IF EXISTS `' . _DB_PREFIX_ . 'advanced_search_seller_shipping_coverage`';
 $sql[] = 'SET FOREIGN_KEY_CHECKS=1';
 $sql[] = "DELETE FROM ". _DB_PREFIX_ ."kb_mp_custom_fields WHERE field_name LIKE 'field_lat'";
 $sql[] = "DELETE FROM ". _DB_PREFIX_ ."kb_mp_custom_fields WHERE field_name LIKE 'field_lon'";

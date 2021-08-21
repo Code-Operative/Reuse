@@ -27,12 +27,11 @@ $sql = array();
 
 $sql[] = 'SET FOREIGN_KEY_CHECKS=0';
 $sql[] = 'DROP TABLE IF EXISTS `' . _DB_PREFIX_ . 'kb_mp_seller_shipping_coverage`';
-$sql[] = 'CREATE TABLE `' . _DB_PREFIX_ . 'kb_mp_seller_shipping_coverage` (
-          `id_coverage` int(10) NOT NULL AUTO_INCREMENT,
-          `id_seller` int(10) DEFAULT NULL,
-          `id_carrier` int(10) DEFAULT NULL,
-          `cp_area` varchar(3) DEFAULT NULL,
-          `cp_district` varchar(3) DEFAULT NULL,
+$sql[] = 'CREATE TABLE `' . _DB_PREFIX_ . 'advanced_search_seller_shipping_coverage` (
+          `id_coverage` INT(10) NOT NULL AUTO_INCREMENT,
+          `id_seller` INT(10) DEFAULT NULL,
+          `id_carrier` INT(10) DEFAULT NULL,
+          `postcode_coverage` VARCHAR(6) DEFAULT NULL,
           PRIMARY KEY (`id_coverage`)
         ) ENGINE=' . _MYSQL_ENGINE_ . ' DEFAULT CHARSET=utf8';
 $sql[] = 'SET FOREIGN_KEY_CHECKS=1';
