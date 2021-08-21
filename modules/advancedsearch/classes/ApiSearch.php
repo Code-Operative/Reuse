@@ -108,7 +108,7 @@ class ApiSearch
                         . $seller["id_seller"]
                         . ', '
                         . $seller["id_employee"]
-                        . ',(SELECT id_field FROM psrn_kb_mp_custom_fields WHERE field_name="field_lat"),"'
+                        . ',(SELECT id_field FROM '. _DB_PREFIX_ .'kb_mp_custom_fields WHERE field_name="field_lat"),"'
                         . $latlon["latitude"] . '", now(), now() )';
                     $db->execute($request);
                 }
@@ -121,7 +121,7 @@ class ApiSearch
                         . $seller["id_seller"]
                         . ', '
                         . $seller["id_employee"]
-                        . ',(SELECT id_field FROM psrn_kb_mp_custom_fields WHERE field_name="field_lon"),"'
+                        . ',(SELECT id_field FROM '._DB_PREFIX_ .'kb_mp_custom_fields WHERE field_name="field_lon"),"'
                         . $latlon["longitude"] . '", now(), now() )';
                     $db->execute($request);
                 }
