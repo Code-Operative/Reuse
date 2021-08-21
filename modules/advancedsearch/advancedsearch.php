@@ -7,6 +7,7 @@ if (!defined('_PS_VERSION_')) {
 include_once _PS_MODULE_DIR_ . 'advancedsearch/classes/CustomSearchEngine.php';
 
 use PrestaShop\PrestaShop\Core\Module\WidgetInterface;
+
 class AdvancedSearch extends Module implements WidgetInterface
 {
     const AVAILABLE_HOOKS = [
@@ -483,6 +484,11 @@ class AdvancedSearch extends Module implements WidgetInterface
         return $this->getProductBySellers($sellers);
     }
 
+    public function deviliverySearch($parameters): array
+    {
+
+    }
+
     /**
      * @throws PrestaShopDatabaseException
      */
@@ -490,23 +496,24 @@ class AdvancedSearch extends Module implements WidgetInterface
     {
         $products = [];
 
-        if ( Tools::getValue('retrieve') && Tools::getValue('retrieve') == "collection") {
+        if (Tools::getValue('retrieve') && Tools::getValue('retrieve') == "collection") {
             $products = $this->collectionSearch($params);
+        } elseif (Tools::getValue('retrieve') && Tools::getValue('retrieve') == "delivery") {
+            $products = $this->deviliverySearch($params);
         }
 
         return new CustomSearchEngine($products, Tools::getValue('search'));
     }
 
-    public function renderWidget($hookName, array $configuration) 
+    public function renderWidget($hookName, array $configuration)
     {
         $this->smarty->assign($this->getWidgetVariables($hookName, $configuration));
 
-        return $this->fetch('module:'.$this->name.'/views/templates/widget/advancedsearch.tpl');
+        return $this->fetch('module:' . $this->name . '/views/templates/widget/advancedsearch.tpl');
     }
- 
-    public function getWidgetVariables($hookName , array $configuration)
+
+    public function getWidgetVariables($hookName, array $configuration)
     {
-        // $myParamKey = $configuration['my_param_key'] ?? null;
         $postcode = Tools::getValue('postcode');
 
         return [
@@ -514,7 +521,5 @@ class AdvancedSearch extends Module implements WidgetInterface
             'regExPostCode' => '[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}',
             'search_controller_url' => $this->context->link->getPageLink('search', null, null, null, false, null, true),
         ];
-
     }
-
 }
