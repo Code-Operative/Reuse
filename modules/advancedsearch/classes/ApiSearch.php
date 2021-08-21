@@ -233,13 +233,23 @@ class ApiSearch
         return $db->executeS($request);
     }
 
-    public function getSellersCovered(): array
+    /**
+     * @param $postcode
+     * @return array
+     * @throws PrestaShopDatabaseException
+     */
+    public function getSellersCovered($postcode): array
     {
+
         $db = Db::getInstance();
 
+        ///si el poscode_coverage es un subestring de $poscode
+        /// postcode_coverage  NB;NBB; BCB ACB;
+        ///
+
         $request = 'SELECT DISTINCT id_seller FROM' . _DB_PREFIX_ . 'advanced_search_seller_shipping_coverage cv
-                    WHERE COALESCE(cv.cp_district,0)=0 AND cv.cp_area="HA"
-                    OR  COALESCE(cv.cp_district,0)<>0 AND cv.cp_area="HA" AND cv.cp_district="1"';
+                    WHERE cv.postcode_coverage like "%'.$postcode.'%"
+                    ';
 
         return $db->executeS($request);
     }

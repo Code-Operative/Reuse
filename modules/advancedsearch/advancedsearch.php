@@ -70,8 +70,6 @@ class AdvancedSearch extends Module implements WidgetInterface
         );
     }
 
-
-
     /**
      * This method handles the module's configuration page
      * @return string The page's HTML content
@@ -153,7 +151,6 @@ class AdvancedSearch extends Module implements WidgetInterface
 
         return $this->display(__FILE__, 'advancedsearch.tpl');
     }
-
 
     public function hookActionFrontControllerSetMedia():void
     {
@@ -250,8 +247,15 @@ class AdvancedSearch extends Module implements WidgetInterface
         return $this->apiSearch->getProductBySellers($sellers);
     }
 
-    public function deviliverySearch($parameters): void
+    /**
+     * @throws PrestaShopDatabaseException
+     */
+    public function deliverySearch($parameters): array
     {
+        $postcode = Tools::getValue('postcode');
+        $sellers = $this->apiSearch->getSellersCovered($postcode);
+
+        return $this->apiSearch->getProductBySellers($sellers);
 
     }
 
@@ -265,7 +269,7 @@ class AdvancedSearch extends Module implements WidgetInterface
         if (Tools::getValue('retrieve') && Tools::getValue('retrieve') == "collection") {
             $products = $this->collectionSearch($params);
         } elseif (Tools::getValue('retrieve') && Tools::getValue('retrieve') == "delivery") {
-            $products = $this->deviliverySearch($params);
+            $products = $this->deliverySearch($params);
         }
 
         return new CustomSearchEngine($products, Tools::getValue('search'));
