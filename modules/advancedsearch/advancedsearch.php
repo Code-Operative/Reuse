@@ -375,16 +375,28 @@ class AdvancedSearch extends Module implements WidgetInterface
     }
 
     /**
-     * Call to google api geocoding
+     * Call to postcode.io api geocoding
      * @param $url
      * @return array
      */
-    public function getApiGeocoding($url): array
+    public function getApiGeocoding($url,$postcode): array
     {
         $arr = [];
+        $curl = curl_init();
+        $postcode = curl_escape($curl, $postcode);
+        $url = $url.$postcode;
 
-        $curl = curl_init($url);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'GET',
+            ));
+
         $curl_response = curl_exec($curl);
         $response = json_decode($curl_response);
         if ($response->status !== 200) {
@@ -405,9 +417,9 @@ class AdvancedSearch extends Module implements WidgetInterface
      * @param $postcode
      * @return string
      */
-    public function getURLApiPostcodes($postcode): string
+    public function getURLApiPostcodes(): string
     {
-        return 'https://api.postcodes.io/postcodes/' . $postcode;
+        return 'https://api.postcodes.io/postcodes/';
     }
 
     /**
@@ -418,9 +430,9 @@ class AdvancedSearch extends Module implements WidgetInterface
      */
     public function getLatAndLog($postcode): array
     {
-        $url = $this->getURLApiPostcodes($postcode);
+        $url = $this->getURLApiPostcodes();
 
-        return $this->getApiGeocoding($url);
+        return $this->getApiGeocoding($url,$postcode);
     }
 
     /**
@@ -495,8 +507,10 @@ class AdvancedSearch extends Module implements WidgetInterface
     public function getWidgetVariables($hookName , array $configuration)
     {
         // $myParamKey = $configuration['my_param_key'] ?? null;
-        
+        $postcode = Tools::getValue('postcode');
+
         return [
+            'postcode' => $postcode,
             'regExPostCode' => '[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}',
             'search_controller_url' => $this->context->link->getPageLink('search', null, null, null, false, null, true),
         ];

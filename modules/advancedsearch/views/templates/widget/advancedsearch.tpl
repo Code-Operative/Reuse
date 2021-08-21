@@ -1,5 +1,6 @@
 <!-- Block advancedsearch -->
 <div class="advanceSearchwrapperModule">
+    
   <!-- <div>{$my_var1}</div> -->
   <form name="asearchform" method="get" style="display: contents" action="{$search_controller_url}">
     <!-- <div id="advancedsearch_block_home" class="advanceSearchKeywords" data-search-controller-url="{$search_controller_url}"> -->
