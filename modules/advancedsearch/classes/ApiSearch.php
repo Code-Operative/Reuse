@@ -190,4 +190,58 @@ class ApiSearch
 
         return $product;
     }
+
+    public function getSellersCoveredDistance($latitude, $longitude): array
+    {
+        if (!$latitude || !$longitude) {
+            return [];
+        }
+
+        $db = Db::getInstance();
+
+        $request = 'SELECT a.id_seller, a.distance
+        FROM (SELECT geo.id_seller,
+                     (((acos(sin((' . $latitude . ' * pi() / 180)) * -- Latitud
+                             sin((geo.lat * pi() / 180)) + cos((' . $latitude . ' * pi() / 180)) * -- Latitud
+                                                           cos((geo.lat * pi() / 180)) *
+                                                           cos((( ' . $longitude . '- geo.lon) * -- Longitud
+                                                                pi() / 180)))) * 180 / pi()) * 60 * 1.1515
+                         ) as distance
+              FROM (SELECT id_seller, SUM(lat) AS lat, SUM(lon) AS lon
+                    FROM (SELECT id_seller,
+                                 CASE
+                                     WHEN id_field =
+                                          (SELECT id_field FROM ' . _DB_PREFIX_ . '_kb_mp_custom_fields WHERE field_name = "field_lat")
+                                         THEN sm.value
+                                     ELSE 0 END AS lat,
+                                 CASE
+                                     WHEN id_field =
+                                          (SELECT id_field FROM ' . _DB_PREFIX_ . '_kb_mp_custom_fields WHERE field_name = "field_lon")
+                                         THEN sm.value
+                                     ELSE 0 END AS lon
+                          FROM '._DB_PREFIX_.'kb_mp_custom_field_seller_mapping sm
+                          WHERE id_field = (SELECT id_field FROM ' . _DB_PREFIX_ . 'kb_mp_custom_fields WHERE field_name = "field_lat")
+                             OR id_field = (SELECT id_field FROM ' . _DB_PREFIX_ . 'kb_mp_custom_fields WHERE field_name = "field_lon")) AS sm
+                    GROUP BY sm.id_seller) AS geo
+              HAVING distance < 10
+              UNION
+              SELECT DISTINCT id_seller, 0 AS distance
+              FROM ' . _DB_PREFIX_ . 'advanced_search_seller_shipping_coverage cv
+              WHERE COALESCE(cv.cp_district, 0) = 0 AND cv.cp_area = "HA"
+                 OR COALESCE(cv.cp_district, 0) <> 0 AND cv.cp_area = "HA" AND cv.cp_district = "1") AS a
+              GROUP BY a.id_seller';
+        return $db->executeS($request);
+    }
+
+    public function getSellersCovered(): array
+    {
+        $db = Db::getInstance();
+
+        $request = 'SELECT DISTINCT id_seller FROM' . _DB_PREFIX_ . 'advanced_search_seller_shipping_coverage cv
+                    WHERE COALESCE(cv.cp_district,0)=0 AND cv.cp_area="HA"
+                    OR  COALESCE(cv.cp_district,0)<>0 AND cv.cp_area="HA" AND cv.cp_district="1"';
+
+        return $db->executeS($request);
+    }
+
 }
