@@ -39,6 +39,7 @@ $sql[] = "DELETE FROM ". _DB_PREFIX_ ."kb_mp_custom_fields WHERE field_name LIKE
 $sql[] = 'ALTER TABLE ' . _DB_PREFIX_ .'customer DROP COLUMN postcode';
 $sql[] = 'ALTER TABLE ' . _DB_PREFIX_ .'customer DROP COLUMN lat';
 $sql[] = 'ALTER TABLE ' . _DB_PREFIX_ .'customer DROP COLUMN lon';
+$sql[] = 'DROP TABLE ' . _DB_PREFIX_ . 'advanced_search_seller_status';
 
 
 foreach ($sql as $query) {

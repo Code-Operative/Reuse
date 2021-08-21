@@ -55,6 +55,16 @@ $sql[] = 'ALTER TABLE '._DB_PREFIX_.'customer ADD COLUMN postcode VARCHAR(8)';
 $sql[] = 'ALTER TABLE '._DB_PREFIX_.'customer ADD COLUMN lat VARCHAR(25)';
 $sql[] = 'ALTER TABLE '._DB_PREFIX_.'customer ADD COLUMN lon VARCHAR(25)';
 
+
+$sql[] = 'CREATE TABLE ' . _DB_PREFIX_ . 'advanced_search_seller_status
+            (
+                id MEDIUMINT NOT NULL AUTO_INCREMENT,
+                id_seller INT(10) UNSIGNED NOT NULL,
+                postcodeStatus BOOLEAN,
+                postcodeCoverageStatus BOOLEAN,
+                PRIMARY KEY (id)
+            )';
+
 foreach ($sql as $query) {
     if (Db::getInstance()->execute($query) === false) {
         return false;
