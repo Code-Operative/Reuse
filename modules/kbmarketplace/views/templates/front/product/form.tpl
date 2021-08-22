@@ -54,8 +54,8 @@
             <br>
             <input id="kb_submission_type" type="hidden" name="submitType" value="save" />
             <input type="hidden" id="kb_product_type" name="type_product" value="{$product_type|intval}" />
-            <a href="javascript:void(0)" class='btn-sm btn-info' id="submit_product_form_butn" onclick="submitProductForm('savenstay')">{l s='Save and Stay' mod='kbmarketplace'}</a>
-            <a href="javascript:void(0)" class='btn-sm btn-success' id="submit_product_form_butn" onclick="submitProductForm('save')">{l s='Save' mod='kbmarketplace'}</a>
+            <a href="javascript:void(0)" class='btn-sm btn-info' id="submit_product_form_butn" onclick="submitProductForm('savenstay');checkIntegrations();">{l s='Save and Stay' mod='kbmarketplace'}</a>
+            <a href="javascript:void(0)" class='btn-sm btn-success' id="submit_product_form_butn" onclick="submitProductForm('save');checkIntegrations();">{l s='Save' mod='kbmarketplace'}</a>
         </form>
         <script>
             var json_languages = {$json_languages nofilter};{*Variables contain JSON, can not escape this.*}

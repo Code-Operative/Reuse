@@ -99,6 +99,25 @@
         </div>
     </div>
 </div>
+{* the dynamic part of this is in a contentbox script called new-product-integrations.js *}
+<div class="kb-vspacer5"></div>
+<div class="kb-panel outer-border kb_product_section" id="new-product-integrations">
+    <div id="product-integrations-container" style="display: none;">
+        <div data-toggle="kb-product-form-integrations" class='kb-panel-header kb-panel-header-tab'>
+            <h1>Other marketplaces</h1>
+            <input type="hidden" name="integrations_tab" value="1" />
+            <div class='kb-accordian-symbol kbexpand'><i class="kb-material-icons">&#xe145;</i></div>
+            <div class='clearfix'></div>
+        </div>
+        <div id="kb-product-form-integrations" class='kb-panel-body'>
+            <div class="kb-block kb-form">
+                <input type="checkbox" id="ebay-checkbox" name="ebay">
+                <label for="ebay">Also list on eBay</label>
+            </div>
+        </div>
+    </div>
+<div>
+
 {*
 * DISCLAIMER
 *
