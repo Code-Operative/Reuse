@@ -11,7 +11,6 @@ $sql[] = 'DROP TABLE IF EXISTS `' . _DB_PREFIX_ . 'advanced_search_seller_shippi
 $sql[] = 'CREATE TABLE IF NOT EXISTS `' . _DB_PREFIX_ . 'advanced_search_seller_shipping_coverage` (
           `id_coverage` INT(10) NOT NULL AUTO_INCREMENT,
           `id_seller` INT(10) DEFAULT NULL,
-          `id_carrier` INT(10) DEFAULT NULL,
           `postcode_coverage` VARCHAR(8) DEFAULT NULL,
           PRIMARY KEY (`id_coverage`)
         ) ENGINE=' . _MYSQL_ENGINE_ . ' DEFAULT CHARSET=utf8';

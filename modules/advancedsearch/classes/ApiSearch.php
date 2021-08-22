@@ -75,16 +75,27 @@ class ApiSearch
         $db = Db::getInstance();
 
         $sellers = [];
-        $request = 'DELETE FROM ' . _DB_PREFIX_ . 'kb_mp_custom_field_seller_mapping WHERE id_field=(SELECT id_field FROM '
-            . _DB_PREFIX_ . 'kb_mp_custom_fields WHERE field_name="field_lat") AND value is null';
-        $db->execute($request);
-        $request = 'DELETE FROM ' . _DB_PREFIX_ . 'kb_mp_custom_field_seller_mapping WHERE id_field=(SELECT id_field FROM '
-            . _DB_PREFIX_ . 'kb_mp_custom_fields WHERE field_name="field_lon") AND value is null';
-        $db->execute($request);
-        $request = 'SELECT id_customer, id_employee, id_seller, id_field, value FROM '
+
+        $request = "DELETE FROM "
             . _DB_PREFIX_
-            . 'kb_mp_custom_field_seller_mapping WHERE id_field=(SELECT id_field FROM '
-            . _DB_PREFIX_ . 'kb_mp_custom_fields WHERE field_name="collection_postcode") AND value is not null';
+            . "kb_mp_custom_field_seller_mapping WHERE id_field=(SELECT id_field FROM "
+            . _DB_PREFIX_
+            . "kb_mp_custom_fields WHERE field_name='field_lat') AND value is null";
+        $db->execute($request);
+
+        $request = "DELETE FROM "
+            . _DB_PREFIX_
+            . "kb_mp_custom_field_seller_mapping WHERE id_field=(SELECT id_field FROM "
+            . _DB_PREFIX_
+            . "kb_mp_custom_fields WHERE field_name='field_lon') AND value is null";
+        $db->execute($request);
+
+        $request = "SELECT id_customer, id_employee, id_seller, id_field, value FROM "
+            . _DB_PREFIX_
+            . "kb_mp_custom_field_seller_mapping WHERE id_field=(SELECT id_field FROM "
+            . _DB_PREFIX_
+            . "kb_mp_custom_fields WHERE field_name='collection_postcode') AND value is not null";
+
         $sellers = $db->executeS($request);
         foreach ($sellers as $seller) {
             $request = 'SELECT count(*) as num FROM '
