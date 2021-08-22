@@ -44,7 +44,6 @@ class InstallTools
         }
 
         return true;
-
     }
 
     public function insertSellerCoverage($idSeller, $coverage):bool

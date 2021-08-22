@@ -243,13 +243,11 @@ class ApiSearch
 
         $db = Db::getInstance();
 
-        ///si el poscode_coverage es un subestring de $poscode
-        /// postcode_coverage  NB;NBB; BCB ACB;
-        ///
-
-        $request = 'SELECT DISTINCT id_seller FROM' . _DB_PREFIX_ . 'advanced_search_seller_shipping_coverage cv
-                    WHERE cv.postcode_coverage like "%'.$postcode.'%"
-                    ';
+        $request = 'SELECT DISTINCT id_seller FROM'
+            . _DB_PREFIX_
+            . "advanced_search_seller_shipping_coverage WHERE "
+            . $postcode
+            ." like concat('%', postcode_coverage , '%')" ;
 
         return $db->executeS($request);
     }
