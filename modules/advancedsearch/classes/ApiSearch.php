@@ -240,7 +240,6 @@ class ApiSearch
      */
     public function getSellersCovered($postcode): array
     {
-
         $db = Db::getInstance();
 
         $request = "SELECT DISTINCT id_seller FROM "
@@ -255,8 +254,6 @@ class ApiSearch
     public function cleanPostcode($postcode): string
     {
         $postcode = strip_tags($postcode);
-        $postcode =strtoupper(str_replace(" ", "", $postcode));
-
-        return $postcode;
+        return strtoupper(str_replace(" ", "", $postcode));
     }
 }
