@@ -16,6 +16,7 @@ class AdvancedSearch extends Module implements WidgetInterface
         'actionCustomerAccountUpdate',
         'actionFrontControllerSetMedia',
         'productSearchProvider',
+        'displayProductAdditionalInfo',
     ];
 
     private $apiSearch;
@@ -291,5 +292,16 @@ class AdvancedSearch extends Module implements WidgetInterface
             'regExPostCode' => '[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}',
             'search_controller_url' => $this->context->link->getPageLink('search', null, null, null, false, null, true),
         ];
+    }
+
+    public function hookDisplayProductAdditionalInfo($params){
+
+        if (Tools::getValue('retrieve') && Tools::getValue('retrieve') == "collection") {
+            $this->context->smarty->assign('retrieve' ,"collection only");
+        } elseif (Tools::getValue('retrieve') && Tools::getValue('retrieve') == "delivery") {
+            $this->context->smarty->assign('retrieve' ,"delivery");
+        }
+        
+        return $this->display(__FILE__, 'product-retrieve.tpl');
     }
 }
