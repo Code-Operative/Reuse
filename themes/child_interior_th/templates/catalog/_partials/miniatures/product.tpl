@@ -95,10 +95,7 @@
                  {hook h='displayProductPriceBlock' product=$product type="before_price"}
                {*End label*}
               <span itemprop="price" content="{$product.price_amount}" class="price">{$product.price}</span>
-                <div class="advancesearch-result-wrapper">
-                  <div class="product-list-delivery">delivery</div>
-                  <div class="product-list-collection">collection only</div>
-                </div>
+              {hook h='displayProductAdditionalInfo' product=$product}
               {if $product.has_discount}
                 {hook h='displayProductPriceBlock' product=$product type="old_price"}
 
