@@ -6,24 +6,22 @@ use PrestaShop\PrestaShop\Core\Product\Search\ProductSearchQuery;
 use PrestaShop\PrestaShop\Core\Product\Search\ProductSearchResult;
 use PrestaShop\PrestaShop\Core\Product\Search\SortOrder;
 
-class CustomSearchEngine implements ProductSearchProviderInterface{
+class CustomSearchEngine implements ProductSearchProviderInterface
+{
 
     protected $products;
     protected $string;
 
-    public function __construct($params,$string)
+    public function __construct($params, $string)
     {
-        if($params != null && $string != false){
+        if ($params != null && $string != false) {
             $this->string = $string;
             $product = [];
-            foreach($params as $param){
-                foreach($param as $prod){
-                    $product[] = $prod;
-                }
+            foreach ($params as $param) {
+                $product[] = $param;
             }
             $this->products = $product;
-        }
-        else{
+        } else {
             $this->products = [];
         }
     }
@@ -34,7 +32,8 @@ class CustomSearchEngine implements ProductSearchProviderInterface{
      * @return ProductSearchResult
      * @throws PrestaShopException
      */
-    public function runQuery(ProductSearchContext $context, ProductSearchQuery $query){
+    public function runQuery(ProductSearchContext $context, ProductSearchQuery $query)
+    {
 
         $products = [];
         $count = 0;
@@ -53,6 +52,7 @@ class CustomSearchEngine implements ProductSearchProviderInterface{
             false, // $use_cookie, ignored anyway
             null
         );
+
         $products = $result['result'];
         $count = $result['total'];
 
@@ -64,7 +64,7 @@ class CustomSearchEngine implements ProductSearchProviderInterface{
         ]);
         
         $prods = [];
-        foreach($products as $product){
+        foreach ($products as $product) {
             $prds["id_product"] = $product["id_product"];
             $prods[] = $prds;
         }
