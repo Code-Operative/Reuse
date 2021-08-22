@@ -17,12 +17,12 @@ class ApiSearch
      * @param $postcode
      * @return array
      */
-    public function getApiGeocoding($url,$postcode): array
+    public function getApiGeocoding($url, $postcode): array
     {
         $arr = [];
         $curl = curl_init();
         $postcode = curl_escape($curl, $postcode);
-        $url = $url.$postcode;
+        $url = $url . $postcode;
 
         curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
@@ -60,7 +60,7 @@ class ApiSearch
     {
         $url = $this->getURLApiPostcodes();
 
-        return $this->getApiGeocoding($url,$postcode);
+        return $this->getApiGeocoding($url, $postcode);
     }
 
 
@@ -108,7 +108,7 @@ class ApiSearch
                         . $seller["id_seller"]
                         . ', '
                         . $seller["id_employee"]
-                        . ',(SELECT id_field FROM '. _DB_PREFIX_ .'kb_mp_custom_fields WHERE field_name="field_lat"),"'
+                        . ',(SELECT id_field FROM ' . _DB_PREFIX_ . 'kb_mp_custom_fields WHERE field_name="field_lat"),"'
                         . $latlon["latitude"] . '", now(), now() )';
                     $db->execute($request);
                 }
@@ -121,7 +121,7 @@ class ApiSearch
                         . $seller["id_seller"]
                         . ', '
                         . $seller["id_employee"]
-                        . ',(SELECT id_field FROM '._DB_PREFIX_ .'kb_mp_custom_fields WHERE field_name="field_lon"),"'
+                        . ',(SELECT id_field FROM ' . _DB_PREFIX_ . 'kb_mp_custom_fields WHERE field_name="field_lon"),"'
                         . $latlon["longitude"] . '", now(), now() )';
                     $db->execute($request);
                 }
@@ -219,7 +219,7 @@ class ApiSearch
                                           (SELECT id_field FROM ' . _DB_PREFIX_ . '_kb_mp_custom_fields WHERE field_name = "field_lon")
                                          THEN sm.value
                                      ELSE 0 END AS lon
-                          FROM '._DB_PREFIX_.'kb_mp_custom_field_seller_mapping sm
+                          FROM ' . _DB_PREFIX_ . 'kb_mp_custom_field_seller_mapping sm
                           WHERE id_field = (SELECT id_field FROM ' . _DB_PREFIX_ . 'kb_mp_custom_fields WHERE field_name = "field_lat")
                              OR id_field = (SELECT id_field FROM ' . _DB_PREFIX_ . 'kb_mp_custom_fields WHERE field_name = "field_lon")) AS sm
                     GROUP BY sm.id_seller) AS geo
@@ -243,15 +243,20 @@ class ApiSearch
 
         $db = Db::getInstance();
 
-        $request = 'SELECT DISTINCT id_seller FROM'
+        $request = "SELECT DISTINCT id_seller FROM "
             . _DB_PREFIX_
-            . "advanced_search_seller_shipping_coverage WHERE "
-            . $postcode
-            ." like concat('%', postcode_coverage , '%')" ;
+            . "advanced_search_seller_shipping_coverage WHERE '"
+            . $this->cleanPostcode($postcode)
+            . "' like concat('%', postcode_coverage , '%')";
 
         return $db->executeS($request);
     }
 
+    public function cleanPostcode($postcode): string
+    {
+        $postcode = strip_tags($postcode);
+        $postcode =strtoupper(str_replace(" ", "", $postcode));
 
-
+        return $postcode;
+    }
 }

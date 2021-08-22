@@ -256,7 +256,6 @@ class AdvancedSearch extends Module implements WidgetInterface
         $sellers = $this->apiSearch->getSellersCovered($postcode);
 
         return $this->apiSearch->getProductBySellers($sellers);
-
     }
 
     /**
