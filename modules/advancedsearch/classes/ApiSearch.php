@@ -2,7 +2,10 @@
 
 class ApiSearch
 {
-    /**
+
+    private $sellersDistance;
+
+     /**
      * Build url for google geocoding
      * @return string
      */
@@ -184,10 +187,15 @@ class ApiSearch
     public function getProductBySellers($sellers): array
     {
         $product = [];
-        foreach ($sellers as $seller) {
-            $product[] = $this->getProductBySeller($seller['id_seller']);
+        foreach ($sellers as $index=>$seller) {
+            $prods = $this->getProductBySeller($seller['id_seller']);
+            $prod = [];
+            foreach ($prods as $idx=>$prod) {
+                $prod['id_seller'] = $seller['id_seller'];
+                $prod['distance'] = $seller['distance'];
+                $product[] = $prod;
+            }
         }
-
         return $product;
     }
 
@@ -252,6 +260,14 @@ class ApiSearch
         return $db->executeS($request);
     }
 
+    public function setSellersProductsByDistance($sellers): void
+    {
+        $this->sellersDistance[] = $sellers;
+    }
 
+    public function getSellersProductsByDistance(): array
+    {
+        return $this->sellersDistance;
+    }
 
 }

@@ -273,6 +273,7 @@ class AdvancedSearch extends Module implements WidgetInterface
             $products = $this->deliverySearch($params);
         }
 
+        $this->apiSearch->setSellersProductsByDistance($products);
         return new CustomSearchEngine($products, Tools::getValue('search'));
     }
 
@@ -297,7 +298,17 @@ class AdvancedSearch extends Module implements WidgetInterface
     public function hookDisplayProductAdditionalInfo($params){
 
         if (Tools::getValue('retrieve') && Tools::getValue('retrieve') == "collection") {
+            $products = $this->apiSearch->getSellersProductsByDistance();
+            $distance = "";
+            foreach ($products as $product){
+                foreach ($product as $prod){
+                    if($params['product']['id_product'] == $prod['id_product']){
+                        $distance = number_format((float)$prod['distance'], 2, '.', '');
+                    }
+                }
+            }
             $this->context->smarty->assign('retrieve' ,"collection only");
+            $this->context->smarty->assign('distance' ,$distance);
         } elseif (Tools::getValue('retrieve') && Tools::getValue('retrieve') == "delivery") {
             $this->context->smarty->assign('retrieve' ,"delivery");
         }

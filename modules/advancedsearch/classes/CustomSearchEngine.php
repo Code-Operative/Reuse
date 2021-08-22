@@ -18,9 +18,7 @@ class CustomSearchEngine implements ProductSearchProviderInterface
             $this->string = $string;
             $product = [];
             foreach ($params as $param) {
-                foreach ($param as $prod) {
-                    $product[] = $prod;
-                }
+                $product[] = $param;
             }
             $this->products = $product;
         } else {
