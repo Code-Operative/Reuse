@@ -130,7 +130,7 @@ class InstallTools
     {
         $query = "SELECT id_field FROM "
             . _DB_PREFIX_
-            . "kb_mp_custom_fields WHERE field_name like 'delivery_postcode_prefix'";
+            . "kb_mp_custom_fields WHERE field_name= 'delivery_postcode_prefix'";
 
         return $this->db->getValue($query);
     }
