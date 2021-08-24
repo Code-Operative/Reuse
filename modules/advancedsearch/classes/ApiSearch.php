@@ -76,6 +76,20 @@ class ApiSearch
         return $this->getApiGeocoding($url, $postcode);
     }
 
+
+    /**
+     * Update sellers postcode status
+     * @return array
+     */
+    public function updateSellersPostcodesStatus(): void
+    {
+        $db = Db::getInstance();
+
+        $request = "UPDATE " . _DB_PREFIX_ . "advanced_search_seller_status SET postcode_status = false, postcode_coverage_status= false";
+
+        $db->execute($request);
+    }
+
     /**
      * Get sellers postcode status
      * @return array
@@ -291,6 +305,7 @@ class ApiSearch
         $status = $this->getSellersPostcodesStatus();
         $this->updateSellersPostcodes($status);
         $this->updateSellersDeliveryPostcodes($status);
+        $this->updateSellersPostcodesStatus();
     }
 
     /**
