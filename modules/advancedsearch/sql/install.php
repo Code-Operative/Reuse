@@ -57,24 +57,40 @@ $sql[] = "CREATE TRIGGER tg_geoloc AFTER UPDATE ON "
             FOR EACH ROW
             BEGIN
                 DECLARE cant INT(1);
-                SET cant=(SELECT COUNT(*) FROM advanced_search_seller_status WHERE id_seller=OLD.id_seller);
-                IF OLD.id_field=(SELECT id_field FROM psrn_kb_mp_custom_fields WHERE field_name='collection_postcode')
+                SET cant=(SELECT COUNT(*) FROM "
+    . _DB_PREFIX_
+    ."advanced_search_seller_status WHERE id_seller=OLD.id_seller);
+                IF OLD.id_field=(SELECT id_field FROM "
+    . _DB_PREFIX_
+    ."kb_mp_custom_fields WHERE field_name='collection_postcode')
                    AND OLD.value <> NEW.value AND cant=0 THEN
-                      INSERT INTO advanced_search_seller_status (id_seller, postcode_status) VALUES(OLD.id_seller, true);
+                      INSERT INTO "
+    . _DB_PREFIX_
+    . "advanced_search_seller_status (id_seller, postcode_status) VALUES(OLD.id_seller, true);
                 END IF;
-                IF OLD.id_field=(SELECT id_field FROM psrn_kb_mp_custom_fields WHERE field_name='collection_postcode')
+                IF OLD.id_field=(SELECT id_field FROM "
+    . _DB_PREFIX_
+    ."kb_mp_custom_fields WHERE field_name='collection_postcode')
                    AND OLD.value <> NEW.value AND cant>0 THEN
-                      UPDATE advanced_search_seller_status SET postcode_status=true WHERE id_seller=OLD.id_seller;
+                      UPDATE "
+    . _DB_PREFIX_
+    ."advanced_search_seller_status SET postcode_status=true WHERE id_seller=OLD.id_seller;
                 END IF;
-                    IF OLD.id_field=(SELECT id_field FROM psrn_kb_mp_custom_fields WHERE field_name='delivery_postcode_prefix')
+                   IF OLD.id_field=(SELECT id_field FROM "
+    . _DB_PREFIX_
+    ."kb_mp_custom_fields WHERE field_name='delivery_postcode_prefix')
                    AND OLD.value <> NEW.value AND cant=0 THEN
-                                INSERT INTO advanced_search_seller_status (id_seller, postcode_coverage_status) VALUES(OLD.id_seller, true);
+                                INSERT INTO "
+    . _DB_PREFIX_
+    ."advanced_search_seller_status (id_seller, postcode_coverage_status) VALUES(OLD.id_seller, true);
                 END IF;
                 IF OLD.id_field=(SELECT id_field FROM "
     ._DB_PREFIX_
     ."kb_mp_custom_fields WHERE field_name='delivery_postcode_prefix')
                    AND OLD.value <> NEW.value AND cant>0 THEN
-                                UPDATE advanced_search_seller_status SET postcode_coverage_status=true WHERE id_seller=OLD.id_seller;
+                                UPDATE "
+    . _DB_PREFIX_
+    ."advanced_search_seller_status SET postcode_coverage_status=true WHERE id_seller=OLD.id_seller;
                 END IF;
             END";
 
