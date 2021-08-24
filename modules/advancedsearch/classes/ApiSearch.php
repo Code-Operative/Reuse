@@ -1,9 +1,19 @@
 <?php
 
+include_once _PS_MODULE_DIR_ . 'advancedsearch/sql/InstallTools.php';
+
 class ApiSearch
 {
 
+    private $installTools;
     private $sellersDistance;
+
+
+    public function __construct()
+    {
+        $db = DB::getInstance();
+        $this->installTools = new InstallTools($db);
+    }
 
      /**
      * Build url for google geocoding
@@ -66,18 +76,97 @@ class ApiSearch
         return $this->getApiGeocoding($url, $postcode);
     }
 
-
     /**
-     * Find all seller, check is the sellers have lat and lon.
-     *
-     * @return void
-     * @throws PrestaShopDatabaseException
+     * Get sellers postcode status
+     * @return array
      */
-    public function checkSellersLatLon(): void
+    public function getSellersPostcodesStatus(): array
     {
         $db = Db::getInstance();
 
-        $sellers = [];
+        $request = "SELECT id, id_seller, postcode_status, postcode_coverage_status FROM "
+            . _DB_PREFIX_
+            . "advanced_search_seller_status";
+
+        return $db->executeS($request);
+    }
+
+    /**
+     * Update sellers postcodes
+     * @param $status
+     * @return void
+     */
+    public function updateSellersPostcodes($status):void 
+    {
+        foreach ($status as $seller){
+            if($seller['postcode_status']){
+                $this->cleanSellerLatLon($seller['id_seller']);
+                $this->setSellerLatLon($seller['id_seller']);
+            }
+        }
+    }
+
+    /**
+     * Delete seller latitud & longitude
+     * @param $seller
+     * @return void
+     */
+    public function cleanSellerLatLon($seller): void 
+    {
+        $db = Db::getInstance();
+
+        $request = "DELETE FROM "
+            . _DB_PREFIX_
+            . "kb_mp_custom_field_seller_mapping WHERE id_field=(SELECT id_field FROM "
+            . _DB_PREFIX_
+            . "kb_mp_custom_fields WHERE field_name='field_lat') AND id_seller =" . $seller;
+        $db->execute($request);
+
+        $request = "DELETE FROM "
+            . _DB_PREFIX_
+            . "kb_mp_custom_field_seller_mapping WHERE id_field=(SELECT id_field FROM "
+            . _DB_PREFIX_
+            . "kb_mp_custom_fields WHERE field_name='field_lon') AND id_seller =" . $seller;
+        $db->execute($request);
+    }
+
+    /**
+     * Update seller delivery postcodes
+     * @param $status
+     * @return void
+     */
+    public function updateSellersDeliveryPostcodes($status):void 
+    {
+        foreach ($status as $seller){
+            if($seller['postcode_coverage_status']){
+                $this->cleanSellerCoverage($seller['id_seller']);
+                $this->setSellerCoverage($seller['id_seller']);
+            }
+        }
+    }
+
+    /**
+     * Delete all seller postcode coverage 
+     * @param $seller
+     * @return void
+     */
+    public function cleanSellerCoverage($seller): void 
+    {
+        $db = Db::getInstance();
+
+        $request = "DELETE FROM "
+            . _DB_PREFIX_
+            . "advanced_search_seller_shipping_coverage WHERE id_seller =" . $seller;
+        $db->execute($request);
+    }
+
+    /**
+     * Delete rows with null latitude & longitude
+     * @return void
+     */
+    public function cleanNullLatLon(): void 
+    {
+        $db = Db::getInstance();
 
         $request = "DELETE FROM "
             . _DB_PREFIX_
@@ -92,51 +181,65 @@ class ApiSearch
             . _DB_PREFIX_
             . "kb_mp_custom_fields WHERE field_name='field_lon') AND value is null";
         $db->execute($request);
+    }
 
-        $request = "SELECT id_customer, id_employee, id_seller, id_field, value FROM "
+    /**
+     * Get seller postcode
+     * @param $seller
+     * @return array
+     */
+    public function getSellerCollectionPostcode($seller): array
+    {
+        $db = Db::getInstance();
+
+        $request = "SELECT id_customer, id_employee, value FROM "
             . _DB_PREFIX_
             . "kb_mp_custom_field_seller_mapping WHERE id_field=(SELECT id_field FROM "
             . _DB_PREFIX_
-            . "kb_mp_custom_fields WHERE field_name='collection_postcode') AND value is not null";
+            . "kb_mp_custom_fields WHERE field_name='collection_postcode') AND id_seller =" . $seller;
 
-        $sellers = $db->executeS($request);
-        foreach ($sellers as $seller) {
-            $request = 'SELECT count(*) as num FROM '
-                . _DB_PREFIX_
-                . 'kb_mp_custom_field_seller_mapping WHERE id_seller = '
-                . $seller["id_seller"]
-                . ' AND ((id_field=(SELECT id_field FROM '
-                . _DB_PREFIX_
-                . 'kb_mp_custom_fields WHERE field_name="field_lat") AND value is not null) OR (id_field=(SELECT id_field FROM '
-                . _DB_PREFIX_ . 'kb_mp_custom_fields WHERE field_name="field_lon") AND value is not null))';
-            $sellerc = $db->executeS($request);
-            $latlon = [];
-            if ($sellerc[0]["num"] == 0) {
-                $latlon = $this->getLatAndLog($seller["value"]);
+        return $db->executeS($request);
+    }
+
+    /**
+     * Update seller lat & lon
+     *
+     * @return void
+     * @throws PrestaShopDatabaseException
+     */
+    public function setSellerLatLon($seller): void
+    {
+        $db = Db::getInstance();
+
+        $sellerpostcode = $this->getSellerCollectionPostcode($seller);
+
+        if(!empty($sellerpostcode)){
+            foreach ($sellerpostcode as $postcode){
+                $latlon = $this->getLatAndLog($postcode['value']);
                 if (isset($latlon["latitude"])) {
                     $request = 'INSERT INTO '
-                        . _DB_PREFIX_
-                        . 'kb_mp_custom_field_seller_mapping VALUES (default,'
-                        . $seller["id_customer"]
-                        . ','
-                        . $seller["id_seller"]
-                        . ', '
-                        . $seller["id_employee"]
-                        . ',(SELECT id_field FROM ' . _DB_PREFIX_ . 'kb_mp_custom_fields WHERE field_name="field_lat"),"'
-                        . $latlon["latitude"] . '", now(), now() )';
+                    . _DB_PREFIX_
+                    . 'kb_mp_custom_field_seller_mapping VALUES (default,'
+                    . $postcode["id_customer"]
+                    . ','
+                    . $seller
+                    . ', '
+                    . $postcode["id_employee"]
+                    . ',(SELECT id_field FROM ' . _DB_PREFIX_ . 'kb_mp_custom_fields WHERE field_name="field_lat"),"'
+                    . $latlon["latitude"] . '", now(), now() )';
                     $db->execute($request);
                 }
                 if (isset($latlon["longitude"])) {
                     $request = 'INSERT INTO '
-                        . _DB_PREFIX_
-                        . 'kb_mp_custom_field_seller_mapping VALUES (default,'
-                        . $seller["id_customer"]
-                        . ','
-                        . $seller["id_seller"]
-                        . ', '
-                        . $seller["id_employee"]
-                        . ',(SELECT id_field FROM ' . _DB_PREFIX_ . 'kb_mp_custom_fields WHERE field_name="field_lon"),"'
-                        . $latlon["longitude"] . '", now(), now() )';
+                    . _DB_PREFIX_
+                    . 'kb_mp_custom_field_seller_mapping VALUES (default,'
+                    . $postcode["id_customer"]
+                    . ','
+                    . $seller
+                    . ', '
+                    . $postcode["id_employee"]
+                    . ',(SELECT id_field FROM ' . _DB_PREFIX_ . 'kb_mp_custom_fields WHERE field_name="field_lon"),"'
+                    . $latlon["longitude"] . '", now(), now() )';
                     $db->execute($request);
                 }
             }
@@ -144,20 +247,64 @@ class ApiSearch
     }
 
     /**
+     * Get seller delivery postcodes
+     * @param $seller
+     * @return array
+     */
+    public function getSellerDeliveryPostCodes($seller): array 
+    {
+        $db = Db::getInstance();
+
+        $idField = $this->installTools->getIdDeliveryPostcodePrefix();
+
+        $query = "SELECT value FROM ". _DB_PREFIX_ ."kb_mp_custom_field_seller_mapping WHERE id_field = ". $idField . " AND id_seller = " . $seller;
+
+        return $db->executeS($query);
+    }
+
+    /**
+     * Set Seller coverage
+     * @param $seller
+     * @return void
+     */
+    public function setSellerCoverage($seller): void
+    {
+        $postcodes = $this->getSellerDeliveryPostCodes($seller);
+        foreach ($postcodes as $postcodelist){
+            $postcodeCoverages = $this->installTools->cleanDeliveryPostcodePrefix($postcodelist['value']);
+            foreach ($postcodeCoverages as $coverage)
+            {
+                $this->installTools->insertSellerCoverage($seller, $coverage);
+            }
+        }
+    }
+
+    /**
+     * Check all sellers postcodes and delivery postcodes
+     * @param $url
+     * @param $postcode
+     * @return array
+     */
+    public function checkSellersPostcodes(): void
+    {
+        $this->cleanNullLatLon();
+        $status = $this->getSellersPostcodesStatus();
+        $this->updateSellersPostcodes($status);
+        $this->updateSellersDeliveryPostcodes($status);
+    }
+
+    /**
      * @param $latitude
      * @param $longitude
      * @param $distance
-     * @return array devuelve un arreglo con el idSeler y las distancias
+     * @return array return array with idSeler and distances
      * @throws PrestaShopDatabaseException
      */
-    public function getSellerByDistance($latitude, $longitude, $distance): array
+    public function getSellersByDistance($latitude, $longitude, $distance): array
     {
         if (!$latitude || !$longitude) {
             return [];
         }
-
-        //temporary patch to set lat&lon sellers's
-        $this->checkSellersLatLon();
 
         $db = Db::getInstance();
 

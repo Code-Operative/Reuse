@@ -244,7 +244,7 @@ class AdvancedSearch extends Module implements WidgetInterface
             }
         }
 
-        $sellers = $this->apiSearch->getSellerByDistance($latitude, $longitude, $distanceform);
+        $sellers = $this->apiSearch->getSellersByDistance($latitude, $longitude, $distanceform);
         return $this->apiSearch->getProductBySellers($sellers);
     }
 
@@ -265,6 +265,8 @@ class AdvancedSearch extends Module implements WidgetInterface
     public function hookProductSearchProvider(array $params): CustomSearchEngine
     {
         $products = [];
+
+        $this->apiSearch->checkSellersPostcodes();
 
         if (Tools::getValue('retrieve') && Tools::getValue('retrieve') == "collection") {
             $products = $this->collectionSearch($params);
