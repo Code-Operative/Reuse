@@ -19,6 +19,16 @@ $sql[] = 'SET FOREIGN_KEY_CHECKS=0';
 $sql[] = "DROP TRIGGER IF EXISTS tg_geoloc";
 $sql[] = "DROP TABLE IF EXISTS " . _DB_PREFIX_ . "advanced_search_seller_shipping_coverage";
 $sql[] = 'SET FOREIGN_KEY_CHECKS=1';
+$sql[] = "DELETE FROM "
+. _DB_PREFIX_
+. "kb_mp_custom_field_seller_mapping WHERE id_field = (SELECT id_field FROM "
+. _DB_PREFIX_
+. "kb_mp_custom_fields WHERE field_name='field_lat')";
+$sql[] = "DELETE FROM "
+. _DB_PREFIX_
+. "kb_mp_custom_field_seller_mapping WHERE id_field = (SELECT id_field FROM "
+. _DB_PREFIX_
+. "kb_mp_custom_fields WHERE field_name='field_lon')";
 $sql[] = "DELETE FROM " . _DB_PREFIX_ . "kb_mp_custom_fields WHERE field_name LIKE 'field_lat'";
 $sql[] = "DELETE FROM " . _DB_PREFIX_ . "kb_mp_custom_fields WHERE field_name LIKE 'field_lon'";
 $sql[] = 'ALTER TABLE ' . _DB_PREFIX_ . 'customer DROP COLUMN postcode';
