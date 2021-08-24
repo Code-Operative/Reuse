@@ -51,6 +51,11 @@ $sql[] = 'CREATE TABLE IF NOT EXISTS '
                 postcode_coverage_status BOOLEAN,
                 PRIMARY KEY (id)
             )';
+$sql[] = "INSERT INTO " 
+    . _DB_PREFIX_
+    . "advanced_search_seller_status SELECT 'default', id_seller, true, true FROM "
+    . _DB_PREFIX_
+    . "kb_mp_seller";
 $sql[] = "CREATE TRIGGER tg_geoloc AFTER UPDATE ON "
     ._DB_PREFIX_
     ."kb_mp_custom_field_seller_mapping
