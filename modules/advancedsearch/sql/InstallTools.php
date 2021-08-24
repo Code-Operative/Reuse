@@ -93,7 +93,7 @@ class InstallTools
             . _DB_PREFIX_
             ."kb_mp_custom_fields_lang(id_field, id_lang, id_shop, label, description, placeholder) values ('"
             . $idLat
-            ."', 2, 1, 'lat', 'Lat from api.', 'Latitude')";
+            ."', 2, 1, 'field_lat', 'Lat from api.', 'Latitude')";
 
         return $this->db->execute($query);
     }
@@ -105,7 +105,7 @@ class InstallTools
             . _DB_PREFIX_
             ."kb_mp_custom_fields_lang(id_field, id_lang, id_shop, label, description, placeholder) values ('"
             . $idLat
-            ."', 2, 1, 'lon', 'Lon from api.', 'Longitude')";
+            ."', 2, 1, 'field_lon', 'Lon from api.', 'Longitude')";
 
         return $this->db->execute($query);
     }
