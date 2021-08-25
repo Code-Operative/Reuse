@@ -85,7 +85,18 @@ The diagram can also be found in the [miroboard](https://miro.com/app/board/o9J_
 
 Lat and Lon in the diagram stands for longitude and latitude respectively, they are converted from postcode using the [open source postcodes.io API service](https://postcodes.io/). 
 
-This is a module developped by [Code-Operative](https://code-operative.co.uk/) to work with [prestashop marketplace](###marketplace-module). The zip file can be downloaded from [this github repository]() and can be drag and dropped into the upload module page. 
+The collection search longitude and latitude to calculate the distance and return the desired results. The delivery search compares the postcode prefix e.g. NE1 7JB would have the prefix of NE1 and return sellers that matches the postcode prefix. 
+
+The module depends on the knowband marketplace module’s custom fields for both postcode (collection) and postcode prefix (for delivery). A new table is created to track the changes of postcode, this is done by using a trigger in the database. When the seller updates either postcode in the kbmarketplace custom fields mapping table then the trigger will raise a flag in the tracking table. When a search is made, the tracking table is checked for any updates to be made to the seller’s longitude and latitude and make them if necessary. For the buyers, when the postcode is updated a hook is triggered to update the latitude and longitude. 
+
+The search for keywords is done using [prestashop default search](https://devdocs.prestashop.com/1.7/development/components/faceted-search/). 
+
+This is a module developped by [Code-Operative](https://code-operative.co.uk/) to work with [prestashop marketplace](###marketplace-module). The zip file can be downloaded from [this github repository]() and can be drag and dropped into the upload module page. After installation, make sure that the following hooks are implemted: 
+- actionCustomerAccountAdd
+- actionCustomerAccountUpdate
+- actionFrontControllerSetMedia
+- displayTopColumn
+- productSearchProvider
 
 
 # Code Customisations 
