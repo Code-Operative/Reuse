@@ -186,16 +186,19 @@ class AdvancedSearch extends Module implements WidgetInterface
     {
         $postcode = $parameters["customer"]->{'postcode'};
 
-        $url = $this->apiSearch->getURLApiPostcodes($postcode);
+        $url = $this->apiSearch->getURLApiPostcodes();
 
-        $respApi = $this->apiSearch->getApiGeocoding($url);
+        $respApi = $this->apiSearch->getApiGeocoding($url, $postcode);
 
         $db = Db::getInstance();
         $idcustomer = $parameters['customer']->{'id'};
         $request = "UPDATE `psrn_customer` SET lat = "
-            . $respApi["latitude"] . ", lon = " . $respApi["longitude"] . " WHERE `id_customer` =  $idcustomer ";
+            . $respApi["latitude"]
+            . ", lon = "
+            . $respApi["longitude"]
+            . " WHERE `id_customer` =  $idcustomer ";
 
-        $result = $db->execute($request);
+        $db->execute($request);
     }
 
 
@@ -210,8 +213,11 @@ class AdvancedSearch extends Module implements WidgetInterface
             $idCustomer = $this->context->customer->id;
             $db = Db::getInstance();
 
-            $request = 'SELECT postcode, lat as latitude, lon as longitude FROM ' . _DB_PREFIX_ . 'customer 
-                        WHERE id_customer = ' . $idCustomer;
+            $request = 'SELECT postcode, lat as latitude, lon as longitude FROM '
+                . _DB_PREFIX_
+                . 'customer 
+                        WHERE id_customer = '
+                . $idCustomer;
 
             $result = $db->executeS($request);
         } else {

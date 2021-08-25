@@ -79,13 +79,15 @@ class ApiSearch
 
     /**
      * Update sellers postcode status
-     * @return array
+     * @return void
      */
     public function updateSellersPostcodesStatus(): void
     {
         $db = Db::getInstance();
 
-        $request = "UPDATE " . _DB_PREFIX_ . "advanced_search_seller_status SET postcode_status = false, postcode_coverage_status= false";
+        $request = "UPDATE "
+            . _DB_PREFIX_
+            . "advanced_search_seller_status SET postcode_status = false, postcode_coverage_status= false";
 
         $db->execute($request);
     }
@@ -93,6 +95,7 @@ class ApiSearch
     /**
      * Get sellers postcode status
      * @return array
+     * @throws PrestaShopDatabaseException
      */
     public function getSellersPostcodesStatus(): array
     {
@@ -109,6 +112,7 @@ class ApiSearch
      * Update sellers postcodes
      * @param $status
      * @return void
+     * @throws PrestaShopDatabaseException
      */
     public function updateSellersPostcodes($status):void 
     {
@@ -148,6 +152,7 @@ class ApiSearch
      * Update seller delivery postcodes
      * @param $status
      * @return void
+     * @throws PrestaShopDatabaseException
      */
     public function updateSellersDeliveryPostcodes($status):void 
     {
@@ -201,6 +206,7 @@ class ApiSearch
      * Get seller postcode
      * @param $seller
      * @return array
+     * @throws PrestaShopDatabaseException
      */
     public function getSellerCollectionPostcode($seller): array
     {
@@ -264,6 +270,7 @@ class ApiSearch
      * Get seller delivery postcodes
      * @param $seller
      * @return array
+     * @throws PrestaShopDatabaseException
      */
     public function getSellerDeliveryPostCodes($seller): array 
     {
@@ -271,7 +278,12 @@ class ApiSearch
 
         $idField = $this->installTools->getIdDeliveryPostcodePrefix();
 
-        $query = "SELECT value FROM ". _DB_PREFIX_ ."kb_mp_custom_field_seller_mapping WHERE id_field = ". $idField . " AND id_seller = " . $seller;
+        $query = "SELECT value FROM "
+            . _DB_PREFIX_
+            ."kb_mp_custom_field_seller_mapping WHERE id_field = "
+            . $idField
+            . " AND id_seller = "
+            . $seller;
 
         return $db->executeS($query);
     }
@@ -280,10 +292,12 @@ class ApiSearch
      * Set Seller coverage
      * @param $seller
      * @return void
+     * @throws PrestaShopDatabaseException
      */
     public function setSellerCoverage($seller): void
     {
         $postcodes = $this->getSellerDeliveryPostCodes($seller);
+
         foreach ($postcodes as $postcodelist){
             $postcodeCoverages = $this->installTools->cleanDeliveryPostcodePrefix($postcodelist['value']);
             foreach ($postcodeCoverages as $coverage)
@@ -295,9 +309,8 @@ class ApiSearch
 
     /**
      * Check all sellers postcodes and delivery postcodes
-     * @param $url
-     * @param $postcode
-     * @return array
+     * @return void
+     * @throws PrestaShopDatabaseException
      */
     public function checkSellersPostcodes(): void
     {
