@@ -1852,3 +1852,26 @@ h1.page-heading {
 .field_DeliveryOptions{
     height: 100px;
 }
+
+/* For advanced search module  */
+.product-list-collection {
+    background-image: url('/img/click-collect.png');
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    display: block;
+    color: #555555;
+    /* background-repeat: no-repeat; */
+    background-position: left center;
+    padding-left: 18px;
+  }   
+  
+  .product-list-delivery {
+    background-image: url(/img/delivery-grey.png);
+    background-repeat: no-repeat;
+    background-size: 15px 11px;
+    display: block;
+    color: #555555;
+    /* background-repeat: no-repeat; */
+    background-position: left center;
+    padding-left: 18px;
+  }
