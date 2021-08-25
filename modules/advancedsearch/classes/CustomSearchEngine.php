@@ -65,16 +65,25 @@ class CustomSearchEngine implements ProductSearchProviderInterface
         
         $prods = [];
         foreach ($products as $product) {
-            $prds["id_product"] = $product["id_product"];
-            $prods[] = $prds;
+            $prods[] = $product["id_product"];
         }
 
-        $sellerprods = array_intersect($prods,$this->products);
+        $prodd = [];
+        foreach ($this->products as $product) {
+            $prodd[] = $product["id_product"];
+        }
+
+        $sellerprods = array_intersect($prods,$prodd);
+
+        $array_prods = [];
+        foreach ($sellerprods as $prod) {
+            $aprod['id_product'] = $prod;
+            $array_prods[] = $aprod; 
+        }
 
         $new_products = new ProductSearchResult();
-        if (!empty($this->products)) {
-            $array_list = $sellerprods;
-            $new_products->setProducts($array_list);
+        if (!empty($array_prods)) {
+            $new_products->setProducts($array_prods);
         }
 
         return $new_products;

@@ -1,6 +1,6 @@
 <div class="advancesearch-result-wrapper">
-    <div class="product-list-collection">{$retrieve}</div>
+    <div id="product-list-retrieve" class="product-list-collection">{$retrieve}</div>
     {if $distance}
-        <div class="product-list-delivery">{$distance} miles</div>
+        <div id="product-list-distance" class="product-list-delivery">{$distance} miles</div>
     {/if}
 </div>
