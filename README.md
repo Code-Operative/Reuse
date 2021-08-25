@@ -70,6 +70,24 @@ The distance is calculated using google [geolocation API](https://developers.goo
 
 This is a module developped by [Code-Operative](https://code-operative.co.uk/) for the [prestashop marketplace](###marketplace-module) and the zip file can be downloaded from [this github repository](https://github.com/Code-Operative/Reuse/blob/master/postcodecheck.zip) and can be drag and dropped into the upload module page. 
 
+## Advanced Search Module 
+
+This module is to provide advanced search for buyers to:
+1) search for products that are delivered to a specific postcode prefix
+2) search for products that are within a certain mile of a postcode
+
+In the front office, the module has a form that the buyer can search with keywords, postcode and miles (for collection). The result will show all products that satisfy the search criteria in the same way prestashop default search does. 
+
+The logic of the module can be illustrated with the diagram belo: 
+
+![The logic of advanced search module](https://user-images.githubusercontent.com/39419492/130858924-ada0747a-2956-4dd8-9ae3-499cd9d272cd.png)
+The diagram can also be found in the [miroboard](https://miro.com/app/board/o9J_l0_NArk=/): 
+
+Lat and Lon in the diagram stands for longitude and latitude respectively, they are converted from postcode using the [open source postcodes.io API service](https://postcodes.io/). 
+
+This is a module developped by [Code-Operative](https://code-operative.co.uk/) to work with [prestashop marketplace](###marketplace-module). The zip file can be downloaded from [this github repository]() and can be drag and dropped into the upload module page. 
+
+
 # Code Customisations 
 The main code customisations are done in: 
 - theme 
