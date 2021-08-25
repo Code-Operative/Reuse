@@ -18,7 +18,8 @@
                 <li class="active" rel="general" id="kb-sprofile-general">{l s='General' mod='kbmarketplace'}</li>
                 <li rel="metadata" id="kb-sprofile-metadata">{l s='Meta Information' mod='kbmarketplace'}</li>
                 <li rel="policydata" id="kb-sprofile-policydata">{l s='Policy' mod='kbmarketplace'}</li>
-                <li rel="paymentinfo" id="kb-sprofile-paymentinfo">{l s='Payout' mod='kbmarketplace'}</li>                
+                <li rel="paymentinfo" id="kb-sprofile-paymentinfo">{l s='Payout' mod='kbmarketplace'}</li>
+                <li rel="integrations" id="kb-sprofile-integrations">{l s='Integrations' mod='kbmarketplace'}</li>                
         </ul>
         <div class="clearfix"></div>
         <div class="kb_tab_container">
@@ -1381,6 +1382,28 @@
                     <div class="kb-block" style="padding:5px 15px 5px 5px; text-align: right;">
                         <div id="sellerprofile-updating-progress" class="input-loader" style="display:none;vertical-align: middle;"></div>
                         <button id="sellerprofile-update-btn" type="button" class="kbbtn-big kbbtn-success" onclick="validateSellerForm()">{l s='Save' mod='kbmarketplace'}</button>
+                    </div>
+                </div>
+                <div id="integrations" class="kb_tab_content">
+                {*  the dynamic parts of this are in a contentbox script called seller-profile-integrations.js  *}
+                    <p class="kblabel">eBay</p>
+                    <div id="ebay-no-link" style="display: block">
+                        <p>no account currently linked</p>
+                        <p class="ebay-account-link">
+                            <a href="https://auth.ebay.com/oauth2/consents?client_id=JohnEvan-ReuseHom-PRD-eafe27181-a39e072c&redirect_uri=John_Evans-JohnEvan-ReuseH-jwlfh&scope=https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.marketing.readonly+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.marketing+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.inventory.readonly+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.inventory+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.account.readonly+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.account+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.fulfillment.readonly+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.fulfillment+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.analytics.readonly+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.finances+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.payment.dispute+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fcommerce.identity.readonly+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fcommerce.notification.subscription+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fcommerce.notification.subscription.readonly&state&response_type=code&hd&consentGiven=false">
+                                click here to link your ebay account to your reuse seller account
+                            </a>
+                        </p>
+                    </div>
+                    <div id="ebay-yes-link" style="display: none">
+                        <p>✓ account linked</p>
+                        <p class="ebay-account-link">
+                            <a href="https://auth.ebay.com/oauth2/consents?client_id=JohnEvan-ReuseHom-PRD-eafe27181-a39e072c&redirect_uri=John_Evans-JohnEvan-ReuseH-jwlfh&scope=https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.marketing.readonly+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.marketing+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.inventory.readonly+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.inventory+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.account.readonly+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.account+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.fulfillment.readonly+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.fulfillment+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.analytics.readonly+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.finances+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.payment.dispute+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fcommerce.identity.readonly+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fcommerce.notification.subscription+https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fcommerce.notification.subscription.readonly&state&response_type=code&hd&consentGiven=false">
+                                change linked account
+                            </a>
+                        </p>
+                        <p onclick="hello"><a>remove account link</a></p>
+                        <p>warning, items mirrored on ebay and reuse may become unlinked if you change or remove the account link</p>
                     </div>
                 </div>
             </form>
