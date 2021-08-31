@@ -325,7 +325,7 @@ class ApiSearch
      * @param $latitude
      * @param $longitude
      * @param $distance
-     * @return array return array with idSeler and distances
+     * @return array return array with idSeller and distances
      * @throws PrestaShopDatabaseException
      */
     public function getSellersByDistance($latitude, $longitude, $distance): array
