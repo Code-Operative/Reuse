@@ -11,9 +11,11 @@ class CustomSearchEngine implements ProductSearchProviderInterface
 
     protected $products;
     protected $string;
+    protected $sQuery = false;
 
     public function __construct($params, $string)
     {
+
         if ($params != null && $string != false) {
             $this->string = $string;
             $product = [];
@@ -21,6 +23,9 @@ class CustomSearchEngine implements ProductSearchProviderInterface
                 $product[] = $param;
             }
             $this->products = $product;
+        } elseif ($string != false) {
+            $this->string = $string;
+            $this->sQuery = true;
         } else {
             $this->products = [];
         }
@@ -55,35 +60,39 @@ class CustomSearchEngine implements ProductSearchProviderInterface
 
         $products = $result['result'];
         $count = $result['total'];
-
-        Hook::exec('actionSearch', [ 
+        Hook::exec('actionSearch', [
             'searched_query' => $queryString,
-            'total' => $count, 
+            'total' => $count,
             // deprecated since 1.7.x
             'expr' => $queryString,
         ]);
-        
-        $prods = [];
-        foreach ($products as $product) {
-            $prods[] = $product["id_product"];
-        }
 
-        $prodd = [];
-        foreach ($this->products as $product) {
-            $prodd[] = $product["id_product"];
-        }
+        if($this->sQuery) {
+            $new_products = new ProductSearchResult();
+            $new_products->setProducts($products);
+        } else {
+            $prods = [];
+            foreach ($products as $product) {
+                $prods[] = $product["id_product"];
+            }
 
-        $sellerprods = array_intersect($prods,$prodd);
+            $prodd = [];
+            foreach ($this->products as $product) {
+                $prodd[] = $product["id_product"];
+            }
 
-        $array_prods = [];
-        foreach ($sellerprods as $prod) {
-            $aprod['id_product'] = $prod;
-            $array_prods[] = $aprod; 
-        }
+            $sellerprods = array_intersect($prods,$prodd);
 
-        $new_products = new ProductSearchResult();
-        if (!empty($array_prods)) {
-            $new_products->setProducts($array_prods);
+            $array_prods = [];
+            foreach ($sellerprods as $prod) {
+                $aprod['id_product'] = $prod;
+                $array_prods[] = $aprod;
+            }
+
+            $new_products = new ProductSearchResult();
+            if (!empty($array_prods)) {
+                $new_products->setProducts($array_prods);
+            }
         }
 
         return $new_products;

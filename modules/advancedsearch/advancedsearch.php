@@ -271,6 +271,7 @@ class AdvancedSearch extends Module implements WidgetInterface
     public function hookProductSearchProvider(array $params): CustomSearchEngine
     {
         $products = [];
+        $searchValue = 'search';
 
         $this->apiSearch->checkSellersPostcodes();
 
@@ -278,10 +279,12 @@ class AdvancedSearch extends Module implements WidgetInterface
             $products = $this->collectionSearch($params);
         } elseif (Tools::getValue('retrieve') && Tools::getValue('retrieve') == "delivery") {
             $products = $this->deliverySearch($params);
+        }else {
+            $searchValue = 's';
         }
 
         $this->apiSearch->setSellersProductsByDistance($products);
-        return new CustomSearchEngine($products, Tools::getValue('search'));
+        return new CustomSearchEngine($products, Tools::getValue($searchValue));
     }
 
     public function renderWidget($hookName, array $configuration)
