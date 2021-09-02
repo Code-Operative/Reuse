@@ -14,7 +14,7 @@ class CustomSearchEngine implements ProductSearchProviderInterface
 
     public function __construct($params, $string)
     {
-        if ($params != null && $string != false) {
+        if ($params != null && $string !== false) {
             $this->string = $string;
             $product = [];
             foreach ($params as $param) {
@@ -120,7 +120,7 @@ class CustomSearchEngine implements ProductSearchProviderInterface
                // );
             }
         } else {
-        
+
             $prods = [];
             foreach ($products as $product) {
                 $prods[] = $product["id_product"];
@@ -131,7 +131,12 @@ class CustomSearchEngine implements ProductSearchProviderInterface
                 $prodd[] = $product["id_product"];
             }
 
-            $sellerprods = array_intersect($prods,$prodd);
+            if(empty($this->string)){
+                $sellerprods = $prodd;
+            }
+            else{
+                $sellerprods = array_intersect($prods,$prodd);
+            }
 
             $array_prods = [];
             foreach ($sellerprods as $prod) {
